@@ -1,0 +1,122 @@
+"""Watch HTTP routes: profile CRUD, journals, read state."""
+
+from __future__ import annotations
+
+import os
+
+os.environ.setdefault("SCIPAL_WATCH_ALLOW_SQLITE_REPO", "1")
+
+import sqlite3
+import tempfile
+import unittest
+from pathlib import Path
+
+from flask import Flask
+
+from build_db.watch_schema import migrate
+from routes.watch import build_watch_blueprint
+from tests import support_sqlite_watch_repo as repo
+
+
+class WatchRouteTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory(ignore_cleanup_errors=True)
+        self.addCleanup(self.tmp.cleanup)
+        self.db = Path(self.tmp.name) / "t.db"
+        conn = sqlite3.connect(self.db)
+        conn.execute(
+            "CREATE TABLE papers (paper_id TEXT PRIMARY KEY, filename TEXT NOT NULL, "
+            "title TEXT, authors TEXT, abstract TEXT, journal TEXT, year INTEGER, doi TEXT, "
+            "parse_status TEXT, parse_engine TEXT, acquisition TEXT, "
+            "created_at TEXT, updated_at TEXT)"
+        )
+        conn.commit()
+        conn.close()
+        migrate(self.db)
+        app = Flask(__name__)
+        app.register_blueprint(build_watch_blueprint(db_path=self.db, log=app.logger, store=repo))
+        self.client = app.test_client()
+
+    def test_profile_crud_and_journals(self) -> None:
+        created = self.client.post(
+            "/api/watch/profiles",
+            json={"name": "HCC", "field_text": "hepatocellular carcinoma"},
+        )
+        self.assertEqual(created.status_code, 201)
+        profile_id = created.get_json()["profile_id"]
+
+        listing = self.client.get("/api/watch/profiles").get_json()["profiles"]
+        self.assertEqual(len(listing), 1)
+
+        updated = self.client.put(
+            f"/api/watch/profiles/{profile_id}", json={"max_items": 5}
+        )
+        self.assertEqual(updated.get_json()["max_items"], 5)
+
+        self.client.put(
+            f"/api/watch/profiles/{profile_id}/journals",
+            json={"journals": [{"issn_l": "1234-5678", "name": "J1"}]},
+        )
+        journals = self.client.get(
+            f"/api/watch/profiles/{profile_id}/journals"
+        ).get_json()["journals"]
+        self.assertEqual(journals[0]["issn_l"], "1234-5678")
+
+    def test_read_item(self) -> None:
+        conn = repo.connect(self.db)
+        profile_id = repo.create_profile(conn, {"name": "P"})
+        run_id = repo.create_run(conn, profile_id, "2026-10-20", "2026-10-27")
+        item_id = repo.add_item(
+            conn, run_id, profile_id, {"title": "T", "acquisition": "abstract"}
+        )
+        conn.close()
+        self.assertEqual(
+            self.client.post(f"/api/watch/items/{item_id}/read").status_code, 200
+        )
+        conn = repo.connect(self.db)
+        status = conn.execute(
+            "SELECT status FROM watch_items WHERE id = ?", (item_id,)
+        ).fetchone()[0]
+        conn.close()
+        self.assertEqual(status, "read")
+
+    def test_item_feedback_and_abstract(self) -> None:
+        conn = repo.connect(self.db)
+        profile_id = repo.create_profile(conn, {"name": "P"})
+        run_id = repo.create_run(conn, profile_id, "2026-10-20", "2026-10-27")
+        item_id = repo.add_item(
+            conn,
+            run_id,
+            profile_id,
+            {
+                "title": "T",
+                "abstract": "A short abstract",
+                "acquisition": "abstract",
+            },
+        )
+        conn.close()
+        self.assertEqual(
+            self.client.post(
+                f"/api/watch/items/{item_id}/feedback",
+                json={"feedback": "useful"},
+            ).status_code,
+            200,
+        )
+        self.assertEqual(
+            self.client.post(
+                f"/api/watch/items/{item_id}/feedback",
+                json={"feedback": "bad"},
+            ).status_code,
+            400,
+        )
+        conn = repo.connect(self.db)
+        row = conn.execute(
+            "SELECT feedback, abstract FROM watch_items WHERE id = ?", (item_id,)
+        ).fetchone()
+        conn.close()
+        self.assertEqual(row["feedback"], "useful")
+        self.assertEqual(row["abstract"], "A short abstract")
+
+
+if __name__ == "__main__":
+    unittest.main()

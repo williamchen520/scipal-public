@@ -1,0 +1,152 @@
+services:
+  app:
+    image: scipal-app:latest
+    gpus: all
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    env_file:
+      - .env
+    environment:
+      APP_MODE: "${APP_MODE:-DEV_MODE}"
+      SCIPAL_AUTH_REQUIRED: "1"
+      SCIPAL_HOST: "0.0.0.0"
+      SCIPAL_EMBEDDING_MODEL: "/models/models/BAAI--bge-base-en-v1.5"
+      SCIPAL_RERANK_MODEL: "/models/models/BAAI--bge-reranker-base"
+      SCIPAL_CODE_API_URL: "http://code-api:5010"
+      SCIPAL_PLUGINS: "${SCIPAL_PLUGINS:-}"
+      SCIPAL_RETRIEVAL_TRACE: "${SCIPAL_RETRIEVAL_TRACE:-0}"
+      SCIPAL_EVIDENCE_AUDIT: "${SCIPAL_EVIDENCE_AUDIT:-0}"
+      SCIPAL_RETRIEVAL_CONFIG_ID: "${SCIPAL_RETRIEVAL_CONFIG_ID:-unversioned}"
+      SCIPAL_CLAIM_AUDIT: "${SCIPAL_CLAIM_AUDIT:-0}"
+      SCIPAL_EVIDENCE_LEDGER: "${SCIPAL_EVIDENCE_LEDGER:-0}"
+      SCIPAL_AUDIT_PG: "${SCIPAL_AUDIT_PG:-0}"
+      SCIPAL_CORPUS_SNAPSHOT_ID: "${SCIPAL_CORPUS_SNAPSHOT_ID:-}"
+      SCIPAL_SANDBOX_URL: "${SCIPAL_SANDBOX_URL:-}"
+      SCIPAL_SANDBOX_TOKEN: "${SCIPAL_SANDBOX_TOKEN:-}"
+    volumes:
+      - ../data:/app/data
+      - F:/scipal_data/documents:/app/documents
+      - F:/scipal_data/documents_xml:/app/documents_xml
+      - ../logs:/app/logs
+      - ../models:/models:ro
+    expose:
+      - "5000"
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/api/health', timeout=3)"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 300s
+
+  zoekt:
+    image: scipal-zoekt:latest
+    command: ["-index", "/index", "-listen", ":6070", ]
+    volumes:
+      - ../data/zoekt-index:/index:ro
+    expose:
+      - "6070"
+    restart: unless-stopped
+
+  code-api:
+    image: scipal-app:latest
+    entrypoint: []
+    command: ["python", "-m", "code_rag.api", "--host", "0.0.0.0", "--port", "5010"]
+    environment:
+      SCIPAL_INTERNAL_TOKEN: "${SCIPAL_INTERNAL_TOKEN:?SCIPAL_INTERNAL_TOKEN is required}"
+      SCIPAL_CODE_READ_DSN: "${SCIPAL_CODE_READ_DSN:?SCIPAL_CODE_READ_DSN is required}"
+      SCIPAL_CORE_DSN: "${SCIPAL_CORE_READ_DSN:?SCIPAL_CORE_READ_DSN is required}"
+      SCIPAL_CODE_EMBED_MODEL: "/code-models/bge-small-zh-v1.5"
+      SCIPAL_CODE_DEVICE: "cpu"
+      SCIPAL_CODE_WORKSPACE_REQUIRED: "1"
+      SCIPAL_CODE_SEARCH_BACKEND: "bm25_map"
+      SCIPAL_ZOekt_URL: "http://zoekt:6070"
+      SCIPAL_ZOekt_REPO_MAP: '{"lib_2c5709b07c77":"scanpy-1.12.5","lib_anndata":"anndata","lib_squidpy":"squidpy","lib_scvi_tools":"scvi-tools","lib_snakemake":"snakemake","lib_ggplot2":"ggplot2","lib_dplyr":"dplyr","lib_12473817b941":"rnaseq-3.28.0","lib_nfcore_scrnaseq":"nf-core-scrnaseq","lib_nfcore_atacseq":"nf-core-atacseq"}' 
+      SCIPAL_CODE_BM25_DSN: "${SCIPAL_PARADEDB_DSN:?SCIPAL_PARADEDB_DSN is required}"
+    volumes:
+      - ../models:/code-models:ro
+    expose:
+      - "5010"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import os,urllib.request; req=urllib.request.Request('http://127.0.0.1:5010/health', headers={'X-SCIPAL-Internal-Token': os.environ['SCIPAL_INTERNAL_TOKEN']}); urllib.request.urlopen(req, timeout=3)"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    restart: unless-stopped
+
+  watch-cron:
+    image: scipal-app:latest
+    entrypoint: []
+    command: ["python", "scripts/run_watch_due.py", "--loop", "--interval", "300"]
+    env_file:
+      - .env
+    environment:
+      SCIPAL_AUTH_REQUIRED: "1"
+    volumes:
+      - ../data:/app/data
+      - ../logs:/app/logs
+    depends_on:
+      app:
+        condition: service_healthy
+    healthcheck:
+      disable: true
+    restart: unless-stopped
+
+  pg-backup:
+    image: postgres:16
+    entrypoint: ["/bin/bash", "/pg_backup.sh"]
+    env_file:
+      - .env
+    volumes:
+      - ../backups:/app/backups
+      - ./pg_backup.sh:/pg_backup.sh:ro
+    healthcheck:
+      disable: true
+    restart: unless-stopped
+
+  paradedb:
+    image: paradedb/paradedb:latest
+    environment:
+      POSTGRES_DB: scipal_g0
+      POSTGRES_PASSWORD: "${PARADEDB_PASSWORD:?PARADEDB_PASSWORD is required}"
+    ports:
+      - "127.0.0.1:5434:5432"
+    volumes:
+      - paradedb_g0:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d scipal_g0"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2
+    depends_on:
+      app:
+        condition: service_healthy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    restart: unless-stopped
+
+volumes:
+  paradedb_g0:
+    external: true
+    name: paradedb_g0
+  caddy_data:
+  caddy_config:

@@ -1,0 +1,71 @@
+"""Paper data-flow tests."""
+
+from __future__ import annotations
+
+import unittest
+from unittest import mock
+
+from services.papers import flow
+
+
+class FlowTests(unittest.TestCase):
+    def test_extract_reads_and_writes(self) -> None:
+        nodes, edges = flow._extract(
+            "Figure.1.R",
+            "r",
+            'x <- readRDS("Our single-cell atlas.rds")\nsaveRDS(x, "Total atlas.rds")',
+        )
+        ids = {node["id"] for node in nodes}
+        self.assertIn("artifact:Our single-cell atlas.rds", ids)
+        self.assertIn("artifact:Total atlas.rds", ids)
+        relations = {edge["relation"] for edge in edges}
+        self.assertEqual(relations, {"reads", "writes"})
+
+    def test_file_path_literal(self) -> None:
+        nodes, edges = flow._extract(
+            "figure4.R",
+            "r",
+            'write_xlsx(df, path = file.path(dir, "out.xlsx"))',
+        )
+        self.assertTrue(any(edge["target"] == "artifact:out.xlsx" for edge in edges))
+        self.assertTrue(any(node["id"] == "artifact:out.xlsx" for node in nodes))
+
+    def test_variable_path_literal(self) -> None:
+        nodes, edges = flow._extract(
+            "Figure1.R",
+            "r",
+            'infile <- "data.csv"\nd <- read.csv(infile)',
+        )
+        self.assertTrue(any(edge["target"] == "artifact:data.csv" for edge in edges))
+        self.assertTrue(any(node["id"] == "artifact:data.csv" for node in nodes))
+
+    def test_paste0_literal_tail(self) -> None:
+        nodes, edges = flow._extract(
+            "figure1.R",
+            "r",
+            'read.csv(paste0(dir, "data.csv"))',
+        )
+        self.assertTrue(any(edge["target"] == "artifact:data.csv" for edge in edges))
+        self.assertTrue(any(edge["method"] == "paste0" for edge in edges))
+
+    def test_unbound(self) -> None:
+        with mock.patch.object(flow, "list_bindings", return_value=[]):
+            result = flow.paper_data_flow("p1")
+        self.assertEqual(result["status"], "unbound")
+
+    def test_flow_from_bound_library(self) -> None:
+        with mock.patch.object(
+            flow, "list_bindings", return_value=[{"library_id": "lib_1", "snapshot_id": "snap_1"}]
+        ), mock.patch.object(
+            flow,
+            "_files",
+            return_value=[("Figure.1.R", "r", 'saveRDS(x, "atlas.rds")')],
+        ):
+            result = flow.paper_data_flow("p1")
+        self.assertEqual(result["status"], "ok")
+        self.assertEqual(result["edges"][0]["relation"], "writes")
+        self.assertEqual(result["edges"][0]["confidence"], "explicit")
+
+
+if __name__ == "__main__":
+    unittest.main()

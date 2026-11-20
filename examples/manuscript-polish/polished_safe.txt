@@ -1,0 +1,1 @@
+﻿This exploratory analysis found that treatment was associated with response in 12 of 40 patients [1]. This finding may be consistent with prior work [2].

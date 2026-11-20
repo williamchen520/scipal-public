@@ -1,0 +1,67 @@
+{
+  "_generated": {
+    "do_not_edit": true,
+    "generated_by": "scripts/spec_compile.py",
+    "source": "contract/spec.json",
+    "source_sha256": "344c726803ffaab5b6fbf592082d97355e7b1acf7a5116452f440a9bbbac60d3"
+  },
+  "missing": [],
+  "required_paths": [
+    {
+      "exists": true,
+      "path": "ARCHITECTURE.json"
+    },
+    {
+      "exists": true,
+      "path": "api_server.py"
+    },
+    {
+      "exists": true,
+      "path": "scripts/validate_arch.py"
+    },
+    {
+      "exists": true,
+      "path": "scripts/spec_compile.py"
+    },
+    {
+      "exists": true,
+      "path": "scripts/spec_check.py"
+    },
+    {
+      "exists": true,
+      "path": ".githooks/pre-commit"
+    },
+    {
+      "exists": true,
+      "path": "tests/test_spec_contract.py"
+    },
+    {
+      "exists": true,
+      "path": "contract/approval.json"
+    },
+    {
+      "exists": true,
+      "path": "contract/exceptions.json"
+    },
+    {
+      "exists": true,
+      "path": "scripts/runtime_contract_check.py"
+    },
+    {
+      "exists": true,
+      "path": "api_server_factory.py"
+    },
+    {
+      "exists": true,
+      "path": "tests/test_app_factory.py"
+    },
+    {
+      "exists": true,
+      "path": "contract_app.py"
+    },
+    {
+      "exists": true,
+      "path": "requirements-contract.txt"
+    }
+  ]
+}

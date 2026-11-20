@@ -1,0 +1,112 @@
+from __future__ import annotations
+
+import json
+from typing import Any, Mapping
+
+class ReviewRepository:
+    """PostgreSQL-only durable review repository."""
+
+    def __init__(self, db_path=None) -> None:
+        # db_path is kept for call-site compatibility; storage is PostgreSQL.
+        self.db_path = db_path
+
+    def _pg(self):
+        from services.db.pg_pool import pg_connection
+        from services.db.tenant_pilot import set_search_path
+
+        pg = pg_connection()
+        set_search_path(pg, "reviews")
+        return pg
+
+    def ensure_schema(self) -> None:
+        return None
+
+    def save(
+        self,
+        *,
+        review_id: str,
+        topic: str,
+        markdown: str,
+        run_id: str | None = None,
+        stats: Mapping[str, Any] | None = None,
+        references: list[dict[str, Any]] | None = None,
+        warnings: list[str] | None = None,
+        guard: Mapping[str, Any] | None = None,
+        created_at: str | None = None,
+    ) -> str:
+        pg = self._pg()
+        try:
+            pg.execute(
+                "INSERT INTO reviews "
+                "(review_id, run_id, topic, markdown, stats_json, references_json, "
+                "warnings_json, guard_json, created_at) "
+                "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) "
+                "ON CONFLICT (review_id) DO UPDATE SET run_id=EXCLUDED.run_id, "
+                "topic=EXCLUDED.topic, markdown=EXCLUDED.markdown, "
+                "stats_json=EXCLUDED.stats_json, references_json=EXCLUDED.references_json, "
+                "warnings_json=EXCLUDED.warnings_json, guard_json=EXCLUDED.guard_json, "
+                "created_at=EXCLUDED.created_at",
+                (
+                    review_id, run_id, topic, markdown, _dump(stats or {}),
+                    _dump(references or []), _dump(warnings or []),
+                    _dump(guard) if guard is not None else None,
+                    created_at or _now(),
+                ),
+            )
+            pg.commit()
+        finally:
+            pg.close()
+        return review_id
+
+    def get(self, review_id: str) -> dict[str, Any] | None:
+        pg = self._pg()
+        try:
+            row = pg.execute(
+                "SELECT * FROM reviews WHERE review_id = %s", (review_id,)
+            ).fetchone()
+            return _row_to_dict(row) if row else None
+        finally:
+            pg.close()
+
+    def list(self, limit: int = 20) -> list[dict[str, Any]]:
+        pg = self._pg()
+        try:
+            rows = pg.execute(
+                "SELECT * FROM reviews ORDER BY created_at DESC LIMIT %s",
+                (max(1, limit),),
+            ).fetchall()
+            return [_row_to_dict(row) for row in rows]
+        finally:
+            pg.close()
+
+
+def _row_to_dict(row) -> dict[str, Any]:
+    return {
+        "review_id": row["review_id"],
+        "run_id": row["run_id"],
+        "topic": row["topic"],
+        "markdown": row["markdown"],
+        "stats": _load(row["stats_json"], {}),
+        "references": _load(row["references_json"], []),
+        "warnings": _load(row["warnings_json"], []),
+        "guard": _load(row["guard_json"], None),
+        "created_at": row["created_at"],
+    }
+
+
+def _dump(value: Any) -> str:
+    return json.dumps(value, ensure_ascii=False)
+
+
+def _load(raw: str | None, default: Any) -> Any:
+    if not raw:
+        return default
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        return default
+
+
+def _now() -> str:
+    return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+

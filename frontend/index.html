@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SciPal · 科研工作台</title>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center;
+      background: #0b1020; color: #e2e8f0;
+      font-family: system-ui, "Microsoft YaHei", sans-serif;
+    }
+    .card {
+      max-width: 760px; margin: 24px; padding: 40px 44px;
+      background: #131c31; border: 1px solid #f5c542; border-radius: 18px;
+    }
+    h1 { margin: 0 0 8px; font-size: 40px; color: #f5c542; }
+    p { line-height: 1.7; color: #94a3b8; }
+    a { color: #38bdf8; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 24px; }
+    .tile {
+      display: block; padding: 18px; text-decoration: none;
+      background: #0f1a2e; border: 1px solid #1e3a5f; border-radius: 12px;
+    }
+    .tile strong { display: block; color: #e2e8f0; margin-bottom: 6px; }
+    code { background: #0f1a2e; padding: 2px 6px; border-radius: 6px; color: #7dd3fc; }
+    .note { margin-top: 24px; font-size: 13px; color: #64748b; }
+    .userbar {
+      position: fixed; top: 16px; right: 20px; display: flex; gap: 10px;
+      align-items: center; font-size: 13px; color: #94a3b8;
+    }
+    .userbar a, .userbar button {
+      color: #38bdf8; background: none; border: 0; cursor: pointer;
+      text-decoration: none; font: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="userbar">
+    <span id="who"></span>
+    <a id="login-link" href="/login.html">登录</a>
+    <button id="logout" hidden>退出</button>
+  </div>
+  <main class="card">
+    <h1>SciPal V33.96</h1>
+    <p>
+      SciPal 同时提供 <strong>headless API</strong> 与 <strong>浏览器工作台</strong>：
+      文献检索、综述、问答由 DSH 通过 MCP 调用；浏览器端可管理项目、实验、run、
+      签名与句子溯源。
+    </p>
+
+    <div class="grid">
+      <a class="tile" href="/libraries.html">
+        <strong>我的代码库</strong>
+        注册外部 repo，按 library 检索代码、查看调用图。
+      </a>
+      <a class="tile" href="/code.html">
+        <strong>代码检索</strong>
+        按 library 检索代码符号、路径与行号。
+      </a>
+      <a class="tile" href="/search.html">
+        <strong>双轨检索</strong>
+        本地证据与在线候选分栏，在线命中自动进入候选队列。
+      </a>
+      <a class="tile" href="/imports.html">
+        <strong>批量导入</strong>
+        上传 HTML / PDF / XML，创建 import session，查看处理状态。
+      </a>
+      <a class="tile" href="/annotations.html">
+        <strong>标注与引用</strong>
+        查看论文标注、references、citations 一跳图。
+      </a>
+      <a class="tile" href="/plans.html">
+        <strong>RAG 计划</strong>
+        审批 DSH 提交的计划，批准后派发给 RAG worker。
+      </a>
+      <a class="tile" href="/evidence.html">
+        <strong>证据裁决</strong>
+        分组查看多 RAG 证据，记录人工 accept / reject / needs_more_evidence。
+      </a>
+      <a class="tile" href="/audit.html">
+        <strong>裁决审计</strong>
+        查看人工裁决、冲突标记，导出 RO-Crate 证据包。
+      </a>
+      <a class="tile" href="/ledger.html">
+        <strong>证据账本</strong>
+        查看 claim、引用句、来源论文、页码、得分和高优先证据。
+      </a>
+      <a class="tile" href="/trace.html">
+        <strong>句子溯源</strong>
+        输入 paper_id / sentence_id，查看页码、bbox、引用与图表。
+      </a>
+      <a class="tile" href="/compare.html">
+        <strong>双栏对比</strong>
+        并列阅读两篇论文（依赖本地 PDF）。
+      </a>
+      <a class="tile" href="/projects.html">
+        <strong>项目与实验</strong>
+        创建项目、实验、run，并查看修订与审计。
+      </a>
+      <a class="tile" href="/reviews.html">
+        <strong>综述写作</strong>
+        生成大纲、综述草稿、引用与 Markdown 导出。
+      </a>
+      <a class="tile" href="/watch.html">
+        <strong>文献监控</strong>
+        按主题/期刊追踪新论文，生成周报并反馈。
+      </a>
+      <a class="tile" href="/packs.html">
+        <strong>领域包</strong>
+        查看术语、限定条件与证据规范。
+      </a>
+      <a class="tile" href="/claims.html">
+        <strong>Claim 试点</strong>
+        审讯 10 个 claim，查看正反证据与裁决。
+      </a>
+    </div>
+
+    <p class="note">
+      DSH 工具：<code>search_evidence</code> · <code>get_context</code> ·
+      <code>verify_answer</code> · <code>watch_run</code> ·
+      <code>ask_question</code> · <code>generate_review</code>
+    </p>
+    </main>
+  <script>
+    fetch("/api/auth/me", { credentials: "same-origin" })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((body) => {
+        if (!body) return;
+        document.getElementById("who").textContent = body.display_name || body.username || body.user_id || "";
+        document.getElementById("login-link").hidden = true;
+        const logout = document.getElementById("logout");
+        logout.hidden = false;
+        logout.addEventListener("click", async () => {
+          await fetch("/api/auth/logout", { method: "POST", credentials: "same-origin" });
+          window.location.reload();
+        });
+      })
+      .catch(() => {});
+  </script>
+</body>
+</html>

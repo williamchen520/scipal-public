@@ -1,0 +1,329 @@
+"""Experiment records API: owner-private within a project/workspace."""
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
+from flask import Blueprint, jsonify, request, session
+
+from services.experiments import (
+    ProtocolNotFound,
+    create_access_request,
+    create_experiment,
+    decide_access_request,
+    get_audit,
+    get_experiment,
+    list_access_requests,
+    list_experiments,
+    list_revisions,
+    list_signatures,
+    list_workspace_requests,
+    sign_experiment,
+    update_experiment,
+)
+from services.tenancy.web import resolve_workspace
+
+
+def _pg_read() -> bool:
+    import os
+
+    return os.environ.get("SCIPAL_EXPERIMENTS_BACKEND", "").strip().lower() in {
+        "postgres", "postgresql", "pg", "1", "true"
+    }
+
+
+def build_experiments_blueprint(*, db_path: str | Path, log: Any = None) -> Blueprint:
+    bp = Blueprint("experiments", __name__)
+    db = str(db_path)
+
+    def context():
+        user_id = session.get("user_id")
+        if not user_id:
+            return None, None
+        return user_id, resolve_workspace(db_path=db)
+
+    @bp.get("/api/projects/<project_id>/experiments")
+    def experiments_list(project_id: str):
+        user_id, workspace_id = context()
+        if not user_id:
+            return jsonify({"error": "authentication required"}), 401
+        if not workspace_id:
+            return jsonify({"error": "workspace access denied"}), 403
+        if _pg_read():
+            from services.experiments import pg_read
+
+            rows = pg_read.list_experiments(project_id, workspace_id, user_id)
+        else:
+            rows = list_experiments(project_id, workspace_id, user_id, db_path=db)
+        if rows is None:
+            return jsonify({"error": "Project not found"}), 404
+        return jsonify({"experiments": rows})
+
+    @bp.post("/api/projects/<project_id>/experiments")
+    def experiments_create(project_id: str):
+        user_id, workspace_id = context()
+        if not user_id:
+            return jsonify({"error": "authentication required"}), 401
+        if not workspace_id:
+            return jsonify({"error": "workspace access denied"}), 403
+        body = request.get_json(silent=True) or {}
+        try:
+            if _pg_read():
+                from services.experiments import pg_write
+
+                row = pg_write.create_experiment(
+                    project_id,
+                    workspace_id,
+                    user_id,
+                    str(body.get("title") or ""),
+                    protocol_id=str(body.get("protocol_id") or ""),
+                    protocol_version=str(body.get("protocol_version") or ""),
+                    status=str(body.get("status") or "planned"),
+                    content=str(body.get("content") or ""),
+                )
+                return jsonify(row), 201
+            row = create_experiment(
+                project_id,
+                workspace_id,
+                user_id,
+                str(body.get("title") or ""),
+                protocol_id=str(body.get("protocol_id") or ""),
+                protocol_version=str(body.get("protocol_version") or ""),
+                status=str(body.get("status") or "planned"),
+                content=str(body.get("content") or ""),
+                db_path=db,
+            )
+        except PermissionError:
+            return jsonify({"error": "Project not found"}), 404
+        except ProtocolNotFound:
+            return jsonify({"error": "Protocol not found"}), 404
+        except ValueError as exc:
+            return jsonify({"error": str(exc)}), 400
+        return jsonify(row), 201
+
+    @bp.get("/api/experiment-access-requests")
+    def experiment_access_requests():
+        user_id, workspace_id = context()
+        if not user_id:
+            return jsonify({"error": "authentication required"}), 401
+        if not workspace_id:
+            return jsonify({"error": "workspace access denied"}), 403
+        if _pg_read():
+            from services.experiments import pg_read
+
+            return jsonify({"requests": pg_read.list_workspace_requests(workspace_id, user_id)})
+        return jsonify(
+            {"requests": list_workspace_requests(workspace_id, user_id, db_path=db)}
+        )
+
+    @bp.get("/api/experiments/<experiment_id>")
+    def experiments_detail(experiment_id: str):
+        user_id, workspace_id = context()
+        if not user_id:
+            return jsonify({"error": "authentication required"}), 401
+        if not workspace_id:
+            return jsonify({"error": "workspace access denied"}), 403
+        if _pg_read():
+            from services.experiments import pg_read
+
+            row = pg_read.get_experiment(experiment_id, workspace_id, user_id)
+        else:
+            row = get_experiment(experiment_id, workspace_id, user_id, db_path=db)
+        if not row:
+            return jsonify({"error": "Experiment not found"}), 404
+        return jsonify(row)
+
+    @bp.put("/api/experiments/<experiment_id>")
+    def experiments_update(experiment_id: str):
+        user_id, workspace_id = context()
+        if not user_id:
+            return jsonify({"error": "authentication required"}), 401
+        if not workspace_id:
+            return jsonify({"error": "workspace access denied"}), 403
+        body = request.get_json(silent=True) or {}
+        try:
+            if _pg_read():
+                from services.experiments import pg_write
+
+                row = pg_write.update_experiment(
+                    experiment_id,
+                    workspace_id,
+                    user_id,
+                    title=body.get("title"),
+                    status=body.get("status"),
+                    content=body.get("content"),
+                )
+                if not row:
+                    return jsonify({"error": "Experiment not found"}), 404
+                return jsonify(row)
+            row = update_experiment(
+                experiment_id,
+                workspace_id,
+                user_id,
+                title=body.get("title"),
+                status=body.get("status"),
+                content=body.get("content"),
+                db_path=db,
+            )
+        except ValueError as exc:
+            return jsonify({"error": str(exc)}), 400
+        if not row:
+            return jsonify({"error": "Experiment not found"}), 404
+        return jsonify(row)
+
+    @bp.get("/api/experiments/<experiment_id>/revisions")
+    def experiment_revisions(experiment_id: str):
+        user_id, workspace_id = context()
+        if not user_id:
+            return jsonify({"error": "authentication required"}), 401
+        if not workspace_id:
+            return jsonify({"error": "workspace access denied"}), 403
+        if _pg_read():
+            from services.experiments import pg_read
+
+            rows = pg_read.list_revisions(experiment_id, workspace_id, user_id)
+        else:
+            rows = list_revisions(experiment_id, workspace_id, user_id, db_path=db)
+        if rows is None:
+            return jsonify({"error": "Experiment not found"}), 404
+        return jsonify({"revisions": rows})
+
+    @bp.get("/api/experiments/<experiment_id>/audit")
+    def experiment_audit(experiment_id: str):
+        user_id, workspace_id = context()
+        if not user_id:
+            return jsonify({"error": "authentication required"}), 401
+        if not workspace_id:
+            return jsonify({"error": "workspace access denied"}), 403
+        if _pg_read():
+            from services.experiments import pg_read
+
+            rows = pg_read.get_audit(experiment_id, workspace_id, user_id)
+        else:
+            rows = get_audit(experiment_id, workspace_id, user_id, db_path=db)
+        if rows is None:
+            return jsonify({"error": "Experiment not found"}), 404
+        return jsonify({"audit": rows})
+
+    @bp.post("/api/experiments/<experiment_id>/sign")
+    def experiment_sign(experiment_id: str):
+        user_id, workspace_id = context()
+        if not user_id:
+            return jsonify({"error": "authentication required"}), 401
+        if not workspace_id:
+            return jsonify({"error": "workspace access denied"}), 403
+        body = request.get_json(silent=True) or {}
+        try:
+            if _pg_read():
+                from services.experiments import pg_write
+
+                signature = pg_write.sign_experiment(
+                    experiment_id,
+                    workspace_id,
+                    user_id,
+                    str(body.get("password") or ""),
+                    meaning=str(body.get("meaning") or "author"),
+                )
+            else:
+                signature = sign_experiment(
+                experiment_id,
+                workspace_id,
+                user_id,
+                str(body.get("password") or ""),
+                meaning=str(body.get("meaning") or "author"),
+                db_path=db,
+            )
+        except PermissionError:
+            return jsonify({"error": "re-authentication failed"}), 401
+        except ValueError as exc:
+            return jsonify({"error": str(exc)}), 400
+        if not signature:
+            return jsonify({"error": "Experiment not found"}), 404
+        return jsonify(signature), 201
+
+    @bp.get("/api/experiments/<experiment_id>/signatures")
+    def experiment_signatures(experiment_id: str):
+        user_id, workspace_id = context()
+        if not user_id:
+            return jsonify({"error": "authentication required"}), 401
+        if not workspace_id:
+            return jsonify({"error": "workspace access denied"}), 403
+        if _pg_read():
+            from services.experiments import pg_read
+
+            rows = pg_read.list_signatures(experiment_id, workspace_id, user_id)
+        else:
+            rows = list_signatures(experiment_id, workspace_id, user_id, db_path=db)
+        if rows is None:
+            return jsonify({"error": "Experiment not found"}), 404
+        return jsonify({"signatures": rows})
+
+    @bp.post("/api/experiments/<experiment_id>/access-requests")
+    def experiment_request_access(experiment_id: str):
+        user_id, workspace_id = context()
+        if not user_id:
+            return jsonify({"error": "authentication required"}), 401
+        if not workspace_id:
+            return jsonify({"error": "workspace access denied"}), 403
+        if _pg_read():
+            from services.experiments import pg_write
+
+            row = pg_write.create_access_request(experiment_id, workspace_id, user_id)
+        else:
+            row = create_access_request(experiment_id, workspace_id, user_id, db_path=db)
+        if not row:
+            return jsonify({"error": "Request not allowed"}), 404
+        return jsonify(row), 201
+
+    @bp.get("/api/experiments/<experiment_id>/access-requests")
+    def experiment_list_access(experiment_id: str):
+        user_id, workspace_id = context()
+        if not user_id:
+            return jsonify({"error": "authentication required"}), 401
+        if not workspace_id:
+            return jsonify({"error": "workspace access denied"}), 403
+        if _pg_read():
+            from services.experiments import pg_read
+
+            rows = pg_read.list_access_requests(experiment_id, workspace_id, user_id)
+        else:
+            rows = list_access_requests(experiment_id, workspace_id, user_id, db_path=db)
+        if rows is None:
+            return jsonify({"error": "Experiment not found"}), 404
+        return jsonify({"requests": rows})
+
+    @bp.post("/api/experiments/<experiment_id>/access-requests/<request_id>/decide")
+    def experiment_decide_access(experiment_id: str, request_id: str):
+        user_id, workspace_id = context()
+        if not user_id:
+            return jsonify({"error": "authentication required"}), 401
+        if not workspace_id:
+            return jsonify({"error": "workspace access denied"}), 403
+        body = request.get_json(silent=True) or {}
+        if _pg_read():
+            from services.experiments import pg_write
+
+            request_row = pg_write.decide_access_request(
+                experiment_id,
+                request_id,
+                workspace_id,
+                user_id,
+                bool(body.get("approve")),
+                hours=int(body.get("hours") or 24),
+            )
+        else:
+            request_row = decide_access_request(
+                experiment_id,
+                request_id,
+                workspace_id,
+                user_id,
+                bool(body.get("approve")),
+                hours=int(body.get("hours") or 24),
+                db_path=db,
+            )
+        if not request_row:
+            return jsonify({"error": "Request not found"}), 404
+        return jsonify(request_row)
+
+    return bp

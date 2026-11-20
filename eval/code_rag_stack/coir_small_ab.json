@@ -1,0 +1,15 @@
+{
+  "dataset": "CoIR/CodeSearchNet-python-small",
+  "queries": 50,
+  "corpus": 1000,
+  "bm25": {
+    "ndcg@10": 0.8621,
+    "mrr@10": 0.8357,
+    "recall@100": 1.0
+  },
+  "code_rag": {
+    "ndcg@10": 0.6754,
+    "mrr@10": 0.6456,
+    "recall@100": 0.92
+  }
+}

@@ -1,0 +1,60 @@
+"""Paragraph citation helper tests."""
+
+from __future__ import annotations
+
+import unittest
+from unittest import mock
+
+from services.qa.citations import paragraph_citation
+
+
+class CitationTests(unittest.TestCase):
+    def test_paragraph_citation(self) -> None:
+        class FakePG:
+            def execute(self, sql, params):
+                return self
+
+            def fetchall(self):
+                return [{"sentence_id": "s1"}, {"sentence_id": "s2"}]
+
+            def close(self):
+                pass
+
+        with mock.patch(
+            "services.qa.citations.corpus_connection", return_value=FakePG()
+        ):
+            result = paragraph_citation("p1")
+        self.assertEqual(result["paragraph_id"], "p1")
+        self.assertEqual(result["sentence_ids"], ["s1", "s2"])
+
+    def test_empty(self) -> None:
+        self.assertEqual(paragraph_citation(""), {})
+
+    def test_build_sources_adds_paragraph_ids(self) -> None:
+        from unittest import mock
+
+        from services.qa.qa_service import QAService
+
+        service = object.__new__(QAService)
+        retrieval = {
+            "paragraphs": [
+                {"para_id": "p1", "paper_id": "paper", "text": "body"},
+            ]
+        }
+        citations = [{"type": "P", "num": 1, "raw": "[P1]"}]
+        with mock.patch(
+            "services.qa.qa_service.paragraph_citation",
+            return_value={"paragraph_id": "p1", "sentence_ids": ["s1", "s2"]},
+        ):
+            sources = service._build_sources(retrieval, citations)
+        self.assertEqual(sources["paragraphs"][0]["paragraph_id"], "p1")
+        self.assertEqual(sources["paragraphs"][0]["sentence_ids"], ["s1", "s2"])
+
+    def test_fallback_citations(self) -> None:
+        from services.qa.citations import fallback_citations
+
+        citations = fallback_citations(5, limit=3)
+        self.assertEqual(len(citations), 3)
+        self.assertEqual(citations[0]["raw"], "[P1]")
+        self.assertTrue(citations[0]["fallback"])
+        self.assertEqual(fallback_citations(0), [])

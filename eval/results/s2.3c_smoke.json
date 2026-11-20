@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "questions": 3,
+    "evidence_recall@10": 0.0,
+    "evidence_recall@20": 0.0,
+    "anchor_recall@10": 0.0,
+    "mrr": 0.0,
+    "ndcg@10": 0.0,
+    "elapsed_s": 79.6,
+    "backend": "sentence (SCIPAL_EVIDENCE_BACKEND default)"
+  },
+  "rows": [
+    {
+      "question_id": "s1-001",
+      "category": "factoid",
+      "question": "How many neurons does the mouse brain contain?",
+      "gold_paper_id": "paper_import_106459887625",
+      "gold_sentence_ids": [
+        "paper_import_106459887625_para_0050_sent_001"
+      ],
+      "returned": 19,
+      "hit_ranks": [],
+      "anchor_hit_rank": null,
+      "recall@10": false,
+      "recall@20": false,
+      "latency_s": 70.063,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-002",
+      "category": "factoid",
+      "question": "Which six modulatory neuron types are listed in the mouse brain atlas?",
+      "gold_paper_id": "paper_import_106459887625",
+      "gold_sentence_ids": [
+        "paper_import_106459887625_para_0055_sent_004"
+      ],
+      "returned": 24,
+      "hit_ranks": [],
+      "anchor_hit_rank": null,
+      "recall@10": false,
+      "recall@20": false,
+      "latency_s": 4.214,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-003",
+      "category": "method",
+      "question": "Which software was used to calculate cumulative positions and mean velocities?",
+      "gold_paper_id": "paper_import_106459887625",
+      "gold_sentence_ids": [
+        "paper_import_106459887625_para_0084_sent_004"
+      ],
+      "returned": 20,
+      "hit_ranks": [],
+      "anchor_hit_rank": null,
+      "recall@10": false,
+      "recall@20": false,
+      "latency_s": 5.36,
+      "sufficient": true
+    }
+  ]
+}

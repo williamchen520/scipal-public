@@ -1,0 +1,5 @@
+FROM scipal-app:latest
+WORKDIR /app
+COPY . /app
+RUN pip install --no-cache-dir pysbd==0.3.4 tree-sitter-javascript==0.25.0 tree-sitter-typescript==0.23.2
+RUN mkdir -p data documents documents_xml logs

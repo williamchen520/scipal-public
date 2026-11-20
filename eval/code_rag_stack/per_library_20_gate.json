@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "baseline": {
+    "cases": 200,
+    "file@1": 0.67,
+    "file@3": 0.79
+  },
+  "candidate": {
+    "cases": 200,
+    "file@1": 0.835,
+    "file@3": 0.9
+  },
+  "rule": "candidate file@1 >= baseline file@1"
+}

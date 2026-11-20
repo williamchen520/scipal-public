@@ -1,0 +1,94 @@
+{
+  "libraries": [
+    {
+      "library_id": "lib_2c5709b07c77",
+      "imports_total": 2249,
+      "imports_resolved": 525,
+      "unresolved_internal": 0,
+      "external": 1724,
+      "cross_language": 0,
+      "internal_coverage": 1.0
+    },
+    {
+      "library_id": "lib_anndata",
+      "imports_total": 1603,
+      "imports_resolved": 476,
+      "unresolved_internal": 1,
+      "external": 1126,
+      "cross_language": 0,
+      "internal_coverage": 0.9979
+    },
+    {
+      "library_id": "lib_squidpy",
+      "imports_total": 1390,
+      "imports_resolved": 334,
+      "unresolved_internal": 2,
+      "external": 1054,
+      "cross_language": 0,
+      "internal_coverage": 0.994
+    },
+    {
+      "library_id": "lib_scvi_tools",
+      "imports_total": 3080,
+      "imports_resolved": 1056,
+      "unresolved_internal": 0,
+      "external": 2024,
+      "cross_language": 0,
+      "internal_coverage": 1.0
+    },
+    {
+      "library_id": "lib_snakemake",
+      "imports_total": 1577,
+      "imports_resolved": 483,
+      "unresolved_internal": 1,
+      "external": 1093,
+      "cross_language": 0,
+      "internal_coverage": 0.9979
+    },
+    {
+      "library_id": "lib_ggplot2",
+      "imports_total": 31,
+      "imports_resolved": 0,
+      "unresolved_internal": 0,
+      "external": 31,
+      "cross_language": 0,
+      "internal_coverage": null
+    },
+    {
+      "library_id": "lib_dplyr",
+      "imports_total": 10,
+      "imports_resolved": 1,
+      "unresolved_internal": 0,
+      "external": 9,
+      "cross_language": 0,
+      "internal_coverage": 1.0
+    },
+    {
+      "library_id": "lib_12473817b941",
+      "imports_total": 143,
+      "imports_resolved": 143,
+      "unresolved_internal": 0,
+      "external": 0,
+      "cross_language": 0,
+      "internal_coverage": 1.0
+    },
+    {
+      "library_id": "lib_nfcore_scrnaseq",
+      "imports_total": 49,
+      "imports_resolved": 49,
+      "unresolved_internal": 0,
+      "external": 0,
+      "cross_language": 0,
+      "internal_coverage": 1.0
+    },
+    {
+      "library_id": "lib_nfcore_atacseq",
+      "imports_total": 80,
+      "imports_resolved": 80,
+      "unresolved_internal": 0,
+      "external": 0,
+      "cross_language": 0,
+      "internal_coverage": 1.0
+    }
+  ]
+}

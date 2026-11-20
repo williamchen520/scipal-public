@@ -1,0 +1,22 @@
+[
+  {"id":"h01","category":"process","library_id":"lib_12473817b941","query":"remove sequencing adapters","expected_symbol":"TRIMGALORE","expected_path":"modules/nf-core/trimgalore/main.nf"},
+  {"id":"h02","category":"process","library_id":"lib_12473817b941","query":"align spliced reads to genome","expected_symbol":"STAR_ALIGN","expected_path":"modules/nf-core/star/align/main.nf"},
+  {"id":"h03","category":"process","library_id":"lib_12473817b941","query":"quantify transcript abundance","expected_symbol":"SALMON_QUANT","expected_path":"modules/nf-core/salmon/quant/main.nf"},
+  {"id":"h04","category":"process","library_id":"lib_12473817b941","query":"build transcript index","expected_symbol":"SALMON_INDEX","expected_path":"modules/nf-core/salmon/index/main.nf"},
+  {"id":"h05","category":"process","library_id":"lib_12473817b941","query":"estimate expression from bam","expected_symbol":"RSEM_CALCULATEEXPRESSION","expected_path":"modules/nf-core/rsem/calculateexpression/main.nf"},
+  {"id":"h06","category":"process","library_id":"lib_12473817b941","query":"prepare rsem reference","expected_symbol":"RSEM_PREPAREREFERENCE","expected_path":"modules/nf-core/rsem/preparereference/main.nf"},
+  {"id":"h07","category":"process","library_id":"lib_12473817b941","query":"sort alignment file","expected_symbol":"SAMTOOLS_SORT","expected_path":"modules/nf-core/samtools/sort/main.nf"},
+  {"id":"h08","category":"process","library_id":"lib_12473817b941","query":"index alignment file","expected_symbol":"SAMTOOLS_INDEX","expected_path":"modules/nf-core/samtools/index/main.nf"},
+  {"id":"h09","category":"process","library_id":"lib_12473817b941","query":"count reads per gene","expected_symbol":"SUBREAD_FEATURECOUNTS","expected_path":"modules/nf-core/subread/featurecounts/main.nf"},
+  {"id":"h10","category":"process","library_id":"lib_12473817b941","query":"bam statistics","expected_symbol":"RSEQC_BAMSTAT","expected_path":"modules/nf-core/rseqc/bamstat/main.nf"},
+  {"id":"h11","category":"process","library_id":"lib_12473817b941","query":"rna seq quality report","expected_symbol":"QUALIMAP_RNASEQ","expected_path":"modules/nf-core/qualimap/rnaseq/main.nf"},
+  {"id":"h12","category":"process","library_id":"lib_12473817b941","query":"library complexity","expected_symbol":"PRESEQ_LCEXTRAP","expected_path":"modules/nf-core/preseq/lcextrap/main.nf"},
+  {"id":"h13","category":"process","library_id":"lib_12473817b941","query":"remove ribosomal rna","expected_symbol":"SORTMERNA","expected_path":"modules/nf-core/sortmerna/main.nf"},
+  {"id":"h14","category":"process","library_id":"lib_12473817b941","query":"split bam by reference","expected_symbol":"BBMAP_BBSPLIT","expected_path":"modules/nf-core/bbmap/bbsplit/main.nf"},
+  {"id":"h15","category":"process","library_id":"lib_12473817b941","query":"extract archive","expected_symbol":"UNTAR","expected_path":"modules/nf-core/untar/main.nf"},
+  {"id":"h16","category":"process","library_id":"lib_12473817b941","query":"detect ribosomal reads","expected_symbol":"RIBODETECTOR","expected_path":"modules/nf-core/ribodetector/main.nf"},
+  {"id":"h17","category":"process","library_id":"lib_12473817b941","query":"rseqc experiment inference","expected_symbol":"RSEQC_INFEREXPERIMENT","expected_path":"modules/nf-core/rseqc/inferexperiment/main.nf"},
+  {"id":"h18","category":"process","library_id":"lib_12473817b941","query":"rseqc inner distance","expected_symbol":"RSEQC_INNERDISTANCE","expected_path":"modules/nf-core/rseqc/innerdistance/main.nf"},
+  {"id":"h19","category":"process","library_id":"lib_12473817b941","query":"rseqc junction annotation","expected_symbol":"RSEQC_JUNCTIONANNOTATION","expected_path":"modules/nf-core/rseqc/junctionannotation/main.nf"},
+  {"id":"h20","category":"process","library_id":"lib_12473817b941","query":"build tx2gene","expected_symbol":"CUSTOM_TX2GENE","expected_path":"modules/nf-core/custom/tx2gene/main.nf"}
+]

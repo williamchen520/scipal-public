@@ -1,0 +1,1674 @@
+{
+  "rows": [
+    {
+      "question_id": "s1-001",
+      "category": "factoid",
+      "question": "How many neurons does the mouse brain contain?",
+      "gold_paper_id": "paper_import_106459887625",
+      "paper_title": "Molecularly defined cellular atlas of the entire mouse brain with isotropic single-cell resolution",
+      "gold_sentence_id": "paper_import_106459887625_para_0050_sent_001",
+      "gold_sentence": "The mouse brain contains approximately 70 million neurons, each expressing distinct genes and contributing to neural circuits.",
+      "gold_para_id": "paper_import_106459887625_para_0050",
+      "gold_para": "The mouse brain contains approximately 70 million neurons, each expressing distinct genes and contributing to neural circuits. While extensive research has mapped the spatial distribution of specific neuronal types 8 , 13 , 32 , 56 , 57 , 58 , 59 , a comprehensive census of all brain cells has been hindered by technical limitations. Integrating data across studies has been challenging due to inconsistencies 60 , 61 , 62 , 63 , 64 .",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-002",
+      "category": "factoid",
+      "question": "Which six modulatory neuron types are listed in the mouse brain atlas?",
+      "gold_paper_id": "paper_import_106459887625",
+      "paper_title": "Molecularly defined cellular atlas of the entire mouse brain with isotropic single-cell resolution",
+      "gold_sentence_id": "paper_import_106459887625_para_0055_sent_004",
+      "gold_sentence": "The six modulatory types include major neurotransmitter systems—cholinergic (ChAT + ), dopaminergic (TH + and DAT + ), and serotonergic (SERT + )—as well as peptidergic neurons (CRH + and GAL + ).",
+      "gold_para_id": "paper_import_106459887625_para_0055",
+      "gold_para": "The 19 neuronal types included in this study were selected to encompass, as comprehensively as possible, the most frequently investigated subtypes among glutamatergic, GABAergic, and modulatory neurons, prioritizing those lines most representative of the targeted neuronal populations. For example, the eight glutamatergic neuron types include pan-cortical populations such as Camk2a + , VGLUT2 + , and Emx1 + neurons, as well as layer-specific subtypes such as PlxnD1 + , Scnn1a + , and Fezf2 + neurons. The five GABAergic types comprise both pan-GABAergic neurons (GAD2 + and VGAT + ) and the three major cortical inhibitory subclasses (PV + , SOM + , VIP + ). The six modulatory types include major neurotransmitter systems—cholinergic (ChAT + ), dopaminergic (TH + and DAT + ), and serotonergic (SERT + )—as well as peptidergic neurons (CRH + and GAL + ). Nevertheless, we acknowledge that our study does not capture the full diversity of neuronal subtypes already identified in the field of neuroscience. The current dataset is presented as an open resource to facilitate further research, with the expectation that it will be expanded in the future to provide a more comprehensive and broadly applicable reference.",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13615294_para_00035_sent_003",
+          "text": "Instead, because our analysis was intentionally restricted to the two principal functional markers nNOS and ChAT, this category likely comprises a heterogeneous mixture of enteric neurons, including interneurons, intrinsic primary afferent neurons, and excitatory or inhibitory motor neurons expressing alternative neurochemical markers such as calretinin, calbindin, substance P, somatostatin, neuropeptide Y, or CGRP [18].",
+          "paper_id": "paper_PMC13615294"
+        },
+        {
+          "sentence_id": "paper_PMC13631236_para_00042_sent_003",
+          "text": "The total number of retrogradely labeled neurons analyzed per subject was 2211 (CRH-Cre 1), 3309 (CRH-Cre 2), and 1750 (CRH-Cre 3).",
+          "paper_id": "paper_PMC13631236"
+        },
+        {
+          "sentence_id": "paper_PMC13631236_para_00042_sent_001",
+          "text": "To quantify the regional distribution of LHb-projecting CRF+ neurons, EYFP-labeled cell bodies were identified and mapped using the Allen Mouse Brain Atlas in conjunction with the Paxinos and Franklin Mouse Brain Atlas.",
+          "paper_id": "paper_PMC13631236"
+        },
+        {
+          "sentence_id": "paper_PMC13576658_para_00010_sent_003",
+          "text": "This analysis revealed two distinct functional neuron subtypes, each corresponding to a unique state-switching trajectory (Figure 3A).",
+          "paper_id": "paper_PMC13576658"
+        },
+        {
+          "sentence_id": "paper_PMC13631774_para_00036_sent_002",
+          "text": "In addition, the combinations of different response possibilities were widely distributed in wild-type mice and more limited in Pou2f3−/− mice (Fig.",
+          "paper_id": "paper_PMC13631774"
+        },
+        {
+          "sentence_id": "paper_PMC13631236_para_00017_sent_002",
+          "text": "Despite displaying relatively uniform electrophysiological properties, LHb neurons exhibit substantial heterogeneity in their transcriptional profiles, afferents, and projections6,7,63,64.",
+          "paper_id": "paper_PMC13631236"
+        },
+        {
+          "sentence_id": "paper_PMC13576658_para_00010_sent_002",
+          "text": "Specifically, functional neuron subtypes were typically identified using K-modes clustering,27 in which the 24-h ST states of each neuron were treated as its feature vector.",
+          "paper_id": "paper_PMC13576658"
+        },
+        {
+          "sentence_id": "paper_PMC13615294_para_00035_sent_001",
+          "text": "The largest neuronal population in most plexuses consisted of HuC/D+/nNOS−/ChAT− neurons.",
+          "paper_id": "paper_PMC13615294"
+        },
+        {
+          "sentence_id": "paper_PMC10910315_para_00031_sent_003",
+          "text": "Our morphological files of diverse MEC neurons are available at NeuroMorpho.Org (“Wang_G″ archive).",
+          "paper_id": "paper_PMC10910315"
+        },
+        {
+          "sentence_id": "paper_PMC13631774_para_00036_sent_001",
+          "text": "While 40% of the neurons in wild-type mice were broadly tuned across categories, only 29% of neurons in Pou2f3−/− mice were broadly tuned across categories.",
+          "paper_id": "paper_PMC13631774"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-003",
+      "category": "method",
+      "question": "Which software was used to calculate cumulative positions and mean velocities?",
+      "gold_paper_id": "paper_import_106459887625",
+      "paper_title": "Molecularly defined cellular atlas of the entire mouse brain with isotropic single-cell resolution",
+      "gold_sentence_id": "paper_import_106459887625_para_0084_sent_004",
+      "gold_sentence": "The cumulative positions and mean velocities during the control and stimulation periods were calculated using VisuTrack software.",
+      "gold_para_id": "paper_import_106459887625_para_0084",
+      "gold_para": "For optogenetics testing (Fig. 5i ), mice explored the open field freely in 6-min trials divided into two phases: (1) Control Period (0–3 min), mice explored the arena without photostimulation. (2) Stimulation Period (3–6 min), photostimulation was applied to activate glutamatergic or GABAergic neurons in the CPdl or CPvl using a 473 nm laser (10 Hz, 15 ms pulse width, 3.5 mW). Stimulation was triggered when the mouse’s transient velocity exceeded 8 cm/s and ceased when velocity dropped below this threshold. The cumulative positions and mean velocities during the control and stimulation periods were calculated using VisuTrack software. Statistical analyses compared these measures across conditions to evaluate the effects of neuronal activation.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-004",
+      "category": "dataset",
+      "question": "Which mouse model was used to study the whole-brain distribution of microglia?",
+      "gold_paper_id": "paper_import_106459887625",
+      "paper_title": "Molecularly defined cellular atlas of the entire mouse brain with isotropic single-cell resolution",
+      "gold_sentence_id": "paper_import_106459887625_para_0060_sent_003",
+      "gold_sentence": "Additionally, three Cx3cr1-GFP mice (12 weeks old) were used to study the whole-brain distribution of microglia.",
+      "gold_para_id": "paper_import_106459887625_para_0060",
+      "gold_para": "For inducible CreER lines (PlxnD1-2A-CreER and Fezf2-2A-CreER), tamoxifen was prepared by dissolving it in corn oil at room temperature with constant rotation overnight. The solution (20 mg/mL) was administered via intraperitoneal injection three times, with injections given every other day. Additionally, three Cx3cr1-GFP mice (12 weeks old) were used to study the whole-brain distribution of microglia.",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13629504_para_00018_sent_001",
+          "text": "Primary microglia supernatants from the dose curves and NLRP3 inflammasome cell culture experiments were assayed for IL-1β using the Mouse IL-1β/IL-1F2 DuoSet ELISA (R&D Systems, Cat.",
+          "paper_id": "paper_PMC13629504"
+        },
+        {
+          "sentence_id": "paper_PMC13614962_para_00032_sent_001",
+          "text": "Primary postnatal mouse microglial cells were prepared from P1–4 experimental and control mouse brains following the described protocol [75].",
+          "paper_id": "paper_PMC13614962"
+        },
+        {
+          "sentence_id": "paper_PMC13628056_para_00022_sent_001",
+          "text": "Microglia are the most prevalent cell type in the mouse dataset and they possess tremendous diversity in their transcriptomes in general and their PN transcriptomes in specific.",
+          "paper_id": "paper_PMC13628056"
+        },
+        {
+          "sentence_id": "paper_PMC13605233_para_00017_sent_001",
+          "text": "Microglial morphology was analyzed using ImageJ software.",
+          "paper_id": "paper_PMC13605233"
+        },
+        {
+          "sentence_id": "paper_PMC13666788_para_00024_sent_003",
+          "text": "The brain ROIs (DG molecular layer, CA3 stratum radiatum, and CA1 stratum radiatum of both the dorsal and ventral hippocampus) were determined according to the mouse brain atlas (Figure S4) [53].",
+          "paper_id": "paper_PMC13666788"
+        },
+        {
+          "sentence_id": "paper_PMC13629504_para_00004_sent_001",
+          "text": "Primary microglia were prepared from female wild-type C57BL/6 J mice (The Jackson Laboratory) as previously described (Shippy et al., 2022).",
+          "paper_id": "paper_PMC13629504"
+        },
+        {
+          "sentence_id": "paper_PMC13614962_para_00032_sent_002",
+          "text": "BALB/c strain mice were used to generate gender mixed primary microglia cell cultures for RNA-seq experiments.",
+          "paper_id": "paper_PMC13614962"
+        },
+        {
+          "sentence_id": "paper_PMC13615098_para_00030_sent_001",
+          "text": "By contrast, mFcγRII−/− mice exhibited a substantially blunted microglial response following injection with PFF.",
+          "paper_id": "paper_PMC13615098"
+        },
+        {
+          "sentence_id": "paper_PMC13605233_para_00017_sent_003",
+          "text": "Following binarization, outlines were generated, and the images were skeletonized to quantify morphological parameters, including soma area, the number of endpoints, and the maximum branch length of microglial processes [43].",
+          "paper_id": "paper_PMC13605233"
+        },
+        {
+          "sentence_id": "paper_PMC13631343_para_00055_sent_001",
+          "text": "CellProfiler (version 4.2.8; Broad Institute Inc.) was used for morphological analysis of microglia.",
+          "paper_id": "paper_PMC13631343"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-005",
+      "category": "comparison",
+      "question": "Which LHA segment showed a stronger glutamatergic bias?",
+      "gold_paper_id": "paper_import_106459887625",
+      "paper_title": "Molecularly defined cellular atlas of the entire mouse brain with isotropic single-cell resolution",
+      "gold_sentence_id": "paper_import_106459887625_para_0026_sent_007",
+      "gold_sentence": "Within the lateral hypothalamic area (LHA), the middle segment along the anterior-posterior axis exhibited a stronger glutamatergic bias than the anterior and posterior segments.",
+      "gold_para_id": "paper_import_106459887625_para_0026",
+      "gold_para": "We further mapped the spatial distribution of glutamatergic and GABAergic neurons across the entire brain at a 100 µm × 100 µm × 100 µm cubic scale (Figs. 2 g and 3g ). Using this data, we visualized the normed Glu/GABA ratio as a heatmap (Fig. 3j and Supplementary Fig. 8a ). This revealed a heterogeneous spatial distribution with anterior-posterior, left-right, inside-out, and laminar preferences. For example, in the CP, the posterior ventral region was more GABA-biased compared to the anterior dorsolateral region. In the MEA, the ventral region showed a glutamatergic bias, while the dorsal region approached a balanced state. The substantia innominata (SI) displayed an anterior dorsolateral band with a stronger GABAergic bias compared to its posterior ventral counterpart. Within the lateral hypothalamic area (LHA), the middle segment along the anterior-posterior axis exhibited a stronger glutamatergic bias than the anterior and posterior segments. The dorsal aspect of the midbrain reticular nucleus (MRN) and the PAG exhibited a stronger glutamatergic bias compared to the ventral aspect. Laminar preferences were evident in the hippocampal CA1 region, where a specific layer exhibited a reduced glutamatergic bias compared to adjacent layers. In the SC, superficial layers were GABA-biased, while deep layers showed a glutamatergic bias. The MY generally displayed an outer glutamatergic bias compared to its inner aspect, with the PARN showing an anterior glutamatergic bias.",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13610910_para_00029_sent_001",
+          "text": "Across the assessed endpoints, GA 200 mg/kg/day and EA 50 mg/kg/day generally produced stronger effects than the corresponding lower doses.",
+          "paper_id": "paper_PMC13610910"
+        },
+        {
+          "sentence_id": "paper_PMC13631236_para_00001_sent_001",
+          "text": "The majority of LHb neurons are glutamatergic, and express markers such as the vesicular glutamate transporter 2 (VGLUT2)6.",
+          "paper_id": "paper_PMC13631236"
+        },
+        {
+          "sentence_id": "paper_PMC11200646_para_00020_sent_003",
+          "text": "The decline in GluA1 levels was most significant in the caffeine group (C), whereas the application of both doses of VA and the CM (caffeine followed by melatonin) treatment resulted in an increase in GluA1 levels compared to the C group (p < 0.0001).",
+          "paper_id": "paper_PMC11200646"
+        },
+        {
+          "sentence_id": "paper_PMC13610910_para_00030_sent_002",
+          "text": "First, while total hippocampal tissue glutamate was quantified using LC–MS/MS, the study did not directly assess EAAT expression, vesicular glutamate transporter (VGLUT) activity, or NMDA receptor subunit composition.",
+          "paper_id": "paper_PMC13610910"
+        },
+        {
+          "sentence_id": "paper_PMC13610910_para_00029_sent_003",
+          "text": "EA 50 mg/kg/day showed the most prominent association with lower total hippocampal tissue glutamate concentrations and attenuated Alzheimer-like histological and molecular alterations.",
+          "paper_id": "paper_PMC13610910"
+        },
+        {
+          "sentence_id": "paper_PMC13631236_para_00001_sent_003",
+          "text": "Notably, some LHb neurons co-express both glutamatergic and GABAergic markers.",
+          "paper_id": "paper_PMC13631236"
+        },
+        {
+          "sentence_id": "paper_PMC13631774_para_00044_sent_003",
+          "text": "One possible explanation is that we used monosodium glutamate rather than monopotassium glutamate.",
+          "paper_id": "paper_PMC13631774"
+        },
+        {
+          "sentence_id": "paper_PMC13610910_para_00030_sent_003",
+          "text": "The mechanisms underlying the observed treatment-associated differences in total hippocampal tissue glutamate remain unclear because the present analysis did not distinguish extracellular glutamate from intracellular or metabolic pools.",
+          "paper_id": "paper_PMC13610910"
+        },
+        {
+          "sentence_id": "paper_PMC13610910_para_00027_sent_003",
+          "text": "Previous evidence supports the neuroprotective effects of GA in experimental Alzheimer-like pathology [26].",
+          "paper_id": "paper_PMC13610910"
+        },
+        {
+          "sentence_id": "paper_PMC13631283_para_00009_sent_002",
+          "text": "2H and EV2B,C).",
+          "paper_id": "paper_PMC13631283"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-006",
+      "category": "factoid",
+      "question": "What did prior genome analysis suggest about Acanthamoeba energy metabolism?",
+      "gold_paper_id": "paper_PMC13632651",
+      "paper_title": "Mitochondrial proteome of Acanthamoeba delineates aerobic and anaerobic pathways dynamically regulated by oxygen",
+      "gold_sentence_id": "paper_PMC13632651_para_00003_sent_003",
+      "gold_sentence": "In addition, prior genome analysis suggested Acanthamoeba may possess pathways for anerobic ATP production not present in yeast or animals.",
+      "gold_para_id": "paper_PMC13632651_para_00003",
+      "gold_para": "Early studies pointed to fascinating features of Acanthamoeba mitochondria. Although it is a “cousin” of animals and fungi, its circular mtDNA encodes an impressive 42 open reading frames (ORFs)32–35 in comparison to 13 in humans36 and eight conserved mtDNA ORFs in yeast.37 Acanthamoeba contains a superset of mitochondrial pathways found in humans and yeast, including: (i) a full OXPHOS system spanning complex I–V,33,35,38–40 (ii) an ER-mitochondria encounter structure (ERMES)41, (iii) an uncoupling protein (UCP)42, (iv) three type II NADH dehydrogenases (NDH2s)43 (found in yeast but absent in humans), and (v) an alternative oxidase (AOX),44,45 which is absent in humans and in yeast. In addition, prior genome analysis suggested Acanthamoeba may possess pathways for anerobic ATP production not present in yeast or animals. These include [FeFe]-hydrogenase (HydA) and its assembly factors (HydE, HydF, HydG), pyruvate:ferredoxin oxidoreductase (PFOR), and acetate:succinate CoA transferase 1B (ASCT1B), which is important for anaerobic ATP production via substrate-level phosphorylation.46 While mitochondrial localization has been predicted,46 definitive subcellular localization of these enzymes, their assembly factors, and their activities is still lacking. Neither Acanthamoeba cells nor their isolated mitochondria have been shown to generate or consume H2. It also remains unclear whether these pathways and their activities are constitutively active or environmentally regulated.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-007",
+      "category": "method",
+      "question": "Under which oxygen conditions were Acanthamoeba cells profiled?",
+      "gold_paper_id": "paper_PMC13632651",
+      "paper_title": "Mitochondrial proteome of Acanthamoeba delineates aerobic and anaerobic pathways dynamically regulated by oxygen",
+      "gold_sentence_id": "paper_PMC13632651_para_00033_sent_003",
+      "gold_sentence": "In both nutrient-rich and starvation media, we cultured cells for 24 hours under normoxia (21% O2), hypoxia (1% O2), or near-anoxia (<0.01% O2), plus one or six hours of normoxic recovery after 24 hours of near-anoxia.",
+      "gold_para_id": "paper_PMC13632651_para_00033",
+      "gold_para": "To understand how the mitoproteome and its anaerobic and aerobic pathways are remodeled in response to environmental cues, we cultured Acanthamoeba in biological triplicate under 15 distinct environmental conditions, including an O2 sweep. All 48 samples (including two sets of triplicate controls) were analyzed by MS and RNA-seq (Figure 5A). In both nutrient-rich and starvation media, we cultured cells for 24 hours under normoxia (21% O2), hypoxia (1% O2), or near-anoxia (<0.01% O2), plus one or six hours of normoxic recovery after 24 hours of near-anoxia. Normoxic rich medium maintains motile Acanthamoeba trophozoites, while starvation triggers encystation (Figures 5B, S5A, and S5B). Anoxia caused trophozoites to become nonadherent with atypical morphology, but adherence and normal morphology were regained within 1 hour of re-oxygenation (Figures 5B). In starvation medium, anoxia blocked cyst wall formation, indicating that encystation requires O2, consistent with a recent report23 (Figure 5B). For separate “carbon and iron” perturbations, glucose was either removed or replaced with galactose or glycerol, and ferrous iron was either removed or replaced with ferric iron, changes that also altered morphology (Figure S5C).",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-008",
+      "category": "dataset",
+      "question": "How were defined gas atmospheres established in the chambers?",
+      "gold_paper_id": "paper_PMC13632651",
+      "paper_title": "Mitochondrial proteome of Acanthamoeba delineates aerobic and anaerobic pathways dynamically regulated by oxygen",
+      "gold_sentence_id": "paper_PMC13632651_para_00134_sent_002",
+      "gold_sentence": "At the beginning of the experiment, sealed chambers were repeatedly flushed with pre-mixed gasses to establish defined atmospheres.",
+      "gold_para_id": "paper_PMC13632651_para_00134",
+      "gold_para": "A total of 30 experimental cultures were conducted, with each of 10 culture conditions in biological triplicate (separate flasks)—spanning two media conditions (standard (rich) medium or encystation (starvation) medium) and five different O2 perturbation atmospheric conditions: (i) ambient air (21% O2) for 24 hours, (ii) hypoxia (1% O2, 99% N2 mixed gas) for 24 hours, (iii) near-anoxia (100% N2(g)) for 24 hours, (iv) near-anoxia (100% N2(g)) for 24 hours followed by 1 hour of re-oxygenation under ambient air (21% O2), or (v) near-anoxia (100% N2(g)) for 24 hours followed by 6 hours of re-oxygenation under ambient air (21% O2). At the beginning of the experiment, sealed chambers were repeatedly flushed with pre-mixed gasses to establish defined atmospheres. O2 levels < 0.01% in the near-anoxia condition were confirmed using a colorimetric O2 detection pellet (Anaero-Indicator, Cat# 30-02, Mitsubishi Gas Chemical America, Inc). T-75 flasks (13 mL of media, final volume) were inoculated with 2x10^6 cells (normoxic standard media condition), 4x10^6 cells (all other conditions with standard media), or 10x10^6 cells (encystation media conditions), to achieve similar culture densities at the end of the experiment (based on prior growth optimization studies).",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-009",
+      "category": "method",
+      "question": "Which statistical test was used for the volcano plots and barplots?",
+      "gold_paper_id": "paper_PMC13632651",
+      "paper_title": "Mitochondrial proteome of Acanthamoeba delineates aerobic and anaerobic pathways dynamically regulated by oxygen",
+      "gold_sentence_id": "paper_PMC13632651_para_00155_sent_003",
+      "gold_sentence": "Two-sided Student’s t-tests (shown in volcano plots and barplots in the figures) were performed using the function t.test in Excel on input data that met assumptions of normal distribution.",
+      "gold_para_id": "paper_PMC13632651_para_00155",
+      "gold_para": "Statistical analyses were performed in Excel and R. Details of the benchmark analysis of published and newly generated mitochondrial proteomics datasets are provided in the Methods and include how benchmark datasets were created, corrected for size, and used to determine the sensitivity and precision of the MitoViaPCP list and previously published lists. Two-sided Student’s t-tests (shown in volcano plots and barplots in the figures) were performed using the function t.test in Excel on input data that met assumptions of normal distribution. Adjusted p-values were computed via Benjamini-Hochberg.",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13627678_para_00042_sent_005",
+          "text": "The DIA-NN processed report.pg file was further analyzed using Perseus (v.2.0.7.0) with the following procedures: intensities as “main”, and all other categories as “categorical”; intensities transformed by log2, each replicate annotated as conditions (DMSO, E2, Fulv), normalization achieved through median subtraction, and volcano plots generated using t-test for statistical significance.",
+          "paper_id": "paper_PMC13627678"
+        },
+        {
+          "sentence_id": "paper_PMC13613217_para_00025_sent_002",
+          "text": "A volcano plot was constructed to visualize the distribution of all quantified transcripts, using log2 FC plotted against −log10 adjusted P-values (|log2FC| ≳ 0.5; −log10P > 1) (Fig.",
+          "paper_id": "paper_PMC13613217"
+        },
+        {
+          "sentence_id": "paper_PMC13694270_para_00021_sent_002",
+          "text": "Volcano plots were generated using the scRNAtoolVis package (v0.0.7)31 to visualize metabolite distributions across comparison groups.",
+          "paper_id": "paper_PMC13694270"
+        },
+        {
+          "sentence_id": "paper_PMC13615575_para_00005_sent_002",
+          "text": "A volcano plot was then plotted using the “ggplot2” package (v 3.5.1) [14] to display the results.",
+          "paper_id": "paper_PMC13615575"
+        },
+        {
+          "sentence_id": "paper_PMC13613217_para_00025_sent_001",
+          "text": "To measure phenotype-specific differences, a heat map and a volcano plot were generated.",
+          "paper_id": "paper_PMC13613217"
+        },
+        {
+          "sentence_id": "paper_PMC13631272_para_00034_sent_001",
+          "text": "Statistical analysis and visualization were done in Perseus (v2.0.11)52, using biovenn53 for Venn diagrams or using custom scripts in R (v4.5.2) within R Studio (v2026.01.0.392) as well as Python (v 3.10.12) using the following libraries: Matplotlib: 3.7.1, Pandas: 2.0.3 and NumPy: 1.25.2.",
+          "paper_id": "paper_PMC13631272"
+        },
+        {
+          "sentence_id": "paper_PMC13615527_para_00027_sent_001",
+          "text": "Heatmaps, volcano plots, and barplots were drawn with ggplot2 package (v3.5.1) [68] for R.",
+          "paper_id": "paper_PMC13615527"
+        },
+        {
+          "sentence_id": "paper_PMC11068918_para_00031_sent_001",
+          "text": "12.Visualizing the pairwise fold change analysis by a volcano plot (Figure 1B)",
+          "paper_id": "paper_PMC11068918"
+        },
+        {
+          "sentence_id": "paper_PMC13653916_para_00049_sent_001",
+          "text": "All data were collected from 3 to 5 independent experiments with multiple samples.",
+          "paper_id": "paper_PMC13653916"
+        },
+        {
+          "sentence_id": "paper_PMC13358372_para_00003_sent_001",
+          "text": "Prior to the statistical analysis presented in volcano plots, biomarker NPQ values were standardized based on the mean and standard deviation of non‐carriers.",
+          "paper_id": "paper_PMC13358372"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-010",
+      "category": "comparison",
+      "question": "How did NDH2 protein levels change under hypoxia and anoxia?",
+      "gold_paper_id": "paper_PMC13632651",
+      "paper_title": "Mitochondrial proteome of Acanthamoeba delineates aerobic and anaerobic pathways dynamically regulated by oxygen",
+      "gold_sentence_id": "paper_PMC13632651_para_00036_sent_002",
+      "gold_sentence": "Interestingly, all three NDH2s are increased under hypoxia and anoxia at the protein level, and one is even induced at the RNA level (Figure 5G), raising the provocative hypothesis that NDH2s might have an unexplored role in anaerobic physiology.",
+      "gold_para_id": "paper_PMC13632651_para_00036",
+      "gold_para": "An outlier in these patterns is AOX, which shows intriguing O2-dependent changes that cannot be readily explained by known AOX biochemistry (Figure 5G). Interestingly, all three NDH2s are increased under hypoxia and anoxia at the protein level, and one is even induced at the RNA level (Figure 5G), raising the provocative hypothesis that NDH2s might have an unexplored role in anaerobic physiology. This NDH2 induced by low O2 at the RNA level is likely a matrix-facing internal NDH2 (NDI) based on its phylogenetic affiliation with biochemically characterized homologs in other organisms101–107 (Figure S5E).",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-011",
+      "category": "factoid",
+      "question": "What did Liu et al. identify using a Gli1+ lineage-tracing model?",
+      "gold_paper_id": "paper_PMC13632294",
+      "paper_title": "Developmental and functional landscape of theca cells in ovarian biology",
+      "gold_sentence_id": "paper_PMC13632294_para_00014_sent_002",
+      "gold_sentence": "Liu et al. identified two theca cell precursors using a Gli1 + lineage-tracing model during mouse embryogenesis [40].",
+      "gold_para_id": "paper_PMC13632294_para_00014",
+      "gold_para": "Another widely accepted model proposes that theca cells arise from embryonic progenitor populations. Liu et al. identified two theca cell precursors using a Gli1 + lineage-tracing model during mouse embryogenesis [40]. This work provided genetic evidence for the origin of theca cells and described multicellular interactions required to establish a functional theca layer. The authors reported that theca cells derive from ovary-derived Wt1 + cells and mesonephros-derived Gli1 + cells that migrate from the mesonephros. Paracrine signals, including Desert Hedgehog (DHH) and Indian Hedgehog (IHH), produced by GCs, induce Gli1 expression in theca progenitor cells (TPCs). Ovaries lacking Dhh/Ihh show loss or reduction of the theca layer surrounding follicles, abnormal steroid production, arrested folliculogenesis, and failure to form the corpus luteum [10, 40]. These findings indicate that factors produced by GCs at the primary and secondary follicular stages regulate recruitment of theca cells from the stroma. In the same study, oocyte-derived growth differentiation factor 9 (GDF9) regulated Dhh/Ihh production in GCs [40].",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-012",
+      "category": "factoid",
+      "question": "What did recent work report that TSCs can differentiate into?",
+      "gold_paper_id": "paper_PMC13632294",
+      "paper_title": "Developmental and functional landscape of theca cells in ovarian biology",
+      "gold_sentence_id": "paper_PMC13632294_para_00028_sent_001",
+      "gold_sentence": "Recent work reported that TSCs differentiate into oocyte-like cells and follicle-like structures, with potential relevance for reproductive biology and infertility treatment [54].",
+      "gold_para_id": "paper_PMC13632294_para_00028",
+      "gold_para": "Recent work reported that TSCs differentiate into oocyte-like cells and follicle-like structures, with potential relevance for reproductive biology and infertility treatment [54]. In porcine models, TSCs were induced to express oocyte-associated genes, including GDF9B, C-MOS, DAZL, VASA, ZPC, SCP3, and STEIIA, consistent with differentiation toward an oocyte-like state [50]. Studies in sheep have also reported differentiation of TSCs into oocyte-like cells, supporting cross-species potential for generating germ cell-like cells [51]. In 3D culture systems containing ovarian somatic cells, hTSCs differentiated into follicle-like structures. These structures expressed germ cell markers, including DAZL and GDF9, suggesting initiation of oocyte-like differentiation.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-013",
+      "category": "dataset",
+      "question": "Which lineage-tracing model identified theca cell precursors?",
+      "gold_paper_id": "paper_PMC13632294",
+      "paper_title": "Developmental and functional landscape of theca cells in ovarian biology",
+      "gold_sentence_id": "paper_PMC13632294_para_00014_sent_002",
+      "gold_sentence": "Liu et al. identified two theca cell precursors using a Gli1 + lineage-tracing model during mouse embryogenesis [40].",
+      "gold_para_id": "paper_PMC13632294_para_00014",
+      "gold_para": "Another widely accepted model proposes that theca cells arise from embryonic progenitor populations. Liu et al. identified two theca cell precursors using a Gli1 + lineage-tracing model during mouse embryogenesis [40]. This work provided genetic evidence for the origin of theca cells and described multicellular interactions required to establish a functional theca layer. The authors reported that theca cells derive from ovary-derived Wt1 + cells and mesonephros-derived Gli1 + cells that migrate from the mesonephros. Paracrine signals, including Desert Hedgehog (DHH) and Indian Hedgehog (IHH), produced by GCs, induce Gli1 expression in theca progenitor cells (TPCs). Ovaries lacking Dhh/Ihh show loss or reduction of the theca layer surrounding follicles, abnormal steroid production, arrested folliculogenesis, and failure to form the corpus luteum [10, 40]. These findings indicate that factors produced by GCs at the primary and secondary follicular stages regulate recruitment of theca cells from the stroma. In the same study, oocyte-derived growth differentiation factor 9 (GDF9) regulated Dhh/Ihh production in GCs [40].",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-014",
+      "category": "factoid",
+      "question": "What does the follicular vascular network deliver?",
+      "gold_paper_id": "paper_PMC13632294",
+      "paper_title": "Developmental and functional landscape of theca cells in ovarian biology",
+      "gold_sentence_id": "paper_PMC13632294_para_00062_sent_002",
+      "gold_sentence": "This vascular network delivers nutrients, oxygen, gonadotropins, and cholesterol substrates to metabolically active follicular cells, supporting reproductive function (Fig.",
+      "gold_para_id": "paper_PMC13632294_para_00062",
+      "gold_para": "Angiogenesis within the theca layer supports follicular development, steroidogenesis, and ovulation, and it is required for corpus luteum formation. This vascular network delivers nutrients, oxygen, gonadotropins, and cholesterol substrates to metabolically active follicular cells, supporting reproductive function (Fig. 4).Fig. 4Vascularization dynamics in the theca layerduring follicular development and luteinization. The illustration depicts vascular developmentthat supports ovarian follicles across stages of maturation. During early stages, primordial andprimary follicles (A) rely mainly on stromal blood vessels for nutrient and oxygen supply. Asfollicles reach the secondary stage (B), angiogenic factors such as vascular endothelial growthfactor A (VEGFA), fibroblast growth factor 2 (FGF2), and angiopoietins (ANGPTs) are secretedand stimulate angiogenesis in the surrounding theca layer. This vascular expansion supportsdelivery of hormones, oxygen, and metabolic substrates to growing follicles. With transition tothe early antral (C) and antral (D) stages, angiogenesis intensifies further, supports antrumformation, and meets the metabolic demands of follicular maturation and ovulation. Growthfactors such as platelet-derived growth factor subunit B (PDGFB), FGF2, ANGPTs, and VEGFAcoordinate vascular remodelling during these stages. After ovulation, formation of the corpusluteum (E) involves rapid angiogenesis, which supports luteal function. Inflammatory mediatorssuch as interleukin-6 (IL-6), C-C motif chemokine ligand 20 (CCL20), and C-X-C chemokinereceptor type 4 (CXCR4) further regulate vascularization and support progesterone secretionrequired for early pregnancy. The diagram also highlights organisation of arteries, veins,lymphatic vessels, and nerves within the ovarian stroma. Question marks indicate areas wheremechanisms of vascular regulation remain incompletely defined",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-015",
+      "category": "factoid",
+      "question": "How long did ovarian support last after TSC transplantation?",
+      "gold_paper_id": "paper_PMC13632294",
+      "paper_title": "Developmental and functional landscape of theca cells in ovarian biology",
+      "gold_sentence_id": "paper_PMC13632294_para_00092_sent_002",
+      "gold_sentence": "Although studies report improved ovarian function and follicular development after TSC transplantation, these effects appear transient, with ovarian support lasting only a few months.",
+      "gold_para_id": "paper_PMC13632294_para_00092",
+      "gold_para": "Nevertheless, challenges remain. Although studies report improved ovarian function and follicular development after TSC transplantation, these effects appear transient, with ovarian support lasting only a few months. Concerns also remain regarding chromosomal integrity of oocytes from treated ovaries and the capacity to achieve full-term pregnancies. Future studies should refine transplantation protocols, extend the durability and function of regenerated follicles, and establish safety and efficacy before translation to clinical use in humans.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-016",
+      "category": "dataset",
+      "question": "In which clinical setting was CD19-targeted CAR-T evidence reported?",
+      "gold_paper_id": "paper_PMC13627087",
+      "paper_title": "Chimeric antigen receptor T (CAR-T) cell therapy in non-oncological diseases",
+      "gold_sentence_id": "paper_PMC13627087_para_00044_sent_001",
+      "gold_sentence": "Emerging clinical evidence demonstrates the therapeutic potential of CD19-targeted CAR-T cell therapy in refractory cases.",
+      "gold_para_id": "paper_PMC13627087_para_00044",
+      "gold_para": "Emerging clinical evidence demonstrates the therapeutic potential of CD19-targeted CAR-T cell therapy in refractory cases. Two male ASS patients who had failed multiple conventional immunosuppressive therapies, including rituximab and intravenous immunoglobulin, showed rapid and sustained clinical improvement following CAR-T treatment.217,218 Both patients achieved seroconversion of anti-Jo-1 antibodies, normalization of creatine kinase levels, and significant improvements in muscle strength and respiratory function. Similar outcomes were observed in a 45-year-old female patient with refractory myositis, arthritis, and pulmonary involvement who had previously failed nine different treatment regimens. Following CD19 CAR-T therapy, she demonstrated marked improvement across all disease manifestations according to ACR/EULAR criteria and maintained drug-free remission during 150 days of follow-up.219 Additional case reports have corroborated these findings, showing consistent efficacy of CD19 CAR-T therapy in ASS patients.176,219,220 While these clinical observations are promising, several key questions remain unanswered. The precise mechanism by which CD19-targeted CAR-T cells ameliorate IIM symptoms requires further elucidation, particularly given that some patients received combination therapies making it challenging to isolate the specific contribution of CAR-T treatment.206,221,222 Current research efforts include an ongoing Phase I/II clinical trial (NCT06154252) focused on evaluating adverse events and treatment efficacy223 (Fig. 3).",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13614616_para_00001_sent_003",
+          "text": "Indeed, the first reported use of CD19-targeted CAR T cells in a patient with severe, multidrug-resistant UC led to clinical, biochemical, and mucosal improvement [1].",
+          "paper_id": "paper_PMC13614616"
+        },
+        {
+          "sentence_id": "paper_PMC10429589_para_00001_sent_001",
+          "text": "Background: CD19-targeted chimeric antigen receptor-modified (CD19 CAR) T-cell therapy is transforming the treatment of patients with relapsed/refractory (R/R) B cell malignancies.",
+          "paper_id": "paper_PMC10429589"
+        },
+        {
+          "sentence_id": "paper_PMC13687445_para_00057_sent_001",
+          "text": "The first clinical use of CD19 CAR‐T cells in autoimmunity was reported in 2021 in a 20‐year‐old patient with refractory SLE, active LN, nephrotic syndrome and arthritis [305].",
+          "paper_id": "paper_PMC13687445"
+        },
+        {
+          "sentence_id": "paper_PMC13626098_para_00092_sent_002",
+          "text": "Published experience with integrating CD19-targeted CAR-T cell therapy remains confined to individual cases and a two-patient MG/LEMS series (99–101).",
+          "paper_id": "paper_PMC13626098"
+        },
+        {
+          "sentence_id": "paper_PMC10430431_para_00004_sent_001",
+          "text": "Results: After testing different commercially available antibodies for the detection of CD19 CAR-T cells, CD19 protein conjugated with biotin and identified by streptavidin showed the highest resolution in contrast to Antigen CD19 labeled FITC (stain index of 22.19 vs 4.64, p=0.0286).",
+          "paper_id": "paper_PMC10430431"
+        },
+        {
+          "sentence_id": "paper_PMC13630001_para_00028_sent_002",
+          "text": "Our findings suggested that CD19 CAR-T was associated with a higher CR/CRi rate than blinatumomab therapy, especially in patients with high tumor burden and relapsed disease.",
+          "paper_id": "paper_PMC13630001"
+        },
+        {
+          "sentence_id": "paper_PMC10429589_para_00001_sent_002",
+          "text": "We have reported high efficacy in patients (pts) with high-risk R/R chronic lymphocytic leukemia (CLL) treated on a phase I/II clinical trial of CD19 CAR T cells, but with limited follow-up (NCT01865617; Turtle, JCO 2017).",
+          "paper_id": "paper_PMC10429589"
+        },
+        {
+          "sentence_id": "paper_PMC13620351_para_00048_sent_001",
+          "text": "CD20-directed CAR-T therapy has emerged as a promising salvage strategy for patients with relapsed or refractory B-cell malignancies, particularly following failure of CD19-targeted CAR-T therapy.",
+          "paper_id": "paper_PMC13620351"
+        },
+        {
+          "sentence_id": "paper_PMC13620351_para_00048_sent_006",
+          "text": "Future research should focus on dual-target CAR-T strategies targeting both CD19 and CD20, optimisation of CAR constructs to improve persistence, rational combinations with immune checkpoint inhibitors, and larger comparative clinical trials to determine whether CD20-directed CAR-T therapy provides sustained advantages over existing therapeutic approaches (Wu et al., 2024b; Xue et al., 2024).",
+          "paper_id": "paper_PMC13620351"
+        },
+        {
+          "sentence_id": "paper_PMC13627683_para_00000_sent_003",
+          "text": "Factors hindering the effectiveness of CAR T cell therapy include a high tumor burden prior to CAR T cell infusion12,13, loss of or decreased CD19 expression on tumor cells14,15, tumor genetic alterations16,17, and the highly differentiated or dysfunctional state of CAR T cells18,19.",
+          "paper_id": "paper_PMC13627683"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-017",
+      "category": "method",
+      "question": "Which mouse model was used to test NMDAR CAAR-T cells?",
+      "gold_paper_id": "paper_PMC13627087",
+      "paper_title": "Chimeric antigen receptor T (CAR-T) cell therapy in non-oncological diseases",
+      "gold_sentence_id": "paper_PMC13627087_para_00057_sent_008",
+      "gold_sentence": "In vivo, immunodeficient mice lacking natural killer cells and lymphocytes were co-injected with NMDAR antibodies and Nalm6 cells, followed by treatment with NMDAR CAAR-T cells.",
+      "gold_para_id": "paper_PMC13627087_para_00057",
+      "gold_para": "Autoimmune encephalitis (AE) is a form of encephalitis driven by autoimmune mechanisms. Since the identification of anti-N-methyl-D-aspartate receptor (NMDAR) encephalitis in 2007, numerous autoantibodies targeting neuronal cell-surface or synaptic proteins have been discovered.306 AE accounts for approximately 10–20% of all encephalitis cases, with anti-NMDAR encephalitis being the most prevalent subtype, representing 54–80% of AE cases.307 Other notable forms include encephalitis associated with antibodies against leucine-rich glioma-inactivated protein 1 (LGI1) and γ-aminobutyric acid type B receptor (GABABR).308–310 Brain tissue biopsies from patients with NMDAR AE have revealed significant compartmentalized enrichment of CD20+ B cells and CD138+ plasma cells, suggesting that autoantibodies found in the cerebrospinal fluid (CSF) may be produced by activated immune cells infiltrating the central nervous system.311–313 Reincke et al. developed NMDAR-specific chimeric autoantibody receptor T cells (NMDAR CAAR-T), which consist of an NMDAR autoantigen fragment fused with a CD8 hinge and 41BB/CD3ζ intracellular signaling domains. In vitro, NMDAR CAAR-T cells were activated and expanded using K562 and Nalm6 cell lines co-expressing human monoclonal antibodies and luciferase (ffluc) as target cells. Upon activation, these CAAR-T cells secreted interferon-γ and granzyme B, leading to the selective lysis of target cells. The therapeutic efficacy of NMDAR CAAR-T cells was evaluated using ffluc as a reporter. In vivo, immunodeficient mice lacking natural killer cells and lymphocytes were co-injected with NMDAR antibodies and Nalm6 cells, followed by treatment with NMDAR CAAR-T cells. This resulted in a reduction of Nalm6 cells and elimination of the pathogenic antibodies, without any observed off-target toxicity or adverse effects.314 Current related experiments remain at the preclinical stage, and further investigation is required to determine their potential applicabilit",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13631509_para_00005_sent_003",
+          "text": "Mice used for tumor experiments were between 6 and 10 weeks of age.",
+          "paper_id": "paper_PMC13631509"
+        },
+        {
+          "sentence_id": "paper_PMC13626098_para_00110_sent_003",
+          "text": "These cells selectively eliminated NMDAR-specific B-cell lines and reduced autoantibody concentrations in a passive-transfer mouse model.",
+          "paper_id": "paper_PMC13626098"
+        },
+        {
+          "sentence_id": "paper_PMC13688982_para_00053_sent_001",
+          "text": "The advent of new technologies for the generation of transgenic mice in combination with the long list of failed human AD trials has propelled the field to create a set of different rodent models of AD that can recapitulate several of the human AD pathological hallmarks, including amyloid plaque formation, tau hyperphosphorylation and memory deficits (Table 2).189 In addition to cognitive performance, mouse models of AD are being used to identify possible changes in nociceptive processing.",
+          "paper_id": "paper_PMC13688982"
+        },
+        {
+          "sentence_id": "paper_PMC13297230_para_00052_sent_001",
+          "text": "To assess spatial working memory of the mice, the spontaneous alternation T-maze test was conducted (Figure 8A).",
+          "paper_id": "paper_PMC13297230"
+        },
+        {
+          "sentence_id": "paper_PMC13335699_para_00039_sent_003",
+          "text": "Mice were i.v., i.m., or i.p. treated at indicated timepoints with different LNPs loaded with different mRNA constructs (5‐20 µg/dose), TBS, or fingolimod.",
+          "paper_id": "paper_PMC13335699"
+        },
+        {
+          "sentence_id": "paper_PMC13626098_para_00110_sent_002",
+          "text": "NMDAR-specific chimeric autoantibody receptor (CAAR) T cells incorporate an extracellular NMDAR autoantigen domain that recognizes B-cell receptors expressed by NMDAR-reactive B cells.",
+          "paper_id": "paper_PMC13626098"
+        },
+        {
+          "sentence_id": "paper_PMC13627087_para_00057_sent_005",
+          "text": "In vitro, NMDAR CAAR-T cells were activated and expanded using K562 and Nalm6 cell lines co-expressing human monoclonal antibodies and luciferase (ffluc) as target cells.",
+          "paper_id": "paper_PMC13627087"
+        },
+        {
+          "sentence_id": "paper_PMC13719395_para_00009_sent_002",
+          "text": "In total, 7 CD11c-DTR/GFP mice were used: 3 for baseline (native) regional density mapping and 4 for the paired implanted-versus-contralateral comparison.",
+          "paper_id": "paper_PMC13719395"
+        },
+        {
+          "sentence_id": "paper_PMC13719395_para_00009_sent_003",
+          "text": "Similarly, 6 TMEM119-2A-EGFP mice were used: 3 for baseline mapping and 3 for the paired implanted-versus-contralateral comparison.",
+          "paper_id": "paper_PMC13719395"
+        },
+        {
+          "sentence_id": "paper_PMC10248534_para_00021_sent_003",
+          "text": "GlyRα1S296A mice and their wild-type littermates (7–8 weeks old) were also used.",
+          "paper_id": "paper_PMC10248534"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-018",
+      "category": "dataset",
+      "question": "Which target increases with age and is proposed for CAR-T therapy?",
+      "gold_paper_id": "paper_PMC13627087",
+      "paper_title": "Chimeric antigen receptor T (CAR-T) cell therapy in non-oncological diseases",
+      "gold_sentence_id": "paper_PMC13627087_para_00065_sent_001",
+      "gold_sentence": "Recent advances identify urokinase-type plasminogen activator receptor (uPAR) as a promising target, with uPAR-positive cells increasing proportionally with age.36",
+      "gold_para_id": "paper_PMC13627087_para_00065",
+      "gold_para": "Recent advances identify urokinase-type plasminogen activator receptor (uPAR) as a promising target, with uPAR-positive cells increasing proportionally with age.36 Engineered uPAR CAR-T cells (m.uPAR-h.28z) incorporating anti-muPAR scFv with hCD28/CD3ζ signaling domains demonstrate remarkable properties368: specific elimination of senescent cells in juvenile and aged mice without tissue toxicity, improved glucose homeostasis and metabolic function in both physiological aging and high-fat diet models, long-term persistence (> 15 months) following single low-dose administration, prevention of age- and diet-induced metabolic decline when administered prophylactically, enhanced pancreatic β-cell function and insulin sensitivity in metabolic syndrome models, and reduced senescent cell burden across multiple tissues (pancreas, liver, adipose). These findings corroborate earlier work using GPNMB vaccination against senescent cells.369 Notably, uPAR CAR-T cells show particularly strong activity in aged mouse livers and spleens, with protective effects lasting over half the murine lifespan.368 The durability of response after single-dose administration contrasts favorably with conventional senolytics. The field faces significant challenges in target identification due to senescent cell heterogeneity, making universal surface antigens unlikely.370,371 However, this diversity may enable precision targeting of specific senescent subpopulations. Alternative targets under investigation include NKG2D ligands (MICA, MICB, ULBP1-5), though their broad expression patterns present manufacturing and toxicity control challenges.372–374 These developments highlight the potential of immunotherapeutic approaches to address fundamental aging mechanisms while underscoring the need for continued target discovery and validation (Fig. 6).Fig. 6Mechanisms of aging and senescence. Various damaging factors can lead to DNA damage or activation of the INK4/ARF gene, resulting in the upregulation of ",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13620351_para_00049_sent_001",
+          "text": "HER2-directed CAR-T therapy has emerged as a promising approach for HER2-positive solid tumours, including breast, gastric, ovarian, and lung cancers, particularly in patients who have progressed despite HER2-targeted monoclonal antibodies (Budi et al., 2022).",
+          "paper_id": "paper_PMC13620351"
+        },
+        {
+          "sentence_id": "paper_PMC13627087_para_00003_sent_001",
+          "text": "While CAR-T therapy offers distinct advantages for non-malignant diseases, including potential long-term remission through immune memory formation35 and reduced cytokine release syndrome risk compared to cancer applications, several challenges remain: Target specificity: Many senescence-associated antigens are also expressed on healthy tissues.36",
+          "paper_id": "paper_PMC13627087"
+        },
+        {
+          "sentence_id": "paper_PMC13627965_para_00005_sent_002",
+          "text": "Chimeric antigen receptor (CAR) T‐cell (CAR‐T) therapy has transformed the treatment of hematologic malignancies, but obtaining similar success in solid tumors has been difficult.",
+          "paper_id": "paper_PMC13627965"
+        },
+        {
+          "sentence_id": "paper_PMC13620351_para_00118_sent_002",
+          "text": "CAR-T cells targeting antigens like HER2, EGFRvIII, and mesothelin have demonstrated potential in treating breast cancer, glioblastoma, and mesothelioma, respectively.",
+          "paper_id": "paper_PMC13620351"
+        },
+        {
+          "sentence_id": "paper_PMC13691269_para_00028_sent_001",
+          "text": "CAR-T cell therapy emerged in the 1990s, featuring engineered CARs that recognize specific tumor surface antigens and form a non-classical immunological synapse (IS).180 Currently, CAR-T therapy is primarily employed in oncology; however, reinfusion of modified immune cells has also demonstrated beneficial effects in aging-related conditions.",
+          "paper_id": "paper_PMC13691269"
+        },
+        {
+          "sentence_id": "paper_PMC13627087_para_00102_sent_001",
+          "text": "CAR-T therapy holds transformative potential beyond oncology, offering promising applications in autoimmune diseases and other chronic conditions.",
+          "paper_id": "paper_PMC13627087"
+        },
+        {
+          "sentence_id": "paper_PMC13620351_para_00013_sent_001",
+          "text": "The evolution of CAR-T-cell therapy has been driven by the need to improve T-cell activation, persistence, and antitumour efficacy while reducing treatment failure and toxicity.",
+          "paper_id": "paper_PMC13620351"
+        },
+        {
+          "sentence_id": "paper_PMC13620351_para_00005_sent_001",
+          "text": "Overall, CAR-T-cell therapy represents a major advance rather than a universally effective cancer treatment.",
+          "paper_id": "paper_PMC13620351"
+        },
+        {
+          "sentence_id": "paper_PMC13627087_para_00066_sent_002",
+          "text": "These cells improve metabolic function and extend healthspan in aging models, outperforming conventional senolytics through their persistent activity.",
+          "paper_id": "paper_PMC13627087"
+        },
+        {
+          "sentence_id": "paper_PMC13620351_para_00118_sent_001",
+          "text": "CAR-T therapy for solid tumors is in its early clinical development stages, but preclinical studies and early-phase trials have shown promise.",
+          "paper_id": "paper_PMC13620351"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-019",
+      "category": "contradiction",
+      "question": "What difficulties does the CAR-T field face in target identification?",
+      "gold_paper_id": "paper_PMC13627087",
+      "paper_title": "Chimeric antigen receptor T (CAR-T) cell therapy in non-oncological diseases",
+      "gold_sentence_id": "paper_PMC13627087_para_00070_sent_010",
+      "gold_sentence": "Furthermore, the field faces ongoing difficulties in target identification and engineering approaches suitable for precise immune modulation.402",
+      "gold_para_id": "paper_PMC13627087_para_00070",
+      "gold_para": "There are currently two proposed solutions. One is uPAR CAR-T, where endothelial cell-induced chronic inflammation itself triggers a series of inflammatory responses due to subsequent degenerative changes. By eliminating the abnormally displayed endothelial cells, it can reduce the immune response triggered.401 The other is regulatory CD4+ Tregs. Engineered Tregs: These counteract hyperlipidemia-induced endothelial damage by suppressing autoimmune responses and preserving vascular endothelial function.402 However, significant challenges remain in translating these approaches. Infusion of polyclonally expanded Treg cells with unknown antigen specificity cannot effectively suppress target cells and inhibit undesirable immune responses and may lead to unwanted side effects such as systemic immunosuppression and reactivation of latent infections. Therefore, the use of polyclonal infusions in clinical trials is often the main reason for the low efficacy of the adopted therapies. CAR Treg cell infusion may induce so-called cytokine storm and neurotoxicity.402 Furthermore, the field faces ongoing difficulties in target identification and engineering approaches suitable for precise immune modulation.402 These limitations highlight the need for continued refinement of cellular therapies to achieve selective immunomodulation without compromising protective immune functions in atherosclerosis (Fig. 7).",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC11200953_para_00002_sent_002",
+          "text": "For small targets like NKCs, matching presents the following difficulties [19]: (1) Due to the few pixels occupied by cells in images, their features are few and unstable; (2) In dense scenes, cells easily overlap and occlude each other, making it challenging for tracking algorithms to maintain target identity information; (3) In time-lapse photography, the relative speed of P-NKCs is often significant, meaning that the displacement of the cell itself over two frames relative to the length of the target is much larger, complicating the capture of trajectories by algorithms.",
+          "paper_id": "paper_PMC11200953"
+        },
+        {
+          "sentence_id": "paper_PMC11200953_para_00007_sent_003",
+          "text": "Despite these errors being relatively infrequent, the sheer number of targets that need to be detected in each frame means that these mistakes can accumulate, leading to significant challenges for subsequent tracking efforts.",
+          "paper_id": "paper_PMC11200953"
+        },
+        {
+          "sentence_id": "paper_PMC13667555_para_00037_sent_002",
+          "text": "Per-class performance in the primary model is uneven; Highway had the best recall (57.7% recall, 44.1% precision, F1 =0.50), Rural was intermediate (27.1% recall, 36.6% precision, F1 =0.31), and Urban was the most challenging to identify (17.9% recall, 20.0% precision, F1 =0.19).",
+          "paper_id": "paper_PMC13667555"
+        },
+        {
+          "sentence_id": "paper_PMC13667639_para_00111_sent_002",
+          "text": "However, its absolute performance under subject-independent evaluation remains limited, indicating that the four-driver dataset and the available behavioural features do not support strong claims regarding practical detection capability.",
+          "paper_id": "paper_PMC13667639"
+        },
+        {
+          "sentence_id": "paper_PMC11200953_para_00002_sent_001",
+          "text": "Secondly, the cell matching issue arises when detecting cells.",
+          "paper_id": "paper_PMC11200953"
+        },
+        {
+          "sentence_id": "paper_PMC11200953_para_00007_sent_002",
+          "text": "However, as shown in Figure 3, the following two types of errors still occurred: Firstly, the omission of targets due to a limited training set affected the algorithm’s generalization capabilities and significant background interference hindered accurate target identification; Secondly, targets were over-detected in scenarios where NKCs appeared densely or overlapped, and when NKCs’ morphological traits were not distinctive, leading to their misclassification as both P-NKCs and NP-NKCs.",
+          "paper_id": "paper_PMC11200953"
+        },
+        {
+          "sentence_id": "paper_PMC13295584_para_00101_sent_003",
+          "text": "The analysis captures changes in overall discriminative performance and also evaluates differences in robustness, sensitivity, and cross-center stability, all of which are critical for the deployment of mammography in real-world environments.",
+          "paper_id": "paper_PMC13295584"
+        },
+        {
+          "sentence_id": "paper_PMC13667639_para_00111_sent_003",
+          "text": "The selected configuration is therefore examined primarily to characterise its behaviour under strict unseen-driver evaluation and to identify the limitations that remain for broader deployment.",
+          "paper_id": "paper_PMC13667639"
+        },
+        {
+          "sentence_id": "paper_PMC13667555_para_00036_sent_002",
+          "text": "The leave-one-driver-out evaluation, which prevents windows from the same driver appearing in both training and test folds, achieved only 34.9% accuracy (macro-F1 =0.33; 95% CI [20.0%, 49.9%]), barely above the majority-class baseline of 27.0% and close to the stratified-random baseline of 32.7% under the identical grouped scheme (Figure 5).",
+          "paper_id": "paper_PMC13667555"
+        },
+        {
+          "sentence_id": "paper_PMC13667555_para_00037_sent_001",
+          "text": "Restricting the leave-one-driver-out evaluation to the seven drivers who completed more than one route (Sensitivity A) gives a similarly modest accuracy of 35.3% (macro-F1 =0.25; 95% CI [17.7%, 53.2%]) against 32.6% for the majority baseline, indicating that this weak generalization is not simply an artifact of the four Rural-only drivers.",
+          "paper_id": "paper_PMC13667555"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-020",
+      "category": "contradiction",
+      "question": "Why are unintended genetic modifications a safety concern?",
+      "gold_paper_id": "paper_PMC13627087",
+      "paper_title": "Chimeric antigen receptor T (CAR-T) cell therapy in non-oncological diseases",
+      "gold_sentence_id": "paper_PMC13627087_para_00083_sent_002",
+      "gold_sentence": "These unintended genetic modifications can result in unpredictable alterations in gene function or regulation.437",
+      "gold_para_id": "paper_PMC13627087_para_00083",
+      "gold_para": "Although the CRISPR gene-editing system has shown immense potential in the field of CAR-T immunotherapy, it also introduces additional risks of genetic toxicity.436–438 Due to genomic similarity,439,440 Cas proteins may induce unintended double-strand breaks (DSBs) at off-target sites, leading to unexpected mutations—commonly referred to as off-target effects. These unintended genetic modifications can result in unpredictable alterations in gene function or regulation.437 CRISPR-induced DSBs can cause chromosomal abnormalities, including large deletions, inversions, and translocations. One commonly used approach is TRAC gene knockout; however, studies have reported that it frequently leads to chromosomal aberrations. Editing of the TRAC locus in human primary T cells using CRISPR RNPs has shown that approximately 5–20% of T cells exhibit either large deletions or complete loss of chromosome 14.441 Transcriptome sequencing further reveals that these chromosomal deletions lead to abnormal expression of various genes, such as CD70 and MDM2. The Cas9-induced chromosomal loss triggers a p53-associated DNA damage response, activation of apoptotic pathways, and p53-induced cell cycle arrest, ultimately compromising the survival advantage of CAR-T cells.441",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13674442_para_00086_sent_002",
+          "text": "Because these therapies are classified as biological products involving live, genetically modified organisms, their development requires rigorous safety and efficacy testing [371, 372].",
+          "paper_id": "paper_PMC13674442"
+        },
+        {
+          "sentence_id": "paper_PMC13628664_para_00058_sent_001",
+          "text": "As a safety measure, a fail-safe system, such as inserting a suicide gene [129], genetic engineering to make cell proliferation dependent on an external uridine supply [130], or employing an antibody that specifically targets genome-edited cells, can be considered.",
+          "paper_id": "paper_PMC13628664"
+        },
+        {
+          "sentence_id": "paper_PMC13632440_para_00094_sent_003",
+          "text": "However, a critical distinction must be made: epigenetic editing can still cause indirect off-target expression changes in non-targeted genes through effector domain-mediated transcriptional regulation (as noted in the first tier)—these are regulatory-level off-target effects rather than DNA sequence damage; the two types of effects have fundamentally different safety implications and reversibility.",
+          "paper_id": "paper_PMC13632440"
+        },
+        {
+          "sentence_id": "paper_PMC13674456_para_00110_sent_003",
+          "text": "However, these tools introduce their own set of risks, which are related to structural, enzymatic, and immunogenic factors.",
+          "paper_id": "paper_PMC13674456"
+        },
+        {
+          "sentence_id": "paper_PMC13628664_para_00058_sent_002",
+          "text": "Ensuring that such a complex system functions reliably in patients and completely eliminates rare abnormal cells remains technically challenging, and further research is needed.",
+          "paper_id": "paper_PMC13628664"
+        },
+        {
+          "sentence_id": "paper_PMC13632483_para_00001_sent_002",
+          "text": "Several threat vectors compromise the trustworthiness of gene editing workflows: unauthorized modifications to restricted genes, temporal anomalies indicating system breaches or data manipulation, extreme phenotypic outcomes signaling dangerous editing combinations, and cryptographic vulnerabilities in data verification systems (Yao et al., 2020; Li et al., 2021).",
+          "paper_id": "paper_PMC13632483"
+        },
+        {
+          "sentence_id": "paper_PMC13674456_para_00110_sent_001",
+          "text": "The shift from random gene disruption to exact genome writing indicates that current safety standards need to be re‐evaluated.",
+          "paper_id": "paper_PMC13674456"
+        },
+        {
+          "sentence_id": "paper_PMC13607165_para_00051_sent_001",
+          "text": "For CRISPR-based cell and gene therapies, the long-term safety profiles in humans need to be carefully addressed on the path to broad clinical application.",
+          "paper_id": "paper_PMC13607165"
+        },
+        {
+          "sentence_id": "paper_PMC13632440_para_00094_sent_001",
+          "text": "The second tier is execution safety, where epigenetic editing circumvents the genotoxicity risks of traditional genome editing at the DNA sequence integrity level.",
+          "paper_id": "paper_PMC13632440"
+        },
+        {
+          "sentence_id": "paper_PMC13615240_para_00026_sent_001",
+          "text": "Nevertheless, important safety considerations remain.",
+          "paper_id": "paper_PMC13615240"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-021",
+      "category": "factoid",
+      "question": "What has dysregulation of these processes been associated with?",
+      "gold_paper_id": "paper_PMC13631190",
+      "paper_title": "Elektra-Qki and Alien-Wt1 lncRNA-protein interaction controls myocardial ion channel expression and epicardial EMT during heart development in mice",
+      "gold_sentence_id": "paper_PMC13631190_para_00003_sent_006",
+      "gold_sentence": "Dysregulation of these processes has been associated with multiple cardiac pathologies, including cardiomyopathies and electrical conduction disorders [55–57].",
+      "gold_para_id": "paper_PMC13631190_para_00003",
+      "gold_para": "In the heart, several lncRNAs play a role in cardiac development by regulating key cellular mechanisms [33]. These include Braveheart, CARMEN or Fendrr lncRNAs, which are primarily involved in cardiac differentiation during the early stages of development [48–50]. Another relevant lncRNA is ALIEN, which is associated with the specification of cardiac mesoderm [51]. However, its function at later stages of development remains unclear. In addition to their role in differentiation, lncRNAs also regulate aspects of cardiac morphogenesis, including epicardial cell migration, formation of the cardiac chambers, trabeculation, or establishment of the conduction system and electrophysiology [52–54]. Dysregulation of these processes has been associated with multiple cardiac pathologies, including cardiomyopathies and electrical conduction disorders [55–57].",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13602894_para_00030_sent_001",
+          "text": "The current study findings indicate that key metabolic pathways involved in energy metabolism, including glycolysis, the tricarboxylic acid (TCA) cycle, fatty acid oxidation (FAO), and the carnitine shuttle, were dysregulated (Figure 4A), aligning with reports from previous global studies on post‐GDM and type 2 diabetes [11, 32, 33, 34, 35].",
+          "paper_id": "paper_PMC13602894"
+        },
+        {
+          "sentence_id": "paper_PMC13631560_para_00045_sent_001",
+          "text": "Dysregulated Cu homeostasis, whether manifested as deficiency or excess, has been implicated in a broad spectrum of human diseases [17].",
+          "paper_id": "paper_PMC13631560"
+        },
+        {
+          "sentence_id": "paper_PMC13615307_para_00000_sent_005",
+          "text": "Mechanistically, aging is driven by dysregulation of key biological processes, including increased senescence‐associated β‐galactosidase (SA‐β‐gal) activity, cell cycle arrest mediated by p16INK4a (p16, encoded by CDKN2A) and p21CIP1 (p21, encoded by CDKN1A), mitochondrial dysfunction, reduced antioxidant capacity, activation of the senescence‐associated secretory phenotype (SASP), and impaired lipid metabolism (Yamauchi et al.",
+          "paper_id": "paper_PMC13615307"
+        },
+        {
+          "sentence_id": "paper_PMC13663979_para_00002_sent_002",
+          "text": "However, in conditions such as Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD) and Metabolic Dysfunction-Associated steatohepatitis (MASH), a leading cause of impaired liver function in Western populations, these processes become dysregulated and are frequently associated with obesity and diabetes [19,20,21,22].",
+          "paper_id": "paper_PMC13663979"
+        },
+        {
+          "sentence_id": "paper_PMC13601421_para_00024_sent_002",
+          "text": "This analysis revealed coordinated downregulation of multiple core cellular processes, including pathways involved in protein synthesis, RNA processing, proteostasis, cytoskeletal organization, and growth factor signaling (Table 1).",
+          "paper_id": "paper_PMC13601421"
+        },
+        {
+          "sentence_id": "paper_PMC13552366_para_00001_sent_001",
+          "text": "However, there is growing evidence that the triplication of chr21 causes systemic proteomic dysregulation, beyond the amyloidogenic pathway mentioned above, that could drive Down syndrome (DSAD) pathology.2 For 1, several gene products of chr21 are involved in processes such as inflammation, oxidative stress, and neurogenesis,3,4 a number of which have been discussed as contributing factors in DSAD pathophysiology, especially in the context of neuroinflammation.5 Further pathologic events, arguably independent of direct gene dosage effects of chr21 such as cerebrovascular pathology,6 impaired cell metabolism or dysregulated pathways of the nerve growth factor,7 ultimately hint at a complex interplay of several pathophysiologic processes within the proteomic landscape of DS, possibly shaping disease trajectory and contributing to variability in symptom onset and disease progression in DSAD.",
+          "paper_id": "paper_PMC13552366"
+        },
+        {
+          "sentence_id": "paper_PMC13631560_para_00045_sent_002",
+          "text": "Because redox‐active transition metals such as Cu may participate in electron transfer reactions, their homeostasis must be carefully controlled [8, 17] (Figure 2).",
+          "paper_id": "paper_PMC13631560"
+        },
+        {
+          "sentence_id": "paper_PMC13628336_para_00023_sent_001",
+          "text": "Immune Dysregulation Disorders: conditions characterized by defective immune tolerance and cytotoxic regulation (e.g., Griscelli syndrome).",
+          "paper_id": "paper_PMC13628336"
+        },
+        {
+          "sentence_id": "paper_PMC13298417_para_00046_sent_001",
+          "text": "The dysregulation of these genes provides a plausible molecular explanation for the cytological defects observed in mitosis and meiosis.",
+          "paper_id": "paper_PMC13298417"
+        },
+        {
+          "sentence_id": "paper_PMC11716945_para_abstract_sent_005",
+          "text": "We further developed a biomarker panel based on the identified MCI/AD‐associated blood biomarkers and validated its performance in an independent amyloid‐PET‐defined cohort.ResultWe identified 496 proteins that were dysregulated in MCI plasma, and these proteins, involved in different biological processes, exhibited distinct dysregulating patterns with disease progression.",
+          "paper_id": "paper_PMC11716945"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-022",
+      "category": "dataset",
+      "question": "At which developmental stages was Elektra expression measured?",
+      "gold_paper_id": "paper_PMC13631190",
+      "paper_title": "Elektra-Qki and Alien-Wt1 lncRNA-protein interaction controls myocardial ion channel expression and epicardial EMT during heart development in mice",
+      "gold_sentence_id": "paper_PMC13631190_para_00020_sent_004",
+      "gold_sentence": "Globally, Elektra expression is more abundant at early developmental stages E10.5 corresponding to ∼ 10% of the total number of cells, decreasing as development proceeds (E13.5 and E16.5; corresponding to ∼ 2% of the total number of cells).",
+      "gold_para_id": "paper_PMC13631190_para_00020",
+      "gold_para": "Although Elektra and Alien are not among the most highly expressed lncRNAs in cardiac tissue, we selected them for further analysis due to their potential involvement in heart development. To investigate their possible regulatory roles, we subsequently performed SCRINSHOT analyses to dissect their cellular distribution along cardiac development from E10.5 to E19.5 and postnatal stages from P2 to P30 (Fig. 1D, E). Globally, Elektra expression is more abundant at early developmental stages E10.5 corresponding to ∼ 10% of the total number of cells, decreasing as development proceeds (E13.5 and E16.5; corresponding to ∼ 2% of the total number of cells). Surprisingly a transient increase was observed at E19.5 (corresponding to ∼ 60% of the total number of cells), while becoming barely detectable at later postnatal stages (P2, P7 and P30) corresponding to ∼ less than 5% of the total cells (Fig. 1D). Notably, at P21, the proportion of Elektra-positive cells increased again to ∼ 27% of the total cell population. Overall these data illustrate that Elektra expression decreases during cardiac maturation, with transient increases at E19.5 and P21, suggesting an embryonic and postnatal dynamic regulation. We subsequently performed colocalization analyses with epicardial (Col1a2), endothelial (Pecam) and myocardial (Tnnt2) at different developmental stages (Supplementary Fig. 1A). Our data demonstrated that Elektra is expressed in all three distinct cell types, with comparable abundance on each of them at all developmental stages analyzed.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-023",
+      "category": "method",
+      "question": "What analysis followed Qki inhibition in HL1 cardiomyocytes?",
+      "gold_paper_id": "paper_PMC13631190",
+      "paper_title": "Elektra-Qki and Alien-Wt1 lncRNA-protein interaction controls myocardial ion channel expression and epicardial EMT during heart development in mice",
+      "gold_sentence_id": "paper_PMC13631190_para_00033_sent_031",
+      "gold_sentence": "RT-qPCR analyses of gene expression changes in cardiac ion channel-related genes following Qki inhibition in HL1 cardiomyocytes.",
+      "gold_para_id": "paper_PMC13631190_para_00033",
+      "gold_para": "Previous studies have demonstrated that Qki depletion in embryonic or adult hearts, impairs cardiomyocyte contractility by disrupting the alternative splicing of key myofibrillar components (e.g., Actn2 and Ttn) and calcium channels (e.g., Cacnb1 and Ryr2) [78]. Given that our GO analysis of the Elektra dataset revealed a significant enrichment of both ion channels proteins and Qki itself, we first validated the direct interaction between Elektra and the Qki protein by RIP. We observed a significant enrichment of Elektra upon immunoprecipitation with Qki-specific antibody compared to the IgG control (Fig. 4A). Then, we validated gain- and loss-of-function of Elektra (Fig. 4B) and fluorescent immunohistochemistry assays revealed that Elektra inhibition results in Qki upregulation, whereas lncRNA overexpression did not significantly alter Qki protein levels (Fig. 4C). However, at the mRNA level changes were observed in both conditions: loss of Elektra function led to increased Qki expression (Fig. 4D), while gain of Elektra function reduced Qki levels (Fig. 4E).Fig. 4Elektra silencing alters cardiac ion channel expression through Qki-mediated regulation. Panel (A). RT-qPCR analyses of Elektra enrichment in Qki RIP assays from HL1 cardiomyocytes compared to IgG control. Panel (B). RT-qPCR validation of Elektra silencing and overexpression using siRNA and pcDNA3.1 vector, respectively, in HL1 cells (n = 3). Panel (C). Representative images for immunofluorescence analysis of Qki protein levels after Elektra loss- and gain-of-function. Increased Qki levels are observed upon Elektra inhibition (n = 3). Panel (D). RT-qPCR analyses of calcium, sodium and potassium channel gene expression in HL1 cells following Elektra silencing (n = 3). Notably, lncRNA knockdown leads to upregulation of Qki, Ryr2, Atp2a2 and Ncx1, and downregulation of Cacnb3 and Casq2. Panel (E). RT-qPCR analyses of calcium, sodium and potassium channel gene expression in HL1 cells following Elektra overexp",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-024",
+      "category": "factoid",
+      "question": "How did nuclear Elektra regulation differ from other compartments?",
+      "gold_paper_id": "paper_PMC13631190",
+      "paper_title": "Elektra-Qki and Alien-Wt1 lncRNA-protein interaction controls myocardial ion channel expression and epicardial EMT during heart development in mice",
+      "gold_sentence_id": "paper_PMC13631190_para_00051_sent_005",
+      "gold_sentence": "In contrast, nuclear Elektra showed a distinct regulatory pattern, with only Ncx1 consistently affected in both compartments, emphasizing the importance of subcellular localization in lncRNA function [104, 105].",
+      "gold_para_id": "paper_PMC13631190_para_00051",
+      "gold_para": "Gene Ontology (GO) analysis of the Elektra interactome in cardiomyocytes revealed enrichment in cytoplasmic processes such as RNA splicing regulation. Notably, one of the interacting proteins was the KH-domain RNA-binding protein Qki, a well-established regulator of alternative splicing in cardiomyocytes [78]. Functional assays showed that Elektra negatively regulates Qki, with its knockdown increasing Qki levels and altering ion channel gene expression. These effects were mainly associated with the cytoplasmic fraction of Elektra, suggesting a post-transcriptional regulation. In contrast, nuclear Elektra showed a distinct regulatory pattern, with only Ncx1 consistently affected in both compartments, emphasizing the importance of subcellular localization in lncRNA function [104, 105]. Previous studies have shown that Qki regulates the splicing of genes related to cardiac contraction and electrophysiology, including Ryr2 and Cacnb1 [78, 106]. Our findings suggest that Elektra modulates these pathways by regulating Qki levels, without affecting the Qki-driven alternative splicing of these ion channels (data not shown). Moreover, Qki inhibition reduced Elektra expression, in addition to altering the levels of several calcium, sodium and potassium channel genes, in line with previous data [78, 106]. These results suggest a regulatory feedback for maintaining proper splicing and ion channel expression in cardiomyocytes.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-025",
+      "category": "factoid",
+      "question": "What do these findings suggest about lncRNAs?",
+      "gold_paper_id": "paper_PMC13631190",
+      "paper_title": "Elektra-Qki and Alien-Wt1 lncRNA-protein interaction controls myocardial ion channel expression and epicardial EMT during heart development in mice",
+      "gold_sentence_id": "paper_PMC13631190_para_00057_sent_003",
+      "gold_sentence": "These findings highlight the potential importance of lncRNAs as context-dependent regulators of cardiac development and support their potential involvement in tissue-specific processes.",
+      "gold_para_id": "paper_PMC13631190_para_00057",
+      "gold_para": "This study suggests that Elektra and Alien are key lncRNAs with different and specific functions in the developing heart. Our finding indicate that Elektra likely acts in myocardial cells by interacting with Qki and controlling pathways related to electrical activity and contractility, while Alien potentially modulates epicardial cell migration and EMT through its interaction with Wt1. These findings highlight the potential importance of lncRNAs as context-dependent regulators of cardiac development and support their potential involvement in tissue-specific processes.",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13601824_para_00044_sent_001",
+          "text": "These represent the non-protein-coding fraction of the human genome and have historically been regarded as junk DNA.",
+          "paper_id": "paper_PMC13601824"
+        },
+        {
+          "sentence_id": "paper_PMC13632056_para_00003_sent_003",
+          "text": "Studies have demonstrated that lncRNAs significantly influence immune system development and immune responses, modulating functions such as dendritic cell differentiation and maturation [19], as well as T cell activation, proliferation, and differentiation [20].",
+          "paper_id": "paper_PMC13632056"
+        },
+        {
+          "sentence_id": "paper_PMC13657841_para_00001_sent_001",
+          "text": "Long non-coding RNAs (lncRNAs) are typically defined as RNA molecules longer than 200 nucleotides that lack open reading frames.",
+          "paper_id": "paper_PMC13657841"
+        },
+        {
+          "sentence_id": "paper_PMC13632056_para_00045_sent_003",
+          "text": "In terms of mRNA, Mcpt1, Chil4, and Itln1 were significantly up-regulated, while Olfm5, Pnliprp1, and Slit3 were significantly down-regulated, consistent with the RNA sequencing results (Fig.",
+          "paper_id": "paper_PMC13632056"
+        },
+        {
+          "sentence_id": "paper_PMC13605423_para_00032_sent_003",
+          "text": "Of particular interest were 13 interactions involving genes from the previously identified independent networks that also shared direct correlations with the same immune traits.",
+          "paper_id": "paper_PMC13605423"
+        },
+        {
+          "sentence_id": "paper_PMC13628968_para_00044_sent_003",
+          "text": "However, the study was designed as a discovery-oriented analysis, as commonly applied in transcriptomic investigations, and validation was beyond its primary scope.",
+          "paper_id": "paper_PMC13628968"
+        },
+        {
+          "sentence_id": "paper_PMC13632056_para_00003_sent_002",
+          "text": "Despite their lack of protein-coding capacity, lncRNAs are essential regulators at transcriptional, post-transcriptional, and epigenetic levels of gene expression [18].",
+          "paper_id": "paper_PMC13632056"
+        },
+        {
+          "sentence_id": "paper_PMC13600877_para_00021_sent_003",
+          "text": "In the positive correlations (Table 4A), upregulation of lncRNAs such as LINC00397, LINC01219, LINC01554, and LINC02605 was associated with increased expression of several core genes including SERPINA3, SIGLEC9, ZFP36, and DLX4, among others.",
+          "paper_id": "paper_PMC13600877"
+        },
+        {
+          "sentence_id": "paper_PMC13632056_para_00038_sent_003",
+          "text": "(a) The view of a lncRNA -miRNA-mRNA interaction network.",
+          "paper_id": "paper_PMC13632056"
+        },
+        {
+          "sentence_id": "paper_PMC13657841_para_00001_sent_003",
+          "text": "LncRNAs actively regulate tumor growth, metastasis, and recurrence (10-12).",
+          "paper_id": "paper_PMC13657841"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-026",
+      "category": "factoid",
+      "question": "What can fine programmability of particle size improve?",
+      "gold_paper_id": "paper_PMC13620059",
+      "paper_title": "mRNA lipid nanoparticle vaccines: current status, challenges and future prospects",
+      "gold_sentence_id": "paper_PMC13620059_para_00059_sent_002",
+      "gold_sentence": "This allows fine programmability of particle size and key attributes, while boosting consistency and throughput [194].",
+      "gold_para_id": "paper_PMC13620059_para_00059",
+      "gold_para": "By utilizing microfluidic pathways such as hydrodynamic flow focusing, staggered herringbone, and T-junction mixing, researchers achieve controlled microscale convection/diffusion and enhanced turbulence. This allows fine programmability of particle size and key attributes, while boosting consistency and throughput [194]. Overall, the spectrum of techniques from laboratory to industrial-scale production reflects an evolution “from simplicity to precision.” Achieving a balance between speed, convenience, reproducibility, scalability, and high encapsulation efficiency remains essential. Continuous manufacturing platforms such as microfluidics and IJM offer superior solutions to meet the dual demands of product quality and production capacity. A summary of preparation methods and their respective advantages and disadvantages is provided in Table 3. Table 3Analytical techniques for mRNA-LNP stability assessmentPreparation methodLNP applicationOperationAdvantagesDisadvantagesReferencesPipette MixingRapid formulation technique; suitable for small-batch laboratory preparationMix a lipid-containing organic phase (ethanol) with a nucleic-acid buffer and rapidly agitate by pipetting to homogenizeSimple operation, short processing time, and no expensive equipment requiredNot suitable for large-scale manufacturing [189]VortexRapid formulation technique; suitable for small-batch laboratory preparationCombine the nucleic-acid buffer with the lipid–ethanol solution and vortex at a moderate speed to homogenizeEasy to implement and does not require specialized instrumentationNot suitable for large-scale manufacturing [189]Thin-Film hydrationClassical technique for preparing lipid nanoparticlesDissolve lipids in an organic solvent and evaporate the solvent to form a thin lipid film on the vessel wall; then hydrate the film with a nucleic-acid aqueous solution, during which the swollen film curls and closes into vesicular structures; finally, apply extrusion or sonication to obtain un",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-027",
+      "category": "dataset",
+      "question": "Which vaccine formulation did Ai et al. test?",
+      "gold_paper_id": "paper_PMC13620059",
+      "paper_title": "mRNA lipid nanoparticle vaccines: current status, challenges and future prospects",
+      "gold_sentence_id": "paper_PMC13620059_para_00082_sent_006",
+      "gold_sentence": "Ai et al. reported a lyophilized Omicron vaccine stable for over 6 months at 25 °C while maintaining robust immunogenicity.",
+      "gold_para_id": "paper_PMC13620059_para_00082",
+      "gold_para": "To begin with,optimizing mRNA sequence engineering and delivery systems is central, with the goals of improving thermal stability and safety while reducing adverse reactions.Existing mRNA-LNP vaccines (e.g., mRNA-1273 and BNT162b2) require storage at −20 °C and −60 °C to −80 °C, respectively, posing substantial cold-chain challenges in resource-limited settings.mRNA hydrolysis, driven by residual water molecules triggering phosphodiester cleavage, is a primary cause of instability in mRNA-LNP vaccines [234]. To address this, lyophilization (freeze-drying) removes water via sublimation, effectively slowing degradation and offering a feasible path toward ambient-temperature storage by enhancing stability and extending shelf life (Fig. 4) [235]. However, the process must preserve key physicochemical attributes, including particle size distribution, encapsulation efficiency, mRNA integrity, and immunogenicity. For instance, Muramatsu et al. demonstrated that mRNA-LNPs formulated in a Tris-sucrose-maltose buffer remained stable for 12 weeks at room temperature and 24 weeks at 4 °C [236]. Ai et al. reported a lyophilized Omicron vaccine stable for over 6 months at 25 °C while maintaining robust immunogenicity. Clinically, Moderna’s Phase III CMV vaccine (mRNA-1647, NCT05085366) has a lyophilized presentation stable for up to 18 months at 5 °C. Looking forward, alternative drying technologies such as spray-drying, spray freeze-drying, and thin-film freeze-drying are being explored to further improve the stability and scalability of dried mRNA-LNP formulations.In addition, alternative drying technologies, such as spray-drying, spray freeze-drying, thin-film freeze-drying, and supercritical spray-drying, are being explored to further improve stability and scalability [237].Fig. 4Freeze-drying process at macro and micro scales. This illustration outlines the freeze-drying process for lipid nanoparticle (LNP)–mRNA formulations across macro and micro scales. The schematic inclu",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13617365_para_00012_sent_003",
+          "text": "During early clinical development, its quadrivalent formulation (acIIV4) demonstrated superior immunogenicity relative to cIIV4 across all evaluated strains (85–87).",
+          "paper_id": "paper_PMC13617365"
+        },
+        {
+          "sentence_id": "paper_PMC13626742_para_00007_sent_002",
+          "text": "For control vaccinations both 20 mM Tris, 50 mM NaCl plus Alum (Imject, Thermofisher) and Tris buffer alone were used.",
+          "paper_id": "paper_PMC13626742"
+        },
+        {
+          "sentence_id": "paper_PMC13617365_para_00007_sent_001",
+          "text": "The aIIV platform is a subunit sdIIV formulation containing the MF59 adjuvant.",
+          "paper_id": "paper_PMC13617365"
+        },
+        {
+          "sentence_id": "paper_PMC13617365_para_00040_sent_002",
+          "text": "Historically, the clinical development of SIVs has predominantly focused on humoral responses against HA, for which a correlate of protection has been established, while NA, the second major surface glycoprotein of influenza A and B, has been largely neglected.",
+          "paper_id": "paper_PMC13617365"
+        },
+        {
+          "sentence_id": "paper_PMC10468199_para_00038_sent_001",
+          "text": "During the 2020–21 season, quadrivalent formulations of high-dose (HD-IIV4) and adjuvanted (aIIV4) influenza vaccines were introduced.",
+          "paper_id": "paper_PMC10468199"
+        },
+        {
+          "sentence_id": "paper_PMC9953682_para_00023_sent_002",
+          "text": "The beta sheet (29.88%) and coil (35.21%) regions of the vaccine had the most amino acids.",
+          "paper_id": "paper_PMC9953682"
+        },
+        {
+          "sentence_id": "paper_PMC13617365_para_00022_sent_001",
+          "text": "In the first-in-human, phase I/II RCT 101 (117, 118), investigators evaluated the safety, humoral and cellular immunogenicity of varying mRNA dose levels (total HA content ranging from 6.25 µg to 200 µg) among adults aged ≥18 years.",
+          "paper_id": "paper_PMC13617365"
+        },
+        {
+          "sentence_id": "paper_PMC13626742_para_00007_sent_001",
+          "text": "A standard protocol was used throughout to vaccinate mice subcutaneously (s.c.) with 50 μg of either np43, ES−p43 or rp43.",
+          "paper_id": "paper_PMC13626742"
+        },
+        {
+          "sentence_id": "paper_PMC13617365_para_00012_sent_002",
+          "text": "Compared to aIIV3, acIIV3 features a 3-fold increase in HA antigen payload (45 µg per strain) and a 2-fold higher content of the MF59 adjuvant (84).",
+          "paper_id": "paper_PMC13617365"
+        },
+        {
+          "sentence_id": "paper_PMC13617365_para_00030_sent_003",
+          "text": "5.9), A(H3N2) (3.7 vs.",
+          "paper_id": "paper_PMC13617365"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-028",
+      "category": "method",
+      "question": "How can phospholipid choice affect LNP formulations?",
+      "gold_paper_id": "paper_PMC13620059",
+      "paper_title": "mRNA lipid nanoparticle vaccines: current status, challenges and future prospects",
+      "gold_sentence_id": "paper_PMC13620059_para_00019_sent_005",
+      "gold_sentence": "The choice of phospholipid can influence LNP stability, biodistribution, and delivery potency in a formulation-dependent manner [73].",
+      "gold_para_id": "paper_PMC13620059_para_00019",
+      "gold_para": "Phospholipids serve as essential helper components in LNPs, primarily contributing to structural stabilization, mRNA encapsulation, and delivery efficiency [71]. Phospholipids such as DSPC and DOPE modulate LNP stability and membrane fusion through their distinct molecular geometries. DSPC contains saturated long-chain fatty acids and has a cylindrical shape, providing high physical stability and rigidity under physiological conditions; it is widely used in clinically approved mRNA vaccines, such as Moderna’s mRNA-1273 and BioNTech/Pfizer’s BNT162b2 [72]. In contrast, DOPE contains unsaturated fatty acid chains and has a cone-like structure. The choice of phospholipid can influence LNP stability, biodistribution, and delivery potency in a formulation-dependent manner [73]. Recent advances have introduced novel functional phospholipids, such as alcohol-soluble phosphatidylserine derivatives that enhance targeting to the spleen and lymphoid tissues, and pH-responsive zwitterionic ionizable phospholipids (e.g., 9A1P9) that adopt a cone-shaped structure in acidic endosomal environments, inducing membrane phase transitions and significantly improving mRNA release [74]. Overall, phospholipids play a crucial role in maintaining LNP physical stability, promoting membrane fusion, and controlling tissue targeting.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-029",
+      "category": "contradiction",
+      "question": "What balance is crucial for reactogenicity?",
+      "gold_paper_id": "paper_PMC13620059",
+      "paper_title": "mRNA lipid nanoparticle vaccines: current status, challenges and future prospects",
+      "gold_sentence_id": "paper_PMC13620059_para_00075_sent_007",
+      "gold_sentence": "Therefore, optimizing reactogenicity to balance therapeutic efficacy with clinically acceptable risk levels is crucial.",
+      "gold_para_id": "paper_PMC13620059_para_00075",
+      "gold_para": "Vaccine reactogenicity refers to the physical manifestations of the inflammatory response triggered by the vaccine, including both systemic and local side effects. Systemic side effects such as fatigue, headache, fever, myalgia, and arthralgia are commonly observed, while local side effects include swelling, redness, pain, and warmth at the injection site. These effects are more pronounced in younger individuals and tend to intensify after multiple doses. Although severe adverse events such as acute myocardial infarction, cerebral venous sinus thrombosis, myocarditis/pericarditis, pulmonary embolism, Guillain-Barré syndrome, stroke, and anaphylactic shock are rare, they can have significant consequences. mRNA itself plays a substantial role in mediating reactogenicity, which is primarily driven by the activation of innate immune pathways. The activation of immune sensors triggers the release of pro-inflammatory cytokines, including TNF-α, IL-6, and interferons, which are mainly responsible for symptoms such as fever, headache, and muscle pain [224]. Even FDA-approved commercial LNP carriers, such as BNT162b2, exhibit reactogenicity. Therefore, optimizing reactogenicity to balance therapeutic efficacy with clinically acceptable risk levels is crucial.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-030",
+      "category": "factoid",
+      "question": "What role are mRNA vaccines poised to retain?",
+      "gold_paper_id": "paper_PMC13620059",
+      "paper_title": "mRNA lipid nanoparticle vaccines: current status, challenges and future prospects",
+      "gold_sentence_id": "paper_PMC13620059_para_00098_sent_003",
+      "gold_sentence": "With sustained cross-disciplinary collaboration and technological innovation, mRNA vaccines are poised to retain a central role in the control of current and future global infectious diseases.",
+      "gold_para_id": "paper_PMC13620059_para_00098",
+      "gold_para": "Finally, Large-scale, long-duration clinical studies, integrated with systematic real-world data surveillance, are essential for evaluating durability of immunity, breadth of cross-protection, and rare adverse events. Such evidence will elucidate the long-term dynamics of immune responses and inform optimization of vaccination strategies and risk management. With sustained cross-disciplinary collaboration and technological innovation, mRNA vaccines are poised to retain a central role in the control of current and future global infectious diseases.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-031",
+      "category": "factoid",
+      "question": "What increases NOS2 deposition in aggresomes?",
+      "gold_paper_id": "paper_PMC13607564",
+      "paper_title": "Regulation of Inducible Nitric Oxide Synthase (NOS2) Expression in Healthy and Inflamed Bowel: A Narrative Review",
+      "gold_sentence_id": "paper_PMC13607564_para_00272_sent_001",
+      "gold_sentence": "Deposition of NOS2 in aggresomes increases in response to cellular stress such as heat shock or HSP90 depletion [457].",
+      "gold_para_id": "paper_PMC13607564_para_00272",
+      "gold_para": "Deposition of NOS2 in aggresomes increases in response to cellular stress such as heat shock or HSP90 depletion [457]. Moreover, it is also facilitated by NO, operating in macrophages as a negative feedback mechanism [471].",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-032",
+      "category": "factoid",
+      "question": "What induces TAK1?",
+      "gold_paper_id": "paper_PMC13607564",
+      "paper_title": "Regulation of Inducible Nitric Oxide Synthase (NOS2) Expression in Healthy and Inflamed Bowel: A Narrative Review",
+      "gold_sentence_id": "paper_PMC13607564_para_00024_sent_005",
+      "gold_sentence": "TAK1 is induced in response to IL-1/IL-1R signaling, alarmins (‘damage-associated molecular patterns’; DAMPs), microbial signals, or TNFα/TNFR1 engagement [90,91,92].",
+      "gold_para_id": "paper_PMC13607564_para_00024",
+      "gold_para": "In the canonical pathway, NF-κB is sequestered in the cytoplasm by inhibitory κB (IκB) proteins. Phosphorylation of IκB, which marks it for proteasomal degradation, releases the NF-κB dimer, enabling rapid transcriptional activation without requiring new protein synthesis. This phosphorylation is mediated by the IκB kinase (IKK) complex, composed of two catalytic subunits, IKKα and IKKβ, and a regulatory subunit, IKKγ (also known as ‘NF-κB essential modulator’, NEMO) [90,91]. Upstream, IKK is phosphorylated by the MAPKK kinase, ‘transforming growth factor (TGF)-β-activated kinase 1’ (TAK1). TAK1 is induced in response to IL-1/IL-1R signaling, alarmins (‘damage-associated molecular patterns’; DAMPs), microbial signals, or TNFα/TNFR1 engagement [90,91,92]. In adaptive immune cells, NF-κB can also be activated by antigen-mediated B-cell receptor (BCR) or T-cell receptor (TCR) signaling, involving protein kinase C (PKC) [90,91].",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-033",
+      "category": "factoid",
+      "question": "What happens when A2AR signaling is enhanced in IBD?",
+      "gold_paper_id": "paper_PMC13607564",
+      "paper_title": "Regulation of Inducible Nitric Oxide Synthase (NOS2) Expression in Healthy and Inflamed Bowel: A Narrative Review",
+      "gold_sentence_id": "paper_PMC13607564_para_00214_sent_003",
+      "gold_sentence": "Consistent with its anti-inflammatory function, A2AR signaling is dysregulated in IBD, and enhancement of this pathway reduces intestinal inflammation and the accumulation of pro-inflammatory immune cells in the gut mucosa [385].",
+      "gold_para_id": "paper_PMC13607564_para_00214",
+      "gold_para": "MiR-16 may indirectly promote NOS2 expression through repression of adenosine receptor A2A (A2AR) signaling (reviewed in [383]). Activation of the adenosine/A2AR pathway negatively regulates NOS2 expression in immune cells [384] and plays an important role in limiting inflammatory responses mediated by macrophages, neutrophils, and dendritic cells [383]. Consistent with its anti-inflammatory function, A2AR signaling is dysregulated in IBD, and enhancement of this pathway reduces intestinal inflammation and the accumulation of pro-inflammatory immune cells in the gut mucosa [385].",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-034",
+      "category": "comparison",
+      "question": "How do butyrate and HDAC inhibitors affect NOS2 expression?",
+      "gold_paper_id": "paper_PMC13607564",
+      "paper_title": "Regulation of Inducible Nitric Oxide Synthase (NOS2) Expression in Healthy and Inflamed Bowel: A Narrative Review",
+      "gold_sentence_id": "paper_PMC13607564_para_00309_sent_002",
+      "gold_sentence": "Conversely, butyrate and other HDAC inhibitors suppress IFNγ/lipopolysaccharide-induced NOS2 expression [503], while overexpression of ELK3, a transcription factor induced by TGFβ/SMAD3 signaling, also represses NOS2 transcription [203,561].",
+      "gold_para_id": "paper_PMC13607564_para_00309",
+      "gold_para": "Evidence from cultured IMFs further indicates that IL-22 potentiates IFNγ-induced NOS2 expression through STAT3 activation [526]. Conversely, butyrate and other HDAC inhibitors suppress IFNγ/lipopolysaccharide-induced NOS2 expression [503], while overexpression of ELK3, a transcription factor induced by TGFβ/SMAD3 signaling, also represses NOS2 transcription [203,561].",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-035",
+      "category": "contradiction",
+      "question": "What conflicting evidence exists about miR-146a binding sites in NOS2?",
+      "gold_paper_id": "paper_PMC13607564",
+      "paper_title": "Regulation of Inducible Nitric Oxide Synthase (NOS2) Expression in Healthy and Inflamed Bowel: A Narrative Review",
+      "gold_sentence_id": "paper_PMC13607564_para_00181_sent_012",
+      "gold_sentence": "[298] were unable to identify putative miR-146a-binding sites within the human NOS2 3′UTR, whereas miR-26a was predicted and experimentally confirmed to directly repress NOS2 expression.",
+      "gold_para_id": "paper_PMC13607564_para_00181",
+      "gold_para": "Dysregulation of miR-146a and the closely related miR-146b has been reported in human IBD and linked to impaired immune responses and mucosal barrier integrity [292]. Beyond its intracellular functions, miR-146a can also be transferred between immune cells via exosomes. Alexander et al. [311] demonstrated that dendritic cells release exosomes containing miR-146a, which are taken up by recipient dendritic cells and suppress inflammatory responses to endotoxin stimulation. In vivo, exosome-mediated transfer of miR-146a attenuated inflammation, supporting a role for miR-146a as an intercellular anti-inflammatory signal that contributes to the maintenance of immune homeostasis [311]. MiR-146a is elevated in colonic tissue from UC patients and in inflamed mucosa of pediatric IBD patients [309,312], while Zhu et al. [313] reported increased expression of miR-146a-3p in both active CD and inactive CD/UC. Interestingly, miR-146a haplodeficiency aggravated DSS-induced colitis in their model, contrasting earlier observations in miR-146a knockout mice [309,313]. These discrepancies may, at least in part, reflect differences in mouse strains and experimental settings [313]. Notably, efforts to identify direct interaction between miR-146a and the human NOS2 transcript have been less successful than for miR-26a. Zhu et al. [298] were unable to identify putative miR-146a-binding sites within the human NOS2 3′UTR, whereas miR-26a was predicted and experimentally confirmed to directly repress NOS2 expression.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-036",
+      "category": "factoid",
+      "question": "What is lacking in the molecular understanding of neutrophils in glioblastoma?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "paper_title": "Single cell proteomic analysis defines discrete neutrophil functional states in human glioblastoma",
+      "gold_sentence_id": "paper_import_15c6a0f864b0_para_0001_sent_001",
+      "gold_sentence": "Neutrophils are vital innate immune cells shown to infiltrate glioblastomas, however we currently lack the molecular understanding of their functional states within the tumour niche.",
+      "gold_para_id": "paper_import_15c6a0f864b0_para_0001",
+      "gold_para": "Neutrophils are vital innate immune cells shown to infiltrate glioblastomas, however we currently lack the molecular understanding of their functional states within the tumour niche. Given that neutrophils are known to display a prominent discordance between mRNA and protein abundance, we developed ultra-sensitive mini-bulk and single cell proteomic (SCP) workflows to study the heterogeneity of peripheral blood and tumour associated neutrophils (TAN) from patients with glioblastoma. Mini-bulk analysis enabled a deeper protein coverage of circulating immature, mature and TAN populations, defining signatures of maturity and demonstrating that TANs resemble mature circulating neutrophils. Analysis of the SCP data results in the detection of >1100 proteins from a single TAN providing a detailed characterization of neutrophil subsets in glioblastoma. Our approach shows evidence of pathogenic and anti-tumorigenic clusters and discovers cell states invisible to scRNAseq, opening new opportunities to selectively target pro-tumoural neutrophil states.",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13627264_para_00000_sent_001",
+          "text": "Glioblastoma (GBM) is the most aggressive and common form of primary brain cancer, characterized by rapid tumor growth, diffuse infiltration, and poor prognosis, with a median survival time of approximately 15 months following diagnosis [1].",
+          "paper_id": "paper_PMC13627264"
+        },
+        {
+          "sentence_id": "paper_PMC13631731_para_00035_sent_001",
+          "text": "MDSCs are best conceptualized not as a discrete lineage, but as pathologically activated neutrophil- and monocyte-lineage states whose defining property is demonstrable immunosuppression; the principal classes are polymorphonuclear MDSCs (PMN-MDSCs) and monocytic MDSCs (M-MDSCs), with a phenotypically immature early-stage MDSC compartment additionally recognized in humans (121).",
+          "paper_id": "paper_PMC13631731"
+        },
+        {
+          "sentence_id": "paper_PMC13604279_para_00032_sent_002",
+          "text": "Like other myeloid populations, neutrophils undergo functional reprogramming in response to inflammatory cytokines and metabolic alterations present within the tumor microenvironment.",
+          "paper_id": "paper_PMC13604279"
+        },
+        {
+          "sentence_id": "paper_PMC13631343_para_00001_sent_002",
+          "text": "In fact, GB tumors contain an important infiltration of immune cells, especially myeloid cells, which are enriched [2, 3].",
+          "paper_id": "paper_PMC13631343"
+        },
+        {
+          "sentence_id": "paper_PMC13630856_para_00040_sent_001",
+          "text": "The tumor microenvironment at the periphery of GBM differs significantly from the tumor core.",
+          "paper_id": "paper_PMC13630856"
+        },
+        {
+          "sentence_id": "paper_PMC13630856_para_00005_sent_001",
+          "text": "To further evaluate the extent of neoplastic infiltration and characterize the tumor microenvironment, we identified genes specific to different cell types using publicly available single‐cell RNA sequencing (scRNA‐seq) data.",
+          "paper_id": "paper_PMC13630856"
+        },
+        {
+          "sentence_id": "paper_PMC13632213_para_00002_sent_001",
+          "text": "Neutrophils, the most abundant peripheral leukocytes, are rapidly recruited to sites of inflammation.",
+          "paper_id": "paper_PMC13632213"
+        },
+        {
+          "sentence_id": "paper_PMC13632213_para_00002_sent_002",
+          "text": "Growing evidence implicates neutrophil dysfunction in NMOSD pathogenesis: elevated peripheral neutrophil counts correlate with disease activity [18, 19], and pharmacological inhibition of neutrophil elastase (NE) ameliorates brain damage in a murine model of NMOSD [20].",
+          "paper_id": "paper_PMC13632213"
+        },
+        {
+          "sentence_id": "paper_PMC13542881_para_00011_sent_002",
+          "text": "Brain tumors have distinctive microenvironmental landscapes, and glioma cells instruct tissue-invading leukocytes rather than simply coexisting with them (45–47).",
+          "paper_id": "paper_PMC13542881"
+        },
+        {
+          "sentence_id": "paper_PMC13627264_para_00000_sent_002",
+          "text": "The complex etiology of GBM involves a combination of genetic mutations, epigenetic alterations, and dysregulated signaling pathways that drive unchecked tumor proliferation, diffuse invasion, and resistance to conventional therapies [2].",
+          "paper_id": "paper_PMC13627264"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-037",
+      "category": "method",
+      "question": "Which workflows were combined to study neutrophil populations?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "paper_title": "Single cell proteomic analysis defines discrete neutrophil functional states in human glioblastoma",
+      "gold_sentence_id": "paper_import_15c6a0f864b0_para_0006_sent_001",
+      "gold_sentence": "Here we combine flow cytometry and MS-based proteomic workflows to study rare neutrophil populations, both from the peripheral blood and from glioblastoma (GBM) tumours.",
+      "gold_para_id": "paper_import_15c6a0f864b0_para_0006",
+      "gold_para": "Here we combine flow cytometry and MS-based proteomic workflows to study rare neutrophil populations, both from the peripheral blood and from glioblastoma (GBM) tumours. We performed a mini-bulk (500 cells) proteomic analysis of circulating mature CD10 + , immature CD10- low density neutrophils (LDN), normal density neutrophils (NDNs) as well as GBM tumour associated neutrophils (TAN), finding that TANs much more closely resemble mature CD10+ neutrophil populations, but with increased mitochondrial content. We performed ultra-sensitive SCP analysis of TANs to define functional neutrophil clusters within the GBM tumours. The power to identify >1100 proteins per single neutrophil provides us the ability to define the presence of discrete neutrophil functional clusters which we assign as armed, engaged, vital NETs, exhausted, lytic NETs, immunosuppressive and angiogenic and vascular immature. The added value of SCP has enabled the characterization of functional states not previously captured by single cell RNA sequencing (scRNAseq), as a result of imperfect correlation between the tissue neutrophil transcriptome and proteome. Consequently, our work stratifies neutrophil heterogeneity by effector function and opens new avenues to engage anti-tumoural neutrophil responses for GBM disease whilst also providing a platform for the study of neutrophils in disease at the single cell resolution.",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13628270_para_00005_sent_003",
+          "text": "Microwell-based methods facilitate the detection of neutrophils compared with droplet-based methods (27).",
+          "paper_id": "paper_PMC13628270"
+        },
+        {
+          "sentence_id": "paper_PMC13628106_para_00045_sent_002",
+          "text": "Cells were first stained with fixable viability stain (Fvs; BD Biosciences) to exclude dead cells, followed by staining with human CD45, CD11b, CD15, and CD16 antibodies to identify neutrophils.",
+          "paper_id": "paper_PMC13628106"
+        },
+        {
+          "sentence_id": "paper_PMC13569420_para_00020_sent_001",
+          "text": "The chemotactic assay of neutrophil/PMN-MDSC-enriched white blood cells was performed as described previously [32].",
+          "paper_id": "paper_PMC13569420"
+        },
+        {
+          "sentence_id": "paper_PMC13601954_para_00004_sent_002",
+          "text": "Fragile cells such as neutrophils have lower viability in conventional droplet-based capture workflows, which may systematically underestimate the actual proportions of neutrophil subsets; the dropout effect for low-abundance transcripts decreases the detection sensitivity of marker genes and introduces uncertainty in the identification of rare subsets; in addition, the influence of doublet rate on the identification of rare cell states must be corrected during analysis (Gulati et al., 2025).",
+          "paper_id": "paper_PMC13601954"
+        },
+        {
+          "sentence_id": "paper_PMC13632213_para_00006_sent_002",
+          "text": "Complete blood count analyses included all eligible participants with available laboratory data, whereas proteomic profiling, serum/CSF NET-associated biomarker measurements, and ex vivo NETosis assays were restricted to participants with suitable stored serum/CSF samples or fresh blood for immediate neutrophil isolation.",
+          "paper_id": "paper_PMC13632213"
+        },
+        {
+          "sentence_id": "paper_PMC13631593_para_00005_sent_001",
+          "text": "Specifically, we examine how the field can move from a density-defined descriptive phenotype toward molecularly resolved, causally validated and clinically actionable neutrophil states.",
+          "paper_id": "paper_PMC13631593"
+        },
+        {
+          "sentence_id": "paper_PMC13632298_para_00004_sent_003",
+          "text": "These approaches are particularly valuable for characterizing neutrophil localization, activation states, and interactions with surrounding immune and stromal cells.",
+          "paper_id": "paper_PMC13632298"
+        },
+        {
+          "sentence_id": "paper_PMC13632213_para_00006_sent_001",
+          "text": "Partially overlapping patient subsets were used because each assay required different biospecimen types, sample volumes, or processing conditions.",
+          "paper_id": "paper_PMC13632213"
+        },
+        {
+          "sentence_id": "paper_PMC13601954_para_00004_sent_003",
+          "text": "Therefore, the cell subset proportions and gene expression levels reported in current atlases are more appropriate for qualitative comparison of transcriptionally defined cell programs than for precise quantitative measurement of functional cell states, and quantitative or functional conclusions await further validation using improved cell-capture and protein-detection workflows, such as cellular indexing of transcriptomes and epitopes by sequencing (CITE-seq) or related multimodal approaches.",
+          "paper_id": "paper_PMC13601954"
+        },
+        {
+          "sentence_id": "paper_PMC13628270_para_00005_sent_001",
+          "text": "During the application of scRNA-seq to granulocytes, cell isolation and library preparation methods substantially influence cell recovery and data quality (24).",
+          "paper_id": "paper_PMC13628270"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-038",
+      "category": "dataset",
+      "question": "How many proteins were identified per single neutrophil?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "paper_title": "Single cell proteomic analysis defines discrete neutrophil functional states in human glioblastoma",
+      "gold_sentence_id": "paper_import_15c6a0f864b0_para_0009_sent_007",
+      "gold_sentence": "Finally, our SCP workflow enabled the identification of >1100 proteins per single neutrophil after tissue dissociation and cell sorting (Fig. 1C ) from an estimated ~30 pg of peptides injected.",
+      "gold_para_id": "paper_import_15c6a0f864b0_para_0009",
+      "gold_para": "We compared the protein identifications of our two optimized low cell number methods to the standard bulk workflows which required 2 million neutrophils per sample (Fig. 1B ). The data from all 3 proteomic methods were searched using Spectronaut 19, using stringent parameters optimized for mini-bulk and single cell, with a human SwissProt database that included isoforms and an immune cell specific contaminant database. Details on the parameters are provided in Table 2 . As expected, the bulk proteomic workflow enabled the most comprehensive coverage of the neutrophil proteomes, with >5400 protein groups (proteins) identified per sample. However, in the bulk workflow a total 1.5 µg of peptides were injected into the mass spectrometer. The mini-bulk analysis enabled the identification of >3000 proteins per sample from just 500 cells, with the equivalent of ~15 ng injected into the mass spectrometer. Finally, our SCP workflow enabled the identification of >1100 proteins per single neutrophil after tissue dissociation and cell sorting (Fig. 1C ) from an estimated ~30 pg of peptides injected. The mini-bulk and SCP workflows achieved remarkable coverage considering the low input.",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13719468_para_00022_sent_001",
+          "text": "Neutrophils were analyzed and sub-clustered into 7 substantial heterogeneous subtypes, including one mature subset (Neu_Mature_02), three homeostatic subsets (Neu_Homeostatic_01, Neu_Homeostatic_02 and Neu_Homeostatic_03), two interferon-stimulated genes (ISG)-related subsets (Neu_ISG_01 and Neu_ISG_02), and one aged subset (Neu_Aged_01) (Figure 2A), marker genes were shown (Supplementary Figure S1A).",
+          "paper_id": "paper_PMC13719468"
+        },
+        {
+          "sentence_id": "paper_PMC13719363_para_00014_sent_003",
+          "text": "The concentration of total proteins was quantified using the BCA (Thermo Scientific, 23227) and, 20 µg total proteins were separated on 12% SDS-PAGE gels and electro-transferred to nitrocellulose membranes, blocked for 30 min with 5% fat free dry milk in PBST (PBS with 0.1% Tween 20) before the primary antibodies were applied.",
+          "paper_id": "paper_PMC13719363"
+        },
+        {
+          "sentence_id": "paper_PMC13631272_para_00011_sent_001",
+          "text": "To estimate the relative total abundance of all quantified protein groups in single cells or from 10 cells we compared the summed protein quantity to what was found from a titration of diluted bulk digests ranging from 1 pg to 200 pg (Fig.",
+          "paper_id": "paper_PMC13631272"
+        },
+        {
+          "sentence_id": "paper_PMC13631272_para_00010_sent_001",
+          "text": "We first compared the above-mentioned cell-isolation and lysis conditions using E. coli cells and found 34 to 67 quantified E. coli protein groups on average per cell from intact unstained or stained cells, respectively.",
+          "paper_id": "paper_PMC13631272"
+        },
+        {
+          "sentence_id": "paper_PMC7480431_para_03784_sent_001",
+          "text": "Results: Proteomics analyses identified a total of 1299 proteins in the four groups.",
+          "paper_id": "paper_PMC7480431"
+        },
+        {
+          "sentence_id": "paper_PMC7480431_para_03201_sent_001",
+          "text": "Results: A total of 1.861 proteins were identified at least with a unique peptide and we have able to establish the proteomic profile of miR21-/- exosomes against normal exosomes.",
+          "paper_id": "paper_PMC7480431"
+        },
+        {
+          "sentence_id": "paper_PMC13631628_para_00025_sent_001",
+          "text": "Neutrophil heterogeneity, assessed using unsupervised clustering, defined five discrete neutrophil subpopulations: Cd177+, Il1b+, Defa11+, Prg2+, and Elane+.",
+          "paper_id": "paper_PMC13631628"
+        },
+        {
+          "sentence_id": "paper_PMC13628270_para_00001_sent_001",
+          "text": "Over the past three decades, substantial heterogeneity has been revealed among human neutrophils, including differences in morphology, density, maturation status, surface protein expression, and potential roles in adaptive immune responses (5).",
+          "paper_id": "paper_PMC13628270"
+        },
+        {
+          "sentence_id": "paper_PMC13719363_para_00014_sent_001",
+          "text": "5 x 106 isolated human neutrophils were treated with media alone (HBSS, Thermo Scientific, 14025092) or PMA (200 nM) with or without peptides B Box-97/mB Box-97syn/LH1C/LH1CS/LH1CS-FY or LH1CS-RA (1 µM) for 30min.",
+          "paper_id": "paper_PMC13719363"
+        },
+        {
+          "sentence_id": "paper_PMC7480431_para_03784_sent_003",
+          "text": "This group of protein was composed of several Ras-related proteins, eukaryotic initiation factors, granzyme, CD9, tubulin, and serpins among others.",
+          "paper_id": "paper_PMC7480431"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-039",
+      "category": "factoid",
+      "question": "What did the data show about neutrophil granule protein abundance?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "paper_title": "Single cell proteomic analysis defines discrete neutrophil functional states in human glioblastoma",
+      "gold_sentence_id": "paper_import_15c6a0f864b0_para_0011_sent_002",
+      "gold_sentence": "Our data showed that neutrophil granule proteins are highly abundant, with azurophilic granules (AG), specific granules (SG), ficolin granules (FG) and secretory vesicles (SV) all having a median copy number >60,000 copies.",
+      "gold_para_id": "paper_import_15c6a0f864b0_para_0011",
+      "gold_para": "Across all 3 methods, we were interested to examine the proteomic coverage of proteins that are vital to neutrophil function, focusing on neutrophil granules, metabolic proteins and proteins involved in immune signalling pathways. Our data showed that neutrophil granule proteins are highly abundant, with azurophilic granules (AG), specific granules (SG), ficolin granules (FG) and secretory vesicles (SV) all having a median copy number >60,000 copies. In bulk we could detect 682 granule proteins, of which 88% were also detected by mini-bulk and 80% by SCP (Fig. 1F ), showing a remarkable capacity for SCP to characterize important neutrophil effector proteins. We next studied metabolic proteins which are vital to fuel neutrophil effector functions. The metabolic proteins were considerably less abundant than granule proteins but still displayed a median of >15,000 copies. 78% of the proteins identified by bulk were present in the mini-bulk analysis with excellent coverage (75% of proteins identified by bulk) also retained within the SCP data (Fig. 1G ). We next focused on important neutrophil effector function regulators, such as adhesion proteins, proteins required for calcium signalling responses, cytokine and chemokine receptors and pattern recognition receptors (Fig. 1H ). The adhesion proteins were highly abundant and showed good coverage, but low abundance chemokine receptors were difficult to detect even in bulk, and most were not detected with mini-bulk or SCP, showing the current limitations to identify important low abundance proteins.",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13631593_para_00059_sent_001",
+          "text": "Clinically, peripheral blood LDN proportions correlate positively with RA disease activity (DAS28), erythrocyte sedimentation rate and C-reactive protein levels, and LDNs heavily infiltrate inflamed synovial tissue (54).",
+          "paper_id": "paper_PMC13631593"
+        },
+        {
+          "sentence_id": "paper_PMC13631272_para_00011_sent_003",
+          "text": "Consistent with previous reports23 and our expectations, up to 98% of the total protein quantity detected in single cells originated from contaminants, reflecting both the low protein content of individual bacteria and the necessary large excess of trypsin added per sample.",
+          "paper_id": "paper_PMC13631272"
+        },
+        {
+          "sentence_id": "paper_PMC13632502_para_00018_sent_002",
+          "text": "Proteins were classified as differentially abundant if they met the criteria of |log2(ratio)| ≥ 1 and p < 0.05.",
+          "paper_id": "paper_PMC13632502"
+        },
+        {
+          "sentence_id": "paper_PMC13630528_para_00050_sent_003",
+          "text": "Similarly, reductions in adhesion molecule and chemokine transcripts do not necessarily indicate corresponding changes in protein abundance or surface expression and therefore do not establish a functional reduction in leukocyte adhesion [32].",
+          "paper_id": "paper_PMC13630528"
+        },
+        {
+          "sentence_id": "paper_PMC13630528_para_00050_sent_001",
+          "text": "Nevertheless, these findings should be interpreted within the scope of the measurements performed.",
+          "paper_id": "paper_PMC13630528"
+        },
+        {
+          "sentence_id": "paper_PMC13485868_para_00041_sent_001",
+          "text": "The biological interpretation of these findings is supported by the established role of the implicated genes, although caution is needed given the observational design of the study.",
+          "paper_id": "paper_PMC13485868"
+        },
+        {
+          "sentence_id": "paper_PMC13601954_para_00021_sent_001",
+          "text": "The composition of neutrophil subsets is significantly associated with the severity of bacterial pneumonia.",
+          "paper_id": "paper_PMC13601954"
+        },
+        {
+          "sentence_id": "paper_PMC13719468_para_00022_sent_001",
+          "text": "Neutrophils were analyzed and sub-clustered into 7 substantial heterogeneous subtypes, including one mature subset (Neu_Mature_02), three homeostatic subsets (Neu_Homeostatic_01, Neu_Homeostatic_02 and Neu_Homeostatic_03), two interferon-stimulated genes (ISG)-related subsets (Neu_ISG_01 and Neu_ISG_02), and one aged subset (Neu_Aged_01) (Figure 2A), marker genes were shown (Supplementary Figure S1A).",
+          "paper_id": "paper_PMC13719468"
+        },
+        {
+          "sentence_id": "paper_PMC13601954_para_00021_sent_003",
+          "text": "Concurrently, enrichment of ISG-high neutrophils in severely affected patients suggests an interferon-skewed inflammatory program associated with severe disease; whether this program causally impairs bacterial clearance or promotes immune-cell exhaustion requires functional testing (Xiao et al., 2025a).",
+          "paper_id": "paper_PMC13601954"
+        },
+        {
+          "sentence_id": "paper_PMC13631628_para_00025_sent_001",
+          "text": "Neutrophil heterogeneity, assessed using unsupervised clustering, defined five discrete neutrophil subpopulations: Cd177+, Il1b+, Defa11+, Prg2+, and Elane+.",
+          "paper_id": "paper_PMC13631628"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-040",
+      "category": "contradiction",
+      "question": "What limits single-cell proteomic analysis of small cells?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "paper_title": "Single cell proteomic analysis defines discrete neutrophil functional states in human glioblastoma",
+      "gold_sentence_id": "paper_import_15c6a0f864b0_para_0012_sent_006",
+      "gold_sentence": "Despite these developments, the lack of amplification strategies for proteins has mostly limited single cell proteomic (SCP) analysis to larger cells containing a higher protein content such as blastomeres, oocytes and HeLa cells 60 .",
+      "gold_para_id": "paper_import_15c6a0f864b0_para_0012",
+      "gold_para": "Single cell RNAseq has been instrumental in helping to define neutrophil transcriptional subsets, however due to the strong discordance between mRNA and protein abundance 10 , an understanding of neutrophil functional heterogeneity in health and disease is lacking. Although the transcriptome can be used to predict cellular state, it is the proteome that is the key driver of biological function especially in post-mitotic cells such as neutrophils. The bulk proteomes of immune cells including neutrophils have over the years been extensively studied, mapping cellular protein signatures and function to understand disease mechanisms and identify biomarkers. However, bulk proteomics obscures the single cell resolution necessary to capture complex biological tissue cell-state heterogeneity. Important advances in single cell proteomics including the original isobaric labelling methods 54 , 55 , nanodroplet sample processing techniques 15 , 17 , 56 , label free instrument optimisations 57 and even spatial solutions 58 , 59 have enabled the quantification of thousands of proteins from a single cell. Despite these developments, the lack of amplification strategies for proteins has mostly limited single cell proteomic (SCP) analysis to larger cells containing a higher protein content such as blastomeres, oocytes and HeLa cells 60 . Whilst a single HeLa cell is estimated to contain between 150 and 250 pg of protein 61 , a single human neutrophil is estimated to contain between 30 and 60 pg of protein, posing a substantial challenge for SCP analysis 60 , 61 .",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13004678_para_00018_sent_002",
+          "text": "A key limitation lies in the challenge of the translation from ex vivo transcriptomics to clinically applicable measurements, due to biological and technical complexity66.",
+          "paper_id": "paper_PMC13004678"
+        },
+        {
+          "sentence_id": "paper_PMC13632353_para_00070_sent_001",
+          "text": "However, this study has several inherent limitations.",
+          "paper_id": "paper_PMC13632353"
+        },
+        {
+          "sentence_id": "paper_PMC13631272_para_00000_sent_001",
+          "text": "Single cell proteomics (SCP) by mass spectrometry (MS) is an emerging technology that continuously pushes its limits towards improved reproducibility, throughput and sensitivity1–3.",
+          "paper_id": "paper_PMC13631272"
+        },
+        {
+          "sentence_id": "paper_PMC13614359_para_00228_sent_002",
+          "text": "The RNA content of a single cell is orders of magnitude below the input requirements of current commercial DRS kits, and low‐input processing introduces substantial risks of adsorption loss, degradation, contamination, and stochastic transcript dropout [534, 673, 674].",
+          "paper_id": "paper_PMC13614359"
+        },
+        {
+          "sentence_id": "paper_PMC13631272_para_00000_sent_002",
+          "text": "As the protein content of a single eukaryotic cell is very low in the 200 pg range, SCP requires state-of-the-art equipment and workflows to reduce sample loss in an extremely low input setting.",
+          "paper_id": "paper_PMC13631272"
+        },
+        {
+          "sentence_id": "paper_PMC13004678_para_00018_sent_001",
+          "text": "Our study has notable limitations and several strengths to consider.",
+          "paper_id": "paper_PMC13004678"
+        },
+        {
+          "sentence_id": "paper_PMC13632193_para_00057_sent_001",
+          "text": "Several limitations regarding the datasets need to be considered.",
+          "paper_id": "paper_PMC13632193"
+        },
+        {
+          "sentence_id": "paper_PMC13632211_para_00012_sent_002",
+          "text": "Because only a relatively small number of targeted proteins can be measured, spatial proteomics, in contrast to single-cell RNA sequencing (scRNA-seq), is unable to distinguish cell types with the same precision [72–76].",
+          "paper_id": "paper_PMC13632211"
+        },
+        {
+          "sentence_id": "paper_PMC13539050_para_00044_sent_002",
+          "text": "Mass spectrometry has high specificity but does not provide routine single-cell or time-resolved lactylome resolution.",
+          "paper_id": "paper_PMC13539050"
+        },
+        {
+          "sentence_id": "paper_PMC13605177_para_00141_sent_002",
+          "text": "However, compared to conventional single-cell proteomics, the stoichiometry of lactylation modifications is typically low.",
+          "paper_id": "paper_PMC13605177"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-041",
+      "category": "factoid",
+      "question": "What does BA.3.2.1 decouple?",
+      "gold_paper_id": "paper_PMC13615522",
+      "paper_title": "Functional and structural basis of Omicron BA.3.2.1 spike",
+      "gold_sentence_id": "paper_PMC13615522_para_00054_sent_003",
+      "gold_sentence": "Thus, BA.3.2.1 decouples intrinsic RBD affinity from trimer-level receptor engagement: the prefusion spike favors a closed state that limits premature receptor and antibody access, while individual RBDs retain sufficient affinity to support entry once exposed.",
+      "gold_para_id": "paper_PMC13615522_para_00054",
+      "gold_para": "This closed architecture provides a mechanistic explanation for the apparent disconnect between BA.3.2.1 RBD affinity and whole-spike ACE2 binding. Although the BA.3.2.1 RBD retained high intrinsic hACE2 affinity, the trimeric spike bound hACE2 less efficiently than LP.8.1, consistent with restricted RBD accessibility. Thus, BA.3.2.1 decouples intrinsic RBD affinity from trimer-level receptor engagement: the prefusion spike favors a closed state that limits premature receptor and antibody access, while individual RBDs retain sufficient affinity to support entry once exposed. Such conformational gating may underlie “high-escape/low-entry” phenotypes observed in some other Omicron subvariants.12,74-77",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13615522_para_00033_sent_002",
+          "text": "BA.3.2.1 spike exhibited lower association (2.2-fold) and dissociation (1.6-fold) constants than LP.8.1, resulting in a 1.4-fold reduction in hACE2 affinity (Figures 4A, S14A, and S14B).",
+          "paper_id": "paper_PMC13615522"
+        },
+        {
+          "sentence_id": "paper_PMC13615522_para_00057_sent_001",
+          "text": "In summary, BA.3.2.1 achieves broad neutralizing-antibody escape through extensive RBD and NTD remodeling and a glycan-reinforced quaternary architecture.",
+          "paper_id": "paper_PMC13615522"
+        },
+        {
+          "sentence_id": "paper_PMC13615522_para_00033_sent_003",
+          "text": "Consistently, BA.3.2.1-spike virions attached less efficiently than LP.8.1-spike virions to A549-hACE2 cells at 4°C (Figure 4B).",
+          "paper_id": "paper_PMC13615522"
+        },
+        {
+          "sentence_id": "paper_PMC13615522_para_00012_sent_001",
+          "text": "To investigate mechanisms underlying BA.3.2.1 spike function, we determined its trimeric structure by single-particle cryo-EM (Figures S3A-S3C; Table S4).",
+          "paper_id": "paper_PMC13615522"
+        },
+        {
+          "sentence_id": "paper_PMC13642154_para_00014_sent_002",
+          "text": "Therefore, at the unit cell level, the isolation between the two functionalities can be considered good, providing the fundamental conditions for decoupling.",
+          "paper_id": "paper_PMC13642154"
+        },
+        {
+          "sentence_id": "paper_PMC13615522_para_00049_sent_002",
+          "text": "In concert with its closed trimer, which may occlude cryptic/shoulder sites, these changes provide a structural explanation for the broad immune escape and antigenic shift of BA.3.2.1.",
+          "paper_id": "paper_PMC13615522"
+        },
+        {
+          "sentence_id": "paper_PMC13615522_para_00012_sent_002",
+          "text": "82.5% BA.3.2.1 spike particles adopted a closed 3-RBD-down conformation (3.2.1-3D), while 17.5% displayed a flexible state (3.2.1-1M) with two down RBDs and one unresolved RBD (Figure 2A).",
+          "paper_id": "paper_PMC13615522"
+        },
+        {
+          "sentence_id": "paper_PMC13615522_para_00053_sent_003",
+          "text": "The BA.3.2.1-specific N529 glycan further reinforces this closed state through interprotomer interactions.",
+          "paper_id": "paper_PMC13615522"
+        },
+        {
+          "sentence_id": "paper_PMC13615522_para_00049_sent_001",
+          "text": "Collectively, our analyses indicate that BA.3.2.1 broadly recontours RBD/NTD antigenic surfaces.",
+          "paper_id": "paper_PMC13615522"
+        },
+        {
+          "sentence_id": "paper_PMC13615522_para_00003_sent_001",
+          "text": "BA.3.2 has drawn substantial attention because of its extensive spike divergence.12,37 Prior studies suggest that BA.3.2 exhibits pronounced immune evasion but reduced infectivity, fusogenicity, and replication compared with JN.1-descendant variants.12,18,37,38 However, many analyses have relied on pseudovirus systems, with limited evaluation using authentic virus in physiologically relevant primary human airway epithelium (HAE).",
+          "paper_id": "paper_PMC13615522"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-042",
+      "category": "method",
+      "question": "What was used to model unresolved loops?",
+      "gold_paper_id": "paper_PMC13615522",
+      "paper_title": "Functional and structural basis of Omicron BA.3.2.1 spike",
+      "gold_sentence_id": "paper_PMC13615522_para_00020_sent_003",
+      "gold_sentence": "Unresolved loops were subsequently modeled using Phenix’s predict-and-build workflow guided by AlphaFold.50,51",
+      "gold_para_id": "paper_PMC13615522_para_00020",
+      "gold_para": "Beyond the RBD, BA.3.2.1 showed substantial remodeling of the NTD, a major target of nAbs. The NTD antigenic supersite comprises five surface-exposed loops, N1-N5 (Figure S8A).49 To compare this region between BA.3.2.1 and LP.8.1, we performed local refinement of the NTDs (Figures S3I and S4G; Tables S8 and S9). Unresolved loops were subsequently modeled using Phenix’s predict-and-build workflow guided by AlphaFold.50,51",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-043",
+      "category": "dataset",
+      "question": "Which serum panel was used for the first sample panel?",
+      "gold_paper_id": "paper_PMC13615522",
+      "paper_title": "Functional and structural basis of Omicron BA.3.2.1 spike",
+      "gold_sentence_id": "paper_PMC13615522_para_00063_sent_002",
+      "gold_sentence": "The first sample panel, consisting of 26 sera, was collected 21–99 days (median 42.5) after KP.2 infection (as determined by RT-PCR) from individuals aged 22–82 years (median 38.5) who had received 0–4 doses of mRNA vaccines.",
+      "gold_para_id": "paper_PMC13615522_para_00063",
+      "gold_para": "Two panels of human sera collected at UTMB were used in the study. The first sample panel, consisting of 26 sera, was collected 21–99 days (median 42.5) after KP.2 infection (as determined by RT-PCR) from individuals aged 22–82 years (median 38.5) who had received 0–4 doses of mRNA vaccines. The second sample panel, consisting of 21 sera, was collected 23–105 days (median 50) after KP.3 infection (as determined by RT-PCR) from individuals aged 26–96 years (median 54) who had received 0–6 doses of mRNA vaccines. Patient information was completely deidentified from all specimens. The de-identified human sera were heat-inactivated at 56°C for 30 min before the neutralization test. Tables S1 and S2 show the summary of serum information.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-044",
+      "category": "method",
+      "question": "How was the LP.8.1 spike-hACE2 complex prepared?",
+      "gold_paper_id": "paper_PMC13615522",
+      "paper_title": "Functional and structural basis of Omicron BA.3.2.1 spike",
+      "gold_sentence_id": "paper_PMC13615522_para_00078_sent_003",
+      "gold_sentence": "For LP.8.1 spike-hACE2 complex, hACE2 was mixed with the spike at a 2:1 molar ratio to a final spike concentration of 1.2 mg/mL and incubated on ice for 30 min 3 μL samples were applied to the grid as described above.",
+      "gold_para_id": "paper_PMC13615522_para_00078",
+      "gold_para": "For spike protein alone, a 3 μL sample at 1.3 mg/mL was applied to QUANTIFOIL R1.2/1.3 grid (Electron Microscopy Sciences) that had been plasma-cleaned by PELCO easiGlow Glow Discharge Cleaning System (TED PELLA, Inc.). The grid was blotted for 2 s and plunge-frozen in liquid ethane using Vitrobot Mark IV (Thermo Fisher Scientific) at 8°C and 100% humidity. For LP.8.1 spike-hACE2 complex, hACE2 was mixed with the spike at a 2:1 molar ratio to a final spike concentration of 1.2 mg/mL and incubated on ice for 30 min 3 μL samples were applied to the grid as described above. For the BA.3.2.1 spike-hACE2 complex, hACE2 was mixed with the spike at a molecular ratio of 3:1 to a final concentration of spike at 1.2 mg/mL and incubated at 37°C for 15 min, followed by incubation on ice for 30 min 3 μL samples were applied to the grid as described above.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-045",
+      "category": "comparison",
+      "question": "How did S2' band abundance differ across variants?",
+      "gold_paper_id": "paper_PMC13615522",
+      "paper_title": "Functional and structural basis of Omicron BA.3.2.1 spike",
+      "gold_sentence_id": "paper_PMC13615522_para_00006_sent_003",
+      "gold_sentence": "The S2′ band was more abundant in WA1, BA.3, and KP.3 (22%–30%), intermediate in BA.3.2.1 (18%), and lowest in XEC and LP.8.1, with LP.8.1 below 10% (Figures 1B and 1D).",
+      "gold_para_id": "paper_PMC13615522_para_00006",
+      "gold_para": "Western blot analysis of virions released from Vero E6 cells revealed distinct S cleavage patterns. KP.3 and BA.3.2.1 showed efficient S1/S2 cleavage (>80%), comparable to WA1, whereas BA.3, XEC, and LP.8.1 showed lower cleavage (~35%–45%) (Figures 1B, 1C, and S2C). The S2′ band was more abundant in WA1, BA.3, and KP.3 (22%–30%), intermediate in BA.3.2.1 (18%), and lowest in XEC and LP.8.1, with LP.8.1 below 10% (Figures 1B and 1D). Total spike-to-N ratios were similar across variants, except for LP.8.1, which was reduced to ~70% of WA1 levels (Figures S2C and S2D).",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-046",
+      "category": "factoid",
+      "question": "What functions does skin serve as a barrier?",
+      "gold_paper_id": "paper_PMC13657230",
+      "paper_title": "Topical application of urolithin A activates mitophagy and enhances mitochondrial function to promote skin longevity",
+      "gold_sentence_id": "paper_PMC13657230_para_00000_sent_001",
+      "gold_sentence": "Skin is the body’s largest organ and serves vital functions as a barrier against injuries, UV light, and pathogens.",
+      "gold_para_id": "paper_PMC13657230_para_00000",
+      "gold_para": "Skin is the body’s largest organ and serves vital functions as a barrier against injuries, UV light, and pathogens. Chronological aging brings changes in skin appearance and a decline in its protective functions. This is further accentuated following exposure to UV radiation by a process called photoaging.1 The most common visual signs of aging skin are the appearance of wrinkles, skin thinning, hyperpigmentation, sagginess, and dryness. This derives from a combination of biological changes, including a decline in the quantity and quality of structural components of the skin, such as collagen and elastin, as well as dysfunctions in cellular bioenergetics. Indeed, most of the energy to support skin cell health is derived from mitochondria, making mitochondrial dysfunction a key hallmark of skin aging.2,3 The aging process impacts immune cells in the skin. This reduces the ability of the skin to cope with excessive inflammation and significantly contributes to the emergence of photoaging.4 Finally, cellular senescence is emerging as a key additional hallmark that affects skin health as we age, which can be counteracted by removal of the senescent cells (i.e., senolytic effect) or blunting of their detrimental secretome (i.e., senomorphic effect).5",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC13416412_para_00000_sent_002",
+          "text": "Beyond its classical roles as a physical barrier and sensory interface, the skin operates as an active immunological organ, integrating signals from resident and circulating immune cells to maintain tissue homeostasis (2).",
+          "paper_id": "paper_PMC13416412"
+        },
+        {
+          "sentence_id": "paper_PMC13614170_para_00000_sent_003",
+          "text": "In addition to protecting against physical, chemical, and biological threats, the skin regulates the body’s water content, preventing excessive evaporation, which helps maintain thermal balance.",
+          "paper_id": "paper_PMC13614170"
+        },
+        {
+          "sentence_id": "paper_PMC13614170_para_00000_sent_002",
+          "text": "The skin acts as a barrier between the human body and its surroundings, serving multiple functions, including protection, sensation, temperature regulation, metabolic and biochemical processes, and immune system support.",
+          "paper_id": "paper_PMC13614170"
+        },
+        {
+          "sentence_id": "paper_PMC13317201_para_00000_sent_002",
+          "text": "Through multiple layers of tightly packed cells held together by proteins and lipids, stabilizing connective tissue, and a deep layer of adipose tissue, the skin forms a barrier against mechanical damage from the environment while also preventing potentially harmful microbes and toxins from entering the body.",
+          "paper_id": "paper_PMC13317201"
+        },
+        {
+          "sentence_id": "paper_PMC13317201_para_00001_sent_001",
+          "text": "In its role as a protective barrier, skin does not act alone.",
+          "paper_id": "paper_PMC13317201"
+        },
+        {
+          "sentence_id": "paper_PMC13466892_para_00032_sent_001",
+          "text": "The epidermal barrier plays an essential role in maintaining skin homeostasis by regulating transepidermal water loss (TEWL), protecting against environmental stressors, and supporting innate immune defense.",
+          "paper_id": "paper_PMC13466892"
+        },
+        {
+          "sentence_id": "paper_PMC13628173_para_00021_sent_003",
+          "text": "In addition, it participates in immune responses and the regulation of the local microenvironment (53).",
+          "paper_id": "paper_PMC13628173"
+        },
+        {
+          "sentence_id": "paper_PMC13317201_para_00001_sent_003",
+          "text": "These skin resident microbes produce antimicrobials (8–11), compete with neighboring and undesirable microbes for nutrients (12, 13) (a phenomenon better described in the gut [14]), and prime the body’s defenses through immune learning (15, 16).",
+          "paper_id": "paper_PMC13317201"
+        },
+        {
+          "sentence_id": "paper_PMC13605232_para_00240_sent_001",
+          "text": "The skin provides a critical barrier against environmental, microbial, and chemical insults, and disruption of epidermal differentiation, inflammatory homeostasis, or barrier integrity contributes to several dermatological disorders [294,295].",
+          "paper_id": "paper_PMC13605232"
+        },
+        {
+          "sentence_id": "paper_PMC13650093_para_00005_sent_001",
+          "text": "The epidermis functions as a physical barrier to the human body that prevents allergen and microbial penetration through cross-linking of epidermal proteins such as filaggrin, keratins, and loricrin [13, 14].",
+          "paper_id": "paper_PMC13650093"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-047",
+      "category": "factoid",
+      "question": "What did safety assessments show for topical urolithin A?",
+      "gold_paper_id": "paper_PMC13657230",
+      "paper_title": "Topical application of urolithin A activates mitophagy and enhances mitochondrial function to promote skin longevity",
+      "gold_sentence_id": "paper_PMC13657230_para_00021_sent_002",
+      "gold_sentence": "Safety assessments demonstrated that UA can be applied topically to human skin without significant adverse effects in study participants.",
+      "gold_para_id": "paper_PMC13657230_para_00021",
+      "gold_para": "Collectively, the robust mechanistic evidence obtained across cell culture systems, 3D skin models, and human skin explants justified advancing UA into clinical studies to determine whether these biological benefits translate into measurable improvements in human skin. Safety assessments demonstrated that UA can be applied topically to human skin without significant adverse effects in study participants. These comprehensive safety evaluations underscore the excellent tolerability of UA, even for sensitive skin, reinforcing its suitability for widespread use in skincare formulations without posing risks of irritation or sensitization.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-048",
+      "category": "method",
+      "question": "How was PGE2 measured in culture supernatants?",
+      "gold_paper_id": "paper_PMC13657230",
+      "paper_title": "Topical application of urolithin A activates mitophagy and enhances mitochondrial function to promote skin longevity",
+      "gold_sentence_id": "paper_PMC13657230_para_00044_sent_005",
+      "gold_sentence": "PGE2 released in the culture supernatants was measured using a specific ELISA kit according to the supplier’s instructions (Enzo Life Sciences, ADI-900-001).",
+      "gold_para_id": "paper_PMC13657230_para_00044",
+      "gold_para": "For studying the impact of UA on UV-induced PGE2 release, RHE were rinsed in PBS and irradiated with UVB (+UVA) - 850 mJ/cm2 (+ 6 J/cm2) using a SOL500 Sun Simulator equipped with an H2 filter (Dr. Hönle, AG). After irradiation, the treatments were renewed and the RHE incubated for 24 hours. In parallel, non-irradiated conditions were performed and kept in the dark during the irradiation time. PGE2 released in the culture supernatants was measured using a specific ELISA kit according to the supplier’s instructions (Enzo Life Sciences, ADI-900-001). All experimental conditions were performed in n=3 biological replicates.",
+      "hit": true,
+      "returned_evidence": []
+    },
+    {
+      "question_id": "s1-049",
+      "category": "dataset",
+      "question": "How were test materials applied in the 8-week study?",
+      "gold_paper_id": "paper_PMC13657230",
+      "paper_title": "Topical application of urolithin A activates mitophagy and enhances mitochondrial function to promote skin longevity",
+      "gold_sentence_id": "paper_PMC13657230_para_00058_sent_008",
+      "gold_sentence": "The test materials were applied twice daily by the subjects, in the morning and evening, for 8-weeks according to the application training in the aging efficacy study.",
+      "gold_para_id": "paper_PMC13657230_para_00058",
+      "gold_para": "The tested formulations for both the aging efficacy study and the photodamage trial were: a moisturizing skin base cream containing standardized excipients (vehicle) and for the (active) arms containing either 0.5 or 1% UA (MitopureTM) added in the base cream. A study site representative assigned test formulations so that both the subjects and the investigators were blinded to the test article identification. The information containing the assignment of formulations to labels was kept at the study site by a person not involved in the investigations and analysis of data during the study. The statistical analyses plan was finalized prior to unblinding. Thereafter, the envelope containing the code-to-treatment assignments was opened to unblind the study for analysis. A study technician demonstrated the correct amount of the test formulation to be applied during the first application to the study participants. The participants were instructed to use the test formulation every day. The test materials were applied twice daily by the subjects, in the morning and evening, for 8-weeks according to the application training in the aging efficacy study.",
+      "hit": false,
+      "returned_evidence": [
+        {
+          "sentence_id": "paper_PMC11236057_para_00010_sent_003",
+          "text": "The order of testing was randomized across directions between participants.",
+          "paper_id": "paper_PMC11236057"
+        },
+        {
+          "sentence_id": "paper_PMC9950707_para_00029_sent_002",
+          "text": "Data were collected from multiple sources, including pre-and post-tests on academic listening, a questionnaire, the teacher’s in-class observation, students’ notes, and assignments.",
+          "paper_id": "paper_PMC9950707"
+        },
+        {
+          "sentence_id": "paper_PMC9950707_para_00036_sent_002",
+          "text": "They took another test that followed the same format in week 18, which aimed to determine if they had improved in their academic listening abilities after undergoing the training.",
+          "paper_id": "paper_PMC9950707"
+        },
+        {
+          "sentence_id": "paper_PMC7503042_para_00018_sent_003",
+          "text": "We then conducted sensitivity power analyses using G*Power (Faul et al., 2009) to estimate the smallest effect sizes that the study was sufficiently powered to detect, using the power of 99% and significance criterion of 0.00136, which is the significance level that the most significant effect for each set of analyses (e.g., testing main and moderated effects) would need to obtain to pass the false-discovery rate (FDR) corrections for multiple tests (Benjamini & Hochberg, 1995) that we used (the ‘Testing main effects’ and ‘Testing moderated effects’ sections below describe across how many significance tests the FDR corrections were applied for each set of analyses).",
+          "paper_id": "paper_PMC7503042"
+        },
+        {
+          "sentence_id": "paper_PMC9309236_para_00071_sent_001",
+          "text": "Test used in Pre-test, Post-test and Post-questionnaire for 8th grade.",
+          "paper_id": "paper_PMC9309236"
+        },
+        {
+          "sentence_id": "paper_PMC9950707_para_00029_sent_003",
+          "text": "The data collection spanned 10 weeks, starting from week 8 to week 18 of the course.",
+          "paper_id": "paper_PMC9950707"
+        },
+        {
+          "sentence_id": "paper_PMC10912542_para_00005_sent_001",
+          "text": "Based on the data in the literature and considering that no study to date has extensively studied the interaction of the tested material with the tooth structure when used for restorations performed following the manufacturer’s most recent instructions and subsequently immersed in different fluids, this study aimed to investigate the elemental analysis and microhardness of Activa and marginal enamel, and dentin after storage in different immersion fluids.",
+          "paper_id": "paper_PMC10912542"
+        },
+        {
+          "sentence_id": "paper_PMC9950707_para_00029_sent_001",
+          "text": "As a quasi-experimental study without a control group, this study adopted a mixed-method design to ensure rich data could be collected to address the research questions.",
+          "paper_id": "paper_PMC9950707"
+        },
+        {
+          "sentence_id": "paper_PMC10912542_para_00030_sent_006",
+          "text": "[7] also reported that the tested material showed the highest phosphorus release among other tested ion-releasing materials, although this ion movement was only observed in media that is rich in phosphorus, suggesting that the source of the high phosphorus levels detected at the interfaces in this study was from the storage media rather than the tested material itself [7].",
+          "paper_id": "paper_PMC10912542"
+        },
+        {
+          "sentence_id": "paper_PMC13319485_para_00022_sent_003",
+          "text": "In Study 1, group differences were examined using Welch’s t-tests for continuous variables and Fisher’s exact tests for categorical variables; Mann–Whitney U tests were applied where assumptions were violated.",
+          "paper_id": "paper_PMC13319485"
+        }
+      ]
+    },
+    {
+      "question_id": "s1-050",
+      "category": "comparison",
+      "question": "What do current anti-aging ingredients mostly address?",
+      "gold_paper_id": "paper_PMC13657230",
+      "paper_title": "Topical application of urolithin A activates mitophagy and enhances mitochondrial function to promote skin longevity",
+      "gold_sentence_id": "paper_PMC13657230_para_00001_sent_002",
+      "gold_sentence": "While these ingredients can visibly improve wrinkles, uneven tone, and texture, they mostly address downstream manifestations of aging rather than its underlying biological drivers.",
+      "gold_para_id": "paper_PMC13657230_para_00001",
+      "gold_para": "Current “anti-aging” skincare strategies remain largely sign-corrective and rely on a set of well-established actives, such as retinoids (retinol, retinaldehyde, and tretinoin), alpha-hydroxy acids (glycolic and lactic acids), vitamin C, niacinamide, peptides, and hyaluronic acid (HA). While these ingredients can visibly improve wrinkles, uneven tone, and texture, they mostly address downstream manifestations of aging rather than its underlying biological drivers. In addition, some active formulations and combinations can trigger irritation (erythema, stinging, dryness, and peeling), limiting tolerability and long-term use, particularly in photoaged or sensitive skin.6,7 New innovative bioactives are needed to improve skin health and longevity, ideally with a dual benefit profile, impacting both intrinsic aging and extrinsic aging. Intrinsic aging involves the natural, genetic, and biological processes (BPs) that contribute to skin health decline over time.2,3 Extrinsic aging of the skin is due to external factors such as UV exposure, pollution, and lifestyle choices.2,3 These new bioactives should work without causing the irritations often observed. Urolithin A (UA) is a promising molecule to explore for its impact on skin longevity, considering its origins as a postbiotic of the gut microbiome that has been shown to both improve mitochondrial health and reduce age-associated inflammation, i.e., inflammaging, when administered orally. UA increases mitophagy, the process of recycling faulty mitochondria, and enhances biomarkers associated with improved mitochondrial function in several models of aging and age-associated conditions.8 In humans, oral supplementation of UA was shown to be safe, improve mitochondrial function, and increase muscle strength, endurance, and immune decline in clinical studies in middle-aged and elderly subjects.9,10,11 Topical application of UA represents a compelling approach to support skin health and extend skin longevity through its com",
+      "hit": true,
+      "returned_evidence": []
+    }
+  ]
+}

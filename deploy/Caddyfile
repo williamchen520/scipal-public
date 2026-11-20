@@ -1,0 +1,23 @@
+(security_headers) {
+	header {
+		X-Content-Type-Options "nosniff"
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Frame-Options "DENY"
+		Referrer-Policy "no-referrer"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		Cross-Origin-Opener-Policy "same-origin"
+	}
+}
+
+:80 {
+	encode zstd gzip
+	import security_headers
+	reverse_proxy app:5000
+}
+
+https://localhost {
+	tls internal
+	encode zstd gzip
+	import security_headers
+	reverse_proxy app:5000
+}

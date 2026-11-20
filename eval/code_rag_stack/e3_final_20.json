@@ -1,0 +1,22 @@
+[
+  {"id":"f01","category":"symbol","library_id":"lib_2c5709b07c77","query":"filter genes expressed in few cells","expected_symbol":"filter_genes","expected_path":"src/scanpy/preprocessing/_simple.py","expected_ref":"1.12.5"},
+  {"id":"f02","category":"symbol","library_id":"lib_2c5709b07c77","query":"filter genes by dispersion","expected_symbol":"filter_genes_dispersion","expected_path":"src/scanpy/preprocessing/_deprecated/highly_variable_genes.py","expected_ref":"1.12.5"},
+  {"id":"f03","category":"symbol","library_id":"lib_2c5709b07c77","query":"subsample cells","expected_symbol":"subsample","expected_path":"src/scanpy/preprocessing/_deprecated/sampling.py","expected_ref":"1.12.5"},
+  {"id":"f04","category":"symbol","library_id":"lib_2c5709b07c77","query":"magic imputation","expected_symbol":"magic","expected_path":"src/scanpy/external/pp/_magic.py","expected_ref":"1.12.5"},
+  {"id":"f05","category":"symbol","library_id":"lib_2c5709b07c77","query":"diffusion pseudotime","expected_symbol":"dpt","expected_path":"src/scanpy/tools/_dpt.py","expected_ref":"1.12.5"},
+  {"id":"f06","category":"symbol","library_id":"lib_2c5709b07c77","query":"paga trajectory","expected_symbol":"paga","expected_path":"src/scanpy/tools/_paga.py","expected_ref":"1.12.5"},
+  {"id":"f07","category":"symbol","library_id":"lib_2c5709b07c77","query":"diffusion map","expected_symbol":"diffmap","expected_path":"src/scanpy/tools/_diffmap.py","expected_ref":"1.12.5"},
+  {"id":"f08","category":"symbol","library_id":"lib_2c5709b07c77","query":"draw graph","expected_symbol":"draw_graph","expected_path":"src/scanpy/tools/_draw_graph.py","expected_ref":"1.12.5"},
+  {"id":"f09","category":"symbol","library_id":"lib_2c5709b07c77","query":"embedding density","expected_symbol":"embedding_density","expected_path":"src/scanpy/tools/_embedding_density.py","expected_ref":"1.12.5"},
+  {"id":"f10","category":"symbol","library_id":"lib_2c5709b07c77","query":"moran spatial autocorrelation","expected_symbol":"morans_i","expected_path":"src/scanpy/metrics/_morans_i.py","expected_ref":"1.12.5"},
+  {"id":"f11","category":"symbol","library_id":"lib_2c5709b07c77","query":"geary spatial autocorrelation","expected_symbol":"gearys_c","expected_path":"src/scanpy/metrics/_gearys_c.py","expected_ref":"1.12.5"},
+  {"id":"f12","category":"api","library_id":"lib_2c5709b07c77","query":"write h5ad","expected_symbol":"write","expected_path":"src/scanpy/readwrite.py","expected_ref":"1.12.5"},
+  {"id":"f13","category":"api","library_id":"lib_2c5709b07c77","query":"read loom","expected_symbol":"read_loom","expected_path":"src/scanpy/readwrite.py","expected_ref":"1.12.5"},
+  {"id":"f14","category":"api","library_id":"lib_2c5709b07c77","query":"read csv","expected_symbol":"read_csv","expected_path":"src/scanpy/readwrite.py","expected_ref":"1.12.5"},
+  {"id":"f15","category":"api","library_id":"lib_2c5709b07c77","query":"read 10x mtx","expected_symbol":"read_10x_mtx","expected_path":"src/scanpy/readwrite.py","expected_ref":"1.12.5"},
+  {"id":"f16","category":"symbol","library_id":"lib_2c5709b07c77","query":"score cell cycle","expected_symbol":"score_genes_cell_cycle","expected_path":"src/scanpy/tools/_score_genes.py","expected_ref":"1.12.5"},
+  {"id":"f17","category":"symbol","library_id":"lib_2c5709b07c77","query":"filter genes","expected_symbol":"filter_genes","expected_path":"src/scanpy/preprocessing/_simple.py","expected_ref":"1.12.5"},
+  {"id":"f18","category":"symbol","library_id":"lib_2c5709b07c77","query":"subsample","expected_symbol":"subsample","expected_path":"src/scanpy/preprocessing/_deprecated/sampling.py","expected_ref":"1.12.5"},
+  {"id":"f19","category":"symbol","library_id":"lib_2c5709b07c77","query":"magic","expected_symbol":"magic","expected_path":"src/scanpy/external/pp/_magic.py","expected_ref":"1.12.5"},
+  {"id":"f20","category":"symbol","library_id":"lib_2c5709b07c77","query":"paga","expected_symbol":"paga","expected_path":"src/scanpy/tools/_paga.py","expected_ref":"1.12.5"}
+]

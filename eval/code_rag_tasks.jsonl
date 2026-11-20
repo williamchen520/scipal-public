@@ -1,0 +1,3 @@
+{"task_id": "tiny-001", "repo": "eval/fixtures/tiny_py_repo", "task": "Add a mul(a, b) function to src/mathmod.py and a test for it.", "target_paths": ["src/mathmod.py", "test_mathmod.py"], "test_module": "test_mathmod", "tags": ["new_function", "python"]}
+{"task_id": "tiny-002", "repo": "eval/fixtures/tiny_py_repo", "task": "Add a docstring to add() in src/mathmod.py without changing behavior.", "target_paths": ["src/mathmod.py"], "test_module": "test_mathmod", "tags": ["edit", "docstring"]}
+{"task_id": "tiny-003", "repo": "eval/fixtures/tiny_py_repo", "task": "Add a test that checks add() handles negative numbers.", "target_paths": ["test_mathmod.py"], "test_module": "test_mathmod", "tags": ["test", "edge_case"]}

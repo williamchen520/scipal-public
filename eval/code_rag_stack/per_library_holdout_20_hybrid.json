@@ -1,0 +1,3272 @@
+{
+  "summary": {
+    "lib_2c5709b07c77": {
+      "cases": 20,
+      "file_hit@1": 0.8,
+      "file_hit@3": 0.85,
+      "symbol_hit@1": 0.65,
+      "p95_latency_ms": 1028.98
+    },
+    "lib_anndata": {
+      "cases": 20,
+      "file_hit@1": 0.5,
+      "file_hit@3": 0.7,
+      "symbol_hit@1": 0.4,
+      "p95_latency_ms": 901.08
+    },
+    "lib_squidpy": {
+      "cases": 20,
+      "file_hit@1": 0.85,
+      "file_hit@3": 0.95,
+      "symbol_hit@1": 0.8,
+      "p95_latency_ms": 968.33
+    },
+    "lib_scvi_tools": {
+      "cases": 20,
+      "file_hit@1": 0.75,
+      "file_hit@3": 0.9,
+      "symbol_hit@1": 0.45,
+      "p95_latency_ms": 1736.12
+    },
+    "lib_snakemake": {
+      "cases": 20,
+      "file_hit@1": 0.75,
+      "file_hit@3": 0.75,
+      "symbol_hit@1": 0.65,
+      "p95_latency_ms": 1183.31
+    },
+    "lib_ggplot2": {
+      "cases": 20,
+      "file_hit@1": 0.4,
+      "file_hit@3": 0.75,
+      "symbol_hit@1": 0.25,
+      "p95_latency_ms": 674.07
+    },
+    "lib_dplyr": {
+      "cases": 20,
+      "file_hit@1": 0.55,
+      "file_hit@3": 0.75,
+      "symbol_hit@1": 0.15,
+      "p95_latency_ms": 508.23
+    },
+    "lib_12473817b941": {
+      "cases": 20,
+      "file_hit@1": 0.8,
+      "file_hit@3": 0.9,
+      "symbol_hit@1": 0.85,
+      "p95_latency_ms": 470.84
+    },
+    "lib_nfcore_scrnaseq": {
+      "cases": 8,
+      "file_hit@1": 0.75,
+      "file_hit@3": 0.875,
+      "symbol_hit@1": 0.875,
+      "p95_latency_ms": 369.41
+    },
+    "lib_nfcore_atacseq": {
+      "cases": 20,
+      "file_hit@1": 0.75,
+      "file_hit@3": 0.85,
+      "symbol_hit@1": 0.75,
+      "p95_latency_ms": 466.85
+    }
+  },
+  "rows": [
+    {
+      "id": "2c5709b07c77_01",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Show dendrogram based on the hierarchical clustering between the `groupby` categories",
+      "expected_symbol": "add_dendrogram",
+      "expected_path": "src/scanpy/plotting/_baseplot_class.py",
+      "file_rank": 4,
+      "symbol_rank": 5,
+      "top_paths": [
+        "src/scanpy/tools/_dendrogram.py",
+        "src/scanpy/plotting/_anndata.py",
+        "src/scanpy/plotting/_anndata.py"
+      ],
+      "latency_ms": 1462.29
+    },
+    {
+      "id": "2c5709b07c77_02",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Show barplot for the number of cells in in `groupby` category",
+      "expected_symbol": "add_totals",
+      "expected_path": "src/scanpy/plotting/_baseplot_class.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scanpy/plotting/_baseplot_class.py",
+        "src/scanpy/tools/_embedding_density.py",
+        "src/scanpy/plotting/_baseplot_class.py"
+      ],
+      "latency_ms": 836.53
+    },
+    {
+      "id": "2c5709b07c77_03",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Without this caching, asv was running several processes which meant the data was repeatedly downloaded",
+      "expected_symbol": "Agg",
+      "expected_path": "benchmarks/benchmarks/preprocessing_counts.py",
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "benchmarks/benchmarks/preprocessing_counts.py",
+        "src/scanpy/readwrite.py",
+        "benchmarks/benchmarks/preprocessing_log.py"
+      ],
+      "latency_ms": 908.46
+    },
+    {
+      "id": "2c5709b07c77_04",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Aggregate data matrix based on some categorical grouping",
+      "expected_symbol": "aggregate",
+      "expected_path": "src/scanpy/get/_aggregated.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scanpy/get/_aggregated.py",
+        "src/scanpy/get/_aggregated.py",
+        "src/scanpy/preprocessing/_simple.py"
+      ],
+      "latency_ms": 822.5
+    },
+    {
+      "id": "2c5709b07c77_05",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Functionality for generic grouping and aggregating",
+      "expected_symbol": "Aggregate",
+      "expected_path": "src/scanpy/get/_aggregated.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scanpy/get/_aggregated.py",
+        "src/scanpy/get/_aggregated.py",
+        "src/scanpy/get/_aggregated.py"
+      ],
+      "latency_ms": 802.86
+    },
+    {
+      "id": "2c5709b07c77_06",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Compute group-wise mean and variance for a dask array",
+      "expected_symbol": "aggregate_dask_mean_var",
+      "expected_path": "src/scanpy/get/_aggregated.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scanpy/get/_aggregated.py",
+        "src/scanpy/get/_aggregated.py",
+        "src/scanpy/get/_aggregated.py"
+      ],
+      "latency_ms": 915.46
+    },
+    {
+      "id": "2c5709b07c77_07",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Parse a pyproject.toml file and output a list of minimum dependencies",
+      "expected_symbol": "Args",
+      "expected_path": "ci/scripts/low-vers.py",
+      "file_rank": 1,
+      "symbol_rank": 4,
+      "top_paths": [
+        "ci/scripts/low-vers.py",
+        "ci/scripts/low-vers.py",
+        "src/scanpy/_settings/__init__.py"
+      ],
+      "latency_ms": 968.31
+    },
+    {
+      "id": "2c5709b07c77_08",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Command line arguments",
+      "expected_symbol": "Args",
+      "expected_path": "ci/scripts/towncrier_automation.py",
+      "file_rank": 5,
+      "symbol_rank": 5,
+      "top_paths": [
+        "src/scanpy/cli.py",
+        "src/scanpy/_utils/__init__.py",
+        "src/scanpy/external/exporting.py"
+      ],
+      "latency_ms": 740.95
+    },
+    {
+      "id": "2c5709b07c77_09",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Document array support",
+      "expected_symbol": "ArraySupport",
+      "expected_path": "docs/extensions/array_support.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "docs/extensions/array_support.py",
+        "docs/extensions/array_support.py",
+        "docs/extensions/array_support.py"
+      ],
+      "latency_ms": 741.64
+    },
+    {
+      "id": "2c5709b07c77_10",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Automatically save figures in Do not show plots/figures interactively",
+      "expected_symbol": "autosave",
+      "expected_path": "src/scanpy/_settings/__init__.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/plotting/_utils.py"
+      ],
+      "latency_ms": 854.16
+    },
+    {
+      "id": "2c5709b07c77_11",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Automatically show figures if `autosave == False` (default `True`)",
+      "expected_symbol": "autoshow",
+      "expected_path": "src/scanpy/_settings/__init__.py",
+      "file_rank": 1,
+      "symbol_rank": 2,
+      "top_paths": [
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/_settings/__init__.py"
+      ],
+      "latency_ms": 829.81
+    },
+    {
+      "id": "2c5709b07c77_12",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Generic class for the visualization of AnnData categories and selected `var` (features or genes)",
+      "expected_symbol": "BasePlot",
+      "expected_path": "src/scanpy/plotting/_baseplot_class.py",
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/scanpy/preprocessing/_highly_variable_genes.py",
+        "src/scanpy/experimental/pp/_highly_variable_genes.py",
+        "src/scanpy/preprocessing/_highly_variable_genes.py"
+      ],
+      "latency_ms": 932.8
+    },
+    {
+      "id": "2c5709b07c77_13",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Batch balanced kNN Batch balanced kNN alters the kNN procedure to identify each cell's top neighbours in each batch separately instead of the entire",
+      "expected_symbol": "bbknn",
+      "expected_path": "src/scanpy/external/pp/_bbknn.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scanpy/external/pp/_bbknn.py",
+        "src/scanpy/neighbors/_backends/rapids.py",
+        "src/scanpy/external/tl/_palantir.py"
+      ],
+      "latency_ms": 996.14
+    },
+    {
+      "id": "2c5709b07c77_14",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Retrieve gene annotations from ensembl biomart",
+      "expected_symbol": "biomart_annotations",
+      "expected_path": "src/scanpy/queries/_queries.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scanpy/queries/_queries.py",
+        "src/scanpy/queries/_queries.py",
+        "src/scanpy/queries/_queries.py"
+      ],
+      "latency_ms": 802.63
+    },
+    {
+      "id": "2c5709b07c77_15",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Gaussian Blobs",
+      "expected_symbol": "blobs",
+      "expected_path": "src/scanpy/datasets/_datasets.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scanpy/datasets/_datasets.py",
+        "src/scanpy/external/pp/_hashsolo.py",
+        "src/scanpy/external/pp/_hashsolo.py"
+      ],
+      "latency_ms": 620.57
+    },
+    {
+      "id": "2c5709b07c77_16",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Detect branchings and partition the data into corresponding segments",
+      "expected_symbol": "branchings_segments",
+      "expected_path": "src/scanpy/tools/_dpt.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scanpy/tools/_dpt.py",
+        "src/scanpy/tools/_dpt.py",
+        "src/scanpy/tools/_dpt.py"
+      ],
+      "latency_ms": 832.26
+    },
+    {
+      "id": "2c5709b07c77_17",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Compute coefficients for tuple space",
+      "expected_symbol": "build_boolCoeff",
+      "expected_path": "src/scanpy/tools/_sim.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scanpy/tools/_sim.py",
+        "src/scanpy/tools/_rank_genes_groups.py",
+        "src/scanpy/plotting/_utils.py"
+      ],
+      "latency_ms": 790.38
+    },
+    {
+      "id": "2c5709b07c77_18",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Bulk data with conditions ulcerative colitis (UC) and Crohn’s disease (CD) The study assesses transcriptional profiles in peripheral blood mononuclear cells from 42 healthy",
+      "expected_symbol": "burczynski06",
+      "expected_path": "src/scanpy/datasets/_datasets.py",
+      "file_rank": 2,
+      "symbol_rank": 2,
+      "top_paths": [
+        "src/testing/scanpy/_pytest/fixtures/data.py",
+        "src/scanpy/datasets/_datasets.py",
+        "src/scanpy/plotting/_dotplot.py"
+      ],
+      "latency_ms": 1028.98
+    },
+    {
+      "id": "2c5709b07c77_19",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Compression for `sc.read(..., cache=True)` (default `'lzf'`)",
+      "expected_symbol": "cache_compression",
+      "expected_path": "src/scanpy/_settings/__init__.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/readwrite.py",
+        "src/scanpy/readwrite.py"
+      ],
+      "latency_ms": 830.82
+    },
+    {
+      "id": "2c5709b07c77_20",
+      "library_id": "lib_2c5709b07c77",
+      "language": "python",
+      "category": "docstring",
+      "query": "Directory for cache files (default `'./cache/'`)",
+      "expected_symbol": "cachedir",
+      "expected_path": "src/scanpy/_settings/__init__.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/readwrite.py"
+      ],
+      "latency_ms": 845.01
+    },
+    {
+      "id": "anndata_01",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "Wraps a store to count reads of (prefixes of) keys",
+      "expected_symbol": "AccessTrackingStore",
+      "expected_path": "src/anndata/tests/helpers.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/anndata/tests/helpers.py",
+        "src/anndata/_io/zarr.py",
+        "src/anndata/_core/anndata.py"
+      ],
+      "latency_ms": 804.57
+    },
+    {
+      "id": "anndata_02",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "Accessor to create See examples below and in",
+      "expected_symbol": "AdAcc",
+      "expected_path": "src/anndata/acc/__init__.py",
+      "file_rank": 2,
+      "symbol_rank": 4,
+      "top_paths": [
+        "src/anndata/_io/specs/methods.py",
+        "src/anndata/acc/__init__.py",
+        "src/anndata/_core/anndata.py"
+      ],
+      "latency_ms": 826.82
+    },
+    {
+      "id": "anndata_03",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "Add an index array for a specific device",
+      "expected_symbol": "add_array",
+      "expected_path": "src/anndata/compat/__init__.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/anndata/compat/__init__.py",
+        "src/anndata/compat/__init__.py",
+        "src/anndata/_core/index.py"
+      ],
+      "latency_ms": 765.88
+    },
+    {
+      "id": "anndata_04",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "A reference to a 1D or 2D array along one or two dimensions of an AnnData object",
+      "expected_symbol": "AdRef",
+      "expected_path": "src/anndata/acc/__init__.py",
+      "file_rank": 6,
+      "symbol_rank": 6,
+      "top_paths": [
+        "src/anndata/_core/anndata.py",
+        "src/anndata/_core/views.py",
+        "src/anndata/_core/index.py"
+      ],
+      "latency_ms": 879.93
+    },
+    {
+      "id": "anndata_05",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "Underlying mapping to the data",
+      "expected_symbol": "AlignedActual",
+      "expected_path": "src/anndata/_core/aligned_mapping.py",
+      "file_rank": 3,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/anndata/_core/xarray.py",
+        "src/anndata/_core/sparse_dataset.py",
+        "src/anndata/_core/aligned_mapping.py"
+      ],
+      "latency_ms": 774.05
+    },
+    {
+      "id": "anndata_06",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "\\ An abstract base class for Mappings containing array-like values aligned to either one or both AnnData axes",
+      "expected_symbol": "AlignedMappingBase",
+      "expected_path": "src/anndata/_core/aligned_mapping.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/anndata/_core/aligned_mapping.py",
+        "src/anndata/_core/aligned_mapping.py",
+        "src/anndata/_core/aligned_mapping.py"
+      ],
+      "latency_ms": 948.83
+    },
+    {
+      "id": "anndata_07",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "A The actual data is stored as `f'_{self.name}'` in the parent object",
+      "expected_symbol": "AlignedMappingProperty",
+      "expected_path": "src/anndata/_core/aligned_mapping.py",
+      "file_rank": 1,
+      "symbol_rank": 4,
+      "top_paths": [
+        "src/anndata/_core/aligned_mapping.py",
+        "src/anndata/_core/sparse_dataset.py",
+        "src/anndata/_core/anndata.py"
+      ],
+      "latency_ms": 865.36
+    },
+    {
+      "id": "anndata_08",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "Reference to parent AnnData view",
+      "expected_symbol": "AlignedView",
+      "expected_path": "src/anndata/_core/aligned_mapping.py",
+      "file_rank": 4,
+      "symbol_rank": 8,
+      "top_paths": [
+        "src/anndata/_core/views.py",
+        "src/anndata/_core/views.py",
+        "src/anndata/_core/views.py"
+      ],
+      "latency_ms": 779.33
+    },
+    {
+      "id": "anndata_09",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "\\ Lazily concatenate AnnData objects along the `obs` axis",
+      "expected_symbol": "AnnCollection",
+      "expected_path": "src/anndata/experimental/multi_files/_anncollection.py",
+      "file_rank": 2,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/anndata/_core/merge.py",
+        "src/anndata/experimental/multi_files/_anncollection.py",
+        "src/anndata/_io/utils.py"
+      ],
+      "latency_ms": 803.38
+    },
+    {
+      "id": "anndata_10",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "\\ An object to access the observation attributes of `adatas` in AnnCollection",
+      "expected_symbol": "AnnCollectionView",
+      "expected_path": "src/anndata/experimental/multi_files/_anncollection.py",
+      "file_rank": 1,
+      "symbol_rank": 2,
+      "top_paths": [
+        "src/anndata/experimental/multi_files/_anncollection.py",
+        "src/anndata/experimental/multi_files/_anncollection.py",
+        "src/anndata/experimental/multi_files/_anncollection.py"
+      ],
+      "latency_ms": 855.13
+    },
+    {
+      "id": "anndata_11",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "\\ An annotated data matrix",
+      "expected_symbol": "AnnData",
+      "expected_path": "src/anndata/_core/anndata.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/anndata/_core/anndata.py",
+        "src/anndata/abc.py",
+        "src/anndata/abc.py"
+      ],
+      "latency_ms": 773.86
+    },
+    {
+      "id": "anndata_12",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "Backing file manager for AnnData",
+      "expected_symbol": "AnnDataFileManager",
+      "expected_path": "src/anndata/_core/file_backing.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/anndata/_core/file_backing.py",
+        "src/anndata/_core/file_backing.py",
+        "src/anndata/_core/anndata.py"
+      ],
+      "latency_ms": 788.37
+    },
+    {
+      "id": "anndata_13",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "Error caused while trying to read in AnnData",
+      "expected_symbol": "AnnDataReadError",
+      "expected_path": "src/anndata/_io/utils.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/anndata/_io/utils.py",
+        "src/anndata/_types.py",
+        "src/anndata/_io/read.py"
+      ],
+      "latency_ms": 820.17
+    },
+    {
+      "id": "anndata_14",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "\\ PyTorch DataLoader for AnnData objects",
+      "expected_symbol": "AnnLoader",
+      "expected_path": "src/anndata/experimental/pytorch/_annloader.py",
+      "file_rank": 4,
+      "symbol_rank": 4,
+      "top_paths": [
+        "src/anndata/_core/aligned_mapping.py",
+        "src/anndata/_io/specs/methods.py",
+        "src/anndata/_io/read.py"
+      ],
+      "latency_ms": 796.2
+    },
+    {
+      "id": "anndata_15",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "Append an in-memory or on-disk sparse matrix to the current object's store",
+      "expected_symbol": "append",
+      "expected_path": "src/anndata/abc.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/anndata/abc.py",
+        "src/anndata/_core/sparse_dataset.py",
+        "src/anndata/abc.py"
+      ],
+      "latency_ms": 901.08
+    },
+    {
+      "id": "anndata_16",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "Reindex element so el[axis] is aligned to self.new_idx",
+      "expected_symbol": "apply",
+      "expected_path": "src/anndata/_core/merge.py",
+      "file_rank": 2,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/anndata/_core/xarray.py",
+        "src/anndata/_core/merge.py",
+        "src/anndata/_core/merge.py"
+      ],
+      "latency_ms": 816.43
+    },
+    {
+      "id": "anndata_17",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "\\ Parse a pyproject.toml file and output a list of minimum dependencies",
+      "expected_symbol": "Args",
+      "expected_path": "ci/scripts/min-deps.py",
+      "file_rank": 5,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/anndata/acc/_parse_str.py",
+        "src/anndata/acc/_parse_str.py",
+        "src/anndata/acc/_parse_str.py"
+      ],
+      "latency_ms": 839.21
+    },
+    {
+      "id": "anndata_18",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "Construct an open mesh from multiple sequences",
+      "expected_symbol": "array_api_ix",
+      "expected_path": "src/anndata/_core/index.py",
+      "file_rank": 10,
+      "symbol_rank": 10,
+      "top_paths": [
+        "src/anndata/_core/aligned_mapping.py",
+        "src/anndata/_core/file_backing.py",
+        "src/anndata/_types.py"
+      ],
+      "latency_ms": 799.49
+    },
+    {
+      "id": "anndata_19",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "Makes numpy ufuncs convert all instances of views to plain arrays",
+      "expected_symbol": "ArrayView",
+      "expected_path": "src/anndata/_core/views.py",
+      "file_rank": 7,
+      "symbol_rank": 9,
+      "top_paths": [
+        "src/anndata/experimental/multi_files/_anncollection.py",
+        "src/anndata/experimental/multi_files/_anncollection.py",
+        "src/anndata/_core/merge.py"
+      ],
+      "latency_ms": 825.31
+    },
+    {
+      "id": "anndata_20",
+      "library_id": "lib_anndata",
+      "language": "python",
+      "category": "docstring",
+      "query": "Convert x to a numpy array",
+      "expected_symbol": "asarray",
+      "expected_path": "src/anndata/utils.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/anndata/utils.py",
+        "src/anndata/utils.py",
+        "src/anndata/experimental/multi_files/_anncollection.py"
+      ],
+      "latency_ms": 756.51
+    },
+    {
+      "id": "squidpy_01",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Apply a function to a layer within this container",
+      "expected_symbol": "apply",
+      "expected_path": "src/squidpy/im/_container.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/im/_container.py",
+        "src/squidpy/im/_container.py",
+        "src/squidpy/im/_container.py"
+      ],
+      "latency_ms": 890.77
+    },
+    {
+      "id": "squidpy_02",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Normalize a source image to a decomposition reference (colour-basis transfer)",
+      "expected_symbol": "apply_decomposition",
+      "expected_path": "src/squidpy/experimental/im/_stain/_decomposition.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/experimental/im/_stain/_decomposition.py",
+        "src/squidpy/experimental/im/_stain/_normalize.py",
+        "src/squidpy/experimental/im/_stain/_decomposition.py"
+      ],
+      "latency_ms": 958.11
+    },
+    {
+      "id": "squidpy_03",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Apply a Reinhard reference to a source image",
+      "expected_symbol": "apply_reinhard",
+      "expected_path": "src/squidpy/experimental/im/_stain/_reinhard.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/experimental/im/_stain/_reinhard.py",
+        "src/squidpy/types.py",
+        "src/squidpy/im/_container.py"
+      ],
+      "latency_ms": 871.34
+    },
+    {
+      "id": "squidpy_04",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Raise TypeError if *value* is not an instance of *expected_type*",
+      "expected_symbol": "assert_isinstance",
+      "expected_path": "src/squidpy/_validators.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/_validators.py",
+        "tests/test_validators.py",
+        "src/squidpy/gr/_niche.py"
+      ],
+      "latency_ms": 968.33
+    },
+    {
+      "id": "squidpy_05",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Raise KeyError if *key* not in ``getattr(obj, attr)",
+      "expected_symbol": "assert_key_in",
+      "expected_path": "src/squidpy/_validators.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/_validators.py",
+        "src/squidpy/_validators.py",
+        "src/squidpy/_validators.py"
+      ],
+      "latency_ms": 890.16
+    },
+    {
+      "id": "squidpy_06",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Raise KeyError if *key* not in ``getattr(adata, attr)",
+      "expected_symbol": "assert_key_in_adata",
+      "expected_path": "src/squidpy/_validators.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/_validators.py",
+        "src/squidpy/_validators.py",
+        "src/squidpy/_validators.py"
+      ],
+      "latency_ms": 898.88
+    },
+    {
+      "id": "squidpy_07",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Raise KeyError if *key* not in ``getattr(sdata, attr)",
+      "expected_symbol": "assert_key_in_sdata",
+      "expected_path": "src/squidpy/_validators.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/_validators.py",
+        "src/squidpy/_validators.py",
+        "src/squidpy/_validators.py"
+      ],
+      "latency_ms": 1055.1
+    },
+    {
+      "id": "squidpy_08",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Assign tile-cut cell pieces to stitch groups",
+      "expected_symbol": "assign_stitch_groups",
+      "expected_path": "src/squidpy/experimental/tl/_tiling_stitch.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/experimental/tl/_tiling_stitch.py",
+        "src/squidpy/experimental/tl/_tiling_stitch.py",
+        "src/squidpy/experimental/tl/_stitched_labels.py"
+      ],
+      "latency_ms": 904.21
+    },
+    {
+      "id": "squidpy_09",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Wrap a ``(y, x)`` boolean array as a DataArray aligned to ``like``'s y/x",
+      "expected_symbol": "as_spatial_mask",
+      "expected_path": "src/squidpy/experimental/im/_stain/_mask.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/experimental/im/_stain/_mask.py",
+        "src/squidpy/experimental/im/_tiling.py",
+        "src/squidpy/im/_feature_mixin.py"
+      ],
+      "latency_ms": 909.39
+    },
+    {
+      "id": "squidpy_10",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Mean pixel intensity of a grayscale tile",
+      "expected_symbol": "brightness_mean",
+      "expected_path": "src/squidpy/experimental/im/_intensity_metrics.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/experimental/im/_intensity_metrics.py",
+        "src/squidpy/experimental/im/_intensity_metrics.py",
+        "src/squidpy/experimental/im/_intensity_metrics.py"
+      ],
+      "latency_ms": 869.5
+    },
+    {
+      "id": "squidpy_11",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Standard deviation of pixel intensity of a grayscale tile",
+      "expected_symbol": "brightness_std",
+      "expected_path": "src/squidpy/experimental/im/_intensity_metrics.py",
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/squidpy/experimental/im/_make_tiles.py",
+        "src/squidpy/experimental/im/_make_tiles.py",
+        "src/squidpy/im/_io.py"
+      ],
+      "latency_ms": 894.36
+    },
+    {
+      "id": "squidpy_12",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Construct raw adjacency and distance matrices",
+      "expected_symbol": "build_graph",
+      "expected_path": "src/squidpy/gr/neighbors.py",
+      "file_rank": 2,
+      "symbol_rank": 5,
+      "top_paths": [
+        "src/squidpy/tl/_var_by_distance.py",
+        "src/squidpy/gr/neighbors.py",
+        "src/squidpy/pl/_utils.py"
+      ],
+      "latency_ms": 863.48
+    },
+    {
+      "id": "squidpy_13",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Build tile specifications from pre-computed centroids",
+      "expected_symbol": "build_tile_specs",
+      "expected_path": "src/squidpy/experimental/im/_tiling.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/experimental/im/_tiling.py",
+        "src/squidpy/experimental/tl/_tiling_qc.py",
+        "src/squidpy/experimental/im/_utils.py"
+      ],
+      "latency_ms": 890.43
+    },
+    {
+      "id": "squidpy_14",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Calculate per-cell features from segmentation masks",
+      "expected_symbol": "calculate_image_features",
+      "expected_path": "src/squidpy/experimental/im/_calculate_image_features.py",
+      "file_rank": 3,
+      "symbol_rank": 2,
+      "top_paths": [
+        "src/squidpy/im/_feature_mixin.py",
+        "src/squidpy/im/_feature.py",
+        "src/squidpy/experimental/im/_calculate_image_features.py"
+      ],
+      "latency_ms": 875.21
+    },
+    {
+      "id": "squidpy_15",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Calculate image features for all observations in ``adata",
+      "expected_symbol": "calculate_image_features",
+      "expected_path": "src/squidpy/im/_feature.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/im/_feature.py",
+        "src/squidpy/experimental/im/_calculate_image_features.py",
+        "src/squidpy/im/_feature_mixin.py"
+      ],
+      "latency_ms": 915.41
+    },
+    {
+      "id": "squidpy_16",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Calculate niches (spatial clusters) based on a user-defined method in 'flavor'",
+      "expected_symbol": "calculate_niche",
+      "expected_path": "src/squidpy/gr/_niche.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/gr/_niche.py",
+        "src/squidpy/gr/_niche.py",
+        "src/squidpy/gr/_niche.py"
+      ],
+      "latency_ms": 938.42
+    },
+    {
+      "id": "squidpy_17",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Compute niche assignments using user-defined embedding, clustering, and postprocessing",
+      "expected_symbol": "calculate_niche_custom",
+      "expected_path": "src/squidpy/gr/_niche.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/gr/_niche.py",
+        "src/squidpy/gr/_niche.py",
+        "src/squidpy/gr/_niche.py"
+      ],
+      "latency_ms": 942.3
+    },
+    {
+      "id": "squidpy_18",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Compute spatial niches from local cell-type composition",
+      "expected_symbol": "calculate_niche_neighborhood",
+      "expected_path": "src/squidpy/gr/_niche.py",
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/squidpy/gr/_niche.py",
+        "src/squidpy/_constants/_pkg_constants.py",
+        "src/squidpy/gr/_niche.py"
+      ],
+      "latency_ms": 918.02
+    },
+    {
+      "id": "squidpy_19",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Compute niche assignments using the SpatialLeiden algorithm",
+      "expected_symbol": "calculate_niche_spatialleiden",
+      "expected_path": "src/squidpy/gr/_niche.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/gr/_niche.py",
+        "src/squidpy/gr/_niche.py",
+        "src/squidpy/gr/_niche.py"
+      ],
+      "latency_ms": 901.29
+    },
+    {
+      "id": "squidpy_20",
+      "library_id": "lib_squidpy",
+      "language": "python",
+      "category": "docstring",
+      "query": "Compute spatial niches from UTAG-style feature aggregation",
+      "expected_symbol": "calculate_niche_utag",
+      "expected_path": "src/squidpy/gr/_niche.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/squidpy/gr/_niche.py",
+        "src/squidpy/_constants/_pkg_constants.py",
+        "src/squidpy/gr/_niche.py"
+      ],
+      "latency_ms": 911.32
+    },
+    {
+      "id": "scvi_tools_01",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "Amortized Latent Dirichlet Allocation Parameters ---------- adata AnnData object that has been registered via n_topics Number of topics to model",
+      "expected_symbol": "AmortizedLDA",
+      "expected_path": "src/scvi/model/_amortizedlda.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scvi/model/_amortizedlda.py",
+        "src/scvi/module/_amortizedlda.py",
+        "src/scvi/module/_amortizedlda.py"
+      ],
+      "latency_ms": 1700.82
+    },
+    {
+      "id": "scvi_tools_02",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "A PyroModule that serves as the guide for the AmortizedLDAPyroModule class",
+      "expected_symbol": "AmortizedLDAPyroGuide",
+      "expected_path": "src/scvi/module/_amortizedlda.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scvi/module/_amortizedlda.py",
+        "src/scvi/module/_amortizedlda.py",
+        "src/scvi/module/base/_base_module.py"
+      ],
+      "latency_ms": 1441.14
+    },
+    {
+      "id": "scvi_tools_03",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "A PyroModule that serves as the model for the AmortizedLDAPyroModule class",
+      "expected_symbol": "AmortizedLDAPyroModel",
+      "expected_path": "src/scvi/module/_amortizedlda.py",
+      "file_rank": 1,
+      "symbol_rank": 2,
+      "top_paths": [
+        "src/scvi/module/_amortizedlda.py",
+        "src/scvi/module/_amortizedlda.py",
+        "src/scvi/module/base/_base_module.py"
+      ],
+      "latency_ms": 1472.94
+    },
+    {
+      "id": "scvi_tools_04",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "An amortized implementation of Latent Dirichlet Allocation This module uses auto encoding variational Bayes to optimize the latent variables in the model",
+      "expected_symbol": "AmortizedLDAPyroModule",
+      "expected_path": "src/scvi/module/_amortizedlda.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scvi/module/_amortizedlda.py",
+        "src/scvi/model/_multivi.py",
+        "src/scvi/model/_destvi.py"
+      ],
+      "latency_ms": 1758.14
+    },
+    {
+      "id": "scvi_tools_05",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "LightningDataModule for annbatch.Loader with full scvi-tools integration",
+      "expected_symbol": "AnnbatchDataModule",
+      "expected_path": "src/scvi/dataloaders/_custom_dataloaders.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scvi/dataloaders/_custom_dataloaders.py",
+        "src/scvi/external/stereoscope/_model.py",
+        "src/scvi/model/_scvi.py"
+      ],
+      "latency_ms": 1482.81
+    },
+    {
+      "id": "scvi_tools_06",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "DataLoader for loading tensors from AnnData objects",
+      "expected_symbol": "AnnDataLoader",
+      "expected_path": "src/scvi/dataloaders/_ann_dataloader.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scvi/dataloaders/_ann_dataloader.py",
+        "src/scvi/model/base/_embedding_mixin.py",
+        "src/scvi/model/base/_embedding_mixin.py"
+      ],
+      "latency_ms": 1372.25
+    },
+    {
+      "id": "scvi_tools_07",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "Provides an interface to validate and process an AnnData object for use in scvi-tools",
+      "expected_symbol": "AnnDataManager",
+      "expected_path": "src/scvi/data/_manager.py",
+      "file_rank": 1,
+      "symbol_rank": 2,
+      "top_paths": [
+        "src/scvi/data/_manager.py",
+        "src/scvi/data/_manager.py",
+        "src/scvi/data/fields/_base_field.py"
+      ],
+      "latency_ms": 1612.08
+    },
+    {
+      "id": "scvi_tools_08",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "Validation checks for AnnOrMudata scvi-tools compatibility",
+      "expected_symbol": "AnnDataManagerValidationCheck",
+      "expected_path": "src/scvi/data/_manager.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scvi/data/_manager.py",
+        "src/scvi/train/_trainingplans.py",
+        "src/scvi/train/_trainingplans.py"
+      ],
+      "latency_ms": 1425.5
+    },
+    {
+      "id": "scvi_tools_09",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "Simulated datasets for scANVI tutorials",
+      "expected_symbol": "annotation_simulation",
+      "expected_path": "src/scvi/data/_datasets.py",
+      "file_rank": 3,
+      "symbol_rank": 3,
+      "top_paths": [
+        "src/scvi/model/_scanvi.py",
+        "docs/extensions/edit_colab_url.py",
+        "src/scvi/data/_datasets.py"
+      ],
+      "latency_ms": 1338.4
+    },
+    {
+      "id": "scvi_tools_10",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "Extension of Parameters ---------- adata_manager getitem_tensors Specifies the keys in the data registry (``adata_manager.data_registry``) to return in ``__getitem__",
+      "expected_symbol": "AnnTorchDataset",
+      "expected_path": "src/scvi/data/_anntorchdataset.py",
+      "file_rank": 4,
+      "symbol_rank": 4,
+      "top_paths": [
+        "src/scvi/data/_manager.py",
+        "src/scvi/model/base/_base_model.py",
+        "src/scvi/model/utils/_minification.py"
+      ],
+      "latency_ms": 1736.12
+    },
+    {
+      "id": "scvi_tools_11",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "Universal scArches implementation",
+      "expected_symbol": "ArchesMixin",
+      "expected_path": "src/scvi/model/base/_archesmixin.py",
+      "file_rank": 2,
+      "symbol_rank": 2,
+      "top_paths": [
+        "tests/external/scviva/test_scviva.py",
+        "src/scvi/model/base/_archesmixin.py",
+        "src/scvi/nn/_base_components.py"
+      ],
+      "latency_ms": 1269.39
+    },
+    {
+      "id": "scvi_tools_12",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "Create a wrapper around a sparse matrix layer in an AnnCollection",
+      "expected_symbol": "ArrayFakerSparse",
+      "expected_path": "src/scvi/dataloaders/_anncollection.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scvi/dataloaders/_anncollection.py",
+        "src/scvi/dataloaders/_anncollection.py",
+        "src/scvi/data/fields/_protein.py"
+      ],
+      "latency_ms": 1408.16
+    },
+    {
+      "id": "scvi_tools_13",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "An AnnDataField for an .obsm or .varm field in the AnnData data structure",
+      "expected_symbol": "ArrayLikeField",
+      "expected_path": "src/scvi/data/fields/_arraylike_field.py",
+      "file_rank": 4,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/scvi/data/fields/_base_field.py",
+        "src/scvi/data/_manager.py",
+        "src/scvi/data/_utils.py"
+      ],
+      "latency_ms": 1577.57
+    },
+    {
+      "id": "scvi_tools_14",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "Attention block matching the JAX/Flax MultiHeadDotProductAttention architecture",
+      "expected_symbol": "AttentionBlock",
+      "expected_path": "src/scvi/external/mrvi/_components.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scvi/external/mrvi/_components.py",
+        "src/scvi/external/mrvi/_module.py",
+        "src/scvi/external/mrvi/_components.py"
+      ],
+      "latency_ms": 1561.77
+    },
+    {
+      "id": "scvi_tools_15",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "Get the coordinates at a specific time point along the trajectory",
+      "expected_symbol": "at_time",
+      "expected_path": "src/scvi/external/decipher/utils/_trajectory.py",
+      "file_rank": 1,
+      "symbol_rank": 2,
+      "top_paths": [
+        "src/scvi/external/decipher/utils/_trajectory.py",
+        "src/scvi/external/decipher/utils/_trajectory.py",
+        "src/scvi/external/stereoscope/_module.py"
+      ],
+      "latency_ms": 1452.9
+    },
+    {
+      "id": "scvi_tools_16",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "A dictionary that allows for attribute-style access",
+      "expected_symbol": "attrdict",
+      "expected_path": "src/scvi/utils/_attrdict.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/scvi/utils/_attrdict.py",
+        "src/scvi/distributions/_constraints.py",
+        "src/scvi/module/base/_base_module.py"
+      ],
+      "latency_ms": 1392.87
+    },
+    {
+      "id": "scvi_tools_17",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "The key of the data field within the relevant AnnData attribute",
+      "expected_symbol": "attr_key",
+      "expected_path": "src/scvi/data/fields/_base_field.py",
+      "file_rank": 1,
+      "symbol_rank": 8,
+      "top_paths": [
+        "src/scvi/data/fields/_base_field.py",
+        "src/scvi/data/fields/_dataframe_field.py",
+        "src/scvi/data/fields/_dataframe_field.py"
+      ],
+      "latency_ms": 1451.21
+    },
+    {
+      "id": "scvi_tools_18",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "The key of the data field within the relevant AnnData/MuData attribute",
+      "expected_symbol": "attr_key",
+      "expected_path": "src/scvi/data/fields/_mudata.py",
+      "file_rank": 2,
+      "symbol_rank": 9,
+      "top_paths": [
+        "src/scvi/data/fields/_base_field.py",
+        "src/scvi/data/fields/_mudata.py",
+        "src/scvi/data/_utils.py"
+      ],
+      "latency_ms": 1475.7
+    },
+    {
+      "id": "scvi_tools_19",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "List of .obs or .var keys that make up this joint field",
+      "expected_symbol": "attr_keys",
+      "expected_path": "src/scvi/data/fields/_arraylike_field.py",
+      "file_rank": 1,
+      "symbol_rank": 4,
+      "top_paths": [
+        "src/scvi/data/fields/_arraylike_field.py",
+        "src/scvi/data/fields/_arraylike_field.py",
+        "src/scvi/data/fields/_arraylike_field.py"
+      ],
+      "latency_ms": 1387.5
+    },
+    {
+      "id": "scvi_tools_20",
+      "library_id": "lib_scvi_tools",
+      "language": "python",
+      "category": "docstring",
+      "query": "The name of the AnnData attribute where the data is stored",
+      "expected_symbol": "attr_name",
+      "expected_path": "src/scvi/data/fields/_base_field.py",
+      "file_rank": 1,
+      "symbol_rank": 4,
+      "top_paths": [
+        "src/scvi/data/fields/_base_field.py",
+        "src/scvi/external/scviva/_model.py",
+        "src/scvi/external/scviva/_model.py"
+      ],
+      "latency_ms": 1460.39
+    },
+    {
+      "id": "snakemake_01",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Print an instruction to download a remote file",
+      "expected_symbol": "add_remote_file",
+      "expected_path": "src/snakemake/deployment/containerize.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/snakemake/deployment/containerize.py",
+        "src/snakemake/deployment/containerize.py",
+        "src/snakemake/api.py"
+      ],
+      "latency_ms": 999.44
+    },
+    {
+      "id": "snakemake_02",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Add a rule",
+      "expected_symbol": "add_rule",
+      "expected_path": "src/snakemake/workflow.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/snakemake/workflow.py",
+        "src/snakemake/workflow.py",
+        "src/snakemake/rules.py"
+      ],
+      "latency_ms": 777.74
+    },
+    {
+      "id": "snakemake_03",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Subclass of QuotedFormatter that always quotes",
+      "expected_symbol": "AlwaysQuotedFormatter",
+      "expected_path": "src/snakemake/utils/format.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/snakemake/utils/format.py",
+        "src/snakemake/utils/format.py",
+        "src/snakemake/utils/format.py"
+      ],
+      "latency_ms": 946.36
+    },
+    {
+      "id": "snakemake_04",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "A role to insert a hidden HTML anchor (ID) for redirects",
+      "expected_symbol": "anchor_role",
+      "expected_path": "docs/conf.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "docs/conf.py",
+        "src/snakemake/iocontainers.py",
+        "src/snakemake/notebook.py"
+      ],
+      "latency_ms": 1025.55
+    },
+    {
+      "id": "snakemake_05",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "A flag for an input file that shall be considered ancient; i.e",
+      "expected_symbol": "ancient",
+      "expected_path": "src/snakemake/io/__init__.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/snakemake/io/__init__.py",
+        "src/snakemake/cli.py",
+        "src/snakemake/workflow.py"
+      ],
+      "latency_ms": 1021.4
+    },
+    {
+      "id": "snakemake_06",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Mixin for str subclasses that carry flags (e.g",
+      "expected_symbol": "AnnotatedStringFormatMixin",
+      "expected_path": "src/snakemake/io/__init__.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/snakemake/io/__init__.py",
+        "src/snakemake/io/__init__.py",
+        "src/snakemake/io/flags/__init__.py"
+      ],
+      "latency_ms": 973.32
+    },
+    {
+      "id": "snakemake_07",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Apply the defined default remote provider to the given path and return the updated _IOFile",
+      "expected_symbol": "apply_default_storage",
+      "expected_path": "src/snakemake/path_modifier.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/snakemake/path_modifier.py",
+        "src/snakemake/path_modifier.py",
+        "src/snakemake/workflow.py"
+      ],
+      "latency_ms": 1195.12
+    },
+    {
+      "id": "snakemake_08",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Update this ruleinfo with the given one (used for 'use rule' overrides)",
+      "expected_symbol": "apply_modifier",
+      "expected_path": "src/snakemake/ruleinfo.py",
+      "file_rank": 1,
+      "symbol_rank": 9,
+      "top_paths": [
+        "src/snakemake/ruleinfo.py",
+        "src/snakemake/workflow.py",
+        "src/snakemake/workflow.py"
+      ],
+      "latency_ms": 1077.35
+    },
+    {
+      "id": "snakemake_09",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Print all collected sections",
+      "expected_symbol": "ApptainerFormat",
+      "expected_path": "src/snakemake/deployment/containerize.py",
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/snakemake/benchmark.py",
+        "src/snakemake/api.py",
+        "src/snakemake/api.py"
+      ],
+      "latency_ms": 891.89
+    },
+    {
+      "id": "snakemake_10",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Archive the workflow",
+      "expected_symbol": "archive",
+      "expected_path": "src/snakemake/workflow.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/snakemake/workflow.py",
+        "src/snakemake/api.py",
+        "src/snakemake/dag.py"
+      ],
+      "latency_ms": 831.55
+    },
+    {
+      "id": "snakemake_11",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Archives workflow such that it can be re-run on a different system",
+      "expected_symbol": "archive",
+      "expected_path": "src/snakemake/dag.py",
+      "file_rank": 4,
+      "symbol_rank": 4,
+      "top_paths": [
+        "src/snakemake/executors/local.py",
+        "src/snakemake/api.py",
+        "src/snakemake/common/misc.py"
+      ],
+      "latency_ms": 1054.93
+    },
+    {
+      "id": "snakemake_12",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Convert argparse args to API calls",
+      "expected_symbol": "args_to_api",
+      "expected_path": "src/snakemake/cli.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/snakemake/cli.py",
+        "src/snakemake/api.py",
+        "src/snakemake/api.py"
+      ],
+      "latency_ms": 911.11
+    },
+    {
+      "id": "snakemake_13",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Help message formatter which adds default values to argument help",
+      "expected_symbol": "ArgumentDefaultsHelpFormatter",
+      "expected_path": "src/snakemake/common/argparse.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/snakemake/common/argparse.py",
+        "src/snakemake/cli.py",
+        "src/snakemake/workflow.py"
+      ],
+      "latency_ms": 1032.32
+    },
+    {
+      "id": "snakemake_14",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Returns an argument quoted in such a way that CommandLineToArgvW on Windows will return the argument string unchanged",
+      "expected_symbol": "argvquote",
+      "expected_path": "src/snakemake/utils/argvquote.py",
+      "file_rank": 6,
+      "symbol_rank": 6,
+      "top_paths": [
+        "src/snakemake/utils/format.py",
+        "src/snakemake/resources.py",
+        "src/snakemake/cli.py"
+      ],
+      "latency_ms": 1183.31
+    },
+    {
+      "id": "snakemake_15",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Returns the Python module name associated with the `.py` file at a given path",
+      "expected_symbol": "as_py_module",
+      "expected_path": "src/snakemake/ioutils/as_py_module.py",
+      "file_rank": 1,
+      "symbol_rank": 3,
+      "top_paths": [
+        "src/snakemake/ioutils/as_py_module.py",
+        "src/snakemake/parser.py",
+        "src/snakemake/ioutils/as_py_module.py"
+      ],
+      "latency_ms": 1117.87
+    },
+    {
+      "id": "snakemake_16",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Get and validate asset content",
+      "expected_symbol": "Asset",
+      "expected_path": "src/snakemake/assets/__init__.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/snakemake/assets/__init__.py",
+        "src/snakemake/assets/__init__.py",
+        "src/snakemake/assets/__init__.py"
+      ],
+      "latency_ms": 898.3
+    },
+    {
+      "id": "snakemake_17",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Creates a new event loop to execute a coroutine",
+      "expected_symbol": "async_run",
+      "expected_path": "src/snakemake/common/misc.py",
+      "file_rank": 4,
+      "symbol_rank": 6,
+      "top_paths": [
+        "src/snakemake/workflow.py",
+        "src/snakemake/script/__init__.py",
+        "src/snakemake/jobs.py"
+      ],
+      "latency_ms": 1002.06
+    },
+    {
+      "id": "snakemake_18",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Creates a new async Runner after checking we are outside of a running event loop",
+      "expected_symbol": "async_runner",
+      "expected_path": "src/snakemake/common/misc.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/snakemake/common/misc.py",
+        "src/snakemake/common/misc.py",
+        "src/snakemake/jobs.py"
+      ],
+      "latency_ms": 1092.19
+    },
+    {
+      "id": "snakemake_19",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "Generic function that throws an `AttributeError",
+      "expected_symbol": "AttributeGuard",
+      "expected_path": "src/snakemake/iocontainers.py",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "src/snakemake/iocontainers.py",
+        "src/snakemake/iocontainers.py",
+        "src/snakemake/persistence/__init__.py"
+      ],
+      "latency_ms": 916.07
+    },
+    {
+      "id": "snakemake_20",
+      "library_id": "lib_snakemake",
+      "language": "python",
+      "category": "docstring",
+      "query": "{% for cat, catresults in categories|dictsort %} {% endfor %} {% for res in files %} {% endfor %}",
+      "expected_symbol": "auto_report",
+      "expected_path": "src/snakemake/report/__init__.py",
+      "file_rank": 8,
+      "symbol_rank": 8,
+      "top_paths": [
+        "src/snakemake/report/html_reporter/data/categories.py",
+        "src/snakemake/report/html_reporter/data/results.py",
+        "src/snakemake/report/html_reporter/__init__.py"
+      ],
+      "latency_ms": 1072.55
+    },
+    {
+      "id": "ggplot2_01",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "aes to scale",
+      "expected_symbol": "aes_to_scale",
+      "expected_path": "R/aes.R",
+      "file_rank": 1,
+      "symbol_rank": 9,
+      "top_paths": [
+        "R/aes.R",
+        "R/aes.R",
+        "R/scale-type.R"
+      ],
+      "latency_ms": 646.69
+    },
+    {
+      "id": "ggplot2_02",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "after scale",
+      "expected_symbol": "after_scale",
+      "expected_path": "R/aes-delayed-eval.R",
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "R/scale-.R",
+        "R/scale-.R",
+        "R/scale-view.R"
+      ],
+      "latency_ms": 619.08
+    },
+    {
+      "id": "ggplot2_03",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "after stat",
+      "expected_symbol": "after_stat",
+      "expected_path": "R/aes-delayed-eval.R",
+      "file_rank": 2,
+      "symbol_rank": 10,
+      "top_paths": [
+        "R/stat-chain.R",
+        "R/aes-delayed-eval.R",
+        "R/make-constructor.R"
+      ],
+      "latency_ms": 725.49
+    },
+    {
+      "id": "ggplot2_04",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "allow lambda",
+      "expected_symbol": "allow_lambda",
+      "expected_path": "R/utilities.R",
+      "file_rank": 2,
+      "symbol_rank": 2,
+      "top_paths": [
+        "R/stat-quantilemethods.R",
+        "R/utilities.R",
+        "R/utilities.R"
+      ],
+      "latency_ms": 614.55
+    },
+    {
+      "id": "ggplot2_05",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "alternative aes extract usage",
+      "expected_symbol": "alternative_aes_extract_usage",
+      "expected_path": "R/aes.R",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "R/aes.R",
+        "R/aes.R",
+        "R/aes.R"
+      ],
+      "latency_ms": 645.41
+    },
+    {
+      "id": "ggplot2_06",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "annotation borders",
+      "expected_symbol": "annotation_borders",
+      "expected_path": "R/annotation-borders.R",
+      "file_rank": 1,
+      "symbol_rank": 2,
+      "top_paths": [
+        "R/annotation-borders.R",
+        "R/annotation-borders.R",
+        "R/guide-axis.R"
+      ],
+      "latency_ms": 659.68
+    },
+    {
+      "id": "ggplot2_07",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "annotation custom",
+      "expected_symbol": "annotation_custom",
+      "expected_path": "R/annotation-custom.R",
+      "file_rank": 3,
+      "symbol_rank": 3,
+      "top_paths": [
+        "R/guides-.R",
+        "R/layer.R",
+        "R/annotation-custom.R"
+      ],
+      "latency_ms": 674.07
+    },
+    {
+      "id": "ggplot2_08",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "annotation logticks",
+      "expected_symbol": "annotation_logticks",
+      "expected_path": "R/annotation-logticks.R",
+      "file_rank": 2,
+      "symbol_rank": 2,
+      "top_paths": [
+        "R/layer.R",
+        "R/annotation-logticks.R",
+        "R/geom-abline-hline-vline.R"
+      ],
+      "latency_ms": 649.82
+    },
+    {
+      "id": "ggplot2_09",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "annotation map",
+      "expected_symbol": "annotation_map",
+      "expected_path": "R/annotation-map.R",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "R/annotation-map.R",
+        "R/scale-view.R",
+        "R/scale-identity.R"
+      ],
+      "latency_ms": 635.29
+    },
+    {
+      "id": "ggplot2_10",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "annotation raster",
+      "expected_symbol": "annotation_raster",
+      "expected_path": "R/annotation-raster.R",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "R/annotation-raster.R",
+        "R/annotation-raster.R",
+        "R/guide-colorbar.R"
+      ],
+      "latency_ms": 640.92
+    },
+    {
+      "id": "ggplot2_11",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "apply fun",
+      "expected_symbol": "apply_fun",
+      "expected_path": "R/compat-plyr.R",
+      "file_rank": 9,
+      "symbol_rank": 9,
+      "top_paths": [
+        "R/stat-summary-bin.R",
+        "R/scale-.R",
+        "R/facet-labeller.R"
+      ],
+      "latency_ms": 621.28
+    },
+    {
+      "id": "ggplot2_12",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "arg enquos",
+      "expected_symbol": "arg_enquos",
+      "expected_path": "R/aes.R",
+      "file_rank": 2,
+      "symbol_rank": 6,
+      "top_paths": [
+        "R/import-standalone-types-check.R",
+        "R/aes.R",
+        "R/save.R"
+      ],
+      "latency_ms": 558.58
+    },
+    {
+      "id": "ggplot2_13",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "arrange layout",
+      "expected_symbol": "arrange_layout",
+      "expected_path": "R/guide-.R",
+      "file_rank": 8,
+      "symbol_rank": 1,
+      "top_paths": [
+        "R/guide-axis.R",
+        "R/layout.R",
+        "R/coord-flip.R"
+      ],
+      "latency_ms": 573.5
+    },
+    {
+      "id": "ggplot2_14",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as cli",
+      "expected_symbol": "as_cli",
+      "expected_path": "R/utilities.R",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "R/utilities.R",
+        "R/utilities.R",
+        "R/save.R"
+      ],
+      "latency_ms": 608.27
+    },
+    {
+      "id": "ggplot2_15",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as data frame mapped discrete",
+      "expected_symbol": "as.data.frame.mapped_discrete",
+      "expected_path": "R/scale-discrete-.R",
+      "file_rank": 4,
+      "symbol_rank": 4,
+      "top_paths": [
+        "R/import-standalone-types-check.R",
+        "R/facet-null.R",
+        "R/geom-tile.R"
+      ],
+      "latency_ms": 661.84
+    },
+    {
+      "id": "ggplot2_16",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as facets",
+      "expected_symbol": "as_facets",
+      "expected_path": "R/facet-.R",
+      "file_rank": 1,
+      "symbol_rank": 8,
+      "top_paths": [
+        "R/facet-.R",
+        "R/facet-grid-.R",
+        "R/facet-grid-.R"
+      ],
+      "latency_ms": 614.52
+    },
+    {
+      "id": "ggplot2_17",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as facets list",
+      "expected_symbol": "as_facets_list",
+      "expected_path": "R/facet-.R",
+      "file_rank": 2,
+      "symbol_rank": 3,
+      "top_paths": [
+        "R/facet-grid-.R",
+        "R/facet-.R",
+        "R/facet-.R"
+      ],
+      "latency_ms": 651.81
+    },
+    {
+      "id": "ggplot2_18",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as function",
+      "expected_symbol": "as_function",
+      "expected_path": "R/stat-summary-bin.R",
+      "file_rank": 2,
+      "symbol_rank": 2,
+      "top_paths": [
+        "R/save.R",
+        "R/stat-summary-bin.R",
+        "R/save.R"
+      ],
+      "latency_ms": 673.32
+    },
+    {
+      "id": "ggplot2_19",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as gg data frame",
+      "expected_symbol": "as_gg_data_frame",
+      "expected_path": "R/utilities.R",
+      "file_rank": 6,
+      "symbol_rank": 6,
+      "top_paths": [
+        "R/import-standalone-types-check.R",
+        "R/geom-ribbon.R",
+        "R/geom-path.R"
+      ],
+      "latency_ms": 671.65
+    },
+    {
+      "id": "ggplot2_20",
+      "library_id": "lib_ggplot2",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as labeller",
+      "expected_symbol": "as_labeller",
+      "expected_path": "R/facet-labeller.R",
+      "file_rank": 1,
+      "symbol_rank": 2,
+      "top_paths": [
+        "R/facet-labeller.R",
+        "R/facet-labeller.R",
+        "R/facet-labeller.R"
+      ],
+      "latency_ms": 590.13
+    },
+    {
+      "id": "dplyr_01",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "all vars",
+      "expected_symbol": "all_vars",
+      "expected_path": "R/colwise.R",
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "R/colwise.R",
+        "R/colwise-select.R",
+        "R/deprec-context.R"
+      ],
+      "latency_ms": 453.06
+    },
+    {
+      "id": "dplyr_02",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "anti join",
+      "expected_symbol": "anti_join",
+      "expected_path": "R/join.R",
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "R/join.R",
+        "R/join-by.R",
+        "R/join-cols.R"
+      ],
+      "latency_ms": 423.72
+    },
+    {
+      "id": "dplyr_03",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "anti join data frame",
+      "expected_symbol": "anti_join.data.frame",
+      "expected_path": "R/join.R",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "R/join.R",
+        "R/deprec-do.R",
+        "R/generics.R"
+      ],
+      "latency_ms": 508.23
+    },
+    {
+      "id": "dplyr_04",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "any exprs",
+      "expected_symbol": "any_exprs",
+      "expected_path": "R/colwise-filter.R",
+      "file_rank": 5,
+      "symbol_rank": 5,
+      "top_paths": [
+        "R/across.R",
+        "R/join-by.R",
+        "R/across.R"
+      ],
+      "latency_ms": 450.15
+    },
+    {
+      "id": "dplyr_05",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "any vars",
+      "expected_symbol": "any_vars",
+      "expected_path": "R/colwise.R",
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "R/colwise.R",
+        "R/join-cols.R",
+        "R/join-cols.R"
+      ],
+      "latency_ms": 438.01
+    },
+    {
+      "id": "dplyr_06",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "append pos",
+      "expected_symbol": "append_pos",
+      "expected_path": "R/compat-name-repair.R",
+      "file_rank": 3,
+      "symbol_rank": 3,
+      "top_paths": [
+        "R/colwise-mutate.R",
+        "R/summarise.R",
+        "R/compat-name-repair.R"
+      ],
+      "latency_ms": 461.95
+    },
+    {
+      "id": "dplyr_07",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "apply filter syms",
+      "expected_symbol": "apply_filter_syms",
+      "expected_path": "R/colwise-filter.R",
+      "file_rank": 1,
+      "symbol_rank": 4,
+      "top_paths": [
+        "R/colwise-filter.R",
+        "R/colwise-filter.R",
+        "R/colwise-mutate.R"
+      ],
+      "latency_ms": 458.61
+    },
+    {
+      "id": "dplyr_08",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "apply unpack spec",
+      "expected_symbol": "apply_unpack_spec",
+      "expected_path": "R/across.R",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "R/across.R",
+        "R/across.R",
+        "R/across.R"
+      ],
+      "latency_ms": 476.48
+    },
+    {
+      "id": "dplyr_09",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "arrange all",
+      "expected_symbol": "arrange_all",
+      "expected_path": "R/colwise-arrange.R",
+      "file_rank": 3,
+      "symbol_rank": 3,
+      "top_paths": [
+        "R/arrange.R",
+        "R/defunct-lazyeval.R",
+        "R/colwise-arrange.R"
+      ],
+      "latency_ms": 450.55
+    },
+    {
+      "id": "dplyr_10",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "arrange at",
+      "expected_symbol": "arrange_at",
+      "expected_path": "R/colwise-arrange.R",
+      "file_rank": 2,
+      "symbol_rank": 3,
+      "top_paths": [
+        "R/arrange.R",
+        "R/colwise-arrange.R",
+        "R/colwise-arrange.R"
+      ],
+      "latency_ms": 426.97
+    },
+    {
+      "id": "dplyr_11",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "arrange data frame",
+      "expected_symbol": "arrange.data.frame",
+      "expected_path": "R/arrange.R",
+      "file_rank": 1,
+      "symbol_rank": 5,
+      "top_paths": [
+        "R/arrange.R",
+        "R/defunct-lazyeval.R",
+        "R/deprec-do.R"
+      ],
+      "latency_ms": 465.79
+    },
+    {
+      "id": "dplyr_12",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "arrange if",
+      "expected_symbol": "arrange_if",
+      "expected_path": "R/colwise-arrange.R",
+      "file_rank": 2,
+      "symbol_rank": 2,
+      "top_paths": [
+        "R/arrange.R",
+        "R/colwise-arrange.R",
+        "R/colwise-arrange.R"
+      ],
+      "latency_ms": 483.25
+    },
+    {
+      "id": "dplyr_13",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "arrange rows",
+      "expected_symbol": "arrange_rows",
+      "expected_path": "R/arrange.R",
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "R/arrange.R",
+        "R/defunct-lazyeval.R",
+        "R/colwise-arrange.R"
+      ],
+      "latency_ms": 452.45
+    },
+    {
+      "id": "dplyr_14",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as across fn call",
+      "expected_symbol": "as_across_fn_call",
+      "expected_path": "R/across.R",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "R/across.R",
+        "R/across.R",
+        "R/across.R"
+      ],
+      "latency_ms": 480.87
+    },
+    {
+      "id": "dplyr_15",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as data frame grouped df",
+      "expected_symbol": "as.data.frame.grouped_df",
+      "expected_path": "R/grouped-df.R",
+      "file_rank": 5,
+      "symbol_rank": 5,
+      "top_paths": [
+        "R/generics.R",
+        "R/deprec-do.R",
+        "R/context.R"
+      ],
+      "latency_ms": 516.97
+    },
+    {
+      "id": "dplyr_16",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as fun",
+      "expected_symbol": "as_fun",
+      "expected_path": "R/colwise-funs.R",
+      "file_rank": 5,
+      "symbol_rank": 5,
+      "top_paths": [
+        "R/group-map.R",
+        "tests/testthat/test-colwise-select.R",
+        "R/defunct-each.R"
+      ],
+      "latency_ms": 483.89
+    },
+    {
+      "id": "dplyr_17",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as fun list",
+      "expected_symbol": "as_fun_list",
+      "expected_path": "R/colwise-funs.R",
+      "file_rank": 10,
+      "symbol_rank": 10,
+      "top_paths": [
+        "R/group-map.R",
+        "R/deprec-funs.R",
+        "R/dbplyr.R"
+      ],
+      "latency_ms": 485.04
+    },
+    {
+      "id": "dplyr_18",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as group map function",
+      "expected_symbol": "as_group_map_function",
+      "expected_path": "R/group-map.R",
+      "file_rank": 1,
+      "symbol_rank": 5,
+      "top_paths": [
+        "R/group-map.R",
+        "R/import-standalone-purrr.R",
+        "R/group-by.R"
+      ],
+      "latency_ms": 501.29
+    },
+    {
+      "id": "dplyr_19",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as inlined function",
+      "expected_symbol": "as_inlined_function",
+      "expected_path": "R/colwise.R",
+      "file_rank": 4,
+      "symbol_rank": 4,
+      "top_paths": [
+        "R/import-standalone-purrr.R",
+        "R/tbl.R",
+        "R/conditions.R"
+      ],
+      "latency_ms": 482.11
+    },
+    {
+      "id": "dplyr_20",
+      "library_id": "lib_dplyr",
+      "language": "r",
+      "category": "symbol-smoke",
+      "query": "as join by",
+      "expected_symbol": "as_join_by",
+      "expected_path": "R/join-by.R",
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "R/join-by.R",
+        "R/join-by.R",
+        "R/join.R"
+      ],
+      "latency_ms": 457.4
+    },
+    {
+      "id": "12473817b941_01",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "HISAT2 ALIGN",
+      "expected_symbol": "HISAT2_ALIGN",
+      "expected_path": "modules/nf-core/hisat2/align/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/hisat2/align/main.nf",
+        "modules/nf-core/hisat2/build/main.nf",
+        "subworkflows/nf-core/fastq_align_hisat2/main.nf"
+      ],
+      "latency_ms": 411.48
+    },
+    {
+      "id": "12473817b941_02",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "HISAT2 BUILD",
+      "expected_symbol": "HISAT2_BUILD",
+      "expected_path": "modules/nf-core/hisat2/build/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/hisat2/build/main.nf",
+        "modules/nf-core/hisat2/align/main.nf",
+        "modules/nf-core/hisat2/extractsplicesites/main.nf"
+      ],
+      "latency_ms": 407.17
+    },
+    {
+      "id": "12473817b941_03",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "HISAT2 EXTRACTSPLICESITES",
+      "expected_symbol": "HISAT2_EXTRACTSPLICESITES",
+      "expected_path": "modules/nf-core/hisat2/extractsplicesites/main.nf",
+      "file_rank": 3,
+      "symbol_rank": 3,
+      "top_paths": [
+        "modules/nf-core/hisat2/build/main.nf",
+        "modules/nf-core/hisat2/align/main.nf",
+        "modules/nf-core/hisat2/extractsplicesites/main.nf"
+      ],
+      "latency_ms": 438.23
+    },
+    {
+      "id": "12473817b941_04",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "KALLISTO INDEX",
+      "expected_symbol": "KALLISTO_INDEX",
+      "expected_path": "modules/nf-core/kallisto/index/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/kallisto/index/main.nf",
+        "modules/nf-core/kallisto/quant/main.nf",
+        "subworkflows/nf-core/quantify_pseudo_alignment/main.nf"
+      ],
+      "latency_ms": 402.05
+    },
+    {
+      "id": "12473817b941_05",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "KALLISTO QUANT",
+      "expected_symbol": "KALLISTO_QUANT",
+      "expected_path": "modules/nf-core/kallisto/quant/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/kallisto/quant/main.nf",
+        "modules/nf-core/kallisto/index/main.nf",
+        "subworkflows/nf-core/quant_tximport_summarizedexperiment/main.nf"
+      ],
+      "latency_ms": 429.06
+    },
+    {
+      "id": "12473817b941_06",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "KRAKEN2 KRAKEN2",
+      "expected_symbol": "KRAKEN2_KRAKEN2",
+      "expected_path": "modules/nf-core/kraken2/kraken2/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/kraken2/kraken2/main.nf",
+        "conf/modules/kraken2.config",
+        "modules/nf-core/bracken/bracken/main.nf"
+      ],
+      "latency_ms": 401.63
+    },
+    {
+      "id": "12473817b941_07",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "PARABRICKS RNAFQ2BAM",
+      "expected_symbol": "PARABRICKS_RNAFQ2BAM",
+      "expected_path": "modules/nf-core/parabricks/rnafq2bam/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/parabricks/rnafq2bam/main.nf",
+        "workflows/rnaseq/main.nf",
+        "subworkflows/local/prepare_genome_indices/main.nf"
+      ],
+      "latency_ms": 441.86
+    },
+    {
+      "id": "12473817b941_08",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "PICARD MARKDUPLICATES",
+      "expected_symbol": "PICARD_MARKDUPLICATES",
+      "expected_path": "modules/nf-core/picard/markduplicates/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/picard/markduplicates/main.nf",
+        "conf/containers_conda_lock_files_arm64.config",
+        "conf/containers_docker_arm64.config"
+      ],
+      "latency_ms": 470.84
+    },
+    {
+      "id": "12473817b941_09",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "PREPROCESS TRANSCRIPTS FASTA GENCODE",
+      "expected_symbol": "PREPROCESS_TRANSCRIPTS_FASTA_GENCODE",
+      "expected_path": "modules/local/preprocess_transcripts_fasta_gencode/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/local/preprocess_transcripts_fasta_gencode/main.nf",
+        "subworkflows/local/prepare_genome_references/main.nf",
+        "modules/nf-core/custom/catadditionalfasta/main.nf"
+      ],
+      "latency_ms": 486.6
+    },
+    {
+      "id": "12473817b941_10",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "PRESEQ LCEXTRAP",
+      "expected_symbol": "PRESEQ_LCEXTRAP",
+      "expected_path": "modules/nf-core/preseq/lcextrap/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/preseq/lcextrap/main.nf",
+        "conf/modules/preseq.config",
+        "modules/nf-core/rustqc/main.nf"
+      ],
+      "latency_ms": 427.9
+    },
+    {
+      "id": "12473817b941_11",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "process anonymous",
+      "expected_symbol": "process_anonymous",
+      "expected_path": "conf/containers_conda_lock_files_amd64.config",
+      "file_rank": 4,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/gffread/tests/nextflow-gff3.config",
+        "conf/base.config",
+        "modules/nf-core/fq/subsample/tests/nextflow_no_args.config"
+      ],
+      "latency_ms": 435.06
+    },
+    {
+      "id": "12473817b941_12",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "QUALIMAP RNASEQ",
+      "expected_symbol": "QUALIMAP_RNASEQ",
+      "expected_path": "modules/nf-core/qualimap/rnaseq/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/qualimap/rnaseq/main.nf",
+        "conf/containers_conda_lock_files_amd64.config",
+        "workflows/rnaseq/main.nf"
+      ],
+      "latency_ms": 425.12
+    },
+    {
+      "id": "12473817b941_13",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "RSEM CALCULATEEXPRESSION",
+      "expected_symbol": "RSEM_CALCULATEEXPRESSION",
+      "expected_path": "modules/nf-core/rsem/calculateexpression/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/rsem/calculateexpression/main.nf",
+        "modules/nf-core/rsem/preparereference/main.nf",
+        "modules/nf-core/sentieon/rsempreparereference/main.nf"
+      ],
+      "latency_ms": 418.1
+    },
+    {
+      "id": "12473817b941_14",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "RSEM PREPAREREFERENCE",
+      "expected_symbol": "RSEM_PREPAREREFERENCE",
+      "expected_path": "modules/nf-core/rsem/preparereference/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/rsem/preparereference/main.nf",
+        "modules/nf-core/sentieon/rsempreparereference/main.nf",
+        "modules/nf-core/rsem/calculateexpression/main.nf"
+      ],
+      "latency_ms": 450.8
+    },
+    {
+      "id": "12473817b941_15",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "RSEQC BAMSTAT",
+      "expected_symbol": "RSEQC_BAMSTAT",
+      "expected_path": "modules/nf-core/rseqc/bamstat/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/rseqc/bamstat/main.nf",
+        "subworkflows/nf-core/bam_rseqc/main.nf",
+        "modules/nf-core/rseqc/inferexperiment/main.nf"
+      ],
+      "latency_ms": 427.43
+    },
+    {
+      "id": "12473817b941_16",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "RSEQC INFEREXPERIMENT",
+      "expected_symbol": "RSEQC_INFEREXPERIMENT",
+      "expected_path": "modules/nf-core/rseqc/inferexperiment/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/rseqc/inferexperiment/main.nf",
+        "subworkflows/nf-core/bam_rseqc/main.nf",
+        "modules/nf-core/rseqc/readdistribution/main.nf"
+      ],
+      "latency_ms": 440.38
+    },
+    {
+      "id": "12473817b941_17",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "RSEQC INNERDISTANCE",
+      "expected_symbol": "RSEQC_INNERDISTANCE",
+      "expected_path": "modules/nf-core/rseqc/innerdistance/main.nf",
+      "file_rank": 4,
+      "symbol_rank": 4,
+      "top_paths": [
+        "subworkflows/nf-core/bam_rseqc/main.nf",
+        "modules/nf-core/rseqc/inferexperiment/main.nf",
+        "modules/nf-core/rseqc/readdistribution/main.nf"
+      ],
+      "latency_ms": 420.87
+    },
+    {
+      "id": "12473817b941_18",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "RSEQC JUNCTIONANNOTATION",
+      "expected_symbol": "RSEQC_JUNCTIONANNOTATION",
+      "expected_path": "modules/nf-core/rseqc/junctionannotation/main.nf",
+      "file_rank": 3,
+      "symbol_rank": 3,
+      "top_paths": [
+        "modules/nf-core/rseqc/junctionsaturation/main.nf",
+        "modules/nf-core/rseqc/readdistribution/main.nf",
+        "modules/nf-core/rseqc/junctionannotation/main.nf"
+      ],
+      "latency_ms": 427.41
+    },
+    {
+      "id": "12473817b941_19",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "RSEQC JUNCTIONSATURATION",
+      "expected_symbol": "RSEQC_JUNCTIONSATURATION",
+      "expected_path": "modules/nf-core/rseqc/junctionsaturation/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/rseqc/junctionsaturation/main.nf",
+        "modules/nf-core/rseqc/junctionannotation/main.nf",
+        "modules/nf-core/rseqc/bamstat/main.nf"
+      ],
+      "latency_ms": 436.0
+    },
+    {
+      "id": "12473817b941_20",
+      "library_id": "lib_12473817b941",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "RSEQC READDISTRIBUTION",
+      "expected_symbol": "RSEQC_READDISTRIBUTION",
+      "expected_path": "modules/nf-core/rseqc/readdistribution/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/rseqc/readdistribution/main.nf",
+        "modules/nf-core/rseqc/readduplication/main.nf",
+        "subworkflows/nf-core/bam_rseqc/main.nf"
+      ],
+      "latency_ms": 444.03
+    },
+    {
+      "id": "nfcore_scrnaseq_01",
+      "library_id": "lib_nfcore_scrnaseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "MTX TO H5AD",
+      "expected_symbol": "MTX_TO_H5AD",
+      "expected_path": "modules/local/mtx_to_h5ad/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/local/mtx_to_h5ad/main.nf",
+        "subworkflows/nf-core/h5ad_removebackground_barcodes_cellbender_anndata/main.nf",
+        "modules/local/concat_h5ad/main.nf"
+      ],
+      "latency_ms": 352.32
+    },
+    {
+      "id": "nfcore_scrnaseq_02",
+      "library_id": "lib_nfcore_scrnaseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "PARSE CELLRANGERMULTI SAMPLESHEET",
+      "expected_symbol": "PARSE_CELLRANGERMULTI_SAMPLESHEET",
+      "expected_path": "modules/local/parse_cellrangermulti_samplesheet/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/local/parse_cellrangermulti_samplesheet/main.nf",
+        "subworkflows/local/align_cellrangermulti/main.nf",
+        "workflows/scrnaseq.nf"
+      ],
+      "latency_ms": 384.28
+    },
+    {
+      "id": "nfcore_scrnaseq_03",
+      "library_id": "lib_nfcore_scrnaseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "process anonymous",
+      "expected_symbol": "process_anonymous",
+      "expected_path": "modules/nf-core/gffread/tests/nextflow.config",
+      "file_rank": 8,
+      "symbol_rank": 1,
+      "top_paths": [
+        "conf/test.config",
+        "modules/nf-core/gffread/tests/nextflow-gff3.config",
+        "conf/containers_singularity_oras_amd64.config"
+      ],
+      "latency_ms": 364.27
+    },
+    {
+      "id": "nfcore_scrnaseq_04",
+      "library_id": "lib_nfcore_scrnaseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "SIMPLEAF INDEX",
+      "expected_symbol": "SIMPLEAF_INDEX",
+      "expected_path": "modules/nf-core/simpleaf/index/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/simpleaf/index/main.nf",
+        "subworkflows/local/simpleaf/main.nf",
+        "modules/nf-core/simpleaf/quant/main.nf"
+      ],
+      "latency_ms": 356.12
+    },
+    {
+      "id": "nfcore_scrnaseq_05",
+      "library_id": "lib_nfcore_scrnaseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "SIMPLEAF QUANT",
+      "expected_symbol": "SIMPLEAF_QUANT",
+      "expected_path": "modules/nf-core/simpleaf/quant/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/simpleaf/quant/main.nf",
+        "subworkflows/local/simpleaf/main.nf",
+        "modules/nf-core/simpleaf/index/main.nf"
+      ],
+      "latency_ms": 369.41
+    },
+    {
+      "id": "nfcore_scrnaseq_06",
+      "library_id": "lib_nfcore_scrnaseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "STAR ALIGN",
+      "expected_symbol": "STAR_ALIGN",
+      "expected_path": "modules/local/star_align/main.nf",
+      "file_rank": 2,
+      "symbol_rank": 2,
+      "top_paths": [
+        "modules/nf-core/star/genomegenerate/main.nf",
+        "modules/local/star_align/main.nf",
+        "subworkflows/local/starsolo/main.nf"
+      ],
+      "latency_ms": 355.75
+    },
+    {
+      "id": "nfcore_scrnaseq_07",
+      "library_id": "lib_nfcore_scrnaseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "STAR GENOMEGENERATE",
+      "expected_symbol": "STAR_GENOMEGENERATE",
+      "expected_path": "modules/nf-core/star/genomegenerate/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/star/genomegenerate/main.nf",
+        "modules/local/star_genomeparams_upgrade/main.nf",
+        "subworkflows/local/starsolo/main.nf"
+      ],
+      "latency_ms": 356.16
+    },
+    {
+      "id": "nfcore_scrnaseq_08",
+      "library_id": "lib_nfcore_scrnaseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "STAR GENOMEPARAMS UPGRADE",
+      "expected_symbol": "STAR_GENOMEPARAMS_UPGRADE",
+      "expected_path": "modules/local/star_genomeparams_upgrade/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/local/star_genomeparams_upgrade/main.nf",
+        "modules/nf-core/star/genomegenerate/main.nf",
+        "subworkflows/local/starsolo/main.nf"
+      ],
+      "latency_ms": 360.53
+    },
+    {
+      "id": "nfcore_atacseq_01",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "GENOME BLACKLIST REGIONS",
+      "expected_symbol": "GENOME_BLACKLIST_REGIONS",
+      "expected_path": "modules/local/genome_blacklist_regions.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/local/genome_blacklist_regions.nf",
+        "subworkflows/local/prepare_genome.nf",
+        "conf/modules.config"
+      ],
+      "latency_ms": 369.5
+    },
+    {
+      "id": "nfcore_atacseq_02",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "GET AUTOSOMES",
+      "expected_symbol": "GET_AUTOSOMES",
+      "expected_path": "modules/local/get_autosomes.nf",
+      "file_rank": 2,
+      "symbol_rank": 2,
+      "top_paths": [
+        "subworkflows/local/prepare_genome.nf",
+        "modules/local/get_autosomes.nf",
+        "modules/local/get_autosomes.nf"
+      ],
+      "latency_ms": 376.48
+    },
+    {
+      "id": "nfcore_atacseq_03",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "HOMER ANNOTATEPEAKS",
+      "expected_symbol": "HOMER_ANNOTATEPEAKS",
+      "expected_path": "modules/nf-core/homer/annotatepeaks/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/homer/annotatepeaks/main.nf",
+        "subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf",
+        "modules/local/plot_homer_annotatepeaks.nf"
+      ],
+      "latency_ms": 428.79
+    },
+    {
+      "id": "nfcore_atacseq_04",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "KHMER UNIQUEKMERS",
+      "expected_symbol": "KHMER_UNIQUEKMERS",
+      "expected_path": "modules/nf-core/khmer/uniquekmers/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/khmer/uniquekmers/main.nf",
+        "modules/nf-core/khmer/uniquekmers/main.nf",
+        "subworkflows/local/bam_bedgraph_bigwig_bedtools_ucsc.nf"
+      ],
+      "latency_ms": 390.28
+    },
+    {
+      "id": "nfcore_atacseq_05",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "MACS2 CALLPEAK",
+      "expected_symbol": "MACS2_CALLPEAK",
+      "expected_path": "modules/nf-core/macs2/callpeak/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/macs2/callpeak/main.nf",
+        "conf/modules.config",
+        "conf/modules.config"
+      ],
+      "latency_ms": 378.23
+    },
+    {
+      "id": "nfcore_atacseq_06",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "MACS2 CONSENSUS",
+      "expected_symbol": "MACS2_CONSENSUS",
+      "expected_path": "modules/local/macs2_consensus.nf",
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "modules/nf-core/macs2/callpeak/main.nf",
+        "conf/modules.config",
+        "conf/modules.config"
+      ],
+      "latency_ms": 411.85
+    },
+    {
+      "id": "nfcore_atacseq_07",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "MULTIQC CUSTOM PEAKS",
+      "expected_symbol": "MULTIQC_CUSTOM_PEAKS",
+      "expected_path": "modules/local/multiqc_custom_peaks.nf",
+      "file_rank": 9,
+      "symbol_rank": 9,
+      "top_paths": [
+        "modules/local/multiqc.nf",
+        "subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf",
+        "modules/nf-core/custom/dumpsoftwareversions/main.nf"
+      ],
+      "latency_ms": 384.75
+    },
+    {
+      "id": "nfcore_atacseq_08",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "PICARD COLLECTMULTIPLEMETRICS",
+      "expected_symbol": "PICARD_COLLECTMULTIPLEMETRICS",
+      "expected_path": "modules/nf-core/picard/collectmultiplemetrics/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/picard/collectmultiplemetrics/main.nf",
+        "modules/nf-core/picard/markduplicates/main.nf",
+        "modules/nf-core/picard/mergesamfiles/main.nf"
+      ],
+      "latency_ms": 427.14
+    },
+    {
+      "id": "nfcore_atacseq_09",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "PICARD MARKDUPLICATES",
+      "expected_symbol": "PICARD_MARKDUPLICATES",
+      "expected_path": "modules/nf-core/picard/markduplicates/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/picard/markduplicates/main.nf",
+        "modules/nf-core/picard/mergesamfiles/main.nf",
+        "modules/nf-core/picard/collectmultiplemetrics/main.nf"
+      ],
+      "latency_ms": 413.11
+    },
+    {
+      "id": "nfcore_atacseq_10",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "PICARD MERGESAMFILES",
+      "expected_symbol": "PICARD_MERGESAMFILES",
+      "expected_path": "modules/nf-core/picard/mergesamfiles/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/picard/mergesamfiles/main.nf",
+        "modules/nf-core/picard/markduplicates/main.nf",
+        "modules/nf-core/picard/collectmultiplemetrics/main.nf"
+      ],
+      "latency_ms": 410.61
+    },
+    {
+      "id": "nfcore_atacseq_11",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "PLOT HOMER ANNOTATEPEAKS",
+      "expected_symbol": "PLOT_HOMER_ANNOTATEPEAKS",
+      "expected_path": "modules/local/plot_homer_annotatepeaks.nf",
+      "file_rank": 2,
+      "symbol_rank": 2,
+      "top_paths": [
+        "modules/nf-core/homer/annotatepeaks/main.nf",
+        "modules/local/plot_homer_annotatepeaks.nf",
+        "subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf"
+      ],
+      "latency_ms": 400.72
+    },
+    {
+      "id": "nfcore_atacseq_12",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "PLOT MACS2 QC",
+      "expected_symbol": "PLOT_MACS2_QC",
+      "expected_path": "modules/local/plot_macs2_qc.nf",
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "modules/nf-core/macs2/callpeak/main.nf",
+        "subworkflows/local/bam_peaks_call_qc_annotate_macs2_homer.nf",
+        "conf/modules.config"
+      ],
+      "latency_ms": 398.69
+    },
+    {
+      "id": "nfcore_atacseq_13",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "PRESEQ LCEXTRAP",
+      "expected_symbol": "PRESEQ_LCEXTRAP",
+      "expected_path": "modules/nf-core/preseq/lcextrap/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/preseq/lcextrap/main.nf",
+        "conf/modules.config",
+        "workflows/atacseq.nf"
+      ],
+      "latency_ms": 485.23
+    },
+    {
+      "id": "nfcore_atacseq_14",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "process anonymous",
+      "expected_symbol": "process_anonymous",
+      "expected_path": "conf/modules.config",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "conf/modules.config",
+        "conf/modules.config",
+        "conf/base.config"
+      ],
+      "latency_ms": 466.85
+    },
+    {
+      "id": "nfcore_atacseq_15",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "SAMPLESHEET CHECK",
+      "expected_symbol": "SAMPLESHEET_CHECK",
+      "expected_path": "modules/local/samplesheet_check.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/local/samplesheet_check.nf",
+        "subworkflows/local/input_check.nf",
+        "workflows/atacseq.nf"
+      ],
+      "latency_ms": 379.77
+    },
+    {
+      "id": "nfcore_atacseq_16",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "SAMTOOLS FLAGSTAT",
+      "expected_symbol": "SAMTOOLS_FLAGSTAT",
+      "expected_path": "modules/nf-core/samtools/flagstat/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/samtools/flagstat/main.nf",
+        "modules/nf-core/samtools/index/main.nf",
+        "modules/nf-core/samtools/stats/main.nf"
+      ],
+      "latency_ms": 383.69
+    },
+    {
+      "id": "nfcore_atacseq_17",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "SAMTOOLS IDXSTATS",
+      "expected_symbol": "SAMTOOLS_IDXSTATS",
+      "expected_path": "modules/nf-core/samtools/idxstats/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/samtools/idxstats/main.nf",
+        "modules/nf-core/samtools/index/main.nf",
+        "modules/nf-core/samtools/stats/main.nf"
+      ],
+      "latency_ms": 397.78
+    },
+    {
+      "id": "nfcore_atacseq_18",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "SAMTOOLS INDEX",
+      "expected_symbol": "SAMTOOLS_INDEX",
+      "expected_path": "modules/nf-core/samtools/index/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/samtools/index/main.nf",
+        "modules/nf-core/samtools/idxstats/main.nf",
+        "modules/nf-core/samtools/flagstat/main.nf"
+      ],
+      "latency_ms": 371.13
+    },
+    {
+      "id": "nfcore_atacseq_19",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "SAMTOOLS SORT",
+      "expected_symbol": "SAMTOOLS_SORT",
+      "expected_path": "modules/nf-core/samtools/sort/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/samtools/sort/main.nf",
+        "modules/nf-core/samtools/stats/main.nf",
+        "modules/nf-core/samtools/index/main.nf"
+      ],
+      "latency_ms": 369.16
+    },
+    {
+      "id": "nfcore_atacseq_20",
+      "library_id": "lib_nfcore_atacseq",
+      "language": "nextflow",
+      "category": "symbol-smoke",
+      "query": "SAMTOOLS STATS",
+      "expected_symbol": "SAMTOOLS_STATS",
+      "expected_path": "modules/nf-core/samtools/stats/main.nf",
+      "file_rank": 1,
+      "symbol_rank": 1,
+      "top_paths": [
+        "modules/nf-core/samtools/stats/main.nf",
+        "subworkflows/local/bam_filter_bamtools.nf",
+        "modules/nf-core/samtools/index/main.nf"
+      ],
+      "latency_ms": 371.52
+    }
+  ]
+}

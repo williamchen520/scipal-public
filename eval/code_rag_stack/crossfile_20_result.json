@@ -1,0 +1,227 @@
+{
+  "cases": 20,
+  "file_hit@1": 0.65,
+  "file_hit@3": 0.9,
+  "rows": [
+    {
+      "id": "m01",
+      "query": "logging",
+      "expected_path": "src/scanpy/logging.py",
+      "rank": 1,
+      "top": [
+        "src/scanpy/logging.py",
+        "src/scanpy/_settings/__init__.py",
+        "tests/test_logging.py"
+      ]
+    },
+    {
+      "id": "m02",
+      "query": "logging level",
+      "expected_path": "src/scanpy/logging.py",
+      "rank": 1,
+      "top": [
+        "src/scanpy/logging.py",
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/plotting/_tools/paga.py"
+      ]
+    },
+    {
+      "id": "m03",
+      "query": "settings",
+      "expected_path": "src/scanpy/_settings/__init__.py",
+      "rank": 1,
+      "top": [
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/cli.py",
+        "tests/test_rank_genes_groups.py"
+      ]
+    },
+    {
+      "id": "m04",
+      "query": "normalize total",
+      "expected_path": "src/scanpy/preprocessing/_normalization.py",
+      "rank": 1,
+      "top": [
+        "src/scanpy/preprocessing/_normalization.py",
+        "src/scanpy/_utils/__init__.py",
+        "src/scanpy/logging.py"
+      ]
+    },
+    {
+      "id": "m05",
+      "query": "quality control metrics",
+      "expected_path": "src/scanpy/preprocessing/_qc.py",
+      "rank": 2,
+      "top": [
+        "src/scanpy/_utils/__init__.py",
+        "src/scanpy/preprocessing/_qc.py",
+        "src/scanpy/logging.py"
+      ]
+    },
+    {
+      "id": "m06",
+      "query": "highly variable genes",
+      "expected_path": "src/scanpy/preprocessing/_highly_variable_genes.py",
+      "rank": 3,
+      "top": [
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/logging.py",
+        "src/scanpy/preprocessing/_highly_variable_genes.py"
+      ]
+    },
+    {
+      "id": "m07",
+      "query": "pca",
+      "expected_path": "src/scanpy/preprocessing/_pca/__init__.py",
+      "rank": 2,
+      "top": [
+        "src/scanpy/tools/_ingest.py",
+        "src/scanpy/preprocessing/_pca/__init__.py",
+        "src/scanpy/logging.py"
+      ]
+    },
+    {
+      "id": "m08",
+      "query": "neighbors",
+      "expected_path": "src/scanpy/neighbors/__init__.py",
+      "rank": 1,
+      "top": [
+        "src/scanpy/neighbors/__init__.py",
+        "src/scanpy/_utils/__init__.py",
+        "src/scanpy/tools/_ingest.py"
+      ]
+    },
+    {
+      "id": "m09",
+      "query": "umap",
+      "expected_path": "src/scanpy/tools/_umap.py",
+      "rank": 4,
+      "top": [
+        "src/scanpy/logging.py",
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/neighbors/_connectivity.py"
+      ]
+    },
+    {
+      "id": "m10",
+      "query": "leiden",
+      "expected_path": "src/scanpy/tools/_leiden.py",
+      "rank": 1,
+      "top": [
+        "src/scanpy/tools/_leiden.py",
+        "src/scanpy/_utils/__init__.py",
+        "src/scanpy/tools/_utils_clustering.py"
+      ]
+    },
+    {
+      "id": "m11",
+      "query": "rank genes groups",
+      "expected_path": "src/scanpy/tools/_rank_genes_groups.py",
+      "rank": 3,
+      "top": [
+        "src/scanpy/logging.py",
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/tools/_rank_genes_groups.py"
+      ]
+    },
+    {
+      "id": "m12",
+      "query": "score genes",
+      "expected_path": "src/scanpy/tools/_score_genes.py",
+      "rank": 3,
+      "top": [
+        "src/scanpy/logging.py",
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/tools/_score_genes.py"
+      ]
+    },
+    {
+      "id": "m13",
+      "query": "dotplot",
+      "expected_path": "src/scanpy/plotting/_dotplot.py",
+      "rank": 1,
+      "top": [
+        "src/scanpy/plotting/_dotplot.py",
+        "src/scanpy/logging.py",
+        "src/scanpy/_settings/__init__.py"
+      ]
+    },
+    {
+      "id": "m14",
+      "query": "violin",
+      "expected_path": "src/scanpy/plotting/_anndata.py",
+      "rank": 1,
+      "top": [
+        "src/scanpy/plotting/_anndata.py",
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/logging.py"
+      ]
+    },
+    {
+      "id": "m15",
+      "query": "read 10x mtx",
+      "expected_path": "src/scanpy/readwrite.py",
+      "rank": 1,
+      "top": [
+        "src/scanpy/readwrite.py",
+        "src/scanpy/logging.py",
+        "src/scanpy/_settings/__init__.py"
+      ]
+    },
+    {
+      "id": "m16",
+      "query": "write h5ad",
+      "expected_path": "src/scanpy/readwrite.py",
+      "rank": 1,
+      "top": [
+        "src/scanpy/readwrite.py",
+        "src/scanpy/logging.py",
+        "src/scanpy/_settings/__init__.py"
+      ]
+    },
+    {
+      "id": "m17",
+      "query": "combat",
+      "expected_path": "src/scanpy/preprocessing/_combat.py",
+      "rank": 1,
+      "top": [
+        "src/scanpy/preprocessing/_combat.py",
+        "src/scanpy/logging.py",
+        "src/scanpy/_settings/__init__.py"
+      ]
+    },
+    {
+      "id": "m18",
+      "query": "scrublet",
+      "expected_path": "src/scanpy/preprocessing/_scrublet/__init__.py",
+      "rank": 5,
+      "top": [
+        "src/scanpy/logging.py",
+        "src/scanpy/_settings/__init__.py",
+        "src/scanpy/preprocessing/_scrublet/sparse_utils.py"
+      ]
+    },
+    {
+      "id": "m19",
+      "query": "ingest",
+      "expected_path": "src/scanpy/tools/_ingest.py",
+      "rank": 1,
+      "top": [
+        "src/scanpy/tools/_ingest.py",
+        "src/scanpy/_utils/__init__.py",
+        "src/scanpy/logging.py"
+      ]
+    },
+    {
+      "id": "m20",
+      "query": "dpt",
+      "expected_path": "src/scanpy/tools/_dpt.py",
+      "rank": 1,
+      "top": [
+        "src/scanpy/tools/_dpt.py",
+        "src/scanpy/logging.py",
+        "src/scanpy/_settings/__init__.py"
+      ]
+    }
+  ]
+}

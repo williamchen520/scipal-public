@@ -1,0 +1,304 @@
+[
+  {
+    "id": "body01",
+    "library_id": "lib_2c5709b07c77",
+    "category": "pr-title",
+    "query": "igraph calls `_RNGIgraph.getrandbits` → `Generator.integers(…)` once per random number.",
+    "expected_path": "src/scanpy/_utils/random.py",
+    "expected_paths": [
+      "src/scanpy/_utils/random.py",
+      "src/scanpy/tools/_leiden.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/scanpy",
+    "pr": 4518
+  },
+  {
+    "id": "body02",
+    "library_id": "lib_anndata",
+    "category": "pr-title",
+    "query": "This PR prevents anndata from warning so aggressively.",
+    "expected_path": "src/anndata/_io/specs/methods.py",
+    "expected_paths": [
+      "src/anndata/_io/specs/methods.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/anndata",
+    "pr": 2704
+  },
+  {
+    "id": "body03",
+    "library_id": "lib_squidpy",
+    "category": "pr-title",
+    "query": "Description `PercentilePostprocessor` now takes the percentile over off-diagonal entries only, so the diagonal zeros of `dst` no longer lower the threshold. Graphs built with `percentile` change slightly.",
+    "expected_path": "src/squidpy/gr/neighbors.py",
+    "expected_paths": [
+      "src/squidpy/gr/neighbors.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/squidpy",
+    "pr": 1309
+  },
+  {
+    "id": "body04",
+    "library_id": "lib_squidpy",
+    "category": "pr-title",
+    "query": "`spatial_scatter` checked the image keys under `adata.uns[spatial_key]` but loaded images and scalefactors from `adata.uns[\"spatial\"]`, so any other `spatial_key` failed. This loads images, scalefactors and segmentation images from `adata.uns[spatial_key]`, as the `library_id` docs describe.",
+    "expected_path": "src/squidpy/pl/_spatial_utils.py",
+    "expected_paths": [
+      "src/squidpy/pl/_spatial_utils.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/squidpy",
+    "pr": 1304
+  },
+  {
+    "id": "body05",
+    "library_id": "lib_squidpy",
+    "category": "pr-title",
+    "query": "`assign_stitch_groups` now stores its arguments under `uns[\"tiling_stitch\"][\"params\"]`, so the re-run hint in `calculate_tiling_qc` prints them as is. This drops `_STITCH_PARAM_KEYS`, `_STITCH_COLUMNS` and the private imports into `_tiling_qc`.",
+    "expected_path": "src/squidpy/experimental/tl/_tiling_qc.py",
+    "expected_paths": [
+      "src/squidpy/experimental/tl/_tiling_qc.py",
+      "src/squidpy/experimental/tl/_tiling_stitch.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/squidpy",
+    "pr": 1298
+  },
+  {
+    "id": "body06",
+    "library_id": "lib_scvi_tools",
+    "category": "pr-title",
+    "query": "`test_destvi_vamp_prior_from_normal_condscvi` (default and `\"normal\"` prior): trains DestVI and checks the proportions. - `test_destvi_qz_prior_follows_module`: after `module.double()`, `qz_prior` and its samples are float64. CI has no GPU, so this checks the same mechanism through dtype.",
+    "expected_path": "src/scvi/model/_destvi.py",
+    "expected_paths": [
+      "src/scvi/model/_destvi.py",
+      "src/scvi/module/_mrdeconv.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/scvi-tools",
+    "pr": 4064
+  },
+  {
+    "id": "body07",
+    "library_id": "lib_scvi_tools",
+    "category": "pr-title",
+    "query": "Trimmed port of #4017, plus the crash fix from #4018. Outputs are bit-identical before and after.",
+    "expected_path": "src/scvi/external/cytovi/_model.py",
+    "expected_paths": [
+      "src/scvi/external/cytovi/_model.py",
+      "src/scvi/external/mrvi/_model.py",
+      "src/scvi/model/_utils.py",
+      "src/scvi/model/base/_rnamixin.py",
+      "src/scvi/module/base/_base_module.py",
+      "src/scvi/module/base/_decorators.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/scvi-tools",
+    "pr": 4049
+  },
+  {
+    "id": "body08",
+    "library_id": "lib_snakemake",
+    "category": "pr-title",
+    "query": "Part of #4240, without resolving it: on `main`, these timer chains multiply the scheduling rounds (10,195 instead of 397 for 400 jobs below), and each round repeats the scheduling work discussed there.",
+    "expected_path": "src/snakemake/scheduling/job_scheduler.py",
+    "expected_paths": [
+      "src/snakemake/scheduling/job_scheduler.py"
+    ],
+    "expected_symbol": "",
+    "repo": "snakemake/snakemake",
+    "pr": 4372
+  },
+  {
+    "id": "body09",
+    "library_id": "lib_snakemake",
+    "category": "pr-title",
+    "query": "Use a rule's effective pathvars when creating default storage queries, including multiext prefixes, while keeping workflow defaults for callers without a rule context.",
+    "expected_path": "src/snakemake/path_modifier.py",
+    "expected_paths": [
+      "src/snakemake/path_modifier.py",
+      "src/snakemake/rules.py"
+    ],
+    "expected_symbol": "",
+    "repo": "snakemake/snakemake",
+    "pr": 4366
+  },
+  {
+    "id": "body10",
+    "library_id": "lib_ggplot2",
+    "category": "pr-title",
+    "query": "Declare `ggplot`, `ggplot_built`, `uneval`, and the four legacy element names in the S7 class hierarchy. Subclasses then inherit these compatibility names, which are currently added only by ggplot2's constructors.",
+    "expected_path": "R/all-classes.R",
+    "expected_paths": [
+      "R/all-classes.R",
+      "R/plot-build.R",
+      "R/plot.R",
+      "R/theme-elements.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/ggplot2",
+    "pr": 6915
+  },
+  {
+    "id": "body11",
+    "library_id": "lib_ggplot2",
+    "category": "pr-title",
+    "query": "Plot and theme addition currently reports `e2` in errors with development S7. Capture the original operand in the method so errors identify expressions such as `geom_point`, while retaining the existing capture path for S7 0.2.2.",
+    "expected_path": "R/plot-construction.R",
+    "expected_paths": [
+      "R/plot-construction.R",
+      "R/zzz.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/ggplot2",
+    "pr": 6914
+  },
+  {
+    "id": "body12",
+    "library_id": "lib_ggplot2",
+    "category": "pr-title",
+    "query": "Besides the warning, with `drop = FALSE` a named variable was returned as is instead of as an id, and `id()` over a named variable and another one errored in `vapply()`. Those now give the same ids as the unnamed variable.",
+    "expected_path": "R/backports.R",
+    "expected_paths": [
+      "R/backports.R",
+      "R/compat-plyr.R",
+      "R/facet-.R",
+      "R/facet-grid-.R",
+      "R/facet-labeller.R",
+      "R/facet-wrap.R",
+      "R/guide-axis-logticks.R",
+      "R/guide-colorsteps.R",
+      "R/guide-legend.R",
+      "R/labels.R",
+      "R/layer-sf.R",
+      "R/legend-draw.R",
+      "R/position-dodge.R",
+      "R/position-jitterdodge.R",
+      "R/scale-.R",
+      "R/scale-date.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/ggplot2",
+    "pr": 6908
+  },
+  {
+    "id": "body13",
+    "library_id": "lib_dplyr",
+    "category": "pr-title",
+    "query": "This PR adds `.by` and `.col` arguments to `group_modify()` `.by` instrad of `group_by()` and `.col` instead of `~.x$col` Updated `group_modify.data.frame` and `group_modify.grouped_df` accordingly",
+    "expected_path": "R/group-map.R",
+    "expected_paths": [
+      "R/group-map.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/dplyr",
+    "pr": 7840
+  },
+  {
+    "id": "body14",
+    "library_id": "lib_dplyr",
+    "category": "pr-title",
+    "query": "Now that we finally have the new C level bindings API",
+    "expected_path": "R/data-mask.R",
+    "expected_paths": [
+      "R/data-mask.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/dplyr",
+    "pr": 7819
+  },
+  {
+    "id": "body15",
+    "library_id": "lib_dplyr",
+    "category": "pr-title",
+    "query": "Very tricky little edge case with `reframe()`.",
+    "expected_path": "R/data-mask.R",
+    "expected_paths": [
+      "R/data-mask.R",
+      "R/reframe.R",
+      "R/summarise.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/dplyr",
+    "pr": 7799
+  },
+  {
+    "id": "body16",
+    "library_id": "lib_12473817b941",
+    "category": "pr-title",
+    "query": "Updates `bowtie2/align` and `bowtie2/build` to nf-core/modules master, picking up nf-core/modules#13676.",
+    "expected_path": "modules/nf-core/bowtie2/align/main.nf",
+    "expected_paths": [
+      "modules/nf-core/bowtie2/align/main.nf",
+      "modules/nf-core/bowtie2/build/main.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/rnaseq",
+    "pr": 1997
+  },
+  {
+    "id": "body17",
+    "library_id": "lib_12473817b941",
+    "category": "pr-title",
+    "query": "Fix:** add `.first()` to the `HISAT2_BUILD` output in `subworkflows/local/prepare_genome_indices/main.nf`, making the index a value channel. This matches the other index builds in the same file (Salmon, Kallisto, SortMeRNA), which already use `.first()`.",
+    "expected_path": "subworkflows/local/prepare_genome_indices/main.nf",
+    "expected_paths": [
+      "subworkflows/local/prepare_genome_indices/main.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/rnaseq",
+    "pr": 1994
+  },
+  {
+    "id": "body18",
+    "library_id": "lib_nfcore_scrnaseq",
+    "category": "pr-title",
+    "query": "The pipeline now checks `expected_cells` and `seq_center` across grouped rows for the same sample. If the values differ, the pipeline stops and identifies the sample as in nf-core/rnaseq.",
+    "expected_path": "subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf",
+    "expected_paths": [
+      "subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/scrnaseq",
+    "pr": 607
+  },
+  {
+    "id": "body19",
+    "library_id": "lib_nfcore_scrnaseq",
+    "category": "pr-title",
+    "query": "The matched 10k PBMC GEX + V(D)J test data has too few reads to call cells, so there is no test of the GEX-gated case.",
+    "expected_path": "subworkflows/local/align_cellrangermulti/main.nf",
+    "expected_paths": [
+      "subworkflows/local/align_cellrangermulti/main.nf",
+      "subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf",
+      "workflows/scrnaseq.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/scrnaseq",
+    "pr": 595
+  },
+  {
+    "id": "body20",
+    "library_id": "lib_nfcore_atacseq",
+    "category": "pr-title",
+    "query": "`nextflow config` parses with both the v1 and v2 syntax parsers and differs from `dev` only by the template's new `process_low_memory` label. The pipeline tests have not been run.",
+    "expected_path": "main.nf",
+    "expected_paths": [
+      "main.nf",
+      "modules/local/bam_remove_orphans.nf",
+      "modules/local/bamtools_filter.nf",
+      "modules/local/bedtools_genomecov.nf",
+      "modules/local/deseq2_qc.nf",
+      "modules/local/frip_score.nf",
+      "modules/local/genome_blacklist_regions.nf",
+      "modules/local/get_autosomes.nf",
+      "modules/local/gtf2bed.nf",
+      "modules/local/igv.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/atacseq",
+    "pr": 471
+  }
+]

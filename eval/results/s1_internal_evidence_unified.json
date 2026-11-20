@@ -1,0 +1,8 @@
+{
+  "status": "partial",
+  "backend": "unified",
+  "fallback": "pgvector",
+  "single_query": "HTTP 200, 3 evidence",
+  "full_50": "aborted: ~4 min/query",
+  "note": "fallback works; full baseline not measured"
+}

@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>代码检索 · SciPal</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; margin: 0; background: #f5f6f8; color: #202124; }
+    header { padding: 18px 24px; background: #fff; border-bottom: 1px solid #e3e5e8; }
+    header a { color: #1a5fb4; text-decoration: none; }
+    main { max-width: 960px; margin: 24px auto; padding: 0 18px; }
+    .card { background: #fff; border: 1px solid #e3e5e8; border-radius: 12px; padding: 18px; margin-bottom: 16px; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; }
+    input { padding: 9px 11px; border: 1px solid #cfd3d8; border-radius: 7px; font: inherit; }
+    #query { flex: 1; min-width: 260px; }
+    select { padding: 9px 11px; border: 1px solid #cfd3d8; border-radius: 7px; font: inherit; background: #fff; }
+    #path_filter { min-width: 220px; }
+    button { padding: 9px 16px; border: 0; border-radius: 7px; background: #1a5fb4; color: #fff; cursor: pointer; }
+    .muted { color: #6b7280; font-size: 13px; }
+    .error { color: #b42318; white-space: pre-wrap; }
+    .hit { border-top: 1px solid #eef0f3; padding: 12px 0; }
+    .pill { background: #eef2f8; color: #1a5fb4; border-radius: 99px; padding: 2px 8px; font-size: 12px; }
+    pre { white-space: pre-wrap; background: #f7f8fa; padding: 8px; border-radius: 6px; font-size: 12px; }
+    .tree { max-height: 420px; overflow: auto; font-size: 13px; line-height: 1.7; }
+    .tree details { margin-left: 10px; }
+    .tree summary { cursor: pointer; color: #374151; }
+    .tree button { background: transparent; color: #1a5fb4; padding: 0 4px; text-align: left; border-radius: 4px; }
+    .tree button:hover { background: #eef2f8; }
+  </style>
+</head>
+<body>
+<header><a href="/index.html">← SciPal</a> <strong>代码检索</strong></header>
+<main>
+  <section class="card">
+    <div class="row">
+      <select id="library" style="min-width:260px"><option value="">加载库…</option></select>
+      <input id="query" placeholder="自然语言，或 re:/path:/lang:/sym: 前缀">
+      <select id="mode" title="检索模式">
+        <option value="">默认 BM25 + 图</option>
+        <option value="regex">regex / symbol</option>
+      </select>
+      <select id="top_k" title="返回数量">
+        <option value="10">10 条</option>
+        <option value="20">20 条</option>
+        <option value="50">50 条</option>
+      </select>
+      <button id="go">检索</button>
+      <button id="answer_btn">问答</button>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <input id="path_filter" placeholder="path 过滤，例如 preprocessing">
+      <input id="lang_filter" placeholder="语言，例如 python / r">
+    </div>
+    <p class="muted">只读代码检索；按 library_id 隔离，返回 symbol / path / lines。regex 模式为文件级匹配。</p>
+    <p class="error" id="error"></p>
+  </section>
+  <section class="card"><div id="hits" class="muted">尚未检索。</div></section>
+  <section class="card" id="answer_card" style="display:none">
+    <strong>回答</strong>
+    <div id="answer" class="muted"></div>
+  </section>
+  <section class="card" id="context_card" style="display:none">
+    <strong>上下文</strong>
+    <div id="context" class="muted"></div>
+  </section>
+  <section class="card">
+    <div class="row" style="margin-bottom:8px">
+      <strong>文件树</strong>
+      <input id="tree_filter" placeholder="过滤 path，例如 preprocessing">
+    </div>
+    <div id="tree" class="tree muted">选择库后加载。</div>
+  </section>
+  <section class="card">
+    <strong id="outline_title">符号大纲</strong>
+    <div id="outline" class="tree muted">点击文件查看符号。</div>
+  </section>
+  <section class="card" id="feedback" style="display:none">
+    <div class="row">
+      <input id="expected_path" placeholder="正确 path（可选），例如 src/scanpy/preprocessing/_normalization.py">
+      <button data-verdict="wrong">结果不对</button>
+      <button data-verdict="missing">没找到</button>
+      <button data-verdict="good">结果正确</button>
+    </div>
+    <p class="muted" id="feedback_status"></p>
+  </section>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const languageFor = (path) => {
+  const p = String(path || "").toLowerCase();
+  if (p.endsWith(".py")) return "python";
+  if (p.endsWith(".r")) return "r";
+  if (p.endsWith(".rmd")) return "rmd";
+  if (p.endsWith(".nf")) return "nextflow";
+  if (p.endsWith(".js")) return "javascript";
+  if (p.endsWith(".ts")) return "typescript";
+  return "";
+};
+const filteredHits = (hits) => {
+  const pathNeedle = $('path_filter').value.trim().toLowerCase();
+  const langNeedle = $('lang_filter').value.trim().toLowerCase();
+  return hits.filter((h) => {
+    const path = String(h.path || "").toLowerCase();
+    const lang = languageFor(h.path);
+    return (!pathNeedle || path.includes(pathNeedle)) &&
+      (!langNeedle || lang === langNeedle || lang.includes(langNeedle));
+  });
+};
+const renderHits = (hits) => {
+  if (!hits.length) { $('hits').innerHTML = '无结果'; return; }
+  $('hits').innerHTML = `<p class="muted">${hits.length} 条</p>` + hits.map((h) => `
+      <div class="hit">
+        <strong>${esc(h.symbol_name)}</strong> <span class="pill">${esc(h.unit_type)}</span>
+        <div class="muted">${esc(h.path)}:${esc(h.start_line)}-${esc(h.end_line)} · score ${Number(h.score || 0).toFixed(4)}${(h.package_version || h.ref) ? ` · v${esc(h.package_version || h.ref)}` : ''}${h.source_url ? ` · <a href="${esc(h.source_url)}" target="_blank" rel="noopener">源码</a>` : ''}${h.unit_id ? ` · <button class="context-btn" data-unit="${esc(h.unit_id)}">上下文</button>` : ''}</div>
+        <pre>${esc(h.snippet)}</pre>
+      </div>`).join('');
+  document.querySelectorAll('.context-btn').forEach((button) => {
+    button.addEventListener('click', () => loadContext(button.dataset.unit));
+  });
+};
+async function runSearch() {
+  const library = $('library').value.trim();
+  const query = $('query').value.trim();
+  if (!library || !query) { $('error').textContent = 'library_id 和 query 必填'; return; }
+  $('error').textContent = '';
+  try {
+    const mode = $('mode').value;
+    const res = await fetch(`/api/code/libraries/${encodeURIComponent(library)}/search`, {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        query, top_k: Number($('top_k').value), ...(mode ? {mode} : {}),
+        ...(mode === 'regex' ? {language: $('lang_filter').value.trim(), path_filter: $('path_filter').value.trim()} : {})
+      })
+    });
+    const body = await res.json();
+    if (!res.ok) throw new Error(body.error || body.detail || `HTTP ${res.status}`);
+    currentEvent = body.event_id || '';
+    currentLibrary = library;
+    $('feedback').style.display = currentEvent ? '' : 'none';
+    $('feedback_status').textContent = '';
+    renderHits(filteredHits(body.hits || []));
+  } catch (err) { $('error').textContent = err.message; }
+}
+let currentEvent = '';
+let currentLibrary = '';
+async function sendFeedback(verdict) {
+  if (!currentEvent || !currentLibrary) return;
+  $('feedback_status').textContent = '提交中…';
+  try {
+    const res = await fetch(`/api/code/libraries/${encodeURIComponent(currentLibrary)}/feedback`, {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        event_id: currentEvent,
+        verdict,
+        expected_path: $('expected_path').value.trim()
+      })
+    });
+    const body = await res.json();
+    if (!res.ok) throw new Error(body.error || `HTTP ${res.status}`);
+    $('feedback_status').textContent = '已记录';
+  } catch (err) { $('feedback_status').textContent = err.message; }
+}
+async function loadLibraries() {
+  try {
+    const res = await fetch('/api/code/libraries');
+    const body = await res.json();
+    if (!res.ok) throw new Error(body.error || `HTTP ${res.status}`);
+    const select = $('library');
+    select.innerHTML = (body.libraries || []).map((item) =>
+      `<option value="${esc(item.library_id)}">${esc(item.library_id)} · ${esc(item.units)} units</option>`
+    ).join('') || '<option value="">无库</option>';
+    const first = (body.libraries || [])[0];
+    if (first) { select.value = first.library_id; loadTree(); }
+  } catch (err) { $('error').textContent = err.message; }
+}
+
+function renderTree(files) {
+  const needle = $('tree_filter').value.trim().toLowerCase();
+  const filtered = files.filter((file) => !needle || String(file.path).toLowerCase().includes(needle));
+  if (!filtered.length) { $('tree').innerHTML = '无文件'; return; }
+  const root = {};
+  for (const file of filtered) {
+    const parts = String(file.path).split('/');
+    let node = root;
+    parts.forEach((part, index) => {
+      node[part] = node[part] || (index === parts.length - 1 ? {__file: file} : {});
+      node = node[part];
+    });
+  }
+  const box = document.createElement('div');
+  const walk = (node, parent) => {
+    for (const key of Object.keys(node).sort()) {
+      const child = node[key];
+      if (child.__file) {
+        const button = document.createElement('button');
+        button.textContent = key;
+        button.dataset.path = child.__file.path;
+        button.addEventListener('click', () => loadOutline(child.__file.path));
+        parent.appendChild(button);
+      } else {
+        const details = document.createElement('details');
+        const summary = document.createElement('summary');
+        summary.textContent = key;
+        details.appendChild(summary);
+        walk(child, details);
+        parent.appendChild(details);
+      }
+    }
+  };
+  walk(root, box);
+  $('tree').innerHTML = '';
+  $('tree').appendChild(box);
+}
+
+async function loadTree() {
+  const library = $('library').value;
+  if (!library) return;
+  $('tree').textContent = '加载中…';
+  try {
+    const res = await fetch(`/api/code/libraries/${encodeURIComponent(library)}/tree`);
+    const body = await res.json();
+    if (!res.ok) throw new Error(body.error || `HTTP ${res.status}`);
+    renderTree(body.files || []);
+  } catch (err) { $('tree').textContent = err.message; }
+}
+
+async function loadContext(unitId) {
+  const library = $('library').value;
+  $('context_card').style.display = '';
+  $('context').textContent = '加载中…';
+  try {
+    const res = await fetch(`/api/code/libraries/${encodeURIComponent(library)}/context?unit_id=${encodeURIComponent(unitId)}&max_neighbors=10&max_tokens=4000`);
+    const body = await res.json();
+    if (!res.ok) throw new Error(body.error || `HTTP ${res.status}`);
+    const target = body.target || {};
+    const neighbors = body.neighbors || [];
+    $('context').innerHTML = `
+      <p><strong>${esc(target.symbol_name)}</strong> <span class="pill">${esc(target.unit_type)}</span>
+      <br><span class="muted">${esc(target.path)}:${esc(target.start_line)}-${esc(target.end_line)}</span>
+      ${body.source_url ? ` · <a href="${esc(body.source_url)}" target="_blank" rel="noopener">源码</a>` : ''}
+      <span class="muted"> · ~${esc(body.tokens_est)} tokens${(target.package_version || target.ref) ? ` · v${esc(target.package_version || target.ref)}` : ''}</span></p>
+      ${body.target_text ? `<pre>${esc(body.target_text)}</pre>` : ''}
+      <p><strong>imports</strong><br>${(body.imports || []).map((x) => `<code>${esc(x)}</code>`).join('<br>') || '<span class="muted">无</span>'}</p>
+      <p><strong>neighbors</strong><br>${neighbors.map((n) => `<button class="neighbor-btn" data-symbol="${esc(n.symbol_name)}">${esc(n.symbol_name)} · ${esc(n.path)}:${esc(n.start_line)}</button>`).join('<br>') || '<span class="muted">无</span>'}</p>`;
+    document.querySelectorAll('.neighbor-btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        $('query').value = button.dataset.symbol;
+        $('mode').value = '';
+        runSearch();
+      });
+    });
+  } catch (err) { $('context').textContent = err.message; }
+}
+
+async function loadOutline(path) {
+  const library = $('library').value;
+  $('outline_title').textContent = `符号大纲 · ${path}`;
+  $('outline').textContent = '加载中…';
+  try {
+    const res = await fetch(`/api/code/libraries/${encodeURIComponent(library)}/outline?path=${encodeURIComponent(path)}`);
+    const body = await res.json();
+    if (!res.ok) throw new Error(body.error || `HTTP ${res.status}`);
+    $('outline').innerHTML = '';
+    for (const symbol of body.symbols || []) {
+      const button = document.createElement('button');
+      button.textContent = `${symbol.symbol_name}  L${symbol.start_line}`;
+      button.addEventListener('click', () => {
+        $('query').value = symbol.symbol_name;
+        $('mode').value = '';
+        runSearch();
+      });
+      const row = document.createElement('div');
+      row.appendChild(button);
+      $('outline').appendChild(row);
+    }
+    if (!(body.symbols || []).length) $('outline').textContent = '无符号';
+  } catch (err) { $('outline').textContent = err.message; }
+}
+
+$('library').addEventListener('change', loadTree);
+$('tree_filter').addEventListener('input', loadTree);
+loadLibraries();
+async function askQuestion() {
+  const library = $('library').value;
+  const query = $('query').value.trim();
+  if (!library || !query) { $('error').textContent = 'library 和 query 必填'; return; }
+  $('answer_card').style.display = '';
+  $('answer').textContent = '生成中…';
+  try {
+    const res = await fetch(`/api/code/libraries/${encodeURIComponent(library)}/answer`, {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({query, top_k: 5})
+    });
+    const body = await res.json();
+    if (!res.ok) throw new Error(body.error || body.detail || `HTTP ${res.status}`);
+    const cites = (body.citations || []).map((c) =>
+      `<div>[${esc(c.id)}] ${esc(c.symbol_name)} — ${esc(c.path)}:${esc(c.start_line)}-${esc(c.end_line)}${(c.package_version || c.ref) ? ` · v${esc(c.package_version || c.ref)}` : ''}${c.source_url ? ` · <a href="${esc(c.source_url)}" target="_blank" rel="noopener">源码</a>` : ''}</div>`
+    ).join('');
+    $('answer').innerHTML = `<pre>${esc(body.answer)}</pre><div class="muted">mode=${esc(body.answer_mode)}</div>${cites}`;
+  } catch (err) { $('answer').textContent = err.message; }
+}
+
+$('answer_btn').addEventListener('click', askQuestion);
+$('go').addEventListener('click', runSearch);
+$('query').addEventListener('keydown', (e) => { if (e.key === 'Enter') runSearch(); });
+$('path_filter').addEventListener('keydown', (e) => { if (e.key === 'Enter') runSearch(); });
+document.querySelectorAll('[data-verdict]').forEach((button) => {
+  button.addEventListener('click', () => sendFeedback(button.dataset.verdict));
+});
+</script>
+</body>
+</html>

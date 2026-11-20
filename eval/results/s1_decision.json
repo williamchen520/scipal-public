@@ -1,0 +1,55 @@
+{
+  "status": "complete",
+  "baselines": {
+    "scifact": {
+      "claims": 693,
+      "doc_recall@10": 0.8283,
+      "sentence_recall@10": 0.7951,
+      "mrr": 0.6334,
+      "harness": "sqlite_fts_smoke"
+    },
+    "internal_sentence": {
+      "questions": 50,
+      "evidence_recall@10": 0.6,
+      "evidence_recall@20": 0.62,
+      "mrr": 0.4329,
+      "ndcg@10": 0.6021
+    },
+    "litqa2": {
+      "status": "blocked",
+      "reason": "Europe PMC search timeout"
+    },
+    "unified": {
+      "status": "blocked",
+      "reason": "Chroma paragraphs collection missing"
+    }
+  },
+  "failure_taxonomy": {
+    "misses": 20,
+    "retrieval_miss": 16,
+    "paper_sentence_miss": 2,
+    "ranking_miss": 1,
+    "context_miss": 1
+  },
+  "decisions": [
+    "D1 do not tune sentence-window for recall",
+    "D2 fix UnifiedRetriever Chroma/PG dependency before QA",
+    "D3 prioritize paper-level recall and query coverage",
+    "D4 keep held-out questions",
+    "D5 require dev gain plus held-out confirmation"
+  ],
+  "next_experiments": [
+    "S2.0 fix unified",
+    "S2.1 query expansion",
+    "S2.2 section routing",
+    "S2.3 paper candidates",
+    "S2.4 retest",
+    "S2.5 window context utility"
+  ],
+  "out_of_scope": [
+    "window parameter recall tuning",
+    "single-set repeated tuning",
+    "SQLite smoke as production metric",
+    "fabricated LitQA2/QA scores"
+  ]
+}

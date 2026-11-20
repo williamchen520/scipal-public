@@ -1,0 +1,22 @@
+[
+  {"id":"n01","category":"process","library_id":"lib_12473817b941","query":"quality control fastq","expected_symbol":"FASTQC","expected_path":"modules/nf-core/fastqc/main.nf"},
+  {"id":"n02","category":"process","library_id":"lib_12473817b941","query":"trim adapters","expected_symbol":"FASTP","expected_path":"modules/nf-core/fastp/main.nf"},
+  {"id":"n03","category":"process","library_id":"lib_12473817b941","query":"align reads hisat2","expected_symbol":"HISAT2_ALIGN","expected_path":"modules/nf-core/hisat2/align/main.nf"},
+  {"id":"n04","category":"process","library_id":"lib_12473817b941","query":"build hisat2 index","expected_symbol":"HISAT2_BUILD","expected_path":"modules/nf-core/hisat2/build/main.nf"},
+  {"id":"n05","category":"process","library_id":"lib_12473817b941","query":"quantify kallisto","expected_symbol":"KALLISTO_QUANT","expected_path":"modules/nf-core/kallisto/quant/main.nf"},
+  {"id":"n06","category":"process","library_id":"lib_12473817b941","query":"index kallisto","expected_symbol":"KALLISTO_INDEX","expected_path":"modules/nf-core/kallisto/index/main.nf"},
+  {"id":"n07","category":"process","library_id":"lib_12473817b941","query":"mark duplicates","expected_symbol":"PICARD_MARKDUPLICATES","expected_path":"modules/nf-core/picard/markduplicates/main.nf"},
+  {"id":"n08","category":"process","library_id":"lib_12473817b941","query":"merge rsem counts","expected_symbol":"CUSTOM_RSEMMERGECOUNTS","expected_path":"modules/nf-core/custom/rsemmergecounts/main.nf"},
+  {"id":"n09","category":"process","library_id":"lib_12473817b941","query":"deseq2 qc","expected_symbol":"DESEQ2_QC","expected_path":"modules/local/deseq2_qc/main.nf"},
+  {"id":"n10","category":"process","library_id":"lib_12473817b941","query":"multiqc report","expected_symbol":"MULTIQC","expected_path":"modules/nf-core/multiqc/main.nf"},
+  {"id":"n11","category":"process","library_id":"lib_12473817b941","query":"kraken2 classify","expected_symbol":"KRAKEN2_KRAKEN2","expected_path":"modules/nf-core/kraken2/kraken2/main.nf"},
+  {"id":"n12","category":"process","library_id":"lib_12473817b941","query":"dupradar","expected_symbol":"DUPRADAR","expected_path":"modules/nf-core/dupradar/main.nf"},
+  {"id":"n13","category":"process","library_id":"lib_12473817b941","query":"subsample fastq","expected_symbol":"FQ_SUBSAMPLE","expected_path":"modules/nf-core/fq/subsample/main.nf"},
+  {"id":"n14","category":"process","library_id":"lib_12473817b941","query":"lint fastq","expected_symbol":"FQ_LINT","expected_path":"modules/nf-core/fq/lint/main.nf"},
+  {"id":"n15","category":"process","library_id":"lib_12473817b941","query":"cat fastq","expected_symbol":"CAT_FASTQ","expected_path":"modules/nf-core/cat/fastq/main.nf"},
+  {"id":"n16","category":"process","library_id":"lib_12473817b941","query":"gffread","expected_symbol":"GFFREAD","expected_path":"modules/nf-core/gffread/main.nf"},
+  {"id":"n17","category":"process","library_id":"lib_12473817b941","query":"gtf to bed","expected_symbol":"EAUTILS_GTF2BED","expected_path":"modules/nf-core/eautils/gtf2bed/main.nf"},
+  {"id":"n18","category":"process","library_id":"lib_12473817b941","query":"gunzip","expected_symbol":"GUNZIP","expected_path":"modules/nf-core/gunzip/main.nf"},
+  {"id":"n19","category":"process","library_id":"lib_12473817b941","query":"parabricks rna fq2bam","expected_symbol":"PARABRICKS_RNAFQ2BAM","expected_path":"modules/nf-core/parabricks/rnafq2bam/main.nf"},
+  {"id":"n20","category":"process","library_id":"lib_12473817b941","query":"preprocess transcripts fasta","expected_symbol":"PREPROCESS_TRANSCRIPTS_FASTA_GENCODE","expected_path":"modules/local/preprocess_transcripts_fasta_gencode/main.nf"}
+]

@@ -1,0 +1,166 @@
+{
+  "schema_version": "1",
+  "answer_id": "ans_fa6032b466d6",
+  "chain_id": "ans_fa6032b466d6",
+  "parent_answer_id": "",
+  "revision": 1,
+  "answer_text_hash": "c52589e0b2aafe29504ae9757114d41cef22f5b2c6870ef7fd4457b52588dd61",
+  "renderer_version": "ledger_v1",
+  "created_at": "2026-11-18T08:19:31.692343+00:00",
+  "query": "Does ICI rechallenge improve response in this synthetic example?",
+  "answer": "In this synthetic example, rechallenge is associated with response [P1]. The evidence is limited to a small cohort [P2].",
+  "config_id": "demo-config-v1",
+  "corpus_snapshot_id": "demo-corpus-v1",
+  "scope": {
+    "paper_ids": [
+      "demo_paper_1",
+      "demo_paper_2",
+      "demo_paper_3",
+      "demo_paper_4"
+    ]
+  },
+  "claims": [
+    {
+      "claim_id": "cl_1",
+      "text": "Rechallenge is associated with response [P1].",
+      "cited_sentence_ids": [
+        "demo_s1"
+      ],
+      "known_sentence_ids": [
+        "demo_s1"
+      ],
+      "unknown_sentence_ids": [],
+      "support_status": "cited",
+      "unit_role": "answer_claim",
+      "answer_version_id": "ans_fa6032b466d6"
+    },
+    {
+      "claim_id": "cl_2",
+      "text": "The evidence is limited to a small cohort [P2].",
+      "cited_sentence_ids": [
+        "demo_s2"
+      ],
+      "known_sentence_ids": [
+        "demo_s2"
+      ],
+      "unknown_sentence_ids": [],
+      "support_status": "cited",
+      "unit_role": "answer_claim",
+      "answer_version_id": "ans_fa6032b466d6"
+    }
+  ],
+  "evidence": [
+    {
+      "sentence_id": "demo_s1",
+      "paper_id": "demo_paper_1",
+      "para_id": "demo_para_1",
+      "title": "Synthetic example paper",
+      "section": "Results",
+      "page": 3,
+      "text": "Rechallenge was associated with response in a small cohort.",
+      "retrieval_score": 0.91,
+      "rerank_score": 0.93,
+      "rank": 1,
+      "unit_role": "evidence",
+      "source_ref": {
+        "kind": "literature",
+        "doc_id": "demo_paper_1",
+        "version": "demo-corpus-v1",
+        "content_hash": "2aeab1c819754f962d71d9dff01055313392591d106573f84c1c20764b86b062",
+        "locator": {
+          "paragraph": "demo_para_1",
+          "sentence": "demo_s1",
+          "page": 3
+        }
+      },
+      "cited": true,
+      "review_priority": "low"
+    },
+    {
+      "sentence_id": "demo_s2",
+      "paper_id": "demo_paper_2",
+      "para_id": "demo_para_2",
+      "title": "Synthetic example paper 2",
+      "section": "Limitations",
+      "page": 7,
+      "text": "The cohort was small and single-center.",
+      "retrieval_score": 0.84,
+      "rerank_score": 0.88,
+      "rank": 2,
+      "unit_role": "evidence",
+      "source_ref": {
+        "kind": "literature",
+        "doc_id": "demo_paper_2",
+        "version": "demo-corpus-v1",
+        "content_hash": "d451dfd1436f40b685a0a8aa46715b2fba751c2f93d6e8f49c35683e63e0bf4a",
+        "locator": {
+          "paragraph": "demo_para_2",
+          "sentence": "demo_s2",
+          "page": 7
+        }
+      },
+      "cited": true,
+      "review_priority": "low"
+    },
+    {
+      "sentence_id": "demo_s3",
+      "paper_id": "demo_paper_3",
+      "para_id": "demo_para_3",
+      "title": "Synthetic example paper 3",
+      "section": "Methods",
+      "page": 2,
+      "text": "Response was assessed by RECIST.",
+      "retrieval_score": 0.75,
+      "rerank_score": 0.79,
+      "rank": 3,
+      "unit_role": "evidence",
+      "source_ref": {
+        "kind": "literature",
+        "doc_id": "demo_paper_3",
+        "version": "demo-corpus-v1",
+        "content_hash": "f804ec716ce4901aeb170c37e521d083a9b0e48169993878124bf430d1ce5bc1",
+        "locator": {
+          "paragraph": "demo_para_3",
+          "sentence": "demo_s3",
+          "page": 2
+        }
+      },
+      "cited": false,
+      "review_priority": "medium"
+    },
+    {
+      "sentence_id": "demo_s4",
+      "paper_id": "demo_paper_4",
+      "para_id": "demo_para_4",
+      "title": "Synthetic example paper 4",
+      "section": "Discussion",
+      "page": 9,
+      "text": "Mechanistic support remains exploratory.",
+      "retrieval_score": 0.7,
+      "rerank_score": 0.72,
+      "rank": 4,
+      "unit_role": "evidence",
+      "source_ref": {
+        "kind": "literature",
+        "doc_id": "demo_paper_4",
+        "version": "demo-corpus-v1",
+        "content_hash": "fdcbe6e1be0eaf50998267283e2895b6c13a2434d111721571a5d9942ed57e21",
+        "locator": {
+          "paragraph": "demo_para_4",
+          "sentence": "demo_s4",
+          "page": 9
+        }
+      },
+      "cited": false,
+      "review_priority": "medium"
+    }
+  ],
+  "summary": {
+    "claims": 2,
+    "uncited_claims": 0,
+    "unknown_evidence_claims": 0,
+    "evidence": 4,
+    "cited_evidence": 2,
+    "high_priority": 0
+  }
+}

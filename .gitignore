@@ -1,0 +1,115 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# 数据库
+*.db
+*.sqlite
+*.sqlite3
+
+# 日志
+logs/
+*.log
+
+# SQLite 迁移备份（体积大，不入库）
+backups/
+
+# 插件评测输出（可重跑）
+eval/results/plugin_bench.jsonl
+eval/results/claim_verifier_bench.jsonl
+eval/results/retriever_bench.jsonl
+
+# 环境变量
+.env
+venv/
+.venv/
+
+# IDE
+# .vscode/ 不忽略，提交配置供团队共享
+.idea/
+*.swp
+*.swo
+*~
+
+# 向量库和数据目录（不提交到Git）
+data/chroma/
+data/chroma_abstracts/
+data/protocols_io_cache/
+documents_xml/
+abstracts_xml/
+documents_protocols/
+bioinformatics_methods/
+
+# 临时文件
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db
+
+# 上传的PDF文件
+uploads/
+
+# 源PDF文件（不提交到Git）
+documents/*.pdf
+documents/**/*.pdf
+
+# 实际虚拟环境目录名（7GB+，绝不入库）
+venv_sciPal_py312/
+
+# 整个运行时数据目录：向量库、模型、sqlite db、jsonl缓存
+data/
+
+# 根目录参考资料 PDF（科研写作书、测试论文样本）
+/*.pdf
+
+# 论文抽图运行时产物（从已解析 PDF 抽出的图）
+documents/*.png
+documents/**/*.png
+
+# 大图原始素材（已在 docs/ 下有 pdf/jpg 版本）
+*.tif
+
+# 本地环境变量启动脚本（含个人路径/密钥）
+qwen.txt
+#推送安全配置文件
+.codebuddy/
+
+# 临时测试脚本与配置备份（2026-10 清理）
+_test_*.py
+tests/backups/
+
+# 本地数据沙箱（聚合/脱敏产物，运行期生成）
+/data_sandbox/
+
+# architecture.json codegen 产物
+/generated/
+
+
+deploy/.env.staging
+
+.worktrees/
+
+logs/deploy-events.jsonl
+
+logs/sandbox-events.jsonl
+/papers/
+/documents/
+/data/
+/artifacts/
+/logs/
+/images/
+/packs/
+/docs/papers/
+/deploy/.env
+
+# SciFact raw data: not redistributed
+/eval/data/scifact*
+/eval/gold/scifact_300.jsonl
+/eval/results/scifact_verification_*.json
+/eval/results/s1_scifact.json

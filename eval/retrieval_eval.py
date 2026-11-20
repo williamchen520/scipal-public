@@ -1,0 +1,246 @@
+"""Retrieval evaluation: Recall@k, MRR, nDCG on the gold set.
+
+Usage:
+    python eval/retrieval_eval.py --limit 10
+    python eval/retrieval_eval.py --base-url http://127.0.0.1:5000
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sqlite3
+import math
+import time
+import urllib.error
+import urllib.request
+from pathlib import Path
+from typing import Any, Callable, Dict, List
+
+DEFAULT_GOLD = Path(__file__).resolve().parent / "gold" / "seed_100.jsonl"
+DEFAULT_OUT = Path(__file__).resolve().parent / "results" / "retrieval.json"
+
+
+def load_gold(path: Path) -> List[Dict[str, Any]]:
+    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+
+def _sentences_from_response(payload: Dict[str, Any]) -> List[str]:
+    if payload.get("sufficient") is False:
+        return []
+    out: List[str] = []
+    for item in payload.get("evidence") or []:
+        for highlight in item.get("highlight") or []:
+            sid = highlight.get("sentence_id")
+            if sid:
+                out.append(sid)
+    return out
+
+
+def http_search(query: str, top_k: int, base_url: str) -> Dict[str, Any]:
+    body = json.dumps({"query": query, "top_k": top_k}, ensure_ascii=False).encode("utf-8")
+    request = urllib.request.Request(
+        base_url.rstrip("/") + "/api/evidence/search",
+        data=body,
+        headers={"Content-Type": "application/json; charset=utf-8"},
+        method="POST",
+    )
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=180) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            if exc.code < 500 or attempt == 2:
+                raise
+            time.sleep(2 * (attempt + 1))
+    raise RuntimeError("unreachable")
+
+
+def _dcg(gains: List[int]) -> float:
+    return sum(gain / math.log2(index + 2) for index, gain in enumerate(gains))
+
+
+def evaluate(
+    gold: List[Dict[str, Any]],
+    search_fn: Callable[[str, int], Dict[str, Any]],
+    top_k: int = 10,
+    section_of: Callable[[str], Any] | None = None,
+    paragraph_of: Callable[[str], Any] | None = None,
+) -> Dict[str, Any]:
+    rows = []
+    recall_sum = 0.0
+    mrr_sum = 0.0
+    ndcg_sum = 0.0
+    section_sum = 0.0
+    summary_section_sum = 0.0
+    paragraph_sum = 0.0
+    paragraph_sentence_sum = 0.0
+    counted = 0
+    refusal_total = 0
+    refusal_ok = 0
+
+    for item in gold:
+        print(f"[{item['id']}]", flush=True)
+        expected = set(item.get("evidence") or [])
+        payload = search_fn(item["question"], top_k)
+        found = _sentences_from_response(payload)
+
+        if not expected:  # refusal / out-of-domain
+            refusal_total += 1
+            if not found:
+                refusal_ok += 1
+            rows.append({"id": item["id"], "refusal": True, "returned": len(found)})
+            continue
+
+        counted += 1
+        ranks = [index for index, sid in enumerate(found[:top_k]) if sid in expected]
+        recall = len(set(found[:top_k]) & expected) / len(expected)
+        mrr = 1.0 / (ranks[0] + 1) if ranks else 0.0
+        gains = [1 if sid in expected else 0 for sid in found[:top_k]]
+        ideal = [1] * min(len(expected), top_k)
+        ndcg = _dcg(gains) / _dcg(ideal) if _dcg(ideal) else 0.0
+        recall_sum += recall
+        mrr_sum += mrr
+        ndcg_sum += ndcg
+
+        section_recall = None
+        summary_section_recall = None
+        paragraph_recall = None
+        paragraph_sentence_recall = None
+        paragraph_sentences = {
+            sid
+            for item_evidence in payload.get("evidence") or []
+            for detail in item_evidence.get("paragraph_details") or []
+            for sid in detail.get("sentence_ids") or []
+        }
+        if paragraph_sentences and expected:
+            paragraph_sentence_recall = len(expected & paragraph_sentences) / len(expected)
+            paragraph_sentence_sum += paragraph_sentence_recall
+        if paragraph_of:
+            expected_paras = {paragraph_of(sid) for sid in expected if paragraph_of(sid)}
+            returned_paras = {paragraph_of(sid) for sid in found[:top_k] if paragraph_of(sid)}
+            if expected_paras:
+                paragraph_recall = len(expected_paras & returned_paras) / len(expected_paras)
+                paragraph_sum += paragraph_recall
+        if section_of:
+            expected_sections = {section_of(sid) for sid in expected if section_of(sid)}
+            returned_sections = {section_of(sid) for sid in found[:top_k] if section_of(sid)}
+            summary_sections = {
+                item_summary.get("section_id")
+                for item_summary in payload.get("summaries") or []
+                if item_summary.get("section_id")
+            }
+            if expected_sections:
+                section_recall = len(expected_sections & returned_sections) / len(expected_sections)
+                summary_section_recall = len(expected_sections & summary_sections) / len(expected_sections)
+                section_sum += section_recall
+                summary_section_sum += summary_section_recall
+
+        rows.append(
+            {
+                "id": item["id"],
+                "recall": round(recall, 4),
+                "mrr": round(mrr, 4),
+                "ndcg": round(ndcg, 4),
+                "gold": len(expected),
+                "returned": len(found),
+                "hit_rank": ranks[0] + 1 if ranks else None,
+                "section_recall": round(section_recall, 4) if section_recall is not None else None,
+                "summary_section_recall": round(summary_section_recall, 4) if summary_section_recall is not None else None,
+                "paragraph_recall": round(paragraph_recall, 4) if paragraph_recall is not None else None,
+                "paragraph_sentence_recall": round(paragraph_sentence_recall, 4) if paragraph_sentence_recall is not None else None,
+            }
+        )
+
+    summary = {
+        "questions": counted,
+        f"recall@{top_k}": round(recall_sum / counted, 4) if counted else 0.0,
+        "mrr": round(mrr_sum / counted, 4) if counted else 0.0,
+        f"ndcg@{top_k}": round(ndcg_sum / counted, 4) if counted else 0.0,
+        "refusal_total": refusal_total,
+        "refusal_accuracy": round(refusal_ok / refusal_total, 4) if refusal_total else 0.0,
+        f"section_recall@{top_k}": round(section_sum / counted, 4) if counted else 0.0,
+        f"summary_section_recall@{top_k}": round(summary_section_sum / counted, 4) if counted else 0.0,
+        f"paragraph_recall@{top_k}": round(paragraph_sum / counted, 4) if counted else 0.0,
+        f"paragraph_sentence_recall@{top_k}": round(paragraph_sentence_sum / counted, 4) if counted else 0.0,
+    }
+    return {"summary": summary, "rows": rows}
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--gold", default=str(DEFAULT_GOLD))
+    parser.add_argument("--base-url", default="http://127.0.0.1:5000")
+    parser.add_argument("--top-k", type=int, default=10)
+    parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument("--output", default=str(DEFAULT_OUT))
+    parser.add_argument("--db", default=str(Path(__file__).resolve().parent.parent / "data" / "research.db"))
+    parser.add_argument(
+        "--pg-dsn",
+        default="",
+        help="Use PostgreSQL for sentence->section/paragraph mapping (avoids a long-lived host SQLite handle).",
+    )
+    args = parser.parse_args()
+
+    gold = load_gold(Path(args.gold))
+    if args.limit:
+        gold = gold[: args.limit]
+    section_cache: Dict[str, Any] = {}
+    para_cache: Dict[str, Any] = {}
+    pg = None
+
+    if args.pg_dsn:
+        import psycopg
+
+        pg = psycopg.connect(args.pg_dsn)
+
+        def _lookup(sql: str, sentence_id: str):
+            row = pg.execute(sql.replace("?", "%s"), (sentence_id,)).fetchone()
+            return row[0] if row else None
+    else:
+        db_uri = f"file:{Path(args.db).as_posix()}?mode=ro"
+
+        def _lookup(sql: str, sentence_id: str):
+            # Open/close per lookup: do not hold a host SQLite connection for
+            # the whole multi-hour evaluation run.
+            conn = sqlite3.connect(db_uri, uri=True)
+            try:
+                row = conn.execute(sql, (sentence_id,)).fetchone()
+                return row[0] if row else None
+            finally:
+                conn.close()
+
+    def section_of(sentence_id: str):
+        if sentence_id not in section_cache:
+            section_cache[sentence_id] = _lookup(
+                "SELECT section_id FROM sentences WHERE sentence_id = ?", sentence_id
+            )
+        return section_cache[sentence_id]
+
+    def paragraph_of(sentence_id: str):
+        if sentence_id not in para_cache:
+            para_cache[sentence_id] = _lookup(
+                "SELECT para_id FROM sentences WHERE sentence_id = ?", sentence_id
+            )
+        return para_cache[sentence_id]
+
+    try:
+        result = evaluate(
+            gold,
+            lambda q, k: http_search(q, k, args.base_url),
+            args.top_k,
+            section_of=section_of,
+            paragraph_of=paragraph_of,
+        )
+    finally:
+        if pg is not None:
+            pg.close()
+    output = Path(args.output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(json.dumps(result["summary"], ensure_ascii=False, indent=2))
+    print(f"saved: {output}")
+
+
+if __name__ == "__main__":
+    main()

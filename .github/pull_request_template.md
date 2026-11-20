@@ -1,0 +1,94 @@
+## 0. 协作规则自检（必须填写）
+
+<!--
+本 PR 必须遵守根目录 .dsh_rules。
+四个问题必须逐条回答，不能留空。
+-->
+
+### 0) 架构宪法自检（对应规则 0）
+
+- [ ] 本 PR **未修改** `ARCHITECTURE.json`
+- [ ] 如修改了 JSON：已获得人类“批准修改”，commit 含 `[APPROVED_BY_HUMAN]`
+- [ ] 新路由使用 `status: "planned"`，并已生成/实现
+- [ ] `python scripts/validate_arch.py` 通过
+- [ ] `arch-guard` CI 通过（或本地 hook 已跑）
+- [ ] 无 JSON 之外的 wild route
+
+### 0.1) 全自动施工与审批
+
+- [ ] Worklog：`worklogs/YYYY-MM-DD-<topic>.md`
+- [ ] PR 状态：`Pending Review`
+- [ ] 只有人类明确回复“批准合并”才会 merge
+- [ ] 净变更行数：____（>300 行必须在标题加 `[LARGE]`）
+- [ ] 风险：外部 API / 写库 / 权限变化已列出
+
+### 0.2) 治理门禁
+
+- [ ] 已运行 `python scripts/governance_gate.py --paths <changed> --ops <ops>`
+- [ ] 若命中，已获人类“批准执行”，并给 PR 加 `governance-approved` 标签
+- [ ] CI `governance-gate` 通过，或已按标签批准
+
+### 1) 这个 PR 解决了什么单一主题？（对应规则 1）
+
+<!-- 一句话说明。若包含多个主题，拆成多个 PR。 -->
+
+### 2) 是否已准备好让人类合并？（对应规则 2）
+
+<!--
+二选一：
+- 是：测试/验证已完成，等待人类说“合并”。
+- 否：还缺什么，为什么不能合并。
+AI 不得自行合并。
+-->
+
+### 3) 本次修改的 Claim 状态和证据链是什么？（对应规则 3）
+
+<!--
+如果没有改 claim/证据，写“无”。
+如果有，逐项写：
+- claim_id：
+- 旧状态 → 新状态：
+- 证据 node_id：
+- relation：supports / refutes / underdetermines / mentions
+- 理由：
+- 是否已获人类确认：是 / 否
+-->
+
+### 4) 本轮做完了什么？下一轮干什么？（对应规则 5）
+
+<!--
+本轮：
+- ...
+下一轮：
+- ...
+负结果 / 止损（如有）：
+- ...
+-->
+
+## 1. 背景描述
+
+<!-- 为什么要做这个改动？解决什么问题？关联 issue/讨论。 -->
+
+## 2. 核心改动
+
+<!-- 改了什么：模块、接口、行为、兼容性。 -->
+
+## 3. 基准测试指标变化
+
+<!--
+必须填写。评测语料：本地论文库全部文章（当前 3,300+ 篇）。
+评测集：eval/gold/seed_100.jsonl（100 题，30 curated + 70 auto）。
+命令：python eval/retrieval_eval.py --limit 30
+输出：eval/results/xxx.json
+-->
+
+| 指标 | 基线 | 变更后 | 变化 |
+|---|---|---|---|
+| Recall@10 |  |  |  |
+| MRR |  |  |  |
+| nDCG@10 |  |  |  |
+| refusal_accuracy |  |  |  |
+
+### 测试
+
+<!-- python -m unittest discover -s tests -p "test_*.py" 结果；新增测试数量。 -->

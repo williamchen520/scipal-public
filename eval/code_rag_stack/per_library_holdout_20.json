@@ -1,0 +1,1694 @@
+[
+  {
+    "id": "2c5709b07c77_01",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Show dendrogram based on the hierarchical clustering between the `groupby` categories",
+    "expected_symbol": "add_dendrogram",
+    "expected_path": "src/scanpy/plotting/_baseplot_class.py"
+  },
+  {
+    "id": "2c5709b07c77_02",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Show barplot for the number of cells in in `groupby` category",
+    "expected_symbol": "add_totals",
+    "expected_path": "src/scanpy/plotting/_baseplot_class.py"
+  },
+  {
+    "id": "2c5709b07c77_03",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Without this caching, asv was running several processes which meant the data was repeatedly downloaded",
+    "expected_symbol": "Agg",
+    "expected_path": "benchmarks/benchmarks/preprocessing_counts.py"
+  },
+  {
+    "id": "2c5709b07c77_04",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Aggregate data matrix based on some categorical grouping",
+    "expected_symbol": "aggregate",
+    "expected_path": "src/scanpy/get/_aggregated.py"
+  },
+  {
+    "id": "2c5709b07c77_05",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Functionality for generic grouping and aggregating",
+    "expected_symbol": "Aggregate",
+    "expected_path": "src/scanpy/get/_aggregated.py"
+  },
+  {
+    "id": "2c5709b07c77_06",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Compute group-wise mean and variance for a dask array",
+    "expected_symbol": "aggregate_dask_mean_var",
+    "expected_path": "src/scanpy/get/_aggregated.py"
+  },
+  {
+    "id": "2c5709b07c77_07",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Parse a pyproject.toml file and output a list of minimum dependencies",
+    "expected_symbol": "Args",
+    "expected_path": "ci/scripts/low-vers.py"
+  },
+  {
+    "id": "2c5709b07c77_08",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Command line arguments",
+    "expected_symbol": "Args",
+    "expected_path": "ci/scripts/towncrier_automation.py"
+  },
+  {
+    "id": "2c5709b07c77_09",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Document array support",
+    "expected_symbol": "ArraySupport",
+    "expected_path": "docs/extensions/array_support.py"
+  },
+  {
+    "id": "2c5709b07c77_10",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Automatically save figures in Do not show plots/figures interactively",
+    "expected_symbol": "autosave",
+    "expected_path": "src/scanpy/_settings/__init__.py"
+  },
+  {
+    "id": "2c5709b07c77_11",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Automatically show figures if `autosave == False` (default `True`)",
+    "expected_symbol": "autoshow",
+    "expected_path": "src/scanpy/_settings/__init__.py"
+  },
+  {
+    "id": "2c5709b07c77_12",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Generic class for the visualization of AnnData categories and selected `var` (features or genes)",
+    "expected_symbol": "BasePlot",
+    "expected_path": "src/scanpy/plotting/_baseplot_class.py"
+  },
+  {
+    "id": "2c5709b07c77_13",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Batch balanced kNN Batch balanced kNN alters the kNN procedure to identify each cell's top neighbours in each batch separately instead of the entire",
+    "expected_symbol": "bbknn",
+    "expected_path": "src/scanpy/external/pp/_bbknn.py"
+  },
+  {
+    "id": "2c5709b07c77_14",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Retrieve gene annotations from ensembl biomart",
+    "expected_symbol": "biomart_annotations",
+    "expected_path": "src/scanpy/queries/_queries.py"
+  },
+  {
+    "id": "2c5709b07c77_15",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Gaussian Blobs",
+    "expected_symbol": "blobs",
+    "expected_path": "src/scanpy/datasets/_datasets.py"
+  },
+  {
+    "id": "2c5709b07c77_16",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Detect branchings and partition the data into corresponding segments",
+    "expected_symbol": "branchings_segments",
+    "expected_path": "src/scanpy/tools/_dpt.py"
+  },
+  {
+    "id": "2c5709b07c77_17",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Compute coefficients for tuple space",
+    "expected_symbol": "build_boolCoeff",
+    "expected_path": "src/scanpy/tools/_sim.py"
+  },
+  {
+    "id": "2c5709b07c77_18",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Bulk data with conditions ulcerative colitis (UC) and Crohn’s disease (CD) The study assesses transcriptional profiles in peripheral blood mononuclear cells from 42 healthy",
+    "expected_symbol": "burczynski06",
+    "expected_path": "src/scanpy/datasets/_datasets.py"
+  },
+  {
+    "id": "2c5709b07c77_19",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Compression for `sc.read(..., cache=True)` (default `'lzf'`)",
+    "expected_symbol": "cache_compression",
+    "expected_path": "src/scanpy/_settings/__init__.py"
+  },
+  {
+    "id": "2c5709b07c77_20",
+    "library_id": "lib_2c5709b07c77",
+    "language": "python",
+    "category": "docstring",
+    "query": "Directory for cache files (default `'./cache/'`)",
+    "expected_symbol": "cachedir",
+    "expected_path": "src/scanpy/_settings/__init__.py"
+  },
+  {
+    "id": "anndata_01",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "Wraps a store to count reads of (prefixes of) keys",
+    "expected_symbol": "AccessTrackingStore",
+    "expected_path": "src/anndata/tests/helpers.py"
+  },
+  {
+    "id": "anndata_02",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "Accessor to create See examples below and in",
+    "expected_symbol": "AdAcc",
+    "expected_path": "src/anndata/acc/__init__.py"
+  },
+  {
+    "id": "anndata_03",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "Add an index array for a specific device",
+    "expected_symbol": "add_array",
+    "expected_path": "src/anndata/compat/__init__.py"
+  },
+  {
+    "id": "anndata_04",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "A reference to a 1D or 2D array along one or two dimensions of an AnnData object",
+    "expected_symbol": "AdRef",
+    "expected_path": "src/anndata/acc/__init__.py"
+  },
+  {
+    "id": "anndata_05",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "Underlying mapping to the data",
+    "expected_symbol": "AlignedActual",
+    "expected_path": "src/anndata/_core/aligned_mapping.py"
+  },
+  {
+    "id": "anndata_06",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "\\ An abstract base class for Mappings containing array-like values aligned to either one or both AnnData axes",
+    "expected_symbol": "AlignedMappingBase",
+    "expected_path": "src/anndata/_core/aligned_mapping.py"
+  },
+  {
+    "id": "anndata_07",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "A The actual data is stored as `f'_{self.name}'` in the parent object",
+    "expected_symbol": "AlignedMappingProperty",
+    "expected_path": "src/anndata/_core/aligned_mapping.py"
+  },
+  {
+    "id": "anndata_08",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "Reference to parent AnnData view",
+    "expected_symbol": "AlignedView",
+    "expected_path": "src/anndata/_core/aligned_mapping.py"
+  },
+  {
+    "id": "anndata_09",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "\\ Lazily concatenate AnnData objects along the `obs` axis",
+    "expected_symbol": "AnnCollection",
+    "expected_path": "src/anndata/experimental/multi_files/_anncollection.py"
+  },
+  {
+    "id": "anndata_10",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "\\ An object to access the observation attributes of `adatas` in AnnCollection",
+    "expected_symbol": "AnnCollectionView",
+    "expected_path": "src/anndata/experimental/multi_files/_anncollection.py"
+  },
+  {
+    "id": "anndata_11",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "\\ An annotated data matrix",
+    "expected_symbol": "AnnData",
+    "expected_path": "src/anndata/_core/anndata.py"
+  },
+  {
+    "id": "anndata_12",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "Backing file manager for AnnData",
+    "expected_symbol": "AnnDataFileManager",
+    "expected_path": "src/anndata/_core/file_backing.py"
+  },
+  {
+    "id": "anndata_13",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "Error caused while trying to read in AnnData",
+    "expected_symbol": "AnnDataReadError",
+    "expected_path": "src/anndata/_io/utils.py"
+  },
+  {
+    "id": "anndata_14",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "\\ PyTorch DataLoader for AnnData objects",
+    "expected_symbol": "AnnLoader",
+    "expected_path": "src/anndata/experimental/pytorch/_annloader.py"
+  },
+  {
+    "id": "anndata_15",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "Append an in-memory or on-disk sparse matrix to the current object's store",
+    "expected_symbol": "append",
+    "expected_path": "src/anndata/abc.py"
+  },
+  {
+    "id": "anndata_16",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "Reindex element so el[axis] is aligned to self.new_idx",
+    "expected_symbol": "apply",
+    "expected_path": "src/anndata/_core/merge.py"
+  },
+  {
+    "id": "anndata_17",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "\\ Parse a pyproject.toml file and output a list of minimum dependencies",
+    "expected_symbol": "Args",
+    "expected_path": "ci/scripts/min-deps.py"
+  },
+  {
+    "id": "anndata_18",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "Construct an open mesh from multiple sequences",
+    "expected_symbol": "array_api_ix",
+    "expected_path": "src/anndata/_core/index.py"
+  },
+  {
+    "id": "anndata_19",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "Makes numpy ufuncs convert all instances of views to plain arrays",
+    "expected_symbol": "ArrayView",
+    "expected_path": "src/anndata/_core/views.py"
+  },
+  {
+    "id": "anndata_20",
+    "library_id": "lib_anndata",
+    "language": "python",
+    "category": "docstring",
+    "query": "Convert x to a numpy array",
+    "expected_symbol": "asarray",
+    "expected_path": "src/anndata/utils.py"
+  },
+  {
+    "id": "squidpy_01",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Apply a function to a layer within this container",
+    "expected_symbol": "apply",
+    "expected_path": "src/squidpy/im/_container.py"
+  },
+  {
+    "id": "squidpy_02",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Normalize a source image to a decomposition reference (colour-basis transfer)",
+    "expected_symbol": "apply_decomposition",
+    "expected_path": "src/squidpy/experimental/im/_stain/_decomposition.py"
+  },
+  {
+    "id": "squidpy_03",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Apply a Reinhard reference to a source image",
+    "expected_symbol": "apply_reinhard",
+    "expected_path": "src/squidpy/experimental/im/_stain/_reinhard.py"
+  },
+  {
+    "id": "squidpy_04",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Raise TypeError if *value* is not an instance of *expected_type*",
+    "expected_symbol": "assert_isinstance",
+    "expected_path": "src/squidpy/_validators.py"
+  },
+  {
+    "id": "squidpy_05",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Raise KeyError if *key* not in ``getattr(obj, attr)",
+    "expected_symbol": "assert_key_in",
+    "expected_path": "src/squidpy/_validators.py"
+  },
+  {
+    "id": "squidpy_06",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Raise KeyError if *key* not in ``getattr(adata, attr)",
+    "expected_symbol": "assert_key_in_adata",
+    "expected_path": "src/squidpy/_validators.py"
+  },
+  {
+    "id": "squidpy_07",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Raise KeyError if *key* not in ``getattr(sdata, attr)",
+    "expected_symbol": "assert_key_in_sdata",
+    "expected_path": "src/squidpy/_validators.py"
+  },
+  {
+    "id": "squidpy_08",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Assign tile-cut cell pieces to stitch groups",
+    "expected_symbol": "assign_stitch_groups",
+    "expected_path": "src/squidpy/experimental/tl/_tiling_stitch.py"
+  },
+  {
+    "id": "squidpy_09",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Wrap a ``(y, x)`` boolean array as a DataArray aligned to ``like``'s y/x",
+    "expected_symbol": "as_spatial_mask",
+    "expected_path": "src/squidpy/experimental/im/_stain/_mask.py"
+  },
+  {
+    "id": "squidpy_10",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Mean pixel intensity of a grayscale tile",
+    "expected_symbol": "brightness_mean",
+    "expected_path": "src/squidpy/experimental/im/_intensity_metrics.py"
+  },
+  {
+    "id": "squidpy_11",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Standard deviation of pixel intensity of a grayscale tile",
+    "expected_symbol": "brightness_std",
+    "expected_path": "src/squidpy/experimental/im/_intensity_metrics.py"
+  },
+  {
+    "id": "squidpy_12",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Construct raw adjacency and distance matrices",
+    "expected_symbol": "build_graph",
+    "expected_path": "src/squidpy/gr/neighbors.py"
+  },
+  {
+    "id": "squidpy_13",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Build tile specifications from pre-computed centroids",
+    "expected_symbol": "build_tile_specs",
+    "expected_path": "src/squidpy/experimental/im/_tiling.py"
+  },
+  {
+    "id": "squidpy_14",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Calculate per-cell features from segmentation masks",
+    "expected_symbol": "calculate_image_features",
+    "expected_path": "src/squidpy/experimental/im/_calculate_image_features.py"
+  },
+  {
+    "id": "squidpy_15",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Calculate image features for all observations in ``adata",
+    "expected_symbol": "calculate_image_features",
+    "expected_path": "src/squidpy/im/_feature.py"
+  },
+  {
+    "id": "squidpy_16",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Calculate niches (spatial clusters) based on a user-defined method in 'flavor'",
+    "expected_symbol": "calculate_niche",
+    "expected_path": "src/squidpy/gr/_niche.py"
+  },
+  {
+    "id": "squidpy_17",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Compute niche assignments using user-defined embedding, clustering, and postprocessing",
+    "expected_symbol": "calculate_niche_custom",
+    "expected_path": "src/squidpy/gr/_niche.py"
+  },
+  {
+    "id": "squidpy_18",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Compute spatial niches from local cell-type composition",
+    "expected_symbol": "calculate_niche_neighborhood",
+    "expected_path": "src/squidpy/gr/_niche.py"
+  },
+  {
+    "id": "squidpy_19",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Compute niche assignments using the SpatialLeiden algorithm",
+    "expected_symbol": "calculate_niche_spatialleiden",
+    "expected_path": "src/squidpy/gr/_niche.py"
+  },
+  {
+    "id": "squidpy_20",
+    "library_id": "lib_squidpy",
+    "language": "python",
+    "category": "docstring",
+    "query": "Compute spatial niches from UTAG-style feature aggregation",
+    "expected_symbol": "calculate_niche_utag",
+    "expected_path": "src/squidpy/gr/_niche.py"
+  },
+  {
+    "id": "scvi_tools_01",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "Amortized Latent Dirichlet Allocation Parameters ---------- adata AnnData object that has been registered via n_topics Number of topics to model",
+    "expected_symbol": "AmortizedLDA",
+    "expected_path": "src/scvi/model/_amortizedlda.py"
+  },
+  {
+    "id": "scvi_tools_02",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "A PyroModule that serves as the guide for the AmortizedLDAPyroModule class",
+    "expected_symbol": "AmortizedLDAPyroGuide",
+    "expected_path": "src/scvi/module/_amortizedlda.py"
+  },
+  {
+    "id": "scvi_tools_03",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "A PyroModule that serves as the model for the AmortizedLDAPyroModule class",
+    "expected_symbol": "AmortizedLDAPyroModel",
+    "expected_path": "src/scvi/module/_amortizedlda.py"
+  },
+  {
+    "id": "scvi_tools_04",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "An amortized implementation of Latent Dirichlet Allocation This module uses auto encoding variational Bayes to optimize the latent variables in the model",
+    "expected_symbol": "AmortizedLDAPyroModule",
+    "expected_path": "src/scvi/module/_amortizedlda.py"
+  },
+  {
+    "id": "scvi_tools_05",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "LightningDataModule for annbatch.Loader with full scvi-tools integration",
+    "expected_symbol": "AnnbatchDataModule",
+    "expected_path": "src/scvi/dataloaders/_custom_dataloaders.py"
+  },
+  {
+    "id": "scvi_tools_06",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "DataLoader for loading tensors from AnnData objects",
+    "expected_symbol": "AnnDataLoader",
+    "expected_path": "src/scvi/dataloaders/_ann_dataloader.py"
+  },
+  {
+    "id": "scvi_tools_07",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "Provides an interface to validate and process an AnnData object for use in scvi-tools",
+    "expected_symbol": "AnnDataManager",
+    "expected_path": "src/scvi/data/_manager.py"
+  },
+  {
+    "id": "scvi_tools_08",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "Validation checks for AnnOrMudata scvi-tools compatibility",
+    "expected_symbol": "AnnDataManagerValidationCheck",
+    "expected_path": "src/scvi/data/_manager.py"
+  },
+  {
+    "id": "scvi_tools_09",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "Simulated datasets for scANVI tutorials",
+    "expected_symbol": "annotation_simulation",
+    "expected_path": "src/scvi/data/_datasets.py"
+  },
+  {
+    "id": "scvi_tools_10",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "Extension of Parameters ---------- adata_manager getitem_tensors Specifies the keys in the data registry (``adata_manager.data_registry``) to return in ``__getitem__",
+    "expected_symbol": "AnnTorchDataset",
+    "expected_path": "src/scvi/data/_anntorchdataset.py"
+  },
+  {
+    "id": "scvi_tools_11",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "Universal scArches implementation",
+    "expected_symbol": "ArchesMixin",
+    "expected_path": "src/scvi/model/base/_archesmixin.py"
+  },
+  {
+    "id": "scvi_tools_12",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "Create a wrapper around a sparse matrix layer in an AnnCollection",
+    "expected_symbol": "ArrayFakerSparse",
+    "expected_path": "src/scvi/dataloaders/_anncollection.py"
+  },
+  {
+    "id": "scvi_tools_13",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "An AnnDataField for an .obsm or .varm field in the AnnData data structure",
+    "expected_symbol": "ArrayLikeField",
+    "expected_path": "src/scvi/data/fields/_arraylike_field.py"
+  },
+  {
+    "id": "scvi_tools_14",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "Attention block matching the JAX/Flax MultiHeadDotProductAttention architecture",
+    "expected_symbol": "AttentionBlock",
+    "expected_path": "src/scvi/external/mrvi/_components.py"
+  },
+  {
+    "id": "scvi_tools_15",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "Get the coordinates at a specific time point along the trajectory",
+    "expected_symbol": "at_time",
+    "expected_path": "src/scvi/external/decipher/utils/_trajectory.py"
+  },
+  {
+    "id": "scvi_tools_16",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "A dictionary that allows for attribute-style access",
+    "expected_symbol": "attrdict",
+    "expected_path": "src/scvi/utils/_attrdict.py"
+  },
+  {
+    "id": "scvi_tools_17",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "The key of the data field within the relevant AnnData attribute",
+    "expected_symbol": "attr_key",
+    "expected_path": "src/scvi/data/fields/_base_field.py"
+  },
+  {
+    "id": "scvi_tools_18",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "The key of the data field within the relevant AnnData/MuData attribute",
+    "expected_symbol": "attr_key",
+    "expected_path": "src/scvi/data/fields/_mudata.py"
+  },
+  {
+    "id": "scvi_tools_19",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "List of .obs or .var keys that make up this joint field",
+    "expected_symbol": "attr_keys",
+    "expected_path": "src/scvi/data/fields/_arraylike_field.py"
+  },
+  {
+    "id": "scvi_tools_20",
+    "library_id": "lib_scvi_tools",
+    "language": "python",
+    "category": "docstring",
+    "query": "The name of the AnnData attribute where the data is stored",
+    "expected_symbol": "attr_name",
+    "expected_path": "src/scvi/data/fields/_base_field.py"
+  },
+  {
+    "id": "snakemake_01",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Print an instruction to download a remote file",
+    "expected_symbol": "add_remote_file",
+    "expected_path": "src/snakemake/deployment/containerize.py"
+  },
+  {
+    "id": "snakemake_02",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Add a rule",
+    "expected_symbol": "add_rule",
+    "expected_path": "src/snakemake/workflow.py"
+  },
+  {
+    "id": "snakemake_03",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Subclass of QuotedFormatter that always quotes",
+    "expected_symbol": "AlwaysQuotedFormatter",
+    "expected_path": "src/snakemake/utils/format.py"
+  },
+  {
+    "id": "snakemake_04",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "A role to insert a hidden HTML anchor (ID) for redirects",
+    "expected_symbol": "anchor_role",
+    "expected_path": "docs/conf.py"
+  },
+  {
+    "id": "snakemake_05",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "A flag for an input file that shall be considered ancient; i.e",
+    "expected_symbol": "ancient",
+    "expected_path": "src/snakemake/io/__init__.py"
+  },
+  {
+    "id": "snakemake_06",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Mixin for str subclasses that carry flags (e.g",
+    "expected_symbol": "AnnotatedStringFormatMixin",
+    "expected_path": "src/snakemake/io/__init__.py"
+  },
+  {
+    "id": "snakemake_07",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Apply the defined default remote provider to the given path and return the updated _IOFile",
+    "expected_symbol": "apply_default_storage",
+    "expected_path": "src/snakemake/path_modifier.py"
+  },
+  {
+    "id": "snakemake_08",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Update this ruleinfo with the given one (used for 'use rule' overrides)",
+    "expected_symbol": "apply_modifier",
+    "expected_path": "src/snakemake/ruleinfo.py"
+  },
+  {
+    "id": "snakemake_09",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Print all collected sections",
+    "expected_symbol": "ApptainerFormat",
+    "expected_path": "src/snakemake/deployment/containerize.py"
+  },
+  {
+    "id": "snakemake_10",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Archive the workflow",
+    "expected_symbol": "archive",
+    "expected_path": "src/snakemake/workflow.py"
+  },
+  {
+    "id": "snakemake_11",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Archives workflow such that it can be re-run on a different system",
+    "expected_symbol": "archive",
+    "expected_path": "src/snakemake/dag.py"
+  },
+  {
+    "id": "snakemake_12",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Convert argparse args to API calls",
+    "expected_symbol": "args_to_api",
+    "expected_path": "src/snakemake/cli.py"
+  },
+  {
+    "id": "snakemake_13",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Help message formatter which adds default values to argument help",
+    "expected_symbol": "ArgumentDefaultsHelpFormatter",
+    "expected_path": "src/snakemake/common/argparse.py"
+  },
+  {
+    "id": "snakemake_14",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Returns an argument quoted in such a way that CommandLineToArgvW on Windows will return the argument string unchanged",
+    "expected_symbol": "argvquote",
+    "expected_path": "src/snakemake/utils/argvquote.py"
+  },
+  {
+    "id": "snakemake_15",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Returns the Python module name associated with the `.py` file at a given path",
+    "expected_symbol": "as_py_module",
+    "expected_path": "src/snakemake/ioutils/as_py_module.py"
+  },
+  {
+    "id": "snakemake_16",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Get and validate asset content",
+    "expected_symbol": "Asset",
+    "expected_path": "src/snakemake/assets/__init__.py"
+  },
+  {
+    "id": "snakemake_17",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Creates a new event loop to execute a coroutine",
+    "expected_symbol": "async_run",
+    "expected_path": "src/snakemake/common/misc.py"
+  },
+  {
+    "id": "snakemake_18",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Creates a new async Runner after checking we are outside of a running event loop",
+    "expected_symbol": "async_runner",
+    "expected_path": "src/snakemake/common/misc.py"
+  },
+  {
+    "id": "snakemake_19",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "Generic function that throws an `AttributeError",
+    "expected_symbol": "AttributeGuard",
+    "expected_path": "src/snakemake/iocontainers.py"
+  },
+  {
+    "id": "snakemake_20",
+    "library_id": "lib_snakemake",
+    "language": "python",
+    "category": "docstring",
+    "query": "{% for cat, catresults in categories|dictsort %} {% endfor %} {% for res in files %} {% endfor %}",
+    "expected_symbol": "auto_report",
+    "expected_path": "src/snakemake/report/__init__.py"
+  },
+  {
+    "id": "ggplot2_01",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "aes to scale",
+    "expected_symbol": "aes_to_scale",
+    "expected_path": "R/aes.R"
+  },
+  {
+    "id": "ggplot2_02",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "after scale",
+    "expected_symbol": "after_scale",
+    "expected_path": "R/aes-delayed-eval.R"
+  },
+  {
+    "id": "ggplot2_03",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "after stat",
+    "expected_symbol": "after_stat",
+    "expected_path": "R/aes-delayed-eval.R"
+  },
+  {
+    "id": "ggplot2_04",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "allow lambda",
+    "expected_symbol": "allow_lambda",
+    "expected_path": "R/utilities.R"
+  },
+  {
+    "id": "ggplot2_05",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "alternative aes extract usage",
+    "expected_symbol": "alternative_aes_extract_usage",
+    "expected_path": "R/aes.R"
+  },
+  {
+    "id": "ggplot2_06",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "annotation borders",
+    "expected_symbol": "annotation_borders",
+    "expected_path": "R/annotation-borders.R"
+  },
+  {
+    "id": "ggplot2_07",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "annotation custom",
+    "expected_symbol": "annotation_custom",
+    "expected_path": "R/annotation-custom.R"
+  },
+  {
+    "id": "ggplot2_08",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "annotation logticks",
+    "expected_symbol": "annotation_logticks",
+    "expected_path": "R/annotation-logticks.R"
+  },
+  {
+    "id": "ggplot2_09",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "annotation map",
+    "expected_symbol": "annotation_map",
+    "expected_path": "R/annotation-map.R"
+  },
+  {
+    "id": "ggplot2_10",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "annotation raster",
+    "expected_symbol": "annotation_raster",
+    "expected_path": "R/annotation-raster.R"
+  },
+  {
+    "id": "ggplot2_11",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "apply fun",
+    "expected_symbol": "apply_fun",
+    "expected_path": "R/compat-plyr.R"
+  },
+  {
+    "id": "ggplot2_12",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "arg enquos",
+    "expected_symbol": "arg_enquos",
+    "expected_path": "R/aes.R"
+  },
+  {
+    "id": "ggplot2_13",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "arrange layout",
+    "expected_symbol": "arrange_layout",
+    "expected_path": "R/guide-.R"
+  },
+  {
+    "id": "ggplot2_14",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as cli",
+    "expected_symbol": "as_cli",
+    "expected_path": "R/utilities.R"
+  },
+  {
+    "id": "ggplot2_15",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as data frame mapped discrete",
+    "expected_symbol": "as.data.frame.mapped_discrete",
+    "expected_path": "R/scale-discrete-.R"
+  },
+  {
+    "id": "ggplot2_16",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as facets",
+    "expected_symbol": "as_facets",
+    "expected_path": "R/facet-.R"
+  },
+  {
+    "id": "ggplot2_17",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as facets list",
+    "expected_symbol": "as_facets_list",
+    "expected_path": "R/facet-.R"
+  },
+  {
+    "id": "ggplot2_18",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as function",
+    "expected_symbol": "as_function",
+    "expected_path": "R/stat-summary-bin.R"
+  },
+  {
+    "id": "ggplot2_19",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as gg data frame",
+    "expected_symbol": "as_gg_data_frame",
+    "expected_path": "R/utilities.R"
+  },
+  {
+    "id": "ggplot2_20",
+    "library_id": "lib_ggplot2",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as labeller",
+    "expected_symbol": "as_labeller",
+    "expected_path": "R/facet-labeller.R"
+  },
+  {
+    "id": "dplyr_01",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "all vars",
+    "expected_symbol": "all_vars",
+    "expected_path": "R/colwise.R"
+  },
+  {
+    "id": "dplyr_02",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "anti join",
+    "expected_symbol": "anti_join",
+    "expected_path": "R/join.R"
+  },
+  {
+    "id": "dplyr_03",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "anti join data frame",
+    "expected_symbol": "anti_join.data.frame",
+    "expected_path": "R/join.R"
+  },
+  {
+    "id": "dplyr_04",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "any exprs",
+    "expected_symbol": "any_exprs",
+    "expected_path": "R/colwise-filter.R"
+  },
+  {
+    "id": "dplyr_05",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "any vars",
+    "expected_symbol": "any_vars",
+    "expected_path": "R/colwise.R"
+  },
+  {
+    "id": "dplyr_06",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "append pos",
+    "expected_symbol": "append_pos",
+    "expected_path": "R/compat-name-repair.R"
+  },
+  {
+    "id": "dplyr_07",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "apply filter syms",
+    "expected_symbol": "apply_filter_syms",
+    "expected_path": "R/colwise-filter.R"
+  },
+  {
+    "id": "dplyr_08",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "apply unpack spec",
+    "expected_symbol": "apply_unpack_spec",
+    "expected_path": "R/across.R"
+  },
+  {
+    "id": "dplyr_09",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "arrange all",
+    "expected_symbol": "arrange_all",
+    "expected_path": "R/colwise-arrange.R"
+  },
+  {
+    "id": "dplyr_10",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "arrange at",
+    "expected_symbol": "arrange_at",
+    "expected_path": "R/colwise-arrange.R"
+  },
+  {
+    "id": "dplyr_11",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "arrange data frame",
+    "expected_symbol": "arrange.data.frame",
+    "expected_path": "R/arrange.R"
+  },
+  {
+    "id": "dplyr_12",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "arrange if",
+    "expected_symbol": "arrange_if",
+    "expected_path": "R/colwise-arrange.R"
+  },
+  {
+    "id": "dplyr_13",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "arrange rows",
+    "expected_symbol": "arrange_rows",
+    "expected_path": "R/arrange.R"
+  },
+  {
+    "id": "dplyr_14",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as across fn call",
+    "expected_symbol": "as_across_fn_call",
+    "expected_path": "R/across.R"
+  },
+  {
+    "id": "dplyr_15",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as data frame grouped df",
+    "expected_symbol": "as.data.frame.grouped_df",
+    "expected_path": "R/grouped-df.R"
+  },
+  {
+    "id": "dplyr_16",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as fun",
+    "expected_symbol": "as_fun",
+    "expected_path": "R/colwise-funs.R"
+  },
+  {
+    "id": "dplyr_17",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as fun list",
+    "expected_symbol": "as_fun_list",
+    "expected_path": "R/colwise-funs.R"
+  },
+  {
+    "id": "dplyr_18",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as group map function",
+    "expected_symbol": "as_group_map_function",
+    "expected_path": "R/group-map.R"
+  },
+  {
+    "id": "dplyr_19",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as inlined function",
+    "expected_symbol": "as_inlined_function",
+    "expected_path": "R/colwise.R"
+  },
+  {
+    "id": "dplyr_20",
+    "library_id": "lib_dplyr",
+    "language": "r",
+    "category": "symbol-smoke",
+    "query": "as join by",
+    "expected_symbol": "as_join_by",
+    "expected_path": "R/join-by.R"
+  },
+  {
+    "id": "12473817b941_01",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "HISAT2 ALIGN",
+    "expected_symbol": "HISAT2_ALIGN",
+    "expected_path": "modules/nf-core/hisat2/align/main.nf"
+  },
+  {
+    "id": "12473817b941_02",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "HISAT2 BUILD",
+    "expected_symbol": "HISAT2_BUILD",
+    "expected_path": "modules/nf-core/hisat2/build/main.nf"
+  },
+  {
+    "id": "12473817b941_03",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "HISAT2 EXTRACTSPLICESITES",
+    "expected_symbol": "HISAT2_EXTRACTSPLICESITES",
+    "expected_path": "modules/nf-core/hisat2/extractsplicesites/main.nf"
+  },
+  {
+    "id": "12473817b941_04",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "KALLISTO INDEX",
+    "expected_symbol": "KALLISTO_INDEX",
+    "expected_path": "modules/nf-core/kallisto/index/main.nf"
+  },
+  {
+    "id": "12473817b941_05",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "KALLISTO QUANT",
+    "expected_symbol": "KALLISTO_QUANT",
+    "expected_path": "modules/nf-core/kallisto/quant/main.nf"
+  },
+  {
+    "id": "12473817b941_06",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "KRAKEN2 KRAKEN2",
+    "expected_symbol": "KRAKEN2_KRAKEN2",
+    "expected_path": "modules/nf-core/kraken2/kraken2/main.nf"
+  },
+  {
+    "id": "12473817b941_07",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "PARABRICKS RNAFQ2BAM",
+    "expected_symbol": "PARABRICKS_RNAFQ2BAM",
+    "expected_path": "modules/nf-core/parabricks/rnafq2bam/main.nf"
+  },
+  {
+    "id": "12473817b941_08",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "PICARD MARKDUPLICATES",
+    "expected_symbol": "PICARD_MARKDUPLICATES",
+    "expected_path": "modules/nf-core/picard/markduplicates/main.nf"
+  },
+  {
+    "id": "12473817b941_09",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "PREPROCESS TRANSCRIPTS FASTA GENCODE",
+    "expected_symbol": "PREPROCESS_TRANSCRIPTS_FASTA_GENCODE",
+    "expected_path": "modules/local/preprocess_transcripts_fasta_gencode/main.nf"
+  },
+  {
+    "id": "12473817b941_10",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "PRESEQ LCEXTRAP",
+    "expected_symbol": "PRESEQ_LCEXTRAP",
+    "expected_path": "modules/nf-core/preseq/lcextrap/main.nf"
+  },
+  {
+    "id": "12473817b941_11",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "process anonymous",
+    "expected_symbol": "process_anonymous",
+    "expected_path": "conf/containers_conda_lock_files_amd64.config"
+  },
+  {
+    "id": "12473817b941_12",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "QUALIMAP RNASEQ",
+    "expected_symbol": "QUALIMAP_RNASEQ",
+    "expected_path": "modules/nf-core/qualimap/rnaseq/main.nf"
+  },
+  {
+    "id": "12473817b941_13",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "RSEM CALCULATEEXPRESSION",
+    "expected_symbol": "RSEM_CALCULATEEXPRESSION",
+    "expected_path": "modules/nf-core/rsem/calculateexpression/main.nf"
+  },
+  {
+    "id": "12473817b941_14",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "RSEM PREPAREREFERENCE",
+    "expected_symbol": "RSEM_PREPAREREFERENCE",
+    "expected_path": "modules/nf-core/rsem/preparereference/main.nf"
+  },
+  {
+    "id": "12473817b941_15",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "RSEQC BAMSTAT",
+    "expected_symbol": "RSEQC_BAMSTAT",
+    "expected_path": "modules/nf-core/rseqc/bamstat/main.nf"
+  },
+  {
+    "id": "12473817b941_16",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "RSEQC INFEREXPERIMENT",
+    "expected_symbol": "RSEQC_INFEREXPERIMENT",
+    "expected_path": "modules/nf-core/rseqc/inferexperiment/main.nf"
+  },
+  {
+    "id": "12473817b941_17",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "RSEQC INNERDISTANCE",
+    "expected_symbol": "RSEQC_INNERDISTANCE",
+    "expected_path": "modules/nf-core/rseqc/innerdistance/main.nf"
+  },
+  {
+    "id": "12473817b941_18",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "RSEQC JUNCTIONANNOTATION",
+    "expected_symbol": "RSEQC_JUNCTIONANNOTATION",
+    "expected_path": "modules/nf-core/rseqc/junctionannotation/main.nf"
+  },
+  {
+    "id": "12473817b941_19",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "RSEQC JUNCTIONSATURATION",
+    "expected_symbol": "RSEQC_JUNCTIONSATURATION",
+    "expected_path": "modules/nf-core/rseqc/junctionsaturation/main.nf"
+  },
+  {
+    "id": "12473817b941_20",
+    "library_id": "lib_12473817b941",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "RSEQC READDISTRIBUTION",
+    "expected_symbol": "RSEQC_READDISTRIBUTION",
+    "expected_path": "modules/nf-core/rseqc/readdistribution/main.nf"
+  },
+  {
+    "id": "nfcore_scrnaseq_01",
+    "library_id": "lib_nfcore_scrnaseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "MTX TO H5AD",
+    "expected_symbol": "MTX_TO_H5AD",
+    "expected_path": "modules/local/mtx_to_h5ad/main.nf"
+  },
+  {
+    "id": "nfcore_scrnaseq_02",
+    "library_id": "lib_nfcore_scrnaseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "PARSE CELLRANGERMULTI SAMPLESHEET",
+    "expected_symbol": "PARSE_CELLRANGERMULTI_SAMPLESHEET",
+    "expected_path": "modules/local/parse_cellrangermulti_samplesheet/main.nf"
+  },
+  {
+    "id": "nfcore_scrnaseq_03",
+    "library_id": "lib_nfcore_scrnaseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "process anonymous",
+    "expected_symbol": "process_anonymous",
+    "expected_path": "modules/nf-core/gffread/tests/nextflow.config"
+  },
+  {
+    "id": "nfcore_scrnaseq_04",
+    "library_id": "lib_nfcore_scrnaseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "SIMPLEAF INDEX",
+    "expected_symbol": "SIMPLEAF_INDEX",
+    "expected_path": "modules/nf-core/simpleaf/index/main.nf"
+  },
+  {
+    "id": "nfcore_scrnaseq_05",
+    "library_id": "lib_nfcore_scrnaseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "SIMPLEAF QUANT",
+    "expected_symbol": "SIMPLEAF_QUANT",
+    "expected_path": "modules/nf-core/simpleaf/quant/main.nf"
+  },
+  {
+    "id": "nfcore_scrnaseq_06",
+    "library_id": "lib_nfcore_scrnaseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "STAR ALIGN",
+    "expected_symbol": "STAR_ALIGN",
+    "expected_path": "modules/local/star_align/main.nf"
+  },
+  {
+    "id": "nfcore_scrnaseq_07",
+    "library_id": "lib_nfcore_scrnaseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "STAR GENOMEGENERATE",
+    "expected_symbol": "STAR_GENOMEGENERATE",
+    "expected_path": "modules/nf-core/star/genomegenerate/main.nf"
+  },
+  {
+    "id": "nfcore_scrnaseq_08",
+    "library_id": "lib_nfcore_scrnaseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "STAR GENOMEPARAMS UPGRADE",
+    "expected_symbol": "STAR_GENOMEPARAMS_UPGRADE",
+    "expected_path": "modules/local/star_genomeparams_upgrade/main.nf"
+  },
+  {
+    "id": "nfcore_atacseq_01",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "GENOME BLACKLIST REGIONS",
+    "expected_symbol": "GENOME_BLACKLIST_REGIONS",
+    "expected_path": "modules/local/genome_blacklist_regions.nf"
+  },
+  {
+    "id": "nfcore_atacseq_02",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "GET AUTOSOMES",
+    "expected_symbol": "GET_AUTOSOMES",
+    "expected_path": "modules/local/get_autosomes.nf"
+  },
+  {
+    "id": "nfcore_atacseq_03",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "HOMER ANNOTATEPEAKS",
+    "expected_symbol": "HOMER_ANNOTATEPEAKS",
+    "expected_path": "modules/nf-core/homer/annotatepeaks/main.nf"
+  },
+  {
+    "id": "nfcore_atacseq_04",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "KHMER UNIQUEKMERS",
+    "expected_symbol": "KHMER_UNIQUEKMERS",
+    "expected_path": "modules/nf-core/khmer/uniquekmers/main.nf"
+  },
+  {
+    "id": "nfcore_atacseq_05",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "MACS2 CALLPEAK",
+    "expected_symbol": "MACS2_CALLPEAK",
+    "expected_path": "modules/nf-core/macs2/callpeak/main.nf"
+  },
+  {
+    "id": "nfcore_atacseq_06",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "MACS2 CONSENSUS",
+    "expected_symbol": "MACS2_CONSENSUS",
+    "expected_path": "modules/local/macs2_consensus.nf"
+  },
+  {
+    "id": "nfcore_atacseq_07",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "MULTIQC CUSTOM PEAKS",
+    "expected_symbol": "MULTIQC_CUSTOM_PEAKS",
+    "expected_path": "modules/local/multiqc_custom_peaks.nf"
+  },
+  {
+    "id": "nfcore_atacseq_08",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "PICARD COLLECTMULTIPLEMETRICS",
+    "expected_symbol": "PICARD_COLLECTMULTIPLEMETRICS",
+    "expected_path": "modules/nf-core/picard/collectmultiplemetrics/main.nf"
+  },
+  {
+    "id": "nfcore_atacseq_09",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "PICARD MARKDUPLICATES",
+    "expected_symbol": "PICARD_MARKDUPLICATES",
+    "expected_path": "modules/nf-core/picard/markduplicates/main.nf"
+  },
+  {
+    "id": "nfcore_atacseq_10",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "PICARD MERGESAMFILES",
+    "expected_symbol": "PICARD_MERGESAMFILES",
+    "expected_path": "modules/nf-core/picard/mergesamfiles/main.nf"
+  },
+  {
+    "id": "nfcore_atacseq_11",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "PLOT HOMER ANNOTATEPEAKS",
+    "expected_symbol": "PLOT_HOMER_ANNOTATEPEAKS",
+    "expected_path": "modules/local/plot_homer_annotatepeaks.nf"
+  },
+  {
+    "id": "nfcore_atacseq_12",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "PLOT MACS2 QC",
+    "expected_symbol": "PLOT_MACS2_QC",
+    "expected_path": "modules/local/plot_macs2_qc.nf"
+  },
+  {
+    "id": "nfcore_atacseq_13",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "PRESEQ LCEXTRAP",
+    "expected_symbol": "PRESEQ_LCEXTRAP",
+    "expected_path": "modules/nf-core/preseq/lcextrap/main.nf"
+  },
+  {
+    "id": "nfcore_atacseq_14",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "process anonymous",
+    "expected_symbol": "process_anonymous",
+    "expected_path": "conf/modules.config"
+  },
+  {
+    "id": "nfcore_atacseq_15",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "SAMPLESHEET CHECK",
+    "expected_symbol": "SAMPLESHEET_CHECK",
+    "expected_path": "modules/local/samplesheet_check.nf"
+  },
+  {
+    "id": "nfcore_atacseq_16",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "SAMTOOLS FLAGSTAT",
+    "expected_symbol": "SAMTOOLS_FLAGSTAT",
+    "expected_path": "modules/nf-core/samtools/flagstat/main.nf"
+  },
+  {
+    "id": "nfcore_atacseq_17",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "SAMTOOLS IDXSTATS",
+    "expected_symbol": "SAMTOOLS_IDXSTATS",
+    "expected_path": "modules/nf-core/samtools/idxstats/main.nf"
+  },
+  {
+    "id": "nfcore_atacseq_18",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "SAMTOOLS INDEX",
+    "expected_symbol": "SAMTOOLS_INDEX",
+    "expected_path": "modules/nf-core/samtools/index/main.nf"
+  },
+  {
+    "id": "nfcore_atacseq_19",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "SAMTOOLS SORT",
+    "expected_symbol": "SAMTOOLS_SORT",
+    "expected_path": "modules/nf-core/samtools/sort/main.nf"
+  },
+  {
+    "id": "nfcore_atacseq_20",
+    "library_id": "lib_nfcore_atacseq",
+    "language": "nextflow",
+    "category": "symbol-smoke",
+    "query": "SAMTOOLS STATS",
+    "expected_symbol": "SAMTOOLS_STATS",
+    "expected_path": "modules/nf-core/samtools/stats/main.nf"
+  }
+]

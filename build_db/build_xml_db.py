@@ -1,0 +1,282 @@
+# LEGACY SQLite build path. Do not run in PG-only app/cron; see build_db/LEGACY.md.
+"""LEGACY full-rebuild script. Do not run on production.
+
+Superseded by import_jats / parse_service / DatabaseWriter.
+"""
+
+#!/usr/bin/env python3
+"""
+批量解析 PMC 全文 XML，建独立数据库 V1.0
+
+使用方法：
+  python scripts\build_xml_db.py
+"""
+
+import argparse
+import json
+import sqlite3
+import sys
+from pathlib import Path
+
+# 导入解析函数
+# parse_pmc_xml.py 在 scripts 文件夹里，所以！把 scripts 文件夹加到 sys.path 里
+project_root = Path(__file__).parent.parent
+scripts_dir = project_root / "scripts"
+sys.path.insert(0, str(scripts_dir))
+from parse_pmc_xml import parse_pmc_xml
+
+
+def create_database(db_path: str):
+    """创建数据库表结构"""
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+
+    # 论文表（用 pmcid 作为主键）
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS papers (
+            pmcid TEXT PRIMARY KEY,
+            pmid TEXT,
+            doi TEXT,
+            title TEXT,
+            journal TEXT,
+            publish_date TEXT
+        )
+    """)
+
+    # 作者表
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS authors (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            paper_id TEXT,
+            name TEXT,
+            FOREIGN KEY (paper_id) REFERENCES papers(pmcid)
+        )
+    """)
+
+    # 关键词表
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS keywords (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            paper_id TEXT,
+            keyword TEXT,
+            FOREIGN KEY (paper_id) REFERENCES papers(pmcid)
+        )
+    """)
+
+    # 图表表
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS figures (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            paper_id TEXT,
+            fig_id TEXT,
+            caption TEXT,
+            FOREIGN KEY (paper_id) REFERENCES papers(pmcid)
+        )
+    """)
+
+    # 表格表
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS tables (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            paper_id TEXT,
+            table_id TEXT,
+            caption TEXT,
+            FOREIGN KEY (paper_id) REFERENCES papers(pmcid)
+        )
+    """)
+
+    # 摘要段落表
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS abstract_paragraphs (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            paper_id TEXT,
+            paragraph_index INTEGER,
+            text TEXT,
+            FOREIGN KEY (paper_id) REFERENCES papers(pmcid)
+        )
+    """)
+
+    # 正文段落表
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS body_paragraphs (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            paper_id TEXT,
+            section_title TEXT,
+            section_level INTEGER,
+            paragraph_index INTEGER,
+            text TEXT,
+            FOREIGN KEY (paper_id) REFERENCES papers(pmcid)
+        )
+    """)
+
+    # 句子表
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS sentences (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            paper_id TEXT,
+            paragraph_type TEXT,  -- 'abstract' or 'body'
+            paragraph_id INTEGER,
+            sentence_index INTEGER,
+            text TEXT,
+            FOREIGN KEY (paper_id) REFERENCES papers(pmcid)
+        )
+    """)
+
+    # 参考文献表
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS ref_list (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            paper_id TEXT,
+            ref_id TEXT,
+            text TEXT,
+            FOREIGN KEY (paper_id) REFERENCES papers(pmcid)
+        )
+    """)
+
+    conn.commit()
+    conn.close()
+
+
+def insert_paper(conn, result: dict):
+    """插入一篇论文"""
+    cursor = conn.cursor()
+
+    # 插入论文
+    cursor.execute("""
+        INSERT OR REPLACE INTO papers (pmcid, pmid, doi, title, journal, publish_date)
+        VALUES (?, ?, ?, ?, ?, ?)
+    """, (
+        result['pmcid'],
+        result['pmid'],
+        result['doi'],
+        result['title'],
+        result['journal'],
+        result['publish_date']
+    ))
+
+    # 直接用 pmcid 作为 paper_id
+    paper_id = result['pmcid']
+
+    # 插入作者
+    for author_name in result['authors']:
+        cursor.execute("""
+            INSERT INTO authors (paper_id, name)
+            VALUES (?, ?)
+        """, (paper_id, author_name))
+
+    # 插入关键词
+    for keyword in result['keywords']:
+        cursor.execute("""
+            INSERT INTO keywords (paper_id, keyword)
+            VALUES (?, ?)
+        """, (paper_id, keyword))
+
+    # 插入图表
+    for fig in result['figures']:
+        cursor.execute("""
+            INSERT INTO figures (paper_id, fig_id, caption)
+            VALUES (?, ?, ?)
+        """, (paper_id, fig['id'], fig['caption']))
+
+    # 插入表格
+    for table in result['tables']:
+        cursor.execute("""
+            INSERT INTO tables (paper_id, table_id, caption)
+            VALUES (?, ?, ?)
+        """, (paper_id, table['id'], table['caption']))
+
+    # 插入摘要段落
+    for i, p in enumerate(result['abstract']):
+        cursor.execute("""
+            INSERT INTO abstract_paragraphs (paper_id, paragraph_index, text)
+            VALUES (?, ?, ?)
+        """, (paper_id, i, p['text']))
+
+        para_id = cursor.lastrowid
+
+        # 插入句子
+        for j, sent in enumerate(p['sentences']):
+            cursor.execute("""
+                INSERT INTO sentences (paper_id, paragraph_type, paragraph_id, sentence_index, text)
+                VALUES (?, ?, ?, ?, ?)
+            """, (paper_id, 'abstract', para_id, j, sent))
+
+    # 插入正文章节和段落
+    for sec in result['body']:
+        for i, p in enumerate(sec['paragraphs']):
+            cursor.execute("""
+                INSERT INTO body_paragraphs (paper_id, section_title, section_level, paragraph_index, text)
+                VALUES (?, ?, ?, ?, ?)
+            """, (paper_id, sec['title'], sec['level'], i, p['text']))
+
+            para_id = cursor.lastrowid
+
+            # 插入句子
+            for j, sent in enumerate(p['sentences']):
+                cursor.execute("""
+                    INSERT INTO sentences (paper_id, paragraph_type, paragraph_id, sentence_index, text)
+                    VALUES (?, ?, ?, ?, ?)
+                """, (paper_id, 'body', para_id, j, sent))
+
+    # 插入参考文献
+    for ref in result['references']:
+        cursor.execute("""
+            INSERT INTO ref_list (paper_id, ref_id, text)
+            VALUES (?, ?, ?)
+        """, (paper_id, ref['id'], ref['text']))
+
+    conn.commit()
+    return paper_id
+
+
+def main():
+    parser = argparse.ArgumentParser(description="批量解析 PMC 全文 XML，建独立数据库")
+    parser.add_argument("--input-dir", type=str, default="documents_xml", help="XML 文件目录")
+    parser.add_argument("--db-path", type=str, default="data/xml.db", help="数据库路径")
+
+    args = parser.parse_args()
+
+    input_dir = Path(args.input_dir)
+    db_path = Path(args.db_path)
+
+    # 创建数据库目录
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # 创建数据库表结构
+    create_database(str(db_path))
+
+    # 找到所有 XML 文件
+    xml_files = list(input_dir.glob("*.xml"))
+    print(f"📄 找到 {len(xml_files)} 个 XML 文件")
+
+    # 批量解析并插入数据库
+    conn = sqlite3.connect(str(db_path))
+
+    success = 0
+    failed = 0
+
+    for i, xml_file in enumerate(xml_files, 1):
+        print(f"\n[{i}/{len(xml_files)}] 解析: {xml_file.name}")
+
+        try:
+            result = parse_pmc_xml(str(xml_file))
+            paper_id = insert_paper(conn, result)
+            print(f"  ✅ 插入成功，paper_id={paper_id}")
+            success += 1
+        except Exception as e:
+            print(f"  ❌ 解析失败: {e}")
+            failed += 1
+
+    conn.close()
+
+    # 打印统计
+    print(f"\n{'='*60}")
+    print(f"✅ 完成！")
+    print(f"{'='*60}")
+    print(f"  成功: {success}")
+    print(f"  失败: {failed}")
+    print(f"  数据库: {db_path}")
+
+
+if __name__ == "__main__":
+    main()

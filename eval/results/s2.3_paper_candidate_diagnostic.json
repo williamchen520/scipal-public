@@ -1,0 +1,19 @@
+{
+  "dev_questions": 30,
+  "paper_fts": {
+    "or": "10/30 paper recall@20",
+    "plainto": "0/30 paper recall@20"
+  },
+  "sentence_plainto": {
+    "evidence_recall@10": 0.6,
+    "evidence_recall@20": 0.6333,
+    "mrr": 0.4579,
+    "ndcg@10": 0.6468,
+    "elapsed_s": 203.4
+  },
+  "sentence_or_trial": {
+    "evidence_recall@10": 0.4667,
+    "note": "base displacement; not kept"
+  },
+  "decision": "reject; default SCIPAL_PAPER_CANDIDATES=0"
+}

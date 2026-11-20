@@ -1,0 +1,6 @@
+id = "data_sandbox"
+version = "0.1.0"
+core_api = "1"
+entrypoint = "plugins.data_sandbox.plugin:register"
+enabled = true
+description = "local data profile/aggregate/sample/cloud gate"

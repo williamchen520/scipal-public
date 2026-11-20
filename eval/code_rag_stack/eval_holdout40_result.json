@@ -1,0 +1,11 @@
+{
+  "spec_sha256": "facf02b0f314cfadf1eb2e6252c0a68b707f0173fd153b549e595d5204244caa",
+  "n": 179,
+  "baseline_file@1": 0.6872,
+  "candidate_file@1": 0.8212,
+  "delta": 0.1341,
+  "delta_ci95": [
+    0.0726,
+    0.2011
+  ]
+}

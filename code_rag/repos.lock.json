@@ -1,0 +1,120 @@
+{
+  "repos": {
+    "scanpy": {
+      "id": "scanpy",
+      "url": "https://github.com/scverse/scanpy",
+      "language": "python",
+      "ref": "1.12.5",
+      "path": "G:\\repos\\scanpy-1.12.5",
+      "license": "BSD-3-Clause",
+      "commit": "02513e1ac31a7e8fb4b0349ff9039cc66812f40c",
+      "status": "present"
+    },
+    "nf-core-rnaseq": {
+      "id": "nf-core-rnaseq",
+      "url": "https://github.com/nf-core/rnaseq",
+      "language": "nextflow",
+      "ref": "3.28.0",
+      "path": "G:\\repos\\rnaseq-3.28.0",
+      "license": "MIT",
+      "commit": "f24c6c0e9469d04975d87c3a8bf9020800978782",
+      "status": "present"
+    },
+    "anndata": {
+      "id": "anndata",
+      "url": "https://github.com/scverse/anndata",
+      "language": "python",
+      "ref": "main",
+      "license": "BSD-3-Clause",
+      "commit": "7c3b0f8ace8db262de58729c65da2f632454669a",
+      "path": "G:\\repos\\code_rag\\anndata",
+      "detected_license": "BSD-3-Clause",
+      "license_file": "LICENSE",
+      "status": "downloaded"
+    },
+    "squidpy": {
+      "id": "squidpy",
+      "url": "https://github.com/scverse/squidpy",
+      "language": "python",
+      "ref": "main",
+      "license": "BSD-3-Clause",
+      "commit": "b1c79ac045ca7245edfec865df802a2c936bdda7",
+      "path": "G:\\repos\\code_rag\\squidpy",
+      "detected_license": "BSD-3-Clause",
+      "license_file": "LICENSE",
+      "status": "downloaded"
+    },
+    "scvi-tools": {
+      "id": "scvi-tools",
+      "url": "https://github.com/scverse/scvi-tools",
+      "language": "python",
+      "ref": "main",
+      "license": "BSD-3-Clause",
+      "commit": "2d29ee6d845ab22215434bea4e715e7ecea84797",
+      "path": "G:\\repos\\code_rag\\scvi-tools",
+      "detected_license": "BSD-3-Clause",
+      "license_file": "LICENSE",
+      "status": "downloaded"
+    },
+    "snakemake": {
+      "id": "snakemake",
+      "url": "https://github.com/snakemake/snakemake",
+      "language": "python",
+      "ref": "main",
+      "license": "MIT",
+      "commit": "0ec2a0797c1dca2c7c38699fc9d6578db02f6c89",
+      "path": "G:\\repos\\code_rag\\snakemake",
+      "detected_license": "MIT",
+      "license_file": "LICENSE.md",
+      "status": "downloaded"
+    },
+    "ggplot2": {
+      "id": "ggplot2",
+      "url": "https://github.com/tidyverse/ggplot2",
+      "language": "r",
+      "ref": "main",
+      "license": "MIT",
+      "commit": "b638d654c8189db82a62307fefa84b1da1819da5",
+      "path": "G:\\repos\\code_rag\\ggplot2",
+      "detected_license": "MIT",
+      "license_file": "LICENSE",
+      "status": "downloaded"
+    },
+    "dplyr": {
+      "id": "dplyr",
+      "url": "https://github.com/tidyverse/dplyr",
+      "language": "r",
+      "ref": "main",
+      "license": "MIT",
+      "commit": "819c99f7284b3a413b391c60bea49ae7bfb8bafc",
+      "path": "G:\\repos\\code_rag\\dplyr",
+      "detected_license": "MIT",
+      "license_file": "LICENSE",
+      "status": "downloaded"
+    },
+    "nf-core-scrnaseq": {
+      "id": "nf-core-scrnaseq",
+      "url": "https://github.com/nf-core/scrnaseq",
+      "language": "nextflow",
+      "ref": "main",
+      "license": "MIT",
+      "commit": "1136d995c7a6477de437bc8581cbb7bf34905ed9",
+      "path": "G:\\repos\\code_rag\\nf-core-scrnaseq",
+      "detected_license": "MIT",
+      "license_file": "LICENSE",
+      "status": "downloaded"
+    },
+    "nf-core-atacseq": {
+      "id": "nf-core-atacseq",
+      "url": "https://github.com/nf-core/atacseq",
+      "language": "nextflow",
+      "ref": "main",
+      "license": "MIT",
+      "commit": "86b53046e86128474ddd760ee9c01da2d0643e52",
+      "path": "G:\\repos\\code_rag\\nf-core-atacseq",
+      "detected_license": "MIT",
+      "license_file": "LICENSE",
+      "status": "downloaded"
+    }
+  }
+}

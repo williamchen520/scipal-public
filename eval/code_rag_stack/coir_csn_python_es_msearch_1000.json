@@ -1,0 +1,18 @@
+{
+  "dataset": "CoIR/CodeSearchNet-python",
+  "engine": "Elasticsearch BM25",
+  "subset": {
+    "queries": 1000,
+    "corpus": 280310,
+    "seed": 17
+  },
+  "metrics": {
+    "ndcg@10": 0.7714,
+    "mrr@10": 0.7511,
+    "recall@100": 0.905
+  },
+  "empty_queries": 0,
+  "load_seconds": 22.6,
+  "query_seconds": 6.7,
+  "note": "full corpus, fixed query sample; not official leaderboard"
+}

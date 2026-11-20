@@ -1,0 +1,16 @@
+name: merge-queue
+
+on:
+  merge_group:
+  workflow_dispatch:
+
+jobs:
+  gate:
+    runs-on: [self-hosted, Windows]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Local gate
+        shell: pwsh
+        run: .\scripts\local_gate.ps1

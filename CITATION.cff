@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite this metadata."
+title: "SciPal: an auditable scientific RAG and agent platform"
+type: software
+version: "0.1.4-research-preview"
+date-released: "2026-11-20"
+license: "AGPL-3.0-or-later"
+repository-code: "https://github.com/williamchen520/scipal-public"
+url: "https://github.com/williamchen520/scipal-public"
+abstract: >-
+  SciPal is a local-first scientific retrieval and agent platform with
+  evidence ledgers, provenance, claim audits, human review actions, and
+  an optional evidence-constrained rewrite loop. This is a research
+  preview, not a production service.
+authors:
+  - name: "SciPal contributors"
+keywords:
+  - scientific RAG
+  - evidence ledger
+  - auditability
+  - MCP
+  - code RAG

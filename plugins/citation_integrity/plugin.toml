@@ -1,0 +1,6 @@
+id = "citation_integrity"
+version = "0.1.0"
+core_api = "1"
+entrypoint = "plugins.citation_integrity.plugin:register"
+enabled = false
+description = "DOI/PMID metadata verification and retraction flags"

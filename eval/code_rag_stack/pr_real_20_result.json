@@ -1,0 +1,492 @@
+{
+  "summary": {
+    "lib_2c5709b07c77": {
+      "cases": 2,
+      "file_hit@1": 1.0,
+      "file_hit@3": 1.0,
+      "symbol_hit@1": 0.0
+    },
+    "lib_anndata": {
+      "cases": 2,
+      "file_hit@1": 0.5,
+      "file_hit@3": 0.5,
+      "symbol_hit@1": 0.0
+    },
+    "lib_squidpy": {
+      "cases": 2,
+      "file_hit@1": 0.0,
+      "file_hit@3": 0.0,
+      "symbol_hit@1": 0.0
+    },
+    "lib_scvi_tools": {
+      "cases": 2,
+      "file_hit@1": 0.0,
+      "file_hit@3": 0.0,
+      "symbol_hit@1": 0.0
+    },
+    "lib_snakemake": {
+      "cases": 2,
+      "file_hit@1": 0.5,
+      "file_hit@3": 0.5,
+      "symbol_hit@1": 0.0
+    },
+    "lib_ggplot2": {
+      "cases": 2,
+      "file_hit@1": 0.5,
+      "file_hit@3": 0.5,
+      "symbol_hit@1": 0.0
+    },
+    "lib_dplyr": {
+      "cases": 2,
+      "file_hit@1": 0.5,
+      "file_hit@3": 1.0,
+      "symbol_hit@1": 0.0
+    },
+    "lib_12473817b941": {
+      "cases": 2,
+      "file_hit@1": 0.0,
+      "file_hit@3": 0.5,
+      "symbol_hit@1": 0.0
+    },
+    "lib_nfcore_scrnaseq": {
+      "cases": 2,
+      "file_hit@1": 0.0,
+      "file_hit@3": 0.0,
+      "symbol_hit@1": 0.0
+    },
+    "lib_nfcore_atacseq": {
+      "cases": 2,
+      "file_hit@1": 0.5,
+      "file_hit@3": 0.5,
+      "symbol_hit@1": 0.0
+    }
+  },
+  "rows": [
+    {
+      "id": "2c5709b07c77_01",
+      "library_id": "lib_2c5709b07c77",
+      "category": "pr-title",
+      "query": "perf: speed up igraph RNG adapter for `rng` Generators",
+      "expected_path": "src/scanpy/_utils/random.py",
+      "expected_paths": [
+        "src/scanpy/_utils/random.py",
+        "src/scanpy/tools/_leiden.py"
+      ],
+      "expected_symbol": "",
+      "repo": "scverse/scanpy",
+      "pr": 4518,
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/scanpy/_utils/random.py",
+        "src/scanpy/_utils/__init__.py",
+        "src/scanpy/_utils/random.py"
+      ]
+    },
+    {
+      "id": "2c5709b07c77_02",
+      "library_id": "lib_2c5709b07c77",
+      "category": "pr-title",
+      "query": "fix: allow ingest to handle older anndata",
+      "expected_path": "src/scanpy/tools/_ingest.py",
+      "expected_paths": [
+        "src/scanpy/tools/_ingest.py"
+      ],
+      "expected_symbol": "",
+      "repo": "scverse/scanpy",
+      "pr": 4516,
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/scanpy/tools/_ingest.py",
+        "src/scanpy/tools/_ingest.py",
+        "src/scanpy/_utils/__init__.py"
+      ]
+    },
+    {
+      "id": "anndata_01",
+      "library_id": "lib_anndata",
+      "category": "pr-title",
+      "query": "fix: convert object-dtype dataframe columns on write",
+      "expected_path": "src/anndata/_core/anndata.py",
+      "expected_paths": [
+        "src/anndata/_core/anndata.py",
+        "src/anndata/_io/specs/methods.py",
+        "src/anndata/_io/utils.py"
+      ],
+      "expected_symbol": "",
+      "repo": "scverse/anndata",
+      "pr": 2729,
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/anndata/types.py",
+        "src/anndata/_core/sparse_dataset.py",
+        "src/anndata/abc.py"
+      ]
+    },
+    {
+      "id": "anndata_02",
+      "library_id": "lib_anndata",
+      "category": "pr-title",
+      "query": "feat: implement `AnnData.__setitem__`",
+      "expected_path": "src/anndata/_core/anndata.py",
+      "expected_paths": [
+        "src/anndata/_core/anndata.py",
+        "src/anndata/acc/__init__.py"
+      ],
+      "expected_symbol": "",
+      "repo": "scverse/anndata",
+      "pr": 2724,
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/anndata/_core/anndata.py",
+        "src/anndata/_core/anndata.py",
+        "src/testing/anndata/_pytest.py"
+      ]
+    },
+    {
+      "id": "squidpy_01",
+      "library_id": "lib_squidpy",
+      "category": "pr-title",
+      "query": "Fix spatial_key handling in var_by_distance",
+      "expected_path": "src/squidpy/tl/_var_by_distance.py",
+      "expected_paths": [
+        "src/squidpy/tl/_var_by_distance.py"
+      ],
+      "expected_symbol": "",
+      "repo": "scverse/squidpy",
+      "pr": 1325,
+      "file_rank": 5,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/squidpy/_constants/_pkg_constants.py",
+        "src/squidpy/_constants/_pkg_constants.py",
+        "src/squidpy/_constants/_pkg_constants.py"
+      ]
+    },
+    {
+      "id": "squidpy_02",
+      "library_id": "lib_squidpy",
+      "category": "pr-title",
+      "query": "fix: clear the warnings CI emits",
+      "expected_path": "src/squidpy/experimental/im/_detect_tissue.py",
+      "expected_paths": [
+        "src/squidpy/experimental/im/_detect_tissue.py",
+        "src/squidpy/gr/_nhood.py",
+        "src/squidpy/gr/_ripley.py",
+        "src/squidpy/pl/_ligrec.py",
+        "src/squidpy/pl/_spatial_utils.py"
+      ],
+      "expected_symbol": "",
+      "repo": "scverse/squidpy",
+      "pr": 1310,
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "tests/experimental/test_stitched_labels.py",
+        "tests/utils/test_old_positionals.py",
+        "tests/graph/test_utils.py"
+      ]
+    },
+    {
+      "id": "scvi_tools_01",
+      "library_id": "lib_scvi_tools",
+      "category": "pr-title",
+      "query": "fix(distributions): stabilize float32 NB gradient with respect to mu",
+      "expected_path": "src/scvi/distributions/_negative_binomial.py",
+      "expected_paths": [
+        "src/scvi/distributions/_negative_binomial.py"
+      ],
+      "expected_symbol": "",
+      "repo": "scverse/scvi-tools",
+      "pr": 4087,
+      "file_rank": 7,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/scvi/distributions/_utils.py",
+        "src/scvi/distributions/__init__.py",
+        "src/scvi/distributions/_beta_binomial.py"
+      ]
+    },
+    {
+      "id": "scvi_tools_02",
+      "library_id": "lib_scvi_tools",
+      "category": "pr-title",
+      "query": "fix(scbasset): compute training AUROC on CPU when the model is on MPS",
+      "expected_path": "src/scvi/external/scbasset/_module.py",
+      "expected_paths": [
+        "src/scvi/external/scbasset/_module.py"
+      ],
+      "expected_symbol": "",
+      "repo": "scverse/scvi-tools",
+      "pr": 4075,
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/scvi/external/scbasset/_model.py",
+        "src/scvi/hub/_model.py",
+        "src/scvi/train/_metrics.py"
+      ]
+    },
+    {
+      "id": "snakemake_01",
+      "library_id": "lib_snakemake",
+      "category": "pr-title",
+      "query": "fix: improved, more robust, and more version agnostic serialization of params for passing them to scripts, wrappers, and notebooks",
+      "expected_path": "src/snakemake/common/misc.py",
+      "expected_paths": [
+        "src/snakemake/common/misc.py",
+        "src/snakemake/iocontainers.py",
+        "src/snakemake/script/__init__.py"
+      ],
+      "expected_symbol": "",
+      "repo": "snakemake/snakemake",
+      "pr": 4385,
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/snakemake/iocontainers.py",
+        "src/snakemake/iocontainers.py",
+        "src/snakemake/jobs.py"
+      ]
+    },
+    {
+      "id": "snakemake_02",
+      "library_id": "lib_snakemake",
+      "category": "pr-title",
+      "query": "fix: correct type for software field in reports",
+      "expected_path": "src/snakemake/persistence/__init__.py",
+      "expected_paths": [
+        "src/snakemake/persistence/__init__.py"
+      ],
+      "expected_symbol": "",
+      "repo": "snakemake/snakemake",
+      "pr": 4378,
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "src/snakemake/workflow.py",
+        "src/snakemake/parser.py",
+        "src/snakemake/report/html_reporter/__init__.py"
+      ]
+    },
+    {
+      "id": "ggplot2_01",
+      "library_id": "lib_ggplot2",
+      "category": "pr-title",
+      "query": "Return bare lists from S7 list conversion",
+      "expected_path": "R/all-classes.R",
+      "expected_paths": [
+        "R/all-classes.R"
+      ],
+      "expected_symbol": "",
+      "repo": "tidyverse/ggplot2",
+      "pr": 6916,
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "R/facet-.R",
+        "R/fortify.R",
+        "R/scales-.R"
+      ]
+    },
+    {
+      "id": "ggplot2_02",
+      "library_id": "lib_ggplot2",
+      "category": "pr-title",
+      "query": "Declare compatibility names in the S7 class hierarchy",
+      "expected_path": "R/all-classes.R",
+      "expected_paths": [
+        "R/all-classes.R",
+        "R/plot-build.R",
+        "R/plot.R",
+        "R/theme-elements.R"
+      ],
+      "expected_symbol": "",
+      "repo": "tidyverse/ggplot2",
+      "pr": 6915,
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "R/all-classes.R",
+        "R/plot-construction.R",
+        "R/scale-colour.R"
+      ]
+    },
+    {
+      "id": "dplyr_01",
+      "library_id": "lib_dplyr",
+      "category": "pr-title",
+      "query": "Feature: group_modify() in R/group-map.R",
+      "expected_path": "R/group-map.R",
+      "expected_paths": [
+        "R/group-map.R"
+      ],
+      "expected_symbol": "",
+      "repo": "tidyverse/dplyr",
+      "pr": 7840,
+      "file_rank": 2,
+      "symbol_rank": null,
+      "top_paths": [
+        "R/import-standalone-purrr.R",
+        "R/group-map.R",
+        "R/group-map.R"
+      ]
+    },
+    {
+      "id": "dplyr_02",
+      "library_id": "lib_dplyr",
+      "category": "pr-title",
+      "query": "POC: Custom `summarise()` and `reframe()` groupings",
+      "expected_path": "R/reframe.R",
+      "expected_paths": [
+        "R/reframe.R",
+        "R/summarise.R"
+      ],
+      "expected_symbol": "",
+      "repo": "tidyverse/dplyr",
+      "pr": 7836,
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "R/summarise.R",
+        "R/reframe.R",
+        "R/summarise.R"
+      ]
+    },
+    {
+      "id": "12473817b941_01",
+      "library_id": "lib_12473817b941",
+      "category": "pr-title",
+      "query": "Address review feedback on the 3.28.0 release PR",
+      "expected_path": "main.nf",
+      "expected_paths": [
+        "main.nf",
+        "subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf",
+        "workflows/rnaseq/main.nf"
+      ],
+      "expected_symbol": "",
+      "repo": "nf-core/rnaseq",
+      "pr": 2001,
+      "file_rank": 3,
+      "symbol_rank": null,
+      "top_paths": [
+        "conf/modules/kraken2.config",
+        "nextflow.config",
+        "subworkflows/local/utils_nfcore_rnaseq_pipeline/main.nf"
+      ]
+    },
+    {
+      "id": "12473817b941_02",
+      "library_id": "lib_12473817b941",
+      "category": "pr-title",
+      "query": "Address review nits from the 3.28.0 release PR",
+      "expected_path": "main.nf",
+      "expected_paths": [
+        "main.nf"
+      ],
+      "expected_symbol": "",
+      "repo": "nf-core/rnaseq",
+      "pr": 1998,
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "conf/containers_conda_lock_files_amd64.config",
+        "conf/containers_conda_lock_files_amd64.config",
+        "conf/containers_conda_lock_files_amd64.config"
+      ]
+    },
+    {
+      "id": "nfcore_scrnaseq_01",
+      "library_id": "lib_nfcore_scrnaseq",
+      "category": "pr-title",
+      "query": "Vvalidate input samplesheet for `expected_cells` and `seq_center`",
+      "expected_path": "subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf",
+      "expected_paths": [
+        "subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf"
+      ],
+      "expected_symbol": "",
+      "repo": "nf-core/scrnaseq",
+      "pr": 607,
+      "file_rank": 4,
+      "symbol_rank": null,
+      "top_paths": [
+        "modules/local/parse_cellrangermulti_samplesheet/main.nf",
+        "main.nf",
+        "modules/local/parse_cellrangermulti_samplesheet/main.nf"
+      ]
+    },
+    {
+      "id": "nfcore_scrnaseq_02",
+      "library_id": "lib_nfcore_scrnaseq",
+      "category": "pr-title",
+      "query": "Important! Template update for nf-core/tools v4.2.1",
+      "expected_path": "modules/nf-core/fastqc/main.nf",
+      "expected_paths": [
+        "modules/nf-core/fastqc/main.nf",
+        "subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf"
+      ],
+      "expected_symbol": "",
+      "repo": "nf-core/scrnaseq",
+      "pr": 604,
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "modules/nf-core/kallistobustools/count/main.nf",
+        "modules/nf-core/kallistobustools/ref/main.nf",
+        "modules/nf-core/kallistobustools/count/main.nf"
+      ]
+    },
+    {
+      "id": "nfcore_atacseq_01",
+      "library_id": "lib_nfcore_atacseq",
+      "category": "pr-title",
+      "query": "Apply nf-core/tools 4.1.0 template update with nf-migrate",
+      "expected_path": "main.nf",
+      "expected_paths": [
+        "main.nf",
+        "modules/local/bam_remove_orphans.nf",
+        "modules/local/bamtools_filter.nf",
+        "modules/local/bedtools_genomecov.nf",
+        "modules/local/deseq2_qc.nf",
+        "modules/local/frip_score.nf",
+        "modules/local/genome_blacklist_regions.nf",
+        "modules/local/get_autosomes.nf",
+        "modules/local/gtf2bed.nf",
+        "modules/local/igv.nf"
+      ],
+      "expected_symbol": "",
+      "repo": "nf-core/atacseq",
+      "pr": 471,
+      "file_rank": null,
+      "symbol_rank": null,
+      "top_paths": [
+        "modules/nf-core/deeptools/computematrix/main.nf",
+        "modules/nf-core/deeptools/plotfingerprint/main.nf",
+        "modules/nf-core/deeptools/plotheatmap/main.nf"
+      ]
+    },
+    {
+      "id": "nfcore_atacseq_02",
+      "library_id": "lib_nfcore_atacseq",
+      "category": "pr-title",
+      "query": "Sort peak QC plot inputs deterministically",
+      "expected_path": "modules/local/plot_homer_annotatepeaks.nf",
+      "expected_paths": [
+        "modules/local/plot_homer_annotatepeaks.nf"
+      ],
+      "expected_symbol": "",
+      "repo": "nf-core/atacseq",
+      "pr": 454,
+      "file_rank": 1,
+      "symbol_rank": null,
+      "top_paths": [
+        "modules/local/plot_homer_annotatepeaks.nf",
+        "modules/local/plot_homer_annotatepeaks.nf",
+        "modules/local/plot_macs2_qc.nf"
+      ]
+    }
+  ]
+}

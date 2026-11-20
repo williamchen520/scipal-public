@@ -1,0 +1,2159 @@
+{
+  "_generated": {
+    "do_not_edit": true,
+    "generated_by": "scripts/spec_compile.py",
+    "source": "contract/spec.json",
+    "source_sha256": "344c726803ffaab5b6fbf592082d97355e7b1acf7a5116452f440a9bbbac60d3"
+  },
+  "architecture": "ARCHITECTURE.json",
+  "duplicate_routes": [],
+  "endpoint_count": 304,
+  "endpoints": [
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/<path:path>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/abstracts/<paper_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/abstracts/list",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/agentic/search",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/agentic/search_async",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/auth/login",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/auth/logout",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/auth/me",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/auth/workspace",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/claims",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/claims/",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/claims/<claim_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/claims/<claim_id>/decision",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/claims/<claim_id>/events",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/claims/<claim_id>/evidence",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/claims/<claim_id>/interrogate",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/claims/<claim_id>/note",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/claims/<claim_id>/search",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/communities",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/data/aggregate",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/data/artifacts",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "PUT"
+      ],
+      "rule": "/api/data/artifacts/<artifact_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/data/artifacts/<artifact_id>/validate",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/data/audit",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/data/classify",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/data/cloud-gate",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/data/cloud-send",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/data/profile",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/data/projects",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/data/sample",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/data/session",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/domain-packs",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/domain-packs/",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/domain-packs/<pack_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/domain-packs/<pack_id>/validate",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/embed",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/evidence/context",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/audit/ledgers",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/audit/ledgers/<answer_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/audit/ledgers/<answer_id>/chain",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/audit/ledgers/<answer_id>/rewrite",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/audit/ledgers/<answer_id>/revisions",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/audit/ledgers/<answer_id>/actions",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/audit/ledgers/<answer_id>/actions",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/audit/errors",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/audit/errors",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/audit/errors/<error_id>/transition",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/audit/queue",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/audit/queue/<queue_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/evidence/search",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/experiment-access-requests",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/experiments",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/experiments/<experiment_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "PUT"
+      ],
+      "rule": "/api/experiments/<experiment_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/experiments/<experiment_id>/access-requests",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/experiments/<experiment_id>/access-requests",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/experiments/<experiment_id>/access-requests/<request_id>/decide",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/experiments/<experiment_id>/audit",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/experiments/<experiment_id>/revisions",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/experiments/<experiment_id>/runs",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/experiments/<experiment_id>/runs",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/experiments/<experiment_id>/sign",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/experiments/<experiment_id>/signatures",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "DELETE"
+      ],
+      "rule": "/api/experiments/<run_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "PATCH"
+      ],
+      "rule": "/api/experiments/<run_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/experiments/<run_id>/attachments",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/experiments/<run_id>/attachments",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "DELETE"
+      ],
+      "rule": "/api/experiments/<run_id>/attachments/<file_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/experiments/<run_id>/attachments/<file_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/graph/stats",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/guard/check",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/guard/stats",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/guard/term/<term>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/health",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/ingest",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/ingest/<task_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/ingest/<task_id>/cancel",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/notes",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/notes",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "DELETE"
+      ],
+      "rule": "/api/notes/<note_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "PUT"
+      ],
+      "rule": "/api/notes/<note_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/<paper_id>/annotate",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/annotations",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/graph",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/pdf",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/supplementary",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/<paper_id>/supplementary",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "DELETE"
+      ],
+      "rule": "/api/papers/<paper_id>/supplementary/<supp_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/supplementary/<supp_id>/download",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/<paper_id>/supplementary/link",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/trace",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/trace.png",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/import",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/local",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/parse",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/parse_async",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/projects",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/projects",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/projects/<project_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "PUT"
+      ],
+      "rule": "/api/projects/<project_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/projects/<project_id>/copy",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/projects/<project_id>/experiments",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/projects/<project_id>/experiments",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/projects/<project_id>/members",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/protocols",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/protocols/<protocol_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/protocols/<protocol_id>/export",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/protocols/<protocol_id>/runs",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/protocols/<protocol_id>/runs",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/protocols/import",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/qa/ask",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/qa/ask_async",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/qa/status",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/references",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/references/import",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/retrieve",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/review-projects",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review-projects/<project_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/review-projects/<project_id>/adjudicate",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review-projects/<project_id>/brief",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review-projects/<project_id>/conflicts",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review-projects/<project_id>/events",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/review-projects/<project_id>/evidence",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review-projects/<project_id>/evidence.csv",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review-projects/<project_id>/export.json",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/review-projects/<project_id>/from-watch",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/review-projects/<project_id>/import-file",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/review-projects/<project_id>/import-records",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review-projects/<project_id>/kappa",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/review-projects/<project_id>/members",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/review-projects/<project_id>/papers",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/review-projects/<project_id>/pico",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review-projects/<project_id>/prisma",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review-projects/<project_id>/prisma.svg",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review-projects/<project_id>/report.docx",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review-projects/<project_id>/report.html",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review-projects/<project_id>/report.pdf",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/review-projects/<project_id>/risk-of-bias",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/review-projects/<project_id>/screen",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/review-projects/<project_id>/webhooks",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "DELETE"
+      ],
+      "rule": "/api/review-projects/<project_id>/webhooks/<int:webhook_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/review-projects/import",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review/<review_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review/<review_id>/sentence/<sentence_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/review/assign_papers",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/review/cancel/<task_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/review/generate",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/review/generate_async",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review/llm_status",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/review/outline",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/review/outline/save",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review/outline/saved",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "DELETE"
+      ],
+      "rule": "/api/review/outline/saved/<name>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review/outline/saved/<name>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review/running_task",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/review/search_and_assign",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/review/task/<task_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/reviews",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/reviews/<review_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/reviews/<review_id>/to-protocol",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/runs/<run_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "PUT"
+      ],
+      "rule": "/api/runs/<run_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/runs/<run_id>/comparison",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/search/clear_download_history",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/search/download_history",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/search/download_online",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/search/download_queue",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/search/download_status",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/search/hybrid",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/search/federated",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/ingest-tracking/batches",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/ingest-tracking/batches/<batch_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/ingest-tracking/batches/<batch_id>/items",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/ingest-tracking/batches/<batch_id>/finish",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/ingest-tracking/papers/<paper_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/ingest-tracking/papers/<paper_id>/review",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/search/online",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/search/retry_download",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/tasks",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/tasks/<task_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/tasks/<task_id>/events",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/verify",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/watch/items/<int:item_id>/feedback",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/watch/items/<int:item_id>/read",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "rule": "/api/watch/profiles",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "DELETE",
+        "GET",
+        "PUT"
+      ],
+      "rule": "/api/watch/profiles/<int:profile_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/watch/profiles/<int:profile_id>/discover",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET",
+        "PUT"
+      ],
+      "rule": "/api/watch/profiles/<int:profile_id>/journals",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/watch/profiles/<int:profile_id>/latest",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/watch/profiles/<int:profile_id>/run",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/watch/profiles/<int:profile_id>/runs",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/watch/runs/<int:run_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/watch/runs/<int:run_id>/digest.md",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/watch/runs/<int:run_id>/latest",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/watch/runs/<int:run_id>/read-all",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/watch/topics",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/workspaces",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/workspaces",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/workspaces/<workspace_id>/members",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/workspaces/<workspace_id>/members",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/workspaces/<workspace_id>/role",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/libraries",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/libraries",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/libraries/<library_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "DELETE"
+      ],
+      "rule": "/api/libraries/<library_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/code/libraries",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/code/libraries/<library_id>/environment",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/code/libraries/<library_id>/tree",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/code/libraries/<library_id>/outline",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/code/libraries/<library_id>/status",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/code/libraries/<library_id>/search",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/code/libraries/<library_id>/feedback",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/code/libraries/<library_id>/answer",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/code/libraries/<library_id>/implement",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/code/libraries/<library_id>/implement/execute",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/code/libraries/<library_id>/executions",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/code/libraries/<library_id>/executions/stats",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/code/libraries/<library_id>/executions",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/code/libraries/<library_id>/context",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/code/libraries/<library_id>/map",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/code/libraries/<library_id>/trace",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/providers",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/providers/<rag_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/providers/<rag_id>/health",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/plans",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/plans/<plan_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/plans/<plan_id>/approve",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/plans/<plan_id>/dispatch",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/plans/<plan_id>/cancel",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/jobs/<job_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/jobs/lease",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/jobs/<job_id>/heartbeat",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/jobs/<job_id>/complete",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/jobs/<job_id>/fail",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/models",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/models/<model_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/index-bindings",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/index-bindings",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/runs/<run_id>/evidence",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/runs/<run_id>/evidence",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/runs/<run_id>/artifacts",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/runs/<run_id>/artifacts",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/query",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/plans",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/multi",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/multi/<multi_run_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/multi/<multi_run_id>/adjudications",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/multi/<multi_run_id>/conflicts",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/multi/<multi_run_id>/export.json",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/audit/adjudications",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/audit/conflicts",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/multi/<multi_run_id>/export/ro-crate.zip",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/multi/<multi_run_id>/agreement",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/multi/<multi_run_id>/assignments",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/multi/<multi_run_id>/assignments",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/multi/<multi_run_id>/finalization",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/rag/multi/<multi_run_id>/finalize",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/multi/<multi_run_id>/verify-seal",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/audit/adjudications.csv",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/audit/conflicts.csv",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/multi/<multi_run_id>/export/evidence.csv",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/rag/seal-keys",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/outline",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/paragraphs",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/paragraphs/first",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/paragraphs/<para_id>/sentences",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/<paper_id>/evidence",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/analysis",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/code-links",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/<paper_id>/code-links",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/<paper_id>/code-links/extract",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/<paper_id>/code-links/<link_id>/validate",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/code-libraries",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/<paper_id>/code-links/<link_id>/bind",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/modules",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/data-flow",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/<paper_id>/replication-plan",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/sections/<section_type>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/sources",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/jats",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/html",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/pdf-native",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/federated",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/imports",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/imports/<import_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/imports/<import_id>/items",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/imports/<import_id>/retry",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/imports/<import_id>/process",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/imports/upload",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/imports/<import_id>/enqueue",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/imports/local",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/review",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/<paper_id>/review",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/<paper_id>/publish",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/<paper_id>/annotations",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "PATCH"
+      ],
+      "rule": "/api/papers/<paper_id>/annotations/<annotation_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "DELETE"
+      ],
+      "rule": "/api/papers/<paper_id>/annotations/<annotation_id>",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/external-ids",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "rule": "/api/papers/<paper_id>/enrich",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/references",
+      "status": "implemented"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "rule": "/api/papers/<paper_id>/citations",
+      "status": "implemented"
+    }
+  ]
+}

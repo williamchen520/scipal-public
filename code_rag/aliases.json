@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "reviewed": "2026-11-15",
+  "notes": "Auditable code-domain abbreviation table. Each entry is explicit; no model guessing.",
+  "aliases": [
+    {
+      "phrase": "principal component",
+      "aliases": [
+        "pca"
+      ],
+      "reason": "standard dimensionality-reduction abbreviation",
+      "source": "code domain convention"
+    },
+    {
+      "phrase": "uniform manifold",
+      "aliases": [
+        "umap"
+      ],
+      "reason": "UMAP is the standard name",
+      "source": "code domain convention"
+    },
+    {
+      "phrase": "t-distributed",
+      "aliases": [
+        "tsne"
+      ],
+      "reason": "t-SNE abbreviation",
+      "source": "code domain convention"
+    },
+    {
+      "phrase": "highly variable",
+      "aliases": [
+        "hvg"
+      ],
+      "reason": "HVG is common Scanpy terminology",
+      "source": "Scanpy documentation terminology"
+    },
+    {
+      "phrase": "quality control",
+      "aliases": [
+        "qc",
+        "fastqc"
+      ],
+      "reason": "FASTQC is the standard FastQ QC tool; qc is the generic tag",
+      "source": "nf-core/fastqc module naming"
+    },
+    {
+      "phrase": "log transform",
+      "aliases": [
+        "log1p"
+      ],
+      "reason": "Scanpy log transform API is log1p",
+      "source": "Scanpy API naming"
+    },
+    {
+      "phrase": "dot plot",
+      "aliases": [
+        "dotplot"
+      ],
+      "reason": "Scanpy API uses dotplot",
+      "source": "Scanpy API naming"
+    },
+    {
+      "phrase": "diffusion pseudotime",
+      "aliases": [
+        "dpt"
+      ],
+      "reason": "Scanpy DPT abbreviation",
+      "source": "Scanpy API naming"
+    },
+    {
+      "phrase": "diffusion map",
+      "aliases": [
+        "diffmap"
+      ],
+      "reason": "Scanpy diffmap API",
+      "source": "Scanpy API naming"
+    },
+    {
+      "phrase": "read 10x mtx",
+      "aliases": [
+        "read_10x_mtx"
+      ],
+      "reason": "Scanpy 10x mtx reader",
+      "source": "Scanpy API naming"
+    },
+    {
+      "phrase": "load",
+      "aliases": [
+        "read"
+      ],
+      "reason": "load is read from storage",
+      "source": "common API verb"
+    },
+    {
+      "phrase": "open",
+      "aliases": [
+        "read"
+      ],
+      "reason": "open a dataset is read",
+      "source": "common API verb"
+    },
+    {
+      "phrase": "persist",
+      "aliases": [
+        "write"
+      ],
+      "reason": "persist model/data is write/save",
+      "source": "common API verb"
+    },
+    {
+      "phrase": "combine",
+      "aliases": [
+        "concat"
+      ],
+      "reason": "combine objects is concat/merge",
+      "source": "data API convention"
+    },
+    {
+      "phrase": "annotated data matrix",
+      "aliases": [
+        "anndata"
+      ],
+      "reason": "AnnData is an annotated data matrix",
+      "source": "AnnData documentation"
+    },
+    {
+      "phrase": "variational inference",
+      "aliases": [
+        "scvi"
+      ],
+      "reason": "scVI is a variational inference model",
+      "source": "scvi-tools documentation"
+    },
+    {
+      "phrase": "neighborhood enrichment",
+      "aliases": [
+        "nhood"
+      ],
+      "reason": "squidpy nhood_enrichment",
+      "source": "squidpy API"
+    },
+    {
+      "phrase": "spatial autocorrelation",
+      "aliases": [
+        "autocorr"
+      ],
+      "reason": "squidpy spatial_autocorr",
+      "source": "squidpy API"
+    }
+  ]
+}

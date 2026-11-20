@@ -1,0 +1,947 @@
+{
+  "summary": {
+    "questions": 50,
+    "evidence_recall@10": 0.84,
+    "evidence_recall@20": 0.88,
+    "anchor_recall@10": 0.82,
+    "mrr": 0.6073,
+    "ndcg@10": 0.8898,
+    "elapsed_s": 234.1,
+    "backend": "sentence (SCIPAL_EVIDENCE_BACKEND default)"
+  },
+  "rows": [
+    {
+      "question_id": "s1-001",
+      "category": "factoid",
+      "question": "How many neurons does the mouse brain contain?",
+      "gold_paper_id": "paper_import_106459887625",
+      "gold_sentence_ids": [
+        "paper_import_106459887625_para_0050_sent_001"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 48.847,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-002",
+      "category": "factoid",
+      "question": "Which six modulatory neuron types are listed in the mouse brain atlas?",
+      "gold_paper_id": "paper_import_106459887625",
+      "gold_sentence_ids": [
+        "paper_import_106459887625_para_0055_sent_004"
+      ],
+      "returned": 20,
+      "hit_ranks": [],
+      "anchor_hit_rank": null,
+      "recall@10": false,
+      "recall@20": false,
+      "latency_s": 2.632,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-003",
+      "category": "method",
+      "question": "Which software was used to calculate cumulative positions and mean velocities?",
+      "gold_paper_id": "paper_import_106459887625",
+      "gold_sentence_ids": [
+        "paper_import_106459887625_para_0084_sent_004"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.329,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-004",
+      "category": "dataset",
+      "question": "Which mouse model was used to study the whole-brain distribution of microglia?",
+      "gold_paper_id": "paper_import_106459887625",
+      "gold_sentence_ids": [
+        "paper_import_106459887625_para_0060_sent_003"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 11.604,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-005",
+      "category": "comparison",
+      "question": "Which LHA segment showed a stronger glutamatergic bias?",
+      "gold_paper_id": "paper_import_106459887625",
+      "gold_sentence_ids": [
+        "paper_import_106459887625_para_0026_sent_007"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        2,
+        4,
+        5,
+        7
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.705,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-006",
+      "category": "factoid",
+      "question": "What did prior genome analysis suggest about Acanthamoeba energy metabolism?",
+      "gold_paper_id": "paper_PMC13632651",
+      "gold_sentence_ids": [
+        "paper_PMC13632651_para_00003_sent_003"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        3,
+        9
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.067,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-007",
+      "category": "method",
+      "question": "Under which oxygen conditions were Acanthamoeba cells profiled?",
+      "gold_paper_id": "paper_PMC13632651",
+      "gold_sentence_ids": [
+        "paper_PMC13632651_para_00033_sent_003"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        3,
+        7
+      ],
+      "anchor_hit_rank": 7,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.179,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-008",
+      "category": "dataset",
+      "question": "How were defined gas atmospheres established in the chambers?",
+      "gold_paper_id": "paper_PMC13632651",
+      "gold_sentence_ids": [
+        "paper_PMC13632651_para_00134_sent_002"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        4
+      ],
+      "anchor_hit_rank": 4,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.549,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-009",
+      "category": "method",
+      "question": "Which statistical test was used for the volcano plots and barplots?",
+      "gold_paper_id": "paper_PMC13632651",
+      "gold_sentence_ids": [
+        "paper_PMC13632651_para_00155_sent_003"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.245,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-010",
+      "category": "comparison",
+      "question": "How did NDH2 protein levels change under hypoxia and anoxia?",
+      "gold_paper_id": "paper_PMC13632651",
+      "gold_sentence_ids": [
+        "paper_PMC13632651_para_00036_sent_002"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        7,
+        20
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.939,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-011",
+      "category": "factoid",
+      "question": "What did Liu et al. identify using a Gli1+ lineage-tracing model?",
+      "gold_paper_id": "paper_PMC13632294",
+      "gold_sentence_ids": [
+        "paper_PMC13632294_para_00014_sent_002"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 9.717,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-012",
+      "category": "factoid",
+      "question": "What did recent work report that TSCs can differentiate into?",
+      "gold_paper_id": "paper_PMC13632294",
+      "gold_sentence_ids": [
+        "paper_PMC13632294_para_00028_sent_001"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        6
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.91,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-013",
+      "category": "dataset",
+      "question": "Which lineage-tracing model identified theca cell precursors?",
+      "gold_paper_id": "paper_PMC13632294",
+      "gold_sentence_ids": [
+        "paper_PMC13632294_para_00014_sent_002"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        6
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.435,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-014",
+      "category": "factoid",
+      "question": "What does the follicular vascular network deliver?",
+      "gold_paper_id": "paper_PMC13632294",
+      "gold_sentence_ids": [
+        "paper_PMC13632294_para_00062_sent_002"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        2,
+        11
+      ],
+      "anchor_hit_rank": 2,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.448,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-015",
+      "category": "factoid",
+      "question": "How long did ovarian support last after TSC transplantation?",
+      "gold_paper_id": "paper_PMC13632294",
+      "gold_sentence_ids": [
+        "paper_PMC13632294_para_00092_sent_002"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        2,
+        9
+      ],
+      "anchor_hit_rank": 2,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.911,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-016",
+      "category": "dataset",
+      "question": "In which cases does emerging clinical evidence support CD19-targeted CAR-T cell therapy?",
+      "gold_paper_id": "paper_PMC13627087",
+      "gold_sentence_ids": [
+        "paper_PMC13627087_para_00044_sent_001"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        4,
+        10
+      ],
+      "anchor_hit_rank": 4,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 11.288,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-017",
+      "category": "method",
+      "question": "Which mouse model was used to test NMDAR CAAR-T cells?",
+      "gold_paper_id": "paper_PMC13627087",
+      "gold_sentence_ids": [
+        "paper_PMC13627087_para_00057_sent_008"
+      ],
+      "returned": 20,
+      "hit_ranks": [],
+      "anchor_hit_rank": null,
+      "recall@10": false,
+      "recall@20": false,
+      "latency_s": 12.173,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-018",
+      "category": "dataset",
+      "question": "Which target increases with age and is proposed for CAR-T therapy?",
+      "gold_paper_id": "paper_PMC13627087",
+      "gold_sentence_ids": [
+        "paper_PMC13627087_para_00065_sent_001"
+      ],
+      "returned": 20,
+      "hit_ranks": [],
+      "anchor_hit_rank": null,
+      "recall@10": false,
+      "recall@20": false,
+      "latency_s": 3.152,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-019",
+      "category": "contradiction",
+      "question": "What difficulties does the CAR-T field face in target identification?",
+      "gold_paper_id": "paper_PMC13627087",
+      "gold_sentence_ids": [
+        "paper_PMC13627087_para_00070_sent_010"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        5
+      ],
+      "anchor_hit_rank": 5,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.603,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-020",
+      "category": "contradiction",
+      "question": "Why are unintended genetic modifications a safety concern?",
+      "gold_paper_id": "paper_PMC13627087",
+      "gold_sentence_ids": [
+        "paper_PMC13627087_para_00083_sent_002"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        14
+      ],
+      "anchor_hit_rank": 14,
+      "recall@10": false,
+      "recall@20": true,
+      "latency_s": 2.506,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-021",
+      "category": "factoid",
+      "question": "In the heart, what has dysregulation of lncRNA-regulated cardiac processes been associated with?",
+      "gold_paper_id": "paper_PMC13631190",
+      "gold_sentence_ids": [
+        "paper_PMC13631190_para_00003_sent_006"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        3,
+        4
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 4.109,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-022",
+      "category": "dataset",
+      "question": "At which developmental stages was Elektra expression measured?",
+      "gold_paper_id": "paper_PMC13631190",
+      "gold_sentence_ids": [
+        "paper_PMC13631190_para_00020_sent_004"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        11,
+        18
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.303,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-023",
+      "category": "method",
+      "question": "What analysis followed Qki inhibition in HL1 cardiomyocytes?",
+      "gold_paper_id": "paper_PMC13631190",
+      "gold_sentence_ids": [
+        "paper_PMC13631190_para_00033_sent_031"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        3,
+        4
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.707,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-024",
+      "category": "factoid",
+      "question": "How did nuclear Elektra regulation differ from other compartments?",
+      "gold_paper_id": "paper_PMC13631190",
+      "gold_sentence_ids": [
+        "paper_PMC13631190_para_00051_sent_005"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        6,
+        15
+      ],
+      "anchor_hit_rank": 6,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.371,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-025",
+      "category": "factoid",
+      "question": "What do the Elektra and Alien findings suggest about lncRNAs in cardiac development?",
+      "gold_paper_id": "paper_PMC13631190",
+      "gold_sentence_ids": [
+        "paper_PMC13631190_para_00057_sent_003"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        8,
+        14
+      ],
+      "anchor_hit_rank": 14,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.609,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-026",
+      "category": "factoid",
+      "question": "What can fine programmability of particle size improve?",
+      "gold_paper_id": "paper_PMC13620059",
+      "gold_sentence_ids": [
+        "paper_PMC13620059_para_00059_sent_002"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        4,
+        7
+      ],
+      "anchor_hit_rank": 4,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.791,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-027",
+      "category": "dataset",
+      "question": "Which vaccine formulation did Ai et al. test?",
+      "gold_paper_id": "paper_PMC13620059",
+      "gold_sentence_ids": [
+        "paper_PMC13620059_para_00082_sent_006"
+      ],
+      "returned": 20,
+      "hit_ranks": [],
+      "anchor_hit_rank": null,
+      "recall@10": false,
+      "recall@20": false,
+      "latency_s": 3.45,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-028",
+      "category": "method",
+      "question": "How can phospholipid choice affect LNP formulations?",
+      "gold_paper_id": "paper_PMC13620059",
+      "gold_sentence_ids": [
+        "paper_PMC13620059_para_00019_sent_005"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        2,
+        20
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.546,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-029",
+      "category": "contradiction",
+      "question": "What balance is crucial for reactogenicity?",
+      "gold_paper_id": "paper_PMC13620059",
+      "gold_sentence_ids": [
+        "paper_PMC13620059_para_00075_sent_007"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        2
+      ],
+      "anchor_hit_rank": 2,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.257,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-030",
+      "category": "factoid",
+      "question": "What role are mRNA vaccines poised to retain?",
+      "gold_paper_id": "paper_PMC13620059",
+      "gold_sentence_ids": [
+        "paper_PMC13620059_para_00098_sent_003"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        2,
+        7
+      ],
+      "anchor_hit_rank": 2,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.653,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-031",
+      "category": "factoid",
+      "question": "What increases NOS2 deposition in aggresomes?",
+      "gold_paper_id": "paper_PMC13607564",
+      "gold_sentence_ids": [
+        "paper_PMC13607564_para_00272_sent_001"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        14
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.879,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-032",
+      "category": "factoid",
+      "question": "What induces TAK1?",
+      "gold_paper_id": "paper_PMC13607564",
+      "gold_sentence_ids": [
+        "paper_PMC13607564_para_00024_sent_005"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.407,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-033",
+      "category": "factoid",
+      "question": "What happens when A2AR signaling is enhanced in IBD?",
+      "gold_paper_id": "paper_PMC13607564",
+      "gold_sentence_ids": [
+        "paper_PMC13607564_para_00214_sent_003"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        4
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.837,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-034",
+      "category": "comparison",
+      "question": "How do butyrate and HDAC inhibitors affect NOS2 expression?",
+      "gold_paper_id": "paper_PMC13607564",
+      "gold_sentence_ids": [
+        "paper_PMC13607564_para_00309_sent_002"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        3
+      ],
+      "anchor_hit_rank": 3,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.943,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-035",
+      "category": "contradiction",
+      "question": "What conflicting evidence exists about miR-146a binding sites in NOS2?",
+      "gold_paper_id": "paper_PMC13607564",
+      "gold_sentence_ids": [
+        "paper_PMC13607564_para_00181_sent_012"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        3
+      ],
+      "anchor_hit_rank": 3,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.971,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-036",
+      "category": "factoid",
+      "question": "What is lacking in the molecular understanding of neutrophils in glioblastoma?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "gold_sentence_ids": [
+        "paper_import_15c6a0f864b0_para_0001_sent_001"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.644,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-037",
+      "category": "method",
+      "question": "Which workflows were combined to study neutrophil populations?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "gold_sentence_ids": [
+        "paper_import_15c6a0f864b0_para_0006_sent_001"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        2
+      ],
+      "anchor_hit_rank": 2,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 4.008,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-038",
+      "category": "dataset",
+      "question": "How many proteins were identified per single neutrophil?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "gold_sentence_ids": [
+        "paper_import_15c6a0f864b0_para_0009_sent_007"
+      ],
+      "returned": 20,
+      "hit_ranks": [],
+      "anchor_hit_rank": null,
+      "recall@10": false,
+      "recall@20": false,
+      "latency_s": 3.595,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-039",
+      "category": "factoid",
+      "question": "What did the data show about neutrophil granule protein abundance?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "gold_sentence_ids": [
+        "paper_import_15c6a0f864b0_para_0011_sent_002"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.866,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-040",
+      "category": "contradiction",
+      "question": "What limits single-cell proteomic analysis of small cells?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "gold_sentence_ids": [
+        "paper_import_15c6a0f864b0_para_0012_sent_006"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        7
+      ],
+      "anchor_hit_rank": 7,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 4.578,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-041",
+      "category": "factoid",
+      "question": "What does BA.3.2.1 decouple?",
+      "gold_paper_id": "paper_PMC13615522",
+      "gold_sentence_ids": [
+        "paper_PMC13615522_para_00054_sent_003"
+      ],
+      "returned": 20,
+      "hit_ranks": [],
+      "anchor_hit_rank": null,
+      "recall@10": false,
+      "recall@20": false,
+      "latency_s": 2.229,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-042",
+      "category": "method",
+      "question": "What was used to model unresolved loops?",
+      "gold_paper_id": "paper_PMC13615522",
+      "gold_sentence_ids": [
+        "paper_PMC13615522_para_00020_sent_003"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        7
+      ],
+      "anchor_hit_rank": 7,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.92,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-043",
+      "category": "dataset",
+      "question": "Which serum panel was used for the first sample panel?",
+      "gold_paper_id": "paper_PMC13615522",
+      "gold_sentence_ids": [
+        "paper_PMC13615522_para_00063_sent_002"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        3,
+        18
+      ],
+      "anchor_hit_rank": 3,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 4.462,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-044",
+      "category": "method",
+      "question": "How was the LP.8.1 spike-hACE2 complex prepared?",
+      "gold_paper_id": "paper_PMC13615522",
+      "gold_sentence_ids": [
+        "paper_PMC13615522_para_00078_sent_003"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        9,
+        14,
+        16
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.519,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-045",
+      "category": "comparison",
+      "question": "How did S2' band abundance differ across variants?",
+      "gold_paper_id": "paper_PMC13615522",
+      "gold_sentence_ids": [
+        "paper_PMC13615522_para_00006_sent_003"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        2,
+        15
+      ],
+      "anchor_hit_rank": 2,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.303,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-046",
+      "category": "factoid",
+      "question": "What functions does skin serve as a barrier?",
+      "gold_paper_id": "paper_PMC13657230",
+      "gold_sentence_ids": [
+        "paper_PMC13416412_para_00000_sent_002",
+        "paper_PMC13614170_para_00000_sent_002",
+        "paper_PMC13614170_para_00000_sent_003",
+        "paper_PMC13657230_para_00000_sent_001"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        2,
+        3,
+        7,
+        11
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.975,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-047",
+      "category": "factoid",
+      "question": "What did safety assessments show for topical urolithin A?",
+      "gold_paper_id": "paper_PMC13657230",
+      "gold_sentence_ids": [
+        "paper_PMC13657230_para_00021_sent_002"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1,
+        4,
+        7
+      ],
+      "anchor_hit_rank": 7,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.146,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-048",
+      "category": "method",
+      "question": "How was PGE2 measured in culture supernatants?",
+      "gold_paper_id": "paper_PMC13657230",
+      "gold_sentence_ids": [
+        "paper_PMC13657230_para_00044_sent_005"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        1
+      ],
+      "anchor_hit_rank": 1,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 2.564,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-049",
+      "category": "dataset",
+      "question": "How were test materials applied in the 8-week study?",
+      "gold_paper_id": "paper_PMC13657230",
+      "gold_sentence_ids": [
+        "paper_PMC13657230_para_00058_sent_008"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        17
+      ],
+      "anchor_hit_rank": 17,
+      "recall@10": false,
+      "recall@20": true,
+      "latency_s": 4.083,
+      "sufficient": true
+    },
+    {
+      "question_id": "s1-050",
+      "category": "comparison",
+      "question": "What do current anti-aging ingredients mostly address?",
+      "gold_paper_id": "paper_PMC13657230",
+      "gold_sentence_ids": [
+        "paper_PMC13657230_para_00001_sent_002"
+      ],
+      "returned": 20,
+      "hit_ranks": [
+        2,
+        5,
+        20
+      ],
+      "anchor_hit_rank": 2,
+      "recall@10": true,
+      "recall@20": true,
+      "latency_s": 3.105,
+      "sufficient": true
+    }
+  ]
+}

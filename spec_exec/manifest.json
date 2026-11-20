@@ -1,0 +1,70 @@
+{
+  "_generated": {
+    "do_not_edit": true,
+    "generated_by": "scripts/spec_compile.py",
+    "source": "contract/spec.json",
+    "source_sha256": "344c726803ffaab5b6fbf592082d97355e7b1acf7a5116452f440a9bbbac60d3"
+  },
+  "active_exceptions": 0,
+  "exceptions_file": "contract/exceptions.json",
+  "name": "SciPal executable contract pilot",
+  "rules": [
+    {
+      "approval": "required",
+      "check": "builtin:architecture_json",
+      "id": "architecture.parse",
+      "kind": "architecture_json",
+      "owner": "human",
+      "severity": "blocking"
+    },
+    {
+      "approval": "required",
+      "check": "builtin:route_unique",
+      "id": "architecture.route_unique",
+      "kind": "route_unique",
+      "owner": "human",
+      "severity": "blocking"
+    },
+    {
+      "approval": "required",
+      "check": "builtin:required_paths",
+      "id": "repo.required_paths",
+      "kind": "required_paths",
+      "owner": "human",
+      "severity": "blocking"
+    },
+    {
+      "approval": "required",
+      "check": "builtin:stdlib_only",
+      "id": "contract_tools.stdlib",
+      "kind": "stdlib_only",
+      "owner": "human",
+      "severity": "blocking"
+    },
+    {
+      "approval": "required",
+      "check": "builtin:runtime_contract",
+      "id": "runtime.contract_app",
+      "kind": "runtime_contract",
+      "owner": "human",
+      "severity": "blocking"
+    }
+  ],
+  "schema_version": 1,
+  "source_commit": "6cb0a41",
+  "source_files": [
+    {
+      "path": "contract/spec.json",
+      "sha256": "344c726803ffaab5b6fbf592082d97355e7b1acf7a5116452f440a9bbbac60d3"
+    },
+    {
+      "path": "ARCHITECTURE.json",
+      "sha256": "e15a0d5b3bfe45282e5c373001faa23ae5af12cb5d9028e937c5dd35a281499b"
+    }
+  ],
+  "spec_approval": {
+    "approved_by": "human",
+    "approved_on": "2026-11-20",
+    "spec_sha256": "344c726803ffaab5b6fbf592082d97355e7b1acf7a5116452f440a9bbbac60d3"
+  }
+}

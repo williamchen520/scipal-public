@@ -1,0 +1,20 @@
+{
+  "dataset": "CoIR/CodeSearchNet-python",
+  "engine": "ParadeDB pg_search BM25",
+  "subset": {
+    "queries": 1000,
+    "corpus": 280310,
+    "seed": 17
+  },
+  "metrics": {
+    "ndcg@10": 0.9014,
+    "mrr@10": 0.8865,
+    "recall@100": 0.983
+  },
+  "empty_queries": 0,
+  "timeouts": 0,
+  "slow_queries": [],
+  "load_seconds": 5.7,
+  "query_seconds": 51.6,
+  "note": "full corpus, fixed query sample; not official leaderboard"
+}

@@ -1,0 +1,41 @@
+{
+  "_generated": {
+    "do_not_edit": true,
+    "generated_by": "scripts/spec_compile.py",
+    "source": "contract/spec.json",
+    "source_sha256": "344c726803ffaab5b6fbf592082d97355e7b1acf7a5116452f440a9bbbac60d3"
+  },
+  "all_covered": true,
+  "rules": [
+    {
+      "check": "builtin:architecture_json",
+      "covered": true,
+      "id": "architecture.parse",
+      "kind": "architecture_json"
+    },
+    {
+      "check": "builtin:route_unique",
+      "covered": true,
+      "id": "architecture.route_unique",
+      "kind": "route_unique"
+    },
+    {
+      "check": "builtin:required_paths",
+      "covered": true,
+      "id": "repo.required_paths",
+      "kind": "required_paths"
+    },
+    {
+      "check": "builtin:stdlib_only",
+      "covered": true,
+      "id": "contract_tools.stdlib",
+      "kind": "stdlib_only"
+    },
+    {
+      "check": "builtin:runtime_contract",
+      "covered": true,
+      "id": "runtime.contract_app",
+      "kind": "runtime_contract"
+    }
+  ]
+}

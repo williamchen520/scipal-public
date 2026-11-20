@@ -1,0 +1,11 @@
+{
+  "repos": [
+    {
+      "library_id": "lib_example_scanpy",
+      "path": "G:/repos/scanpy-1.12.5",
+      "repo_url": "https://github.com/scverse/scanpy",
+      "language": "python",
+      "ref": "1.12.5"
+    }
+  ]
+}

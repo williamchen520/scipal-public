@@ -1,0 +1,21 @@
+{
+  "rag_id": "docs",
+  "version": "0.1.0",
+  "display_name": "Docs RAG",
+  "capabilities": ["doc_search"],
+  "endpoint": "http://127.0.0.1:5011",
+  "database_name": "scipal_docs",
+  "schema_version": 1,
+  "model_bindings": {
+    "embedding": "BAAI/bge-small-zh-v1.5",
+    "rerank": "none"
+  },
+  "resource_profile": {"cpu": 1, "ram_gb": 2, "gpu": "none"},
+  "data_residency": "local",
+  "health": {
+    "type": "http",
+    "url_env": "SCIPAL_DOCS_API_URL",
+    "default_url": "http://127.0.0.1:5011",
+    "path": "/health"
+  }
+}

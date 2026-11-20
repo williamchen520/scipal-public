@@ -1,0 +1,49 @@
+name: arch-guard
+
+on:
+  pull_request:
+    paths:
+      - "ARCHITECTURE.json"
+      - "ARCH_CONTRACT.json"
+      - "scripts/guard.py"
+      - "api_server.py"
+      - "routes/**"
+      - "scripts/validate_arch.py"
+      - "scripts/export_routes.py"
+      - "scripts/check_import_boundaries.py"
+      - "scripts/code_budget.py"
+      - "scripts/check_plugins.py"
+      - "docs/architecture/code-budget.json"
+      - "scripts/check_domains.py"
+      - "scripts/migration_status.py"
+      - "deploy/migrations.lock.json"
+      - "deploy/sql/**"
+      - "docs/architecture/domains.json"
+      - "docs/architecture/generated/**"
+      - "services/**"
+      - "code_rag/**"
+      - "build_db/**"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    # Same self-hosted Windows runner used by the eval workflow.
+    runs-on: [self-hosted, Windows]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate ARCHITECTURE.json against Flask routes
+        run: python scripts/validate_arch.py
+      - name: Check generated route manifest
+        run: python scripts/export_routes.py --check
+      - name: Check production code budget
+        run: python scripts/code_budget.py --strict
+      - name: Check plugin boundary
+        run: python scripts/check_plugins.py
+      - name: Check import boundaries
+        run: python scripts/check_import_boundaries.py --strict
+      - name: Check domain ownership
+        run: python scripts/check_domains.py --strict
+      - name: Check migration lock
+        run: python scripts/migration_status.py --check
+      - name: Run architecture guard
+        run: python scripts/guard.py --json

@@ -1,0 +1,835 @@
+[
+  {
+    "id": "2c5709b07c77_01",
+    "library_id": "lib_2c5709b07c77",
+    "category": "pr-title",
+    "query": "igraph calls `_RNGIgraph.getrandbits` → `Generator.integers(…)` once per random number.",
+    "expected_path": "src/scanpy/_utils/random.py",
+    "expected_paths": [
+      "src/scanpy/_utils/random.py",
+      "src/scanpy/tools/_leiden.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/scanpy",
+    "pr": 4518
+  },
+  {
+    "id": "2c5709b07c77_02",
+    "library_id": "lib_2c5709b07c77",
+    "category": "pr-title",
+    "query": "[tests]: https://scanpy.readthedocs.io/page/dev/testing.html#writing-tests [release notes]: https://scanpy.readthedocs.io/page/dev/documentation.html#adding-to-the-docs",
+    "expected_path": "src/scanpy/tools/_ingest.py",
+    "expected_paths": [
+      "src/scanpy/tools/_ingest.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/scanpy",
+    "pr": 4516
+  },
+  {
+    "id": "2c5709b07c77_03",
+    "library_id": "lib_2c5709b07c77",
+    "category": "pr-title",
+    "query": "[tests]: https://scanpy.readthedocs.io/page/dev/testing.html#writing-tests [release notes]: https://scanpy.readthedocs.io/page/dev/documentation.html#adding-to-the-docs",
+    "expected_path": "src/scanpy/neighbors/_connectivity.py",
+    "expected_paths": [
+      "src/scanpy/neighbors/_connectivity.py",
+      "src/scanpy/tools/_ingest.py",
+      "src/scanpy/tools/_umap.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/scanpy",
+    "pr": 4506
+  },
+  {
+    "id": "2c5709b07c77_04",
+    "library_id": "lib_2c5709b07c77",
+    "category": "pr-title",
+    "query": "[tests]: https://scanpy.readthedocs.io/page/dev/testing.html#writing-tests [release notes]: https://scanpy.readthedocs.io/page/dev/documentation.html#adding-to-the-docs",
+    "expected_path": "benchmarks/benchmarks/preprocessing_log.py",
+    "expected_paths": [
+      "benchmarks/benchmarks/preprocessing_log.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/scanpy",
+    "pr": 4505
+  },
+  {
+    "id": "2c5709b07c77_05",
+    "library_id": "lib_2c5709b07c77",
+    "category": "pr-title",
+    "query": "[tests]: https://scanpy.readthedocs.io/page/dev/testing.html#writing-tests [release notes]: https://scanpy.readthedocs.io/page/dev/documentation.html#adding-to-the-docs",
+    "expected_path": "src/scanpy/tools/_rank_genes_groups.py",
+    "expected_paths": [
+      "src/scanpy/tools/_rank_genes_groups.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/scanpy",
+    "pr": 4504
+  },
+  {
+    "id": "anndata_01",
+    "library_id": "lib_anndata",
+    "category": "pr-title",
+    "query": "TODO: wait for https://github.com/scverse/scverse-misc/pull/105 and use that instead of `__init_subclass__` and the test",
+    "expected_path": "src/anndata/_core/anndata.py",
+    "expected_paths": [
+      "src/anndata/_core/anndata.py",
+      "src/anndata/acc/__init__.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/anndata",
+    "pr": 2724
+  },
+  {
+    "id": "anndata_02",
+    "library_id": "lib_anndata",
+    "category": "pr-title",
+    "query": "Small broken out, self-contained fix of #2707",
+    "expected_path": "src/anndata/_io/specs/registry.py",
+    "expected_paths": [
+      "src/anndata/_io/specs/registry.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/anndata",
+    "pr": 2708
+  },
+  {
+    "id": "anndata_03",
+    "library_id": "lib_anndata",
+    "category": "pr-title",
+    "query": "This gets even easier if we implement setting (which we should):",
+    "expected_path": "src/anndata/_core/anndata.py",
+    "expected_paths": [
+      "src/anndata/_core/anndata.py",
+      "src/anndata/_io/h5ad.py",
+      "src/anndata/_io/utils.py",
+      "src/anndata/_io/zarr.py",
+      "src/anndata/acc/__init__.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/anndata",
+    "pr": 2707
+  },
+  {
+    "id": "anndata_04",
+    "library_id": "lib_anndata",
+    "category": "pr-title",
+    "query": "This PR prevents anndata from warning so aggressively.",
+    "expected_path": "src/anndata/_io/specs/methods.py",
+    "expected_paths": [
+      "src/anndata/_io/specs/methods.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/anndata",
+    "pr": 2704
+  },
+  {
+    "id": "anndata_05",
+    "library_id": "lib_anndata",
+    "category": "pr-title",
+    "query": "Supersedes local branch fix-bool-positionals. See commit history for details.",
+    "expected_path": "src/anndata/_core/anndata.py",
+    "expected_paths": [
+      "src/anndata/_core/anndata.py",
+      "src/anndata/_core/file_backing.py",
+      "src/anndata/_core/index.py",
+      "src/anndata/_io/specs/methods.py",
+      "src/anndata/_io/write.py",
+      "src/anndata/compat/__init__.py",
+      "src/anndata/experimental/multi_files/_anncollection.py",
+      "src/anndata/experimental/pytorch/_annloader.py",
+      "src/anndata/logging.py",
+      "src/anndata/utils.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/anndata",
+    "pr": 2699
+  },
+  {
+    "id": "squidpy_01",
+    "library_id": "lib_squidpy",
+    "category": "pr-title",
+    "query": "The third row pins the old floor to confirm the `>=0.26` bump is required by the new morphology API rather than papering over a break: 0.25.2 still passes, it just warns.",
+    "expected_path": "src/squidpy/experimental/im/_detect_tissue.py",
+    "expected_paths": [
+      "src/squidpy/experimental/im/_detect_tissue.py",
+      "src/squidpy/gr/_nhood.py",
+      "src/squidpy/gr/_ripley.py",
+      "src/squidpy/pl/_ligrec.py",
+      "src/squidpy/pl/_spatial_utils.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/squidpy",
+    "pr": 1310
+  },
+  {
+    "id": "squidpy_02",
+    "library_id": "lib_squidpy",
+    "category": "pr-title",
+    "query": "Description `PercentilePostprocessor` now takes the percentile over off-diagonal entries only, so the diagonal zeros of `dst` no longer lower the threshold. Graphs built with `percentile` change slightly.",
+    "expected_path": "src/squidpy/gr/neighbors.py",
+    "expected_paths": [
+      "src/squidpy/gr/neighbors.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/squidpy",
+    "pr": 1309
+  },
+  {
+    "id": "squidpy_03",
+    "library_id": "lib_squidpy",
+    "category": "pr-title",
+    "query": "`spatial_scatter` checked the image keys under `adata.uns[spatial_key]` but loaded images and scalefactors from `adata.uns[\"spatial\"]`, so any other `spatial_key` failed. This loads images, scalefactors and segmentation images from `adata.uns[spatial_key]`, as the `library_id` docs describe.",
+    "expected_path": "src/squidpy/pl/_spatial_utils.py",
+    "expected_paths": [
+      "src/squidpy/pl/_spatial_utils.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/squidpy",
+    "pr": 1304
+  },
+  {
+    "id": "squidpy_04",
+    "library_id": "lib_squidpy",
+    "category": "pr-title",
+    "query": "Follow up: - once fast-array-utils exposes some of these metrics as inlinable functions, we can dedup against it - after this chain, deprecating `ImageContainer` removes the last use of `parallelize`",
+    "expected_path": "src/squidpy/gr/_build.py",
+    "expected_paths": [
+      "src/squidpy/gr/_build.py",
+      "src/squidpy/gr/_nhood.py",
+      "src/squidpy/gr/_ppatterns.py",
+      "src/squidpy/gr/_utils.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/squidpy",
+    "pr": 1302
+  },
+  {
+    "id": "squidpy_05",
+    "library_id": "lib_squidpy",
+    "category": "pr-title",
+    "query": "`assign_stitch_groups` now stores its arguments under `uns[\"tiling_stitch\"][\"params\"]`, so the re-run hint in `calculate_tiling_qc` prints them as is. This drops `_STITCH_PARAM_KEYS`, `_STITCH_COLUMNS` and the private imports into `_tiling_qc`.",
+    "expected_path": "src/squidpy/experimental/tl/_tiling_qc.py",
+    "expected_paths": [
+      "src/squidpy/experimental/tl/_tiling_qc.py",
+      "src/squidpy/experimental/tl/_tiling_stitch.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/squidpy",
+    "pr": 1298
+  },
+  {
+    "id": "scvi_tools_01",
+    "library_id": "lib_scvi_tools",
+    "category": "pr-title",
+    "query": "Extended the issue for multi-modal models.",
+    "expected_path": "src/scvi/distributions/_negative_binomial.py",
+    "expected_paths": [
+      "src/scvi/distributions/_negative_binomial.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/scvi-tools",
+    "pr": 4087
+  },
+  {
+    "id": "scvi_tools_02",
+    "library_id": "lib_scvi_tools",
+    "category": "pr-title",
+    "query": "`test_destvi_vamp_prior_from_normal_condscvi` (default and `\"normal\"` prior): trains DestVI and checks the proportions. - `test_destvi_qz_prior_follows_module`: after `module.double()`, `qz_prior` and its samples are float64. CI has no GPU, so this checks the same mechanism through dtype.",
+    "expected_path": "src/scvi/model/_destvi.py",
+    "expected_paths": [
+      "src/scvi/model/_destvi.py",
+      "src/scvi/module/_mrdeconv.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/scvi-tools",
+    "pr": 4064
+  },
+  {
+    "id": "scvi_tools_03",
+    "library_id": "lib_scvi_tools",
+    "category": "pr-title",
+    "query": "`test_destvi_vamp_prior_from_normal_condscvi` (default and `\"normal\"` prior): trains DestVI and checks the proportions. - `test_destvi_qz_prior_follows_module`: after `module.double()`, `qz_prior` and its samples are float64. CI has no GPU, so this checks the same mechanism through dtype.",
+    "expected_path": "src/scvi/model/_destvi.py",
+    "expected_paths": [
+      "src/scvi/model/_destvi.py",
+      "src/scvi/module/_mrdeconv.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/scvi-tools",
+    "pr": 4052
+  },
+  {
+    "id": "scvi_tools_04",
+    "library_id": "lib_scvi_tools",
+    "category": "pr-title",
+    "query": "Trimmed port of #4017, plus the crash fix from #4018. Outputs are bit-identical before and after.",
+    "expected_path": "src/scvi/external/cytovi/_model.py",
+    "expected_paths": [
+      "src/scvi/external/cytovi/_model.py",
+      "src/scvi/external/mrvi/_model.py",
+      "src/scvi/model/_utils.py",
+      "src/scvi/model/base/_rnamixin.py",
+      "src/scvi/module/base/_base_module.py",
+      "src/scvi/module/base/_decorators.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/scvi-tools",
+    "pr": 4049
+  },
+  {
+    "id": "scvi_tools_05",
+    "library_id": "lib_scvi_tools",
+    "category": "pr-title",
+    "query": "Adds regression unit tests for each fix and changelog entries.",
+    "expected_path": "src/scvi/external/cytovi/_model.py",
+    "expected_paths": [
+      "src/scvi/external/cytovi/_model.py",
+      "src/scvi/external/cytovi/_utils.py"
+    ],
+    "expected_symbol": "",
+    "repo": "scverse/scvi-tools",
+    "pr": 4048
+  },
+  {
+    "id": "snakemake_01",
+    "library_id": "lib_snakemake",
+    "category": "pr-title",
+    "query": "Bug Fixes** * Clearer guidance is provided when restoring parameters requires an optional library that is unavailable.",
+    "expected_path": "src/snakemake/common/misc.py",
+    "expected_paths": [
+      "src/snakemake/common/misc.py",
+      "src/snakemake/iocontainers.py",
+      "src/snakemake/script/__init__.py"
+    ],
+    "expected_symbol": "",
+    "repo": "snakemake/snakemake",
+    "pr": 4385
+  },
+  {
+    "id": "snakemake_02",
+    "library_id": "lib_snakemake",
+    "category": "pr-title",
+    "query": "Tests** * Added coverage for a Conda-based workflow using NumPy 2.2.3.",
+    "expected_path": "src/snakemake/persistence/__init__.py",
+    "expected_paths": [
+      "src/snakemake/persistence/__init__.py"
+    ],
+    "expected_symbol": "",
+    "repo": "snakemake/snakemake",
+    "pr": 4378
+  },
+  {
+    "id": "snakemake_03",
+    "library_id": "lib_snakemake",
+    "category": "pr-title",
+    "query": "Part of #4240, without resolving it: on `main`, these timer chains multiply the scheduling rounds (10,195 instead of 397 for 400 jobs below), and each round repeats the scheduling work discussed there.",
+    "expected_path": "src/snakemake/scheduling/job_scheduler.py",
+    "expected_paths": [
+      "src/snakemake/scheduling/job_scheduler.py"
+    ],
+    "expected_symbol": "",
+    "repo": "snakemake/snakemake",
+    "pr": 4372
+  },
+  {
+    "id": "snakemake_04",
+    "library_id": "lib_snakemake",
+    "category": "pr-title",
+    "query": "200 independent jobs (one input each, `sleep 1`), `-c8`, with a delay injected on every `stat` of an input to emulate a high-latency filesystem (single run per point, macOS):",
+    "expected_path": "src/snakemake/scheduling/job_scheduler.py",
+    "expected_paths": [
+      "src/snakemake/scheduling/job_scheduler.py"
+    ],
+    "expected_symbol": "",
+    "repo": "snakemake/snakemake",
+    "pr": 4370
+  },
+  {
+    "id": "snakemake_05",
+    "library_id": "lib_snakemake",
+    "category": "pr-title",
+    "query": "Use a rule's effective pathvars when creating default storage queries, including multiext prefixes, while keeping workflow defaults for callers without a rule context.",
+    "expected_path": "src/snakemake/path_modifier.py",
+    "expected_paths": [
+      "src/snakemake/path_modifier.py",
+      "src/snakemake/rules.py"
+    ],
+    "expected_symbol": "",
+    "repo": "snakemake/snakemake",
+    "pr": 4366
+  },
+  {
+    "id": "ggplot2_01",
+    "library_id": "lib_ggplot2",
+    "category": "pr-title",
+    "query": "S7's built-in conversion already handles these list-backed objects. Keep the explicit method for compatibility across S7 versions and to avoid potential recursion between `as.list()` and `convert()` if conversion reaches the `as.list()` fallback.",
+    "expected_path": "R/all-classes.R",
+    "expected_paths": [
+      "R/all-classes.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/ggplot2",
+    "pr": 6916
+  },
+  {
+    "id": "ggplot2_02",
+    "library_id": "lib_ggplot2",
+    "category": "pr-title",
+    "query": "Declare `ggplot`, `ggplot_built`, `uneval`, and the four legacy element names in the S7 class hierarchy. Subclasses then inherit these compatibility names, which are currently added only by ggplot2's constructors.",
+    "expected_path": "R/all-classes.R",
+    "expected_paths": [
+      "R/all-classes.R",
+      "R/plot-build.R",
+      "R/plot.R",
+      "R/theme-elements.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/ggplot2",
+    "pr": 6915
+  },
+  {
+    "id": "ggplot2_03",
+    "library_id": "lib_ggplot2",
+    "category": "pr-title",
+    "query": "Plot and theme addition currently reports `e2` in errors with development S7. Capture the original operand in the method so errors identify expressions such as `geom_point`, while retaining the existing capture path for S7 0.2.2.",
+    "expected_path": "R/plot-construction.R",
+    "expected_paths": [
+      "R/plot-construction.R",
+      "R/zzz.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/ggplot2",
+    "pr": 6914
+  },
+  {
+    "id": "ggplot2_04",
+    "library_id": "lib_ggplot2",
+    "category": "pr-title",
+    "query": "Besides the warning, with `drop = FALSE` a named variable was returned as is instead of as an id, and `id()` over a named variable and another one errored in `vapply()`. Those now give the same ids as the unnamed variable.",
+    "expected_path": "R/backports.R",
+    "expected_paths": [
+      "R/backports.R",
+      "R/compat-plyr.R",
+      "R/facet-.R",
+      "R/facet-grid-.R",
+      "R/facet-labeller.R",
+      "R/facet-wrap.R",
+      "R/guide-axis-logticks.R",
+      "R/guide-colorsteps.R",
+      "R/guide-legend.R",
+      "R/labels.R",
+      "R/layer-sf.R",
+      "R/legend-draw.R",
+      "R/position-dodge.R",
+      "R/position-jitterdodge.R",
+      "R/scale-.R",
+      "R/scale-date.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/ggplot2",
+    "pr": 6908
+  },
+  {
+    "id": "ggplot2_05",
+    "library_id": "lib_ggplot2",
+    "category": "pr-title",
+    "query": "This fixes a minor documentation issue: the sentence about `coord_polar()` being superseded by `coord_radial()` was worded confusingly, probably missing the word \"superseded\".",
+    "expected_path": "R/coord-radial.R",
+    "expected_paths": [
+      "R/coord-radial.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/ggplot2",
+    "pr": 6905
+  },
+  {
+    "id": "dplyr_01",
+    "library_id": "lib_dplyr",
+    "category": "pr-title",
+    "query": "This PR adds `.by` and `.col` arguments to `group_modify()` `.by` instrad of `group_by()` and `.col` instead of `~.x$col` Updated `group_modify.data.frame` and `group_modify.grouped_df` accordingly",
+    "expected_path": "R/group-map.R",
+    "expected_paths": [
+      "R/group-map.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/dplyr",
+    "pr": 7840
+  },
+  {
+    "id": "dplyr_02",
+    "library_id": "lib_dplyr",
+    "category": "pr-title",
+    "query": "The idea is quite interesting though. By scoping it to a transient type of grouping that exists _only_ within the `summarise()` call, you get to sidestep all of these issues related to the `grouped_df` class https://github.com/tidyverse/dplyr/issues/4722#issuecomment-577336343",
+    "expected_path": "R/reframe.R",
+    "expected_paths": [
+      "R/reframe.R",
+      "R/summarise.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/dplyr",
+    "pr": 7836
+  },
+  {
+    "id": "dplyr_03",
+    "library_id": "lib_dplyr",
+    "category": "pr-title",
+    "query": "Now that we finally have the new C level bindings API",
+    "expected_path": "R/data-mask.R",
+    "expected_paths": [
+      "R/data-mask.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/dplyr",
+    "pr": 7819
+  },
+  {
+    "id": "dplyr_04",
+    "library_id": "lib_dplyr",
+    "category": "pr-title",
+    "query": "Very tricky little edge case with `reframe()`.",
+    "expected_path": "R/data-mask.R",
+    "expected_paths": [
+      "R/data-mask.R",
+      "R/reframe.R",
+      "R/summarise.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/dplyr",
+    "pr": 7799
+  },
+  {
+    "id": "dplyr_05",
+    "library_id": "lib_dplyr",
+    "category": "pr-title",
+    "query": "Closes https://github.com/tidyverse/dplyr/issues/7794",
+    "expected_path": "R/case-when.R",
+    "expected_paths": [
+      "R/case-when.R"
+    ],
+    "expected_symbol": "",
+    "repo": "tidyverse/dplyr",
+    "pr": 7795
+  },
+  {
+    "id": "12473817b941_01",
+    "library_id": "lib_12473817b941",
+    "category": "pr-title",
+    "query": "No functional change beyond the `main.nf` closure.",
+    "expected_path": "main.nf",
+    "expected_paths": [
+      "main.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/rnaseq",
+    "pr": 1998
+  },
+  {
+    "id": "12473817b941_02",
+    "library_id": "lib_12473817b941",
+    "category": "pr-title",
+    "query": "Updates `bowtie2/align` and `bowtie2/build` to nf-core/modules master, picking up nf-core/modules#13676.",
+    "expected_path": "modules/nf-core/bowtie2/align/main.nf",
+    "expected_paths": [
+      "modules/nf-core/bowtie2/align/main.nf",
+      "modules/nf-core/bowtie2/build/main.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/rnaseq",
+    "pr": 1997
+  },
+  {
+    "id": "12473817b941_03",
+    "library_id": "lib_12473817b941",
+    "category": "pr-title",
+    "query": "| PR | Summary | |---|---| | #1969 | Add `--fail_on_low_trimmed_reads`, `--fail_on_low_mapped_reads` and `--fail_on_undetermined_strandedness` to fail the run, instead of silently skipping the sample or defaulting to `unstranded` |",
+    "expected_path": "main.nf",
+    "expected_paths": [
+      "main.nf",
+      "modules/local/sample_check_failed/main.nf",
+      "modules/nf-core/bbmap/bbsplit/main.nf",
+      "modules/nf-core/bedtools/genomecov/main.nf",
+      "modules/nf-core/bowtie2/align/main.nf",
+      "modules/nf-core/bowtie2/build/main.nf",
+      "modules/nf-core/bracken/bracken/main.nf",
+      "modules/nf-core/cat/fastq/main.nf",
+      "modules/nf-core/custom/catadditionalfasta/main.nf",
+      "modules/nf-core/custom/gtffilter/main.nf",
+      "modules/nf-core/custom/multiqccustombiotype/main.nf",
+      "modules/nf-core/custom/rsemmergecounts/main.nf",
+      "modules/nf-core/custom/tx2gene/main.nf",
+      "modules/nf-core/dupradar/main.nf",
+      "modules/nf-core/eautils/gtf2bed/main.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/rnaseq",
+    "pr": 1996
+  },
+  {
+    "id": "12473817b941_04",
+    "library_id": "lib_12473817b941",
+    "category": "pr-title",
+    "query": "Fix:** add `.first()` to the `HISAT2_BUILD` output in `subworkflows/local/prepare_genome_indices/main.nf`, making the index a value channel. This matches the other index builds in the same file (Salmon, Kallisto, SortMeRNA), which already use `.first()`.",
+    "expected_path": "subworkflows/local/prepare_genome_indices/main.nf",
+    "expected_paths": [
+      "subworkflows/local/prepare_genome_indices/main.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/rnaseq",
+    "pr": 1994
+  },
+  {
+    "id": "12473817b941_05",
+    "library_id": "lib_12473817b941",
+    "category": "pr-title",
+    "query": "Routine `nf-core modules update --all` with nf-core/tools 4.2.1 (the version pinned in `.nf-core.yml`).",
+    "expected_path": "modules/nf-core/bbmap/bbsplit/main.nf",
+    "expected_paths": [
+      "modules/nf-core/bbmap/bbsplit/main.nf",
+      "modules/nf-core/bedtools/genomecov/main.nf",
+      "modules/nf-core/bowtie2/align/main.nf",
+      "modules/nf-core/bowtie2/build/main.nf",
+      "modules/nf-core/bracken/bracken/main.nf",
+      "modules/nf-core/cat/fastq/main.nf",
+      "modules/nf-core/custom/catadditionalfasta/main.nf",
+      "modules/nf-core/custom/gtffilter/main.nf",
+      "modules/nf-core/custom/multiqccustombiotype/main.nf",
+      "modules/nf-core/custom/rsemmergecounts/main.nf",
+      "modules/nf-core/custom/tx2gene/main.nf",
+      "modules/nf-core/dupradar/main.nf",
+      "modules/nf-core/fastp/main.nf",
+      "modules/nf-core/fastqc/main.nf",
+      "modules/nf-core/fq/lint/main.nf",
+      "modules/nf-core/fq/subsample/main.nf",
+      "modules/nf-core/gffread/main.nf",
+      "modules/nf-core/gunzip/main.nf",
+      "modules/nf-core/hisat2/align/main.nf",
+      "modules/nf-core/hisat2/build/main.nf",
+      "modules/nf-core/hisat2/extractsplicesites/main.nf",
+      "modules/nf-core/kallisto/index/main.nf",
+      "modules/nf-core/kallisto/quant/main.nf",
+      "modules/nf-core/kraken2/kraken2/main.nf",
+      "modules/nf-core/multiqc/main.nf",
+      "modules/nf-core/picard/markduplicates/main.nf",
+      "modules/nf-core/preseq/lcextrap/main.nf",
+      "modules/nf-core/qualimap/rnaseq/main.nf",
+      "modules/nf-core/ribodetector/main.nf",
+      "modules/nf-core/rsem/calculateexpression/main.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/rnaseq",
+    "pr": 1993
+  },
+  {
+    "id": "nfcore_scrnaseq_01",
+    "library_id": "lib_nfcore_scrnaseq",
+    "category": "pr-title",
+    "query": "The pipeline now checks `expected_cells` and `seq_center` across grouped rows for the same sample. If the values differ, the pipeline stops and identifies the sample as in nf-core/rnaseq.",
+    "expected_path": "subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf",
+    "expected_paths": [
+      "subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/scrnaseq",
+    "pr": 607
+  },
+  {
+    "id": "nfcore_scrnaseq_02",
+    "library_id": "lib_nfcore_scrnaseq",
+    "category": "pr-title",
+    "query": "Please make sure to merge this pull-request as soon as possible, resolving any merge conflicts in the `nf-core-template-merge-4.2.1` branch (or your own fork, if you prefer). Once complete, make a new minor release of your pipeline.",
+    "expected_path": "modules/nf-core/fastqc/main.nf",
+    "expected_paths": [
+      "modules/nf-core/fastqc/main.nf",
+      "subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/scrnaseq",
+    "pr": 604
+  },
+  {
+    "id": "nfcore_scrnaseq_03",
+    "library_id": "lib_nfcore_scrnaseq",
+    "category": "pr-title",
+    "query": "The matched 10k PBMC GEX + V(D)J test data has too few reads to call cells, so there is no test of the GEX-gated case.",
+    "expected_path": "subworkflows/local/align_cellrangermulti/main.nf",
+    "expected_paths": [
+      "subworkflows/local/align_cellrangermulti/main.nf",
+      "subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf",
+      "workflows/scrnaseq.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/scrnaseq",
+    "pr": 595
+  },
+  {
+    "id": "nfcore_scrnaseq_04",
+    "library_id": "lib_nfcore_scrnaseq",
+    "category": "pr-title",
+    "query": "Closes https://github.com/nf-core/scrnaseq/issues/606",
+    "expected_path": "modules/local/star_align/main.nf",
+    "expected_paths": [
+      "modules/local/star_align/main.nf",
+      "subworkflows/local/simpleaf/main.nf",
+      "subworkflows/local/starsolo/main.nf",
+      "workflows/scrnaseq.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/scrnaseq",
+    "pr": 590
+  },
+  {
+    "id": "nfcore_scrnaseq_05",
+    "library_id": "lib_nfcore_scrnaseq",
+    "category": "pr-title",
+    "query": "Closes https://github.com/nf-core/scrnaseq/issues/585: - Added a json schema to validate the input samplesheet when using `--aligner cellrangerarc` - Updated `simpleaf` and `kallisto` modules - Added `hdf5plugin` to `mtx_to_h5ad` module to work with most recent version of `simpleaf`",
+    "expected_path": "subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf",
+    "expected_paths": [
+      "subworkflows/local/utils_nfcore_scrnaseq_pipeline/main.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/scrnaseq",
+    "pr": 584
+  },
+  {
+    "id": "nfcore_atacseq_01",
+    "library_id": "lib_nfcore_atacseq",
+    "category": "pr-title",
+    "query": "`nextflow config` parses with both the v1 and v2 syntax parsers and differs from `dev` only by the template's new `process_low_memory` label. The pipeline tests have not been run.",
+    "expected_path": "main.nf",
+    "expected_paths": [
+      "main.nf",
+      "modules/local/bam_remove_orphans.nf",
+      "modules/local/bamtools_filter.nf",
+      "modules/local/bedtools_genomecov.nf",
+      "modules/local/deseq2_qc.nf",
+      "modules/local/frip_score.nf",
+      "modules/local/genome_blacklist_regions.nf",
+      "modules/local/get_autosomes.nf",
+      "modules/local/gtf2bed.nf",
+      "modules/local/igv.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/atacseq",
+    "pr": 471
+  },
+  {
+    "id": "nfcore_atacseq_02",
+    "library_id": "lib_nfcore_atacseq",
+    "category": "pr-title",
+    "query": "Fixes an intermittent nf-test snapshot failure in `tests/skip_trimming.nf.test`.",
+    "expected_path": "modules/local/plot_homer_annotatepeaks.nf",
+    "expected_paths": [
+      "modules/local/plot_homer_annotatepeaks.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/atacseq",
+    "pr": 454
+  },
+  {
+    "id": "nfcore_atacseq_03",
+    "library_id": "lib_nfcore_atacseq",
+    "category": "pr-title",
+    "query": "Copy of PR 448 to verify that lint and nf-test work, then will close it.",
+    "expected_path": "main.nf",
+    "expected_paths": [
+      "main.nf",
+      "modules/local/bam_remove_orphans.nf",
+      "modules/local/bamtools_filter.nf",
+      "modules/local/bedtools_genomecov.nf",
+      "modules/local/deseq2_qc.nf",
+      "modules/local/frip_score.nf",
+      "modules/local/genome_blacklist_regions.nf",
+      "modules/local/get_autosomes.nf",
+      "modules/local/gtf2bed.nf",
+      "modules/local/igv.nf",
+      "modules/local/multiqc.nf",
+      "modules/local/multiqc_custom_peaks.nf",
+      "modules/local/plot_homer_annotatepeaks.nf",
+      "modules/local/samplesheet_check.nf",
+      "modules/local/star_align.nf",
+      "modules/local/star_genomegenerate.nf",
+      "modules/local/tss_extract.nf",
+      "modules/nf-core/ataqv/ataqv/main.nf",
+      "modules/nf-core/ataqv/mkarv/main.nf",
+      "modules/nf-core/bowtie2/align/main.nf",
+      "modules/nf-core/bowtie2/build/main.nf",
+      "modules/nf-core/bwa/index/main.nf",
+      "modules/nf-core/bwa/mem/main.nf",
+      "modules/nf-core/chromap/chromap/main.nf",
+      "modules/nf-core/chromap/index/main.nf",
+      "modules/nf-core/custom/getchromsizes/main.nf",
+      "modules/nf-core/deeptools/computematrix/main.nf",
+      "modules/nf-core/deeptools/plotfingerprint/main.nf",
+      "modules/nf-core/deeptools/plotheatmap/main.nf",
+      "modules/nf-core/deeptools/plotprofile/main.nf",
+      "modules/nf-core/gffread/main.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/atacseq",
+    "pr": 450
+  },
+  {
+    "id": "nfcore_atacseq_04",
+    "library_id": "lib_nfcore_atacseq",
+    "category": "pr-title",
+    "query": "Updates all nf-core modules and subworkflows to their latest upstream versions (except `subread`, which had to be pinned to version 2.0.1, see details below) and reconciles the resulting call-signature changes across the pipeline. No intended change in pipeline behavior. This implements Issue 447.",
+    "expected_path": "main.nf",
+    "expected_paths": [
+      "main.nf",
+      "modules/local/bam_remove_orphans.nf",
+      "modules/local/bamtools_filter.nf",
+      "modules/local/bedtools_genomecov.nf",
+      "modules/local/deseq2_qc.nf",
+      "modules/local/frip_score.nf",
+      "modules/local/genome_blacklist_regions.nf",
+      "modules/local/get_autosomes.nf",
+      "modules/local/gtf2bed.nf",
+      "modules/local/igv.nf",
+      "modules/local/multiqc.nf",
+      "modules/local/multiqc_custom_peaks.nf",
+      "modules/local/plot_homer_annotatepeaks.nf",
+      "modules/local/samplesheet_check.nf",
+      "modules/local/star_align.nf",
+      "modules/local/star_genomegenerate.nf",
+      "modules/local/tss_extract.nf",
+      "modules/nf-core/ataqv/ataqv/main.nf",
+      "modules/nf-core/ataqv/mkarv/main.nf",
+      "modules/nf-core/bowtie2/align/main.nf",
+      "modules/nf-core/bowtie2/build/main.nf",
+      "modules/nf-core/bwa/index/main.nf",
+      "modules/nf-core/bwa/mem/main.nf",
+      "modules/nf-core/chromap/chromap/main.nf",
+      "modules/nf-core/chromap/index/main.nf",
+      "modules/nf-core/custom/getchromsizes/main.nf",
+      "modules/nf-core/deeptools/computematrix/main.nf",
+      "modules/nf-core/deeptools/plotfingerprint/main.nf",
+      "modules/nf-core/deeptools/plotheatmap/main.nf",
+      "modules/nf-core/deeptools/plotprofile/main.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/atacseq",
+    "pr": 448
+  },
+  {
+    "id": "nfcore_atacseq_05",
+    "library_id": "lib_nfcore_atacseq",
+    "category": "pr-title",
+    "query": "Changes: - lowercase `channel` factories (Channel.* -> channel.*) - declare explicit closure parameters instead of implicit `it` - prefix unused parameters/variables with `_` - normalize explicit-parameter closure formatting (spacing around `->` and braces; consistent `item` parameter naming)",
+    "expected_path": "subworkflows/local/align_star.nf",
+    "expected_paths": [
+      "subworkflows/local/align_star.nf",
+      "subworkflows/local/bam_bedgraph_bigwig_bedtools_ucsc.nf",
+      "subworkflows/local/bam_filter_bamtools.nf",
+      "subworkflows/local/bed_consensus_quantify_qc_bedtools_featurecounts_deseq2.nf",
+      "subworkflows/local/bigwig_plot_deeptools.nf",
+      "subworkflows/local/input_check.nf",
+      "subworkflows/local/prepare_genome.nf",
+      "workflows/atacseq.nf"
+    ],
+    "expected_symbol": "",
+    "repo": "nf-core/atacseq",
+    "pr": 446
+  }
+]

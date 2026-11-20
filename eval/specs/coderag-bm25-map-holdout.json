@@ -1,0 +1,17 @@
+{
+  "id": "coderag-bm25-map-holdout-2026-11-16",
+  "metric": "file@1",
+  "dataset": "per_library_holdout_20",
+  "corpus": "10 code libraries / 17,537 units",
+  "split": "offset 20 holdout, not used for tuning",
+  "sample_size": 188,
+  "baseline": "bm25",
+  "candidate": "bm25_map",
+  "external_anchor": "CoIR CodeSearchNet-python ES BM25 full 14,918",
+  "heldout": "yes, one-shot before deployment",
+  "threshold": null,
+  "threshold_basis": "no absolute threshold; relative improvement only",
+  "owner": "Chenwei",
+  "reviewer": "pending independent review",
+  "decision_rule": "candidate file@1 >= baseline on heldout; report CI; no post-hoc threshold changes"
+}

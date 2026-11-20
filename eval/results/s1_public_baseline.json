@@ -1,0 +1,14 @@
+{
+  "scifact": {
+    "claims": 693,
+    "doc_recall@10": 0.8283,
+    "sentence_recall@10": 0.7951,
+    "mrr": 0.6334
+  },
+  "litqa2": {
+    "status": "blocked",
+    "reason": "Europe PMC search timed out during build",
+    "attempted_limit": 20
+  },
+  "note": "SciFact baseline uses SQLite FTS smoke harness, not production PG retrieval"
+}

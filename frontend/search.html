@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>双轨检索 · SciPal</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; margin: 0; background: #f5f6f8; color: #202124; }
+    header { padding: 18px 24px; background: #fff; border-bottom: 1px solid #e3e5e8; display: flex; gap: 18px; align-items: center; }
+    header a { color: #1a5fb4; text-decoration: none; }
+    main { max-width: 1100px; margin: 24px auto; padding: 0 18px; }
+    .card { background: #fff; border: 1px solid #e3e5e8; border-radius: 12px; padding: 18px; margin-bottom: 16px; }
+    .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    input[type=text] { flex: 1; min-width: 260px; padding: 10px 12px; border: 1px solid #cfd3d8; border-radius: 7px; font: inherit; }
+    button { padding: 9px 16px; border: 0; border-radius: 7px; background: #1a5fb4; color: #fff; cursor: pointer; }
+    .muted { color: #6b7280; font-size: 13px; }
+    .error { color: #b42318; white-space: pre-wrap; }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 800px) { .cols { grid-template-columns: 1fr; } }
+    .item { border-top: 1px solid #eef0f3; padding: 12px 0; }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 99px; background: #eef2f8; color: #1a5fb4; font-size: 12px; margin-right: 6px; }
+    .pill.warn { background: #fff4e5; color: #9a6700; }
+    .pill.ok { background: #e8f5ee; color: #1a7f4b; }
+    .empty { color: #6b7280; padding: 16px 0; }
+  </style>
+</head>
+<body>
+<header><a href="/index.html">← SciPal</a><strong>双轨检索</strong></header>
+<main>
+  <section class="card">
+    <div class="row">
+      <input id="q" type="text" placeholder="输入研究问题 / 关键词">
+      <label class="muted"><input id="online" type="checkbox"> 在线发现（手动开启）</label>
+      <button id="go">检索</button>
+    </div>
+    <p class="muted">本地证据与在线候选分栏；在线结果自动进入候选队列，不直接发布。</p>
+    <p class="error" id="error"></p>
+  </section>
+
+  <section class="card">
+    <div class="row"><strong>覆盖</strong><span id="coverage" class="muted">尚未检索。</span></div>
+  </section>
+
+  <div class="cols">
+    <section class="card">
+      <h3>本地库 <span id="localCount" class="muted"></span></h3>
+      <div id="local"></div>
+    </section>
+    <section class="card">
+      <h3>在线候选 <span id="onlineCount" class="muted"></span></h3>
+      <div id="onlineList"></div>
+    </section>
+  </div>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+
+function esc(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (ch) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+
+async function api(url) {
+  const response = await fetch(url);
+  const body = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(body.error || `HTTP ${response.status}`);
+  return body;
+}
+
+function renderLocal(rows) {
+  if (!rows.length) { $('local').innerHTML = '<div class="empty">本地库暂无结果</div>'; return; }
+  $('local').innerHTML = rows.map((row) => `
+    <div class="item">
+      <strong>${esc(row.title || row.paper_id)}</strong>
+      <div class="muted">${esc(row.journal || '')} ${esc(row.year || '')} · score ${Number(row.score || 0).toFixed(3)}</div>
+      <div><span class="pill ok">local</span><span class="muted">${esc(row.paper_id)}</span></div>
+    </div>`).join("");
+}
+
+function candidateFor(row, candidates) {
+  return candidates.find((item) =>
+    (item.external_id && (item.external_id === row.pmcid || item.external_id === row.pmid)) ||
+    (item.doi && row.doi && item.doi.toLowerCase() === row.doi.toLowerCase())
+  );
+}
+
+function renderOnline(rows, candidates) {
+  if (!rows.length) { $('onlineList').innerHTML = '<div class="empty">在线暂无新结果</div>'; return; }
+  $('onlineList').innerHTML = rows.map((row) => {
+    const cand = candidateFor(row, candidates);
+    const status = cand ? cand.ingest_status : (row.in_local_db ? 'local' : 'not_enqueued');
+    return `
+    <div class="item">
+      <strong>${esc(row.title || row.paper_id)}</strong>
+      <div class="muted">${esc(row.source || '')} · ${esc(row.journal || '')} ${esc(row.year || '')}</div>
+      <div><span class="pill warn">online</span><span class="pill">${esc(status)}</span></div>
+      ${cand ? `<div class="muted">candidate ${esc(cand.candidate_id)}</div>` : ''}
+      ${row.doi ? `<div class="muted">DOI: ${esc(row.doi)}</div>` : ''}
+    </div>`;
+  }).join("");
+}
+
+$('go').addEventListener('click', async () => {
+  const q = $('q').value.trim();
+  if (!q) { $('error').textContent = '请输入检索词'; return; }
+  $('error').textContent = '';
+  const useOnline = $('online').checked;
+  try {
+    const body = await api(`/api/search/hybrid?q=${encodeURIComponent(q)}&top_k=20&use_online=${useOnline}`);
+    renderLocal(body.local_papers || []);
+    const candidates = (body.online_ingest && body.online_ingest.candidates) || [];
+    renderOnline(body.online_papers || [], candidates);
+    $('localCount').textContent = `(${(body.local_papers || []).length})`;
+    $('onlineCount').textContent = `(${(body.online_papers || []).length})`;
+    $('coverage').textContent = `local_sufficient=${body.coverage ? body.coverage.local_sufficient : '?'} · online=${body.coverage ? body.coverage.online_available : '?'}`;
+  } catch (err) {
+    $('error').textContent = err.message;
+  }
+});
+</script>
+</body>
+</html>

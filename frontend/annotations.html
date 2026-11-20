@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>标注与引用 · SciPal</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; margin: 0; background: #f5f6f8; color: #202124; }
+    header { padding: 18px 24px; background: #fff; border-bottom: 1px solid #e3e5e8; display: flex; gap: 18px; align-items: center; }
+    header a { color: #1a5fb4; text-decoration: none; }
+    main { max-width: 1100px; margin: 24px auto; padding: 0 18px; }
+    .card { background: #fff; border: 1px solid #e3e5e8; border-radius: 12px; padding: 18px; margin-bottom: 16px; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    input, select, textarea { padding: 8px 10px; border: 1px solid #cfd3d8; border-radius: 7px; font: inherit; }
+    input[type=text] { min-width: 220px; }
+    textarea { width: 100%; min-height: 64px; }
+    button { padding: 8px 14px; border: 0; border-radius: 7px; background: #1a5fb4; color: #fff; cursor: pointer; }
+    button.secondary { background: #e9edf3; color: #1a5fb4; }
+    .muted { color: #6b7280; font-size: 13px; }
+    .error { color: #b42318; white-space: pre-wrap; }
+    .item { border-top: 1px solid #eef0f3; padding: 12px 0; }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 99px; background: #eef2f8; color: #1a5fb4; font-size: 12px; margin-right: 6px; }
+    .empty { color: #6b7280; padding: 16px 0; }
+    svg { width: 100%; height: 340px; background: #fbfcfe; border: 1px solid #eef0f3; border-radius: 10px; }
+    .legend { font-size: 12px; color: #6b7280; margin-top: 6px; }
+  </style>
+</head>
+<body>
+<header><a href="/index.html">← SciPal</a><strong>标注与引用</strong></header>
+<main>
+  <section class="card">
+    <div class="row">
+      <input id="paper" type="text" placeholder="paper_id，例如 paper_import_...">
+      <button id="load">加载</button>
+      <span id="status" class="muted"></span>
+    </div>
+    <p class="error" id="error"></p>
+  </section>
+
+  <section class="card">
+    <h3>标注</h3>
+    <div class="row">
+      <select id="kind">
+        <option value="note">note</option>
+        <option value="highlight">highlight</option>
+        <option value="question">question</option>
+      </select>
+      <select id="color">
+        <option>yellow</option><option>green</option><option>blue</option><option>red</option><option>purple</option>
+      </select>
+      <input id="sentence" type="text" placeholder="sentence_id（highlight 必填）">
+      <input id="para" type="text" placeholder="para_id（可选）">
+    </div>
+    <textarea id="comment" placeholder="批注 / 问题"></textarea>
+    <div class="row" style="margin-top:8px">
+      <input id="tags" type="text" placeholder="tags，逗号分隔">
+      <button id="add">添加标注</button>
+    </div>
+    <div id="annotations"></div>
+  </section>
+
+  <section class="card">
+    <h3>引用网络（一跳）</h3>
+    <svg id="graph" viewBox="0 0 1000 340" role="img" aria-label="citation graph"></svg>
+    <div class="legend">左：references　中：当前论文　右：citations</div>
+    <div id="references"></div>
+    <div id="citations"></div>
+  </section>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+let currentPaper = "";
+
+function esc(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (ch) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+
+async function api(url, options = {}) {
+  const response = await fetch(url, options);
+  const body = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(body.error || `HTTP ${response.status}`);
+  return body;
+}
+
+function renderAnnotations(rows) {
+  if (!rows.length) { $('annotations').innerHTML = '<div class="empty">暂无标注</div>'; return; }
+  $('annotations').innerHTML = rows.map((row) => `
+    <div class="item">
+      <span class="pill">${esc(row.kind)}</span><span class="pill">${esc(row.color)}</span>
+      <span class="muted">${esc(row.sentence_id || row.para_id || "paper")}</span>
+      <div>${esc(row.comment || "(无批注)")}</div>
+      <div class="muted">${(row.tags || []).map(esc).join(" · ")}</div>
+      <button class="secondary" data-delete="${esc(row.annotation_id)}">删除</button>
+    </div>`).join("");
+  $('annotations').querySelectorAll('[data-delete]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      try {
+        await api(`/api/papers/${encodeURIComponent(currentPaper)}/annotations/${encodeURIComponent(btn.dataset.delete)}`, { method: 'DELETE' });
+        await loadAll();
+      } catch (err) { $('error').textContent = err.message; }
+    });
+  });
+}
+
+function renderList(id, rows, emptyMessage) {
+  if (!rows.length) { $(id).innerHTML = `<div class="empty">${esc(emptyMessage)}</div>`; return; }
+  $(id).innerHTML = rows.map((row) => `
+    <div class="item">
+      <strong>${esc(row.dst_title || row.src_doi || row.dst_doi || row.edge_id)}</strong>
+      <div class="muted">${esc(row.source)} · ${esc(row.relation)}</div>
+    </div>`).join("");
+}
+
+function renderGraph(refs, cites) {
+  const svg = $('graph');
+  const width = 1000, height = 340, cx = 500, cy = 170;
+  const refsShown = refs.slice(0, 10), citesShown = cites.slice(0, 10);
+  const nodes = [];
+  refsShown.forEach((row, i) => nodes.push({ x: 120, y: 30 + i * 28, label: (row.dst_title || row.dst_doi || "ref").slice(0, 28), kind: 'ref' }));
+  nodes.push({ x: cx, y: cy, label: '当前论文', kind: 'center' });
+  citesShown.forEach((row, i) => nodes.push({ x: 820, y: 30 + i * 28, label: (row.src_doi || row.src_external_id || "cite").slice(0, 28), kind: 'cite' }));
+  const lines = nodes.filter((n) => n.kind === 'ref').map((n) => `<line x1="${n.x + 120}" y1="${n.y + 8}" x2="${cx - 80}" y2="${cy + 8}" stroke="#c8d3e2"/>`).join("")
+    + nodes.filter((n) => n.kind === 'cite').map((n) => `<line x1="${cx + 80}" y1="${cy + 8}" x2="${n.x - 10}" y2="${n.y + 8}" stroke="#c8d3e2"/>`).join("");
+  const dots = nodes.map((n) => `<circle cx="${n.x}" cy="${n.y + 8}" r="${n.kind === 'center' ? 10 : 5}" fill="${n.kind === 'center' ? '#1a5fb4' : '#8aa4c8'}"/>`).join("");
+  const labels = nodes.map((n) => `<text x="${n.x}" y="${n.y}" font-size="11" fill="#334155" text-anchor="${n.kind === 'ref' ? 'end' : n.kind === 'cite' ? 'start' : 'middle'}">${esc(n.label)}</text>`).join("");
+  svg.innerHTML = lines + dots + labels;
+}
+
+async function loadAll() {
+  if (!currentPaper) return;
+  $('error').textContent = '';
+  const [a, r, c] = await Promise.all([
+    api(`/api/papers/${encodeURIComponent(currentPaper)}/annotations?scope=paper`),
+    api(`/api/papers/${encodeURIComponent(currentPaper)}/references`),
+    api(`/api/papers/${encodeURIComponent(currentPaper)}/citations`),
+  ]);
+  renderAnnotations(a.annotations || []);
+  renderList('references', r.references || [], r.empty_message || '暂无参考文献数据');
+  renderList('citations', c.citations || [], c.empty_message || '暂无引用数据');
+  renderGraph(r.references || [], c.citations || []);
+  $('status').textContent = `annotations=${(a.annotations || []).length} refs=${(r.references || []).length} cites=${(c.citations || []).length}`;
+}
+
+$('load').addEventListener('click', () => {
+  currentPaper = $('paper').value.trim();
+  loadAll().catch((err) => { $('error').textContent = err.message; });
+});
+
+$('add').addEventListener('click', async () => {
+  if (!currentPaper) { $('error').textContent = '先加载 paper_id'; return; }
+  const payload = {
+    kind: $('kind').value,
+    color: $('color').value,
+    sentence_id: $('sentence').value.trim(),
+    para_id: $('para').value.trim(),
+    comment: $('comment').value,
+    tags: $('tags').value.split(',').map((x) => x.trim()).filter(Boolean),
+  };
+  try {
+    await api(`/api/papers/${encodeURIComponent(currentPaper)}/annotations`, {
+      method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload),
+    });
+    $('comment').value = ''; $('sentence').value = ''; $('para').value = ''; $('tags').value = '';
+    await loadAll();
+  } catch (err) { $('error').textContent = err.message; }
+});
+
+const initial = new URLSearchParams(location.search).get('paper_id');
+if (initial) { $('paper').value = initial; currentPaper = initial; loadAll().catch((err) => { $('error').textContent = err.message; }); }
+</script>
+</body>
+</html>

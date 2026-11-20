@@ -1,0 +1,795 @@
+{
+  "summary": {
+    "misses": 20,
+    "total": 50,
+    "by_classification": {
+      "retrieval_miss": 16,
+      "ranking_miss": 1,
+      "context_miss": 1,
+      "paper_sentence_miss": 2
+    },
+    "by_category": {
+      "factoid": {
+        "retrieval_miss": 6,
+        "paper_sentence_miss": 1
+      },
+      "dataset": {
+        "retrieval_miss": 4,
+        "ranking_miss": 1,
+        "paper_sentence_miss": 1
+      },
+      "comparison": {
+        "retrieval_miss": 1
+      },
+      "method": {
+        "retrieval_miss": 2,
+        "context_miss": 1
+      },
+      "contradiction": {
+        "retrieval_miss": 3
+      }
+    }
+  },
+  "rows": [
+    {
+      "question_id": "s1-002",
+      "category": "factoid",
+      "question": "Which six modulatory neuron types are listed in the mouse brain atlas?",
+      "gold_paper_id": "paper_import_106459887625",
+      "gold_sentence_ids": [
+        "paper_import_106459887625_para_0055_sent_004"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC10910315",
+        "paper_PMC13576658",
+        "paper_PMC13615294",
+        "paper_PMC13627688",
+        "paper_PMC13631236",
+        "paper_PMC13631671",
+        "paper_PMC13631774",
+        "paper_PMC13632270"
+      ],
+      "returned_paras": [
+        "paper_PMC10910315_para_00031",
+        "paper_PMC13576658_para_00010",
+        "paper_PMC13615294_para_00035",
+        "paper_PMC13627688_para_00017",
+        "paper_PMC13631236_para_00015",
+        "paper_PMC13631236_para_00017",
+        "paper_PMC13631236_para_00042",
+        "paper_PMC13631671_para_00035",
+        "paper_PMC13631774_para_00025",
+        "paper_PMC13631774_para_00036",
+        "paper_PMC13632270_para_00034",
+        "paper_PMC13632270_para_00049"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-004",
+      "category": "dataset",
+      "question": "Which mouse model was used to study the whole-brain distribution of microglia?",
+      "gold_paper_id": "paper_import_106459887625",
+      "gold_sentence_ids": [
+        "paper_import_106459887625_para_0060_sent_003"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC13605233",
+        "paper_PMC13614962",
+        "paper_PMC13615098",
+        "paper_PMC13627730",
+        "paper_PMC13628056",
+        "paper_PMC13629504",
+        "paper_PMC13631343",
+        "paper_PMC13666788",
+        "paper_PMC13719395"
+      ],
+      "returned_paras": [
+        "paper_PMC13605233_para_00017",
+        "paper_PMC13605233_para_00035",
+        "paper_PMC13614962_para_00032",
+        "paper_PMC13615098_para_00030",
+        "paper_PMC13627730_para_00017",
+        "paper_PMC13628056_para_00022",
+        "paper_PMC13629504_para_00004",
+        "paper_PMC13629504_para_00018",
+        "paper_PMC13631343_para_00055",
+        "paper_PMC13666788_para_00019",
+        "paper_PMC13666788_para_00024",
+        "paper_PMC13666788_para_00053",
+        "paper_PMC13719395_para_00009"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-005",
+      "category": "comparison",
+      "question": "Which LHA segment showed a stronger glutamatergic bias?",
+      "gold_paper_id": "paper_import_106459887625",
+      "gold_sentence_ids": [
+        "paper_import_106459887625_para_0026_sent_007"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC11200646",
+        "paper_PMC13022013",
+        "paper_PMC13610910",
+        "paper_PMC13631236",
+        "paper_PMC13631283",
+        "paper_PMC13631774",
+        "paper_PMC13719547"
+      ],
+      "returned_paras": [
+        "paper_PMC11200646_para_00020",
+        "paper_PMC13022013_para_00039",
+        "paper_PMC13610910_para_00013",
+        "paper_PMC13610910_para_00027",
+        "paper_PMC13610910_para_00029",
+        "paper_PMC13610910_para_00030",
+        "paper_PMC13610910_para_00053",
+        "paper_PMC13631236_para_00001",
+        "paper_PMC13631283_para_00009",
+        "paper_PMC13631774_para_00044",
+        "paper_PMC13719547_para_00015"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-009",
+      "category": "method",
+      "question": "Which statistical test was used for the volcano plots and barplots?",
+      "gold_paper_id": "paper_PMC13632651",
+      "gold_sentence_ids": [
+        "paper_PMC13632651_para_00155_sent_003"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC11068918",
+        "paper_PMC12994051",
+        "paper_PMC13358372",
+        "paper_PMC13534441",
+        "paper_PMC13613217",
+        "paper_PMC13615527",
+        "paper_PMC13615575",
+        "paper_PMC13627678",
+        "paper_PMC13628810",
+        "paper_PMC13631272",
+        "paper_PMC13632109",
+        "paper_PMC13653916",
+        "paper_PMC13657898",
+        "paper_PMC13694270"
+      ],
+      "returned_paras": [
+        "paper_PMC11068918_para_00031",
+        "paper_PMC12994051_para_00024",
+        "paper_PMC13358372_para_00003",
+        "paper_PMC13534441_para_00027",
+        "paper_PMC13613217_para_00025",
+        "paper_PMC13615527_para_00027",
+        "paper_PMC13615575_para_00005",
+        "paper_PMC13627678_para_00042",
+        "paper_PMC13628810_para_00058",
+        "paper_PMC13631272_para_00034",
+        "paper_PMC13632109_para_00030",
+        "paper_PMC13653916_para_00049",
+        "paper_PMC13657898_para_00012",
+        "paper_PMC13694270_para_00021"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-016",
+      "category": "dataset",
+      "question": "In which clinical setting was CD19-targeted CAR-T evidence reported?",
+      "gold_paper_id": "paper_PMC13627087",
+      "gold_sentence_ids": [
+        "paper_PMC13627087_para_00044_sent_001"
+      ],
+      "hit_ranks": [
+        14
+      ],
+      "returned_papers": [
+        "paper_PMC10429589",
+        "paper_PMC10430431",
+        "paper_PMC10430522",
+        "paper_PMC13614616",
+        "paper_PMC13620351",
+        "paper_PMC13626098",
+        "paper_PMC13627087",
+        "paper_PMC13627683",
+        "paper_PMC13628067",
+        "paper_PMC13630001",
+        "paper_PMC13687445"
+      ],
+      "returned_paras": [
+        "paper_PMC10429589_para_00001",
+        "paper_PMC10430431_para_00002",
+        "paper_PMC10430431_para_00004",
+        "paper_PMC10430522_para_00002",
+        "paper_PMC13614616_para_00001",
+        "paper_PMC13620351_para_00048",
+        "paper_PMC13626098_para_00061",
+        "paper_PMC13626098_para_00092",
+        "paper_PMC13627087_para_00044",
+        "paper_PMC13627683_para_00000",
+        "paper_PMC13628067_para_00011",
+        "paper_PMC13630001_para_00028",
+        "paper_PMC13687445_para_00041",
+        "paper_PMC13687445_para_00042",
+        "paper_PMC13687445_para_00057"
+      ],
+      "classification": "ranking_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-017",
+      "category": "method",
+      "question": "Which mouse model was used to test NMDAR CAAR-T cells?",
+      "gold_paper_id": "paper_PMC13627087",
+      "gold_sentence_ids": [
+        "paper_PMC13627087_para_00057_sent_008"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC10248534",
+        "paper_PMC13271017",
+        "paper_PMC13297230",
+        "paper_PMC13335699",
+        "paper_PMC13626098",
+        "paper_PMC13627087",
+        "paper_PMC13631509",
+        "paper_PMC13688982",
+        "paper_PMC13719395"
+      ],
+      "returned_paras": [
+        "paper_PMC10248534_para_00021",
+        "paper_PMC13271017_para_00038",
+        "paper_PMC13297230_para_00052",
+        "paper_PMC13335699_para_00018",
+        "paper_PMC13335699_para_00039",
+        "paper_PMC13626098_para_00110",
+        "paper_PMC13627087_para_00057",
+        "paper_PMC13631509_para_00005",
+        "paper_PMC13688982_para_00053",
+        "paper_PMC13719395_para_00009"
+      ],
+      "classification": "context_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-018",
+      "category": "dataset",
+      "question": "Which target increases with age and is proposed for CAR-T therapy?",
+      "gold_paper_id": "paper_PMC13627087",
+      "gold_sentence_ids": [
+        "paper_PMC13627087_para_00065_sent_001"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC13614879",
+        "paper_PMC13620351",
+        "paper_PMC13625181",
+        "paper_PMC13627087",
+        "paper_PMC13627965",
+        "paper_PMC13691269"
+      ],
+      "returned_paras": [
+        "paper_PMC13614879_para_00037",
+        "paper_PMC13620351_para_00005",
+        "paper_PMC13620351_para_00013",
+        "paper_PMC13620351_para_00049",
+        "paper_PMC13620351_para_00118",
+        "paper_PMC13625181_para_00015",
+        "paper_PMC13627087_para_00003",
+        "paper_PMC13627087_para_00004",
+        "paper_PMC13627087_para_00066",
+        "paper_PMC13627087_para_00102",
+        "paper_PMC13627965_para_00005",
+        "paper_PMC13691269_para_00028"
+      ],
+      "classification": "paper_sentence_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-019",
+      "category": "contradiction",
+      "question": "What difficulties does the CAR-T field face in target identification?",
+      "gold_paper_id": "paper_PMC13627087",
+      "gold_sentence_ids": [
+        "paper_PMC13627087_para_00070_sent_010"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC10491310",
+        "paper_PMC11200953",
+        "paper_PMC11644963",
+        "paper_PMC13295584",
+        "paper_PMC13667555",
+        "paper_PMC13667639",
+        "paper_PMC13671674",
+        "paper_PMC13672154"
+      ],
+      "returned_paras": [
+        "paper_PMC10491310_para_00004",
+        "paper_PMC11200953_para_00002",
+        "paper_PMC11200953_para_00007",
+        "paper_PMC11200953_para_00018",
+        "paper_PMC11644963_para_00071",
+        "paper_PMC13295584_para_00101",
+        "paper_PMC13667555_para_00036",
+        "paper_PMC13667555_para_00037",
+        "paper_PMC13667639_para_00029",
+        "paper_PMC13667639_para_00111",
+        "paper_PMC13671674_para_00037",
+        "paper_PMC13672154_para_00031"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-020",
+      "category": "contradiction",
+      "question": "Why are unintended genetic modifications a safety concern?",
+      "gold_paper_id": "paper_PMC13627087",
+      "gold_sentence_ids": [
+        "paper_PMC13627087_para_00083_sent_002"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC10673056",
+        "paper_PMC10916045",
+        "paper_PMC13607165",
+        "paper_PMC13613613",
+        "paper_PMC13615240",
+        "paper_PMC13628664",
+        "paper_PMC13632440",
+        "paper_PMC13632483",
+        "paper_PMC13653194",
+        "paper_PMC13674442",
+        "paper_PMC13674456"
+      ],
+      "returned_paras": [
+        "paper_PMC10673056_para_00027",
+        "paper_PMC10916045_para_00069",
+        "paper_PMC13607165_para_00051",
+        "paper_PMC13613613_para_00037",
+        "paper_PMC13615240_para_00026",
+        "paper_PMC13628664_para_00047",
+        "paper_PMC13628664_para_00058",
+        "paper_PMC13632440_para_00094",
+        "paper_PMC13632483_para_00001",
+        "paper_PMC13653194_para_00067",
+        "paper_PMC13674442_para_00086",
+        "paper_PMC13674456_para_00110"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-021",
+      "category": "factoid",
+      "question": "What has dysregulation of these processes been associated with?",
+      "gold_paper_id": "paper_PMC13631190",
+      "gold_sentence_ids": [
+        "paper_PMC13631190_para_00003_sent_006"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC11716945",
+        "paper_PMC13071172",
+        "paper_PMC13095858",
+        "paper_PMC13298417",
+        "paper_PMC13466892",
+        "paper_PMC13552366",
+        "paper_PMC13552504",
+        "paper_PMC13587689",
+        "paper_PMC13601421",
+        "paper_PMC13601635",
+        "paper_PMC13602894",
+        "paper_PMC13615307",
+        "paper_PMC13628336",
+        "paper_PMC13631560",
+        "paper_PMC13662931",
+        "paper_PMC13663979"
+      ],
+      "returned_paras": [
+        "paper_PMC11716945_para_abstract",
+        "paper_PMC13071172_para_00002",
+        "paper_PMC13095858_para_00031",
+        "paper_PMC13298417_para_00046",
+        "paper_PMC13466892_para_00008",
+        "paper_PMC13466892_para_00059",
+        "paper_PMC13552366_para_00001",
+        "paper_PMC13552504_para_00044",
+        "paper_PMC13587689_para_00000",
+        "paper_PMC13601421_para_00024",
+        "paper_PMC13601635_para_00130",
+        "paper_PMC13602894_para_00030",
+        "paper_PMC13615307_para_00000",
+        "paper_PMC13628336_para_00023",
+        "paper_PMC13631560_para_00045",
+        "paper_PMC13662931_para_00029",
+        "paper_PMC13663979_para_00002"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-025",
+      "category": "factoid",
+      "question": "What do these findings suggest about lncRNAs?",
+      "gold_paper_id": "paper_PMC13631190",
+      "gold_sentence_ids": [
+        "paper_PMC13631190_para_00057_sent_003"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC13600877",
+        "paper_PMC13601824",
+        "paper_PMC13605423",
+        "paper_PMC13628968",
+        "paper_PMC13631367",
+        "paper_PMC13632056",
+        "paper_PMC13657841"
+      ],
+      "returned_paras": [
+        "paper_PMC13600877_para_00021",
+        "paper_PMC13601824_para_00044",
+        "paper_PMC13605423_para_00001",
+        "paper_PMC13605423_para_00021",
+        "paper_PMC13605423_para_00032",
+        "paper_PMC13605423_para_00037",
+        "paper_PMC13628968_para_00044",
+        "paper_PMC13631367_para_00019",
+        "paper_PMC13632056_para_00003",
+        "paper_PMC13632056_para_00038",
+        "paper_PMC13632056_para_00045",
+        "paper_PMC13632056_para_00046",
+        "paper_PMC13657841_para_00001"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-027",
+      "category": "dataset",
+      "question": "Which vaccine formulation did Ai et al. test?",
+      "gold_paper_id": "paper_PMC13620059",
+      "gold_sentence_ids": [
+        "paper_PMC13620059_para_00082_sent_006"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC10468199",
+        "paper_PMC13101628",
+        "paper_PMC13617365",
+        "paper_PMC13617646",
+        "paper_PMC13617811",
+        "paper_PMC13626742",
+        "paper_PMC9953682"
+      ],
+      "returned_paras": [
+        "paper_PMC10468199_para_00038",
+        "paper_PMC13101628_para_00021",
+        "paper_PMC13617365_para_00007",
+        "paper_PMC13617365_para_00012",
+        "paper_PMC13617365_para_00022",
+        "paper_PMC13617365_para_00030",
+        "paper_PMC13617365_para_00040",
+        "paper_PMC13617646_para_00053",
+        "paper_PMC13617811_para_00021",
+        "paper_PMC13626742_para_00007",
+        "paper_PMC9953682_para_00023"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-036",
+      "category": "factoid",
+      "question": "What is lacking in the molecular understanding of neutrophils in glioblastoma?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "gold_sentence_ids": [
+        "paper_import_15c6a0f864b0_para_0001_sent_001"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC13542881",
+        "paper_PMC13604279",
+        "paper_PMC13620351",
+        "paper_PMC13627264",
+        "paper_PMC13630856",
+        "paper_PMC13631343",
+        "paper_PMC13631731",
+        "paper_PMC13632213",
+        "paper_PMC13632237",
+        "paper_PMC7480431"
+      ],
+      "returned_paras": [
+        "paper_PMC13542881_para_00011",
+        "paper_PMC13604279_para_00032",
+        "paper_PMC13620351_para_00074",
+        "paper_PMC13627264_para_00000",
+        "paper_PMC13630856_para_00005",
+        "paper_PMC13630856_para_00040",
+        "paper_PMC13630856_para_00049",
+        "paper_PMC13631343_para_00001",
+        "paper_PMC13631731_para_00035",
+        "paper_PMC13632213_para_00002",
+        "paper_PMC13632237_para_00041",
+        "paper_PMC7480431_para_00250"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-037",
+      "category": "method",
+      "question": "Which workflows were combined to study neutrophil populations?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "gold_sentence_ids": [
+        "paper_import_15c6a0f864b0_para_0006_sent_001"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC13569420",
+        "paper_PMC13601954",
+        "paper_PMC13626922",
+        "paper_PMC13628106",
+        "paper_PMC13628270",
+        "paper_PMC13631593",
+        "paper_PMC13631628",
+        "paper_PMC13632213",
+        "paper_PMC13632298"
+      ],
+      "returned_paras": [
+        "paper_PMC13569420_para_00020",
+        "paper_PMC13601954_para_00004",
+        "paper_PMC13626922_para_00034",
+        "paper_PMC13628106_para_00045",
+        "paper_PMC13628270_para_00005",
+        "paper_PMC13631593_para_00005",
+        "paper_PMC13631593_para_00120",
+        "paper_PMC13631593_para_00122",
+        "paper_PMC13631628_para_00025",
+        "paper_PMC13632213_para_00006",
+        "paper_PMC13632298_para_00004"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-038",
+      "category": "dataset",
+      "question": "How many proteins were identified per single neutrophil?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "gold_sentence_ids": [
+        "paper_import_15c6a0f864b0_para_0009_sent_007"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC13601954",
+        "paper_PMC13628270",
+        "paper_PMC13631272",
+        "paper_PMC13631593",
+        "paper_PMC13631628",
+        "paper_PMC13719363",
+        "paper_PMC13719468",
+        "paper_PMC7480431"
+      ],
+      "returned_paras": [
+        "paper_PMC13601954_para_00019",
+        "paper_PMC13628270_para_00001",
+        "paper_PMC13628270_para_00002",
+        "paper_PMC13631272_para_00010",
+        "paper_PMC13631272_para_00011",
+        "paper_PMC13631593_para_00007",
+        "paper_PMC13631628_para_00025",
+        "paper_PMC13719363_para_00014",
+        "paper_PMC13719468_para_00022",
+        "paper_PMC7480431_para_03201",
+        "paper_PMC7480431_para_03784"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-039",
+      "category": "factoid",
+      "question": "What did the data show about neutrophil granule protein abundance?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "gold_sentence_ids": [
+        "paper_import_15c6a0f864b0_para_0011_sent_002"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC13485868",
+        "paper_PMC13601954",
+        "paper_PMC13628270",
+        "paper_PMC13630528",
+        "paper_PMC13631272",
+        "paper_PMC13631593",
+        "paper_PMC13631628",
+        "paper_PMC13632502",
+        "paper_PMC13719468"
+      ],
+      "returned_paras": [
+        "paper_PMC13485868_para_00041",
+        "paper_PMC13601954_para_00021",
+        "paper_PMC13628270_para_00002",
+        "paper_PMC13630528_para_00050",
+        "paper_PMC13631272_para_00011",
+        "paper_PMC13631593_para_00005",
+        "paper_PMC13631593_para_00059",
+        "paper_PMC13631593_para_00120",
+        "paper_PMC13631628_para_00025",
+        "paper_PMC13632502_para_00018",
+        "paper_PMC13719468_para_00022"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-040",
+      "category": "contradiction",
+      "question": "What limits single-cell proteomic analysis of small cells?",
+      "gold_paper_id": "paper_import_15c6a0f864b0",
+      "gold_sentence_ids": [
+        "paper_import_15c6a0f864b0_para_0012_sent_006"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC13004678",
+        "paper_PMC13086168",
+        "paper_PMC13539050",
+        "paper_PMC13605177",
+        "paper_PMC13614359",
+        "paper_PMC13619008",
+        "paper_PMC13623855",
+        "paper_PMC13631272",
+        "paper_PMC13632193",
+        "paper_PMC13632211",
+        "paper_PMC13632353"
+      ],
+      "returned_paras": [
+        "paper_PMC13004678_para_00018",
+        "paper_PMC13086168_para_00016",
+        "paper_PMC13539050_para_00044",
+        "paper_PMC13605177_para_00141",
+        "paper_PMC13605177_para_00142",
+        "paper_PMC13614359_para_00228",
+        "paper_PMC13619008_para_00040",
+        "paper_PMC13623855_para_00085",
+        "paper_PMC13631272_para_00000",
+        "paper_PMC13632193_para_00057",
+        "paper_PMC13632211_para_00012",
+        "paper_PMC13632353_para_00070"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-041",
+      "category": "factoid",
+      "question": "What does BA.3.2.1 decouple?",
+      "gold_paper_id": "paper_PMC13615522",
+      "gold_sentence_ids": [
+        "paper_PMC13615522_para_00054_sent_003"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC13604127",
+        "paper_PMC13615522",
+        "paper_PMC13642154"
+      ],
+      "returned_paras": [
+        "paper_PMC13604127_para_00012",
+        "paper_PMC13615522_para_00003",
+        "paper_PMC13615522_para_00012",
+        "paper_PMC13615522_para_00019",
+        "paper_PMC13615522_para_00022",
+        "paper_PMC13615522_para_00033",
+        "paper_PMC13615522_para_00041",
+        "paper_PMC13615522_para_00049",
+        "paper_PMC13615522_para_00053",
+        "paper_PMC13615522_para_00057",
+        "paper_PMC13642154_para_00014"
+      ],
+      "classification": "paper_sentence_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-046",
+      "category": "factoid",
+      "question": "What functions does skin serve as a barrier?",
+      "gold_paper_id": "paper_PMC13657230",
+      "gold_sentence_ids": [
+        "paper_PMC13657230_para_00000_sent_001"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC13317201",
+        "paper_PMC13416412",
+        "paper_PMC13466892",
+        "paper_PMC13509748",
+        "paper_PMC13605232",
+        "paper_PMC13610758",
+        "paper_PMC13614170",
+        "paper_PMC13628173",
+        "paper_PMC13632854",
+        "paper_PMC13650093"
+      ],
+      "returned_paras": [
+        "paper_PMC13317201_para_00000",
+        "paper_PMC13317201_para_00001",
+        "paper_PMC13416412_para_00000",
+        "paper_PMC13466892_para_00032",
+        "paper_PMC13509748_para_00012",
+        "paper_PMC13605232_para_00240",
+        "paper_PMC13610758_para_00007",
+        "paper_PMC13614170_para_00000",
+        "paper_PMC13628173_para_00021",
+        "paper_PMC13632854_para_00034",
+        "paper_PMC13650093_para_00005"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    },
+    {
+      "question_id": "s1-049",
+      "category": "dataset",
+      "question": "How were test materials applied in the 8-week study?",
+      "gold_paper_id": "paper_PMC13657230",
+      "gold_sentence_ids": [
+        "paper_PMC13657230_para_00058_sent_008"
+      ],
+      "hit_ranks": [],
+      "returned_papers": [
+        "paper_PMC10039695",
+        "paper_PMC10170323",
+        "paper_PMC10912542",
+        "paper_PMC11236057",
+        "paper_PMC12373372",
+        "paper_PMC13291172",
+        "paper_PMC13292104",
+        "paper_PMC13293639",
+        "paper_PMC13319485",
+        "paper_PMC13429095",
+        "paper_PMC13615055",
+        "paper_PMC13620463",
+        "paper_PMC13630565",
+        "paper_PMC7503042",
+        "paper_PMC9309236",
+        "paper_PMC9950707"
+      ],
+      "returned_paras": [
+        "paper_PMC10039695_para_00084",
+        "paper_PMC10170323_para_00008",
+        "paper_PMC10912542_para_00005",
+        "paper_PMC10912542_para_00030",
+        "paper_PMC11236057_para_00010",
+        "paper_PMC12373372_para_00953",
+        "paper_PMC13291172_para_00005",
+        "paper_PMC13292104_para_00003",
+        "paper_PMC13293639_para_00004",
+        "paper_PMC13319485_para_00022",
+        "paper_PMC13429095_para_00007",
+        "paper_PMC13615055_para_00014",
+        "paper_PMC13620463_para_00054",
+        "paper_PMC13630565_para_00003",
+        "paper_PMC7503042_para_00018",
+        "paper_PMC9309236_para_00071",
+        "paper_PMC9950707_para_00029",
+        "paper_PMC9950707_para_00036"
+      ],
+      "classification": "retrieval_miss",
+      "returned": 20
+    }
+  ]
+}

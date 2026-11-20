@@ -1,0 +1,67 @@
+"""PostgreSQL-primary review project writes (Phase 2, opt-in)."""
+
+from __future__ import annotations
+
+import logging
+import os
+
+LOGGER = logging.getLogger(__name__)
+
+
+class ReviewWriteError(RuntimeError):
+    pass
+
+
+def enabled() -> bool:
+    backend = os.environ.get("SCIPAL_REVIEW_WRITE_BACKEND", "").strip().lower()
+    return backend in {"postgres", "postgresql", "pg", "1", "true"} and bool(
+        os.environ.get("SCIPAL_PG_DSN", "").strip()
+    )
+
+
+def _pg():
+    from services.db.pg_pool import pg_connection
+
+    return pg_connection(os.environ["SCIPAL_PG_DSN"])
+
+
+def create_project(row: dict) -> None:
+    try:
+        with _pg() as pg:
+            pg.execute(
+                "INSERT INTO review_projects (project_id, owner, name, field_text, pico_json, created_at) "
+                "VALUES (%(project_id)s, %(owner)s, %(name)s, %(field_text)s, %(pico_json)s, %(created_at)s)",
+                row,
+            )
+    except Exception as exc:  # noqa: BLE001
+        LOGGER.error("PG review project create failed; refusing SQLite fallback: %s", exc)
+        raise ReviewWriteError("review write backend unavailable") from exc
+
+
+def log_event(row: dict) -> None:
+    try:
+        with _pg() as pg:
+            pg.execute(
+                "INSERT INTO review_events (project_id, actor, action, target, detail, created_at) "
+                "VALUES (%(project_id)s, %(actor)s, %(action)s, %(target)s, %(detail)s, %(created_at)s)",
+                row,
+            )
+    except Exception as exc:  # noqa: BLE001
+        LOGGER.error("PG review event failed; refusing SQLite fallback: %s", exc)
+        raise ReviewWriteError("review write backend unavailable") from exc
+
+
+def update_pico(project_id: str, pico_json: str) -> None:
+    try:
+        with _pg() as pg:
+            row = pg.execute(
+                "UPDATE review_projects SET pico_json=%s WHERE project_id=%s RETURNING project_id",
+                (pico_json, project_id),
+            ).fetchone()
+        if not row:
+            raise ReviewWriteError("review project not found in PostgreSQL")
+    except ReviewWriteError:
+        raise
+    except Exception as exc:  # noqa: BLE001
+        LOGGER.error("PG review pico update failed; refusing SQLite fallback: %s", exc)
+        raise ReviewWriteError("review write backend unavailable") from exc

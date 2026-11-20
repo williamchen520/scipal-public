@@ -1,0 +1,2846 @@
+{
+  "cases": 188,
+  "results": [
+    {
+      "alpha": 0.0,
+      "file_hit@1": 0.6543,
+      "file_hit@3": 0.75,
+      "rows": [
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 8,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 22,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 28,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 31,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 21,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 8,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 94,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 16,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 48,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 26,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 38,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 10,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 14,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 15,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 5,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 14,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 18,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 88,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 8,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 13,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 5,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 7,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 6,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 12,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 11,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 8,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 5,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        }
+      ]
+    },
+    {
+      "alpha": 0.5,
+      "file_hit@1": 0.7606,
+      "file_hit@3": 0.8457,
+      "rows": [
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 10,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 14,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 7,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 12,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 23,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 15,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 16,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 20,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 5,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 5,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 5,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 5,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 5,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 5,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        }
+      ]
+    },
+    {
+      "alpha": 1.0,
+      "file_hit@1": 0.8191,
+      "file_hit@3": 0.883,
+      "rows": [
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 13,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 9,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 6,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 5,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 6,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 7,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 7,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 3,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 5,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 5,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 4,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 2,
+          "file_hit@1": false,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": null,
+          "file_hit@1": false,
+          "file_hit@3": false
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        },
+        {
+          "file_rank": 1,
+          "file_hit@1": true,
+          "file_hit@3": true
+        }
+      ]
+    }
+  ]
+}

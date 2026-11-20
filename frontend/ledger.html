@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SciPal · 证据账本</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #0b1020; color: #e2e8f0; font-family: system-ui, "Microsoft YaHei", sans-serif; }
+    header { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; padding: 18px 28px; border-bottom: 1px solid #1e3a5f; }
+    header .brand { color: #f5c542; font-size: 22px; font-weight: 800; }
+    header a { color: #7dd3fc; text-decoration: none; font-size: 13px; }
+    main { max-width: 1400px; margin: 0 auto; padding: 24px 20px 60px; }
+    h2 { font-size: 18px; margin: 26px 0 10px; }
+    .hint { color: #64748b; font-size: 12px; line-height: 1.7; margin-bottom: 10px; }
+    table { width: 100%; border-collapse: collapse; background: #131c31; border: 1px solid #1e3a5f; border-radius: 10px; overflow: hidden; font-size: 13px; }
+    th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid #1e3a5f; vertical-align: top; }
+    th { color: #94a3b8; font-weight: 600; background: #0f1a2e; }
+    td a { color: #7dd3fc; text-decoration: none; }
+    tr.high td { background: #2a1d14; }
+    .badge { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; background: #1e3a5f; }
+    .badge.high { background: #7c2d12; color: #fed7aa; }
+    .empty { color: #64748b; padding: 22px 0; text-align: center; }
+    #error { color: #f87171; font-size: 13px; min-height: 20px; }
+    pre { white-space: pre-wrap; background: #0f1a2e; padding: 8px; border-radius: 6px; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="brand">证据账本</span>
+    <a href="/">← 返回工作台</a>
+    <a href="/audit.html">审计异常</a>
+    <a href="/evidence.html">证据裁决</a>
+  </header>
+  <main>
+    <div class="hint">
+      每条账本显示 claim、引用句、来源论文、页码、得分、是否被引用。高分未被引用和低分被引用优先看。
+    </div>
+    <div id="error" role="alert"></div>
+    <h2>账本列表</h2>
+    <div id="list"></div>
+    <h2>错误队列</h2>
+    <div id="errors"></div>
+    <h2>账本详情</h2>
+    <div id="detail"></div>
+    <h2>重写草稿</h2>
+    <div id="draft"></div>
+  </main>
+  <script src="/src/ledger.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+"""M2 retriever adapter tests (no model loading)."""
+
+from __future__ import annotations
+
+import tempfile
+import os
+import sqlite3
+import unittest
+from pathlib import Path
+
+from plugins.adapters.retriever_bm25 import BM25Retriever
+from plugins.adapters.retriever_hybrid import HybridRetriever
+from services.plugins import PluginRegistry, PluginRunner
+
+
+class _FakeHybridSearcher:
+    def search(self, *args, **kwargs):
+        return {
+            "results": [
+                {
+                    "paper_id": None,
+                    "para_id": "p1",
+                    "text": "text",
+                    "score": 0.9,
+                    "metadata": {"paper_id": "paper_x"},
+                }
+            ]
+        }
+
+
+def _sqlite_fts_available() -> bool:
+    path = Path(os.environ.get("SCIPAL_DB", "data/research.db"))
+    if not path.exists():
+        return False
+    conn = sqlite3.connect(path)
+    try:
+        return bool(conn.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='paragraphs_fts'"
+        ).fetchone())
+    finally:
+        conn.close()
+
+
+@unittest.skipUnless(
+    os.environ.get("SCIPAL_PG_DSN") and _sqlite_fts_available(),
+    "BM25 plugin requires the legacy SQLite FTS index",
+)
+class RetrieverPluginTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.log = Path(self.tmp.name) / "runs.jsonl"
+        self.registry = PluginRegistry().load()
+
+    def test_retriever_plugins_are_registered(self) -> None:
+        ids = [item["id"] for item in self.registry.list_plugins()]
+        for plugin_id in (
+            "retriever-bm25",
+            "retriever-dense",
+            "retriever-hybrid",
+            "retriever-hybrid-rerank",
+        ):
+            self.assertIn(plugin_id, ids)
+
+    def test_bm25_respects_corpus_and_ranks(self) -> None:
+        corpus = ["paper_PMC12707946_2d3bcc67", "paper_PMC13616637_ab84d6de_xml"]
+        candidates = BM25Retriever().retrieve(
+            "ICI rechallenge hepatocellular carcinoma", corpus=corpus, top_k=5
+        )
+        self.assertTrue(candidates)
+        self.assertTrue(all(item.paper_id in corpus for item in candidates))
+        self.assertEqual([item.rank for item in candidates], list(range(1, len(candidates) + 1)))
+
+    def test_runner_validates_retriever_output(self) -> None:
+        runner = PluginRunner(self.registry, run_log=self.log)
+        run = runner.run(
+            "retriever-bm25",
+            {
+                "query": "ICI rechallenge",
+                "corpus": ["paper_PMC12707946_2d3bcc67"],
+                "top_k": 3,
+            },
+            dataset_hash="sha256:test",
+        )
+        self.assertIn("candidates", run.output)
+        self.assertTrue(self.log.exists())
+
+    def test_hybrid_reads_paper_id_from_metadata(self) -> None:
+        adapter = HybridRetriever(searcher=_FakeHybridSearcher())
+        candidates = adapter.retrieve("q", corpus=["paper_x"], top_k=1)
+        self.assertEqual(candidates[0].paper_id, "paper_x")
+
+
+if __name__ == "__main__":
+    unittest.main()

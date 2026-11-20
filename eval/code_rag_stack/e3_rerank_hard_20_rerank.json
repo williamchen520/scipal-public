@@ -1,0 +1,8 @@
+{
+  "cases": 20,
+  "file_hit@1": 0.4,
+  "file_hit@3": 0.5,
+  "model": "bge-reranker-base",
+  "input": "query+symbol+path+unit_type",
+  "note": "structured cross-encoder probe"
+}

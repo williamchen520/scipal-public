@@ -1,0 +1,80 @@
+name: scipal-staging
+
+services:
+  app:
+    image: scipal-app:latest
+    env_file:
+      - .env.staging
+    environment:
+      APP_MODE: "PROD_MODE"
+      SCIPAL_ENV: "staging"
+      SCIPAL_AUTH_REQUIRED: "1"
+      SCIPAL_HOST: "0.0.0.0"
+      SCIPAL_CODE_API_URL: "http://code-api:5010"
+    ports:
+      - "127.0.0.1:5002:5000"
+    volumes:
+      - staging_data:/app/data
+      - staging_documents:/app/documents
+      - staging_logs:/app/logs
+      - ../models:/models:ro
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/api/health', timeout=3)"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 300s
+    restart: unless-stopped
+
+  code-api:
+    image: scipal-app:latest
+    entrypoint: []
+    command: ["python", "-m", "code_rag.api", "--host", "0.0.0.0", "--port", "5010"]
+    env_file:
+      - .env.staging
+    environment:
+      SCIPAL_CODE_SEARCH_BACKEND: "bm25_map"
+      SCIPAL_CODE_DEVICE: "cpu"
+      SCIPAL_CODE_WORKSPACE_REQUIRED: "1"
+      SCIPAL_ZOekt_URL: "http://zoekt:6070"
+    expose:
+      - "5010"
+    volumes:
+      - ../models:/code-models:ro
+    restart: unless-stopped
+
+  zoekt:
+    image: scipal-zoekt:latest
+    command: ["-index", "/index", "-listen", ":6070"]
+    volumes:
+      - staging_zoekt:/index:ro
+    expose:
+      - "6070"
+    restart: unless-stopped
+
+  paradedb:
+    image: paradedb/paradedb:latest
+    environment:
+      POSTGRES_DB: scipal_staging_g0
+      POSTGRES_PASSWORD: "${PARADEDB_PASSWORD:?PARADEDB_PASSWORD is required}"
+    ports:
+      - "127.0.0.1:5435:5432"
+    volumes:
+      - staging_paradedb:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d scipal_staging_g0"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  staging_data:
+  staging_documents:
+  staging_logs:
+  staging_zoekt:
+  staging_paradedb:

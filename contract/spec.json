@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "name": "SciPal executable contract pilot",
+  "source_commit": "6cb0a41",
+  "architecture": "ARCHITECTURE.json",
+  "approval": "contract/approval.json",
+  "exceptions": "contract/exceptions.json",
+  "rules": [
+    {
+      "id": "architecture.parse",
+      "kind": "architecture_json",
+      "check": "builtin:architecture_json",
+      "severity": "blocking",
+      "owner": "human",
+      "approval": "required",
+      "description": "ARCHITECTURE.json must parse and expose api.endpoints."
+    },
+    {
+      "id": "architecture.route_unique",
+      "kind": "route_unique",
+      "check": "builtin:route_unique",
+      "severity": "blocking",
+      "owner": "human",
+      "approval": "required",
+      "description": "Every rule + method pair must be unique."
+    },
+    {
+      "id": "repo.required_paths",
+      "kind": "required_paths",
+      "check": "builtin:required_paths",
+      "severity": "blocking",
+      "owner": "human",
+      "approval": "required",
+      "description": "Contract and guard files must exist.",
+      "paths": [
+        "ARCHITECTURE.json",
+        "api_server.py",
+        "scripts/validate_arch.py",
+        "scripts/spec_compile.py",
+        "scripts/spec_check.py",
+        ".githooks/pre-commit",
+        "tests/test_spec_contract.py",
+        "contract/approval.json",
+        "contract/exceptions.json",
+        "scripts/runtime_contract_check.py",
+        "api_server_factory.py",
+        "tests/test_app_factory.py",
+        "contract_app.py",
+        "requirements-contract.txt"
+      ]
+    },
+    {
+      "id": "contract_tools.stdlib",
+      "kind": "stdlib_only",
+      "check": "builtin:stdlib_only",
+      "severity": "blocking",
+      "owner": "human",
+      "approval": "required",
+      "description": "Contract tools must be standard-library only.",
+      "paths": [
+        "scripts/spec_compile.py",
+        "scripts/spec_check.py",
+        "scripts/runtime_contract_check.py"
+      ],
+      "allow": [
+        "spec_compile",
+        "_guard",
+        "_forward"
+      ]
+    },
+    {
+      "id": "runtime.contract_app",
+      "kind": "runtime_contract",
+      "check": "builtin:runtime_contract",
+      "severity": "blocking",
+      "owner": "human",
+      "approval": "required",
+      "description": "The DSN-free contract app must match ARCHITECTURE.json.",
+      "architecture": "ARCHITECTURE.json",
+      "root": ".",
+      "app": "contract_app:app",
+      "root_arg": false
+    }
+  ]
+}

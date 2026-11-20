@@ -1,0 +1,30 @@
+name: tests
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  tests:
+    # Needs a self-hosted runner with SciPal dependencies.
+    runs-on: [self-hosted, Windows]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: SQL guard
+        run: python scripts/sql_guard.py --changed --forbid-schema public --allow-destructive
+      - name: Architecture coupling guard
+        run: python scripts/guard.py --base-ref origin/${{ github.base_ref }}
+      - name: Import boundary guard
+        run: python scripts/check_import_boundaries.py --strict
+      - name: Unit tests (timed)
+        run: python scripts/run_tests.py --output artifacts/test-duration.json
+      - name: Upload test duration
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-duration
+          path: artifacts/test-duration.json
+          if-no-files-found: warn
+

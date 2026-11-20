@@ -1,0 +1,15 @@
+{
+  "dataset": "CoIR/CodeSearchNet-python",
+  "subset": {
+    "queries": 200,
+    "corpus": 20000,
+    "seed": 17
+  },
+  "baseline": "BM25 (k1=1.5,b=0.75)",
+  "metrics": {
+    "ndcg@10": 0.9507,
+    "mrr@10": 0.9425,
+    "recall@100": 0.99
+  },
+  "note": "subset only; not official full CoIR score"
+}

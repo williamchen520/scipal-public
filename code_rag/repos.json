@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "root": "G:/repos/code_rag",
+  "policy": {
+    "languages": ["python", "r", "nextflow"],
+    "clone": "git clone --depth 1 --no-recurse-submodules",
+    "pin": "record HEAD commit after clone",
+    "license": "record LICENSE; reject unknown",
+    "secret_scan": "required before ingest"
+  },
+  "repos": [
+    {
+      "id": "scanpy",
+      "url": "https://github.com/scverse/scanpy",
+      "language": "python",
+      "ref": "1.12.5",
+      "path": "G:/repos/scanpy-1.12.5",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "nf-core-rnaseq",
+      "url": "https://github.com/nf-core/rnaseq",
+      "language": "nextflow",
+      "ref": "3.28.0",
+      "path": "G:/repos/rnaseq-3.28.0",
+      "license": "MIT"
+    },
+    {
+      "id": "anndata",
+      "url": "https://github.com/scverse/anndata",
+      "language": "python",
+      "ref": "main",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "squidpy",
+      "url": "https://github.com/scverse/squidpy",
+      "language": "python",
+      "ref": "main",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "scvi-tools",
+      "url": "https://github.com/scverse/scvi-tools",
+      "language": "python",
+      "ref": "main",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "snakemake",
+      "url": "https://github.com/snakemake/snakemake",
+      "language": "python",
+      "ref": "main",
+      "license": "MIT"
+    },
+    {
+      "id": "ggplot2",
+      "url": "https://github.com/tidyverse/ggplot2",
+      "language": "r",
+      "ref": "main",
+      "license": "MIT"
+    },
+    {
+      "id": "dplyr",
+      "url": "https://github.com/tidyverse/dplyr",
+      "language": "r",
+      "ref": "main",
+      "license": "MIT"
+    },
+    {
+      "id": "nf-core-scrnaseq",
+      "url": "https://github.com/nf-core/scrnaseq",
+      "language": "nextflow",
+      "ref": "main",
+      "license": "MIT"
+    },
+    {
+      "id": "nf-core-atacseq",
+      "url": "https://github.com/nf-core/atacseq",
+      "language": "nextflow",
+      "ref": "main",
+      "license": "MIT"
+    }
+  ]
+}

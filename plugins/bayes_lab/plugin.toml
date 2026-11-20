@@ -1,0 +1,6 @@
+id = "bayes_lab"
+version = "0.1.0"
+core_api = "1"
+entrypoint = "plugins.bayes_lab.plugin:register"
+enabled = false
+description = "optional offline GP-UCB parameter study"

@@ -1,0 +1,408 @@
+"""PostgreSQL systematic-review projects (G3.10e4a)."""
+
+from __future__ import annotations
+
+import json
+import uuid
+from datetime import datetime, timezone
+from typing import Any, Dict, List, Optional
+
+from services.db.pg_pool import owner_connection
+
+
+def _pg():
+    from services.db.pg_pool import pg_connection
+    from services.db.tenant_pilot import set_search_path
+
+    pg = pg_connection()
+    set_search_path(pg, "systematic")
+    return pg
+
+
+def _now() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
+def create_project(
+    name: str,
+    field_text: str = "",
+    pico: Optional[Dict[str, str]] = None,
+    owner: str = "default",
+) -> str:
+    project_id = "rev_" + uuid.uuid4().hex[:10]
+    pg = _pg()
+    try:
+        pg.execute(
+            "INSERT INTO review_projects (project_id, owner, name, field_text, pico_json, created_at) "
+            "VALUES (%s, %s, %s, %s, %s, %s)",
+            (project_id, owner, name, field_text, json.dumps(pico or {}, ensure_ascii=False), _now()),
+        )
+        pg.commit()
+    finally:
+        pg.close()
+    return project_id
+
+
+def get_project(project_id: str) -> Optional[Dict]:
+    pg = _pg()
+    try:
+        row = pg.execute(
+            "SELECT project_id, owner, name, field_text, pico_json "
+            "FROM review_projects WHERE project_id = %s",
+            (project_id,),
+        ).fetchone()
+        if not row:
+            return None
+        return {
+            "project_id": row["project_id"],
+            "owner": row["owner"],
+            "name": row["name"],
+            "field_text": row["field_text"],
+            "pico": json.loads(row["pico_json"] or "{}"),
+        }
+    finally:
+        pg.close()
+
+
+def list_projects(owner: str = "default") -> List[Dict]:
+    pg = _pg()
+    try:
+        rows = pg.execute(
+            "SELECT DISTINCT p.project_id, p.name, p.field_text, p.pico_json, p.created_at "
+            "FROM review_projects p LEFT JOIN review_project_members m "
+            "ON m.project_id = p.project_id WHERE p.owner = %s OR m.member = %s "
+            "ORDER BY p.created_at DESC",
+            (owner, owner),
+        ).fetchall()
+        return [
+            {
+                "project_id": row["project_id"],
+                "name": row["name"],
+                "field_text": row["field_text"],
+                "pico": json.loads(row["pico_json"] or "{}"),
+            }
+            for row in rows
+        ]
+    finally:
+        pg.close()
+
+
+def can_access(project_id: str, user: str) -> bool:
+    pg = _pg()
+    try:
+        if pg.execute(
+            "SELECT 1 FROM review_projects WHERE project_id = %s AND owner = %s",
+            (project_id, user),
+        ).fetchone():
+            return True
+        return bool(
+            pg.execute(
+                "SELECT 1 FROM review_project_members WHERE project_id = %s AND member = %s",
+                (project_id, user),
+            ).fetchone()
+        )
+    finally:
+        pg.close()
+
+
+def add_member(project_id: str, member: str, role: str = "reviewer") -> None:
+    pg = _pg()
+    try:
+        pg.execute(
+            "INSERT INTO review_project_members (project_id, member, role, added_at) "
+            "VALUES (%s, %s, %s, %s) ON CONFLICT (project_id, member) DO UPDATE SET role=EXCLUDED.role",
+            (project_id, member, role, _now()),
+        )
+        pg.commit()
+    finally:
+        pg.close()
+
+
+def members(project_id: str) -> List[Dict]:
+    pg = _pg()
+    try:
+        rows = pg.execute(
+            "SELECT member, role FROM review_project_members WHERE project_id = %s ORDER BY member",
+            (project_id,),
+        ).fetchall()
+        return [{"member": row["member"], "role": row["role"]} for row in rows]
+    finally:
+        pg.close()
+
+
+def add_papers(project_id: str, paper_ids: List[str]) -> int:
+    pg = _pg()
+    try:
+        for paper_id in paper_ids:
+            pg.execute(
+                "INSERT INTO review_project_papers (project_id, paper_id, added_at) "
+                "VALUES (%s, %s, %s) ON CONFLICT DO NOTHING",
+                (project_id, paper_id, _now()),
+            )
+        pg.commit()
+        return len(paper_ids)
+    finally:
+        pg.close()
+
+def screen(
+    project_id: str,
+    paper_id: str,
+    decision: str,
+    reason: str = "",
+    reviewer: str = "",
+    stage: str = "title_abstract",
+) -> None:
+    pg = _pg()
+    try:
+        pg.execute(
+            "INSERT INTO screening_decisions "
+            "(project_id, paper_id, stage, decision, reason, reviewer, created_at) "
+            "VALUES (%s, %s, %s, %s, %s, %s, %s)",
+            (project_id, paper_id, stage, decision, reason, reviewer, _now()),
+        )
+        pg.commit()
+    finally:
+        pg.close()
+
+
+def adjudicate(
+    project_id: str,
+    paper_id: str,
+    decision: str,
+    reason: str = "",
+    editor: str = "",
+) -> None:
+    pg = _pg()
+    try:
+        pg.execute(
+            "INSERT INTO adjudications "
+            "(project_id, paper_id, decision, reason, editor, created_at) "
+            "VALUES (%s, %s, %s, %s, %s, %s)",
+            (project_id, paper_id, decision, reason, editor, _now()),
+        )
+        pg.commit()
+    finally:
+        pg.close()
+
+
+def _latest_adjudications(project_id: str) -> Dict[str, str]:
+    pg = _pg()
+    try:
+        rows = pg.execute(
+            "SELECT paper_id, decision FROM ("
+            " SELECT paper_id, decision, ROW_NUMBER() OVER ("
+            " PARTITION BY paper_id ORDER BY id DESC) AS rn"
+            " FROM adjudications WHERE project_id = %s"
+            ") t WHERE rn = 1",
+            (project_id,),
+        ).fetchall()
+        return {row["paper_id"]: row["decision"] for row in rows}
+    finally:
+        pg.close()
+
+
+def prisma(project_id: str) -> Dict[str, int]:
+    pg = _pg()
+    try:
+        identified = pg.execute(
+            "SELECT COUNT(*) AS n FROM review_project_papers WHERE project_id = %s",
+            (project_id,),
+        ).fetchone()["n"]
+        rows = pg.execute(
+            "SELECT paper_id, decision FROM ("
+            " SELECT paper_id, decision, ROW_NUMBER() OVER ("
+            " PARTITION BY paper_id ORDER BY id DESC) AS rn"
+            " FROM screening_decisions WHERE project_id = %s"
+            ") t WHERE rn = 1",
+            (project_id,),
+        ).fetchall()
+        decisions = {row["paper_id"]: row["decision"] for row in rows}
+    finally:
+        pg.close()
+    decisions.update(_latest_adjudications(project_id))
+    counts: Dict[str, int] = {}
+    for decision in decisions.values():
+        counts[decision] = counts.get(decision, 0) + 1
+    included = counts.get("include", 0)
+    excluded = counts.get("exclude", 0)
+    return {
+        "identified": identified,
+        "screened": sum(counts.values()),
+        "included": included,
+        "excluded": excluded,
+        "pending": max(identified - included - excluded, 0),
+    }
+
+
+def conflicts(project_id: str, stage: str = "title_abstract") -> List[Dict]:
+    pg = _pg()
+    try:
+        rows = pg.execute(
+            "SELECT paper_id, reviewer, decision FROM ("
+            " SELECT paper_id, reviewer, decision, ROW_NUMBER() OVER ("
+            " PARTITION BY paper_id, reviewer ORDER BY id DESC) AS rn"
+            " FROM screening_decisions WHERE project_id = %s AND stage = %s"
+            " AND reviewer <> '') t WHERE rn = 1 ORDER BY paper_id",
+            (project_id, stage),
+        ).fetchall()
+    finally:
+        pg.close()
+    by_paper: Dict[str, Dict[str, str]] = {}
+    for row in rows:
+        by_paper.setdefault(row["paper_id"], {})[row["reviewer"]] = row["decision"]
+    resolved = _latest_adjudications(project_id)
+    return [
+        {
+            "paper_id": paper_id,
+            "decisions": decisions,
+            "resolved": paper_id in resolved,
+            "adjudicated": resolved.get(paper_id),
+        }
+        for paper_id, decisions in by_paper.items()
+        if len(set(decisions.values())) > 1
+    ]
+
+
+def log_event(project_id: str, actor: str, action: str, target: str = "", detail: str = "") -> None:
+    pg = _pg()
+    try:
+        pg.execute(
+            "INSERT INTO review_events (project_id, actor, action, target, detail, created_at) "
+            "VALUES (%s, %s, %s, %s, %s, %s)",
+            (project_id, actor, action, target, detail, _now()),
+        )
+        pg.commit()
+    finally:
+        pg.close()
+
+def add_evidence(project_id: str, paper_id: str, row: Dict[str, str]) -> None:
+    pg = _pg()
+    try:
+        pg.execute(
+            "INSERT INTO evidence_rows "
+            "(project_id, paper_id, design, sample_size, intervention, comparator, "
+            " outcomes, effect, source_sentence, created_at) "
+            "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+            (
+                project_id, paper_id, row.get("design"), row.get("sample_size"),
+                row.get("intervention"), row.get("comparator"), row.get("outcomes"),
+                row.get("effect"), row.get("source_sentence"), _now(),
+            ),
+        )
+        pg.commit()
+    finally:
+        pg.close()
+
+
+def list_evidence(project_id: str) -> List[Dict]:
+    pg = _pg()
+    try:
+        rows = pg.execute(
+            "SELECT paper_id, design, sample_size, intervention, comparator, outcomes, effect "
+            "FROM evidence_rows WHERE project_id = %s ORDER BY id",
+            (project_id,),
+        ).fetchall()
+        return [
+            {
+                "paper_id": row["paper_id"],
+                "design": row["design"],
+                "sample_size": row["sample_size"],
+                "intervention": row["intervention"],
+                "comparator": row["comparator"],
+                "outcomes": row["outcomes"],
+                "effect": row["effect"],
+            }
+            for row in rows
+        ]
+    finally:
+        pg.close()
+
+
+def evidence_csv(project_id: str) -> str:
+    import csv
+    import io
+
+    rows = list_evidence(project_id)
+    if not rows:
+        return ""
+    buffer = io.StringIO()
+    writer = csv.DictWriter(buffer, fieldnames=list(rows[0]))
+    writer.writeheader()
+    writer.writerows(rows)
+    return buffer.getvalue()
+
+
+def project_papers(project_id: str) -> List[Dict]:
+    pg = _pg()
+    try:
+        rows = pg.execute(
+            "SELECT p.paper_id, p.title, p.abstract FROM review_project_papers rp "
+            "JOIN papers p ON p.paper_id = rp.paper_id WHERE rp.project_id = %s",
+            (project_id,),
+        ).fetchall()
+        return [dict(row) for row in rows]
+    finally:
+        pg.close()
+
+def list_events(project_id: str, limit: int = 100) -> List[Dict]:
+    pg = _pg()
+    try:
+        rows = pg.execute(
+            "SELECT actor, action, target, detail, created_at FROM review_events "
+            "WHERE project_id = %s ORDER BY id DESC LIMIT %s",
+            (project_id, max(1, limit)),
+        ).fetchall()
+        return [dict(row) for row in rows]
+    finally:
+        pg.close()
+
+
+def add_from_watch(project_id: str, run_id: int) -> int:
+    pg = _pg()
+    try:
+        rows = pg.execute(
+            "SELECT paper_id FROM watch_items WHERE run_id = %s AND paper_id IS NOT NULL",
+            (run_id,),
+        ).fetchall()
+        paper_ids = [row["paper_id"] for row in rows]
+        if paper_ids:
+            add_papers(project_id, paper_ids)
+        return len(paper_ids)
+    finally:
+        pg.close()
+
+
+def import_records(project_id: str, records: List[Dict]) -> Dict:
+    pg = _pg()
+    try:
+        matched: List[Dict] = []
+        unmatched: List[Dict] = []
+        paper_ids = set()
+        for record in records or []:
+            doi = (record.get("doi") or "").strip().lower()
+            title = (record.get("title") or "").strip()
+            row = None
+            if doi:
+                row = pg.execute(
+                    "SELECT paper_id FROM papers WHERE lower(doi) = %s LIMIT 1", (doi,)
+                ).fetchone()
+            if not row and title:
+                row = pg.execute(
+                    "SELECT paper_id FROM papers WHERE lower(title) = %s LIMIT 1",
+                    (title.lower(),),
+                ).fetchone()
+            if row:
+                paper_ids.add(row["paper_id"])
+                matched.append({"paper_id": row["paper_id"], "title": title, "doi": doi})
+            else:
+                unmatched.append(record)
+        if paper_ids:
+            add_papers(project_id, sorted(paper_ids))
+        return {
+            "matched": len(matched),
+            "unmatched": len(unmatched),
+            "paper_ids": sorted(paper_ids),
+            "unmatched_records": unmatched,
+        }
+    finally:
+        pg.close()

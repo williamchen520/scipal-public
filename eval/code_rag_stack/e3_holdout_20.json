@@ -1,0 +1,22 @@
+[
+  {"id":"h01","category":"symbol","library_id":"lib_2c5709b07c77","query":"calculate quality control metrics","expected_symbol":"calculate_qc_metrics","expected_path":"src/scanpy/preprocessing/_qc.py","expected_ref":"1.12.5"},
+  {"id":"h02","category":"symbol","library_id":"lib_2c5709b07c77","query":"filter cells by minimum genes","expected_symbol":"filter_cells","expected_path":"src/scanpy/preprocessing/_simple.py","expected_ref":"1.12.5"},
+  {"id":"h03","category":"symbol","library_id":"lib_2c5709b07c77","query":"normalize each cell","expected_symbol":"normalize_per_cell","expected_path":"src/scanpy/preprocessing/_simple.py","expected_ref":"1.12.5"},
+  {"id":"h04","category":"symbol","library_id":"lib_2c5709b07c77","query":"scale data to unit variance","expected_symbol":"scale","expected_path":"src/scanpy/preprocessing/_scale.py","expected_ref":"1.12.5"},
+  {"id":"h05","category":"symbol","library_id":"lib_2c5709b07c77","query":"log transform expression","expected_symbol":"log1p","expected_path":"src/scanpy/preprocessing/_simple.py","expected_ref":"1.12.5"},
+  {"id":"h06","category":"symbol","library_id":"lib_2c5709b07c77","query":"highly variable genes seurat","expected_symbol":"highly_variable_genes","expected_path":"src/scanpy/preprocessing/_highly_variable_genes.py","expected_ref":"1.12.5"},
+  {"id":"h07","category":"symbol","library_id":"lib_2c5709b07c77","query":"regress out total counts","expected_symbol":"regress_out","expected_path":"src/scanpy/preprocessing/_simple.py","expected_ref":"1.12.5"},
+  {"id":"h08","category":"symbol","library_id":"lib_2c5709b07c77","query":"combat batch correction","expected_symbol":"combat","expected_path":"src/scanpy/preprocessing/_combat.py","expected_ref":"1.12.5"},
+  {"id":"h09","category":"symbol","library_id":"lib_2c5709b07c77","query":"principal component analysis","expected_symbol":"pca","expected_path":"src/scanpy/preprocessing/_pca/__init__.py","expected_ref":"1.12.5"},
+  {"id":"h10","category":"symbol","library_id":"lib_2c5709b07c77","query":"build neighbor graph","expected_symbol":"neighbors","expected_path":"src/scanpy/neighbors/__init__.py","expected_ref":"1.12.5"},
+  {"id":"h11","category":"symbol","library_id":"lib_2c5709b07c77","query":"uniform manifold approximation","expected_symbol":"umap","expected_path":"src/scanpy/tools/_umap.py","expected_ref":"1.12.5"},
+  {"id":"h12","category":"symbol","library_id":"lib_2c5709b07c77","query":"leiden clustering","expected_symbol":"leiden","expected_path":"src/scanpy/tools/_leiden.py","expected_ref":"1.12.5"},
+  {"id":"h13","category":"symbol","library_id":"lib_2c5709b07c77","query":"rank genes between groups","expected_symbol":"rank_genes_groups","expected_path":"src/scanpy/tools/_rank_genes_groups.py","expected_ref":"1.12.5"},
+  {"id":"h14","category":"symbol","library_id":"lib_2c5709b07c77","query":"score gene signature","expected_symbol":"score_genes","expected_path":"src/scanpy/tools/_score_genes.py","expected_ref":"1.12.5"},
+  {"id":"h15","category":"symbol","library_id":"lib_2c5709b07c77","query":"cell cycle phase scoring","expected_symbol":"score_genes_cell_cycle","expected_path":"src/scanpy/tools/_score_genes.py","expected_ref":"1.12.5"},
+  {"id":"h16","category":"symbol","library_id":"lib_2c5709b07c77","query":"dot plot marker genes","expected_symbol":"dotplot","expected_path":"src/scanpy/plotting/_dotplot.py","expected_ref":"1.12.5"},
+  {"id":"h17","category":"symbol","library_id":"lib_2c5709b07c77","query":"violin plot gene expression","expected_symbol":"violin","expected_path":"src/scanpy/plotting/_anndata.py","expected_ref":"1.12.5"},
+  {"id":"h18","category":"symbol","library_id":"lib_2c5709b07c77","query":"ingest label transfer","expected_symbol":"ingest","expected_path":"src/scanpy/tools/_ingest.py","expected_ref":"1.12.5"},
+  {"id":"h19","category":"symbol","library_id":"lib_2c5709b07c77","query":"scrublet doublet detection","expected_symbol":"scrublet","expected_path":"src/scanpy/preprocessing/_scrublet/__init__.py","expected_ref":"1.12.5"},
+  {"id":"h20","category":"api","library_id":"lib_2c5709b07c77","query":"read 10x h5 file","expected_symbol":"read_10x_h5","expected_path":"src/scanpy/readwrite.py","expected_ref":"1.12.5"}
+]

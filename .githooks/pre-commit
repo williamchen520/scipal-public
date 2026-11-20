@@ -1,0 +1,81 @@
+#!/bin/sh
+# Early guard for ARCHITECTURE.json changes.
+#
+# Git's pre-commit hook cannot see the current commit message (it runs before
+# the message file exists). The message-tag enforcement is therefore in
+# .githooks/commit-msg. This hook validates the staged JSON and warns loudly.
+
+new_services=$(git diff --cached --name-only --diff-filter=A -- services)
+if [ -n "$new_services" ] && command -v python >/dev/null 2>&1; then
+    python scripts/guard.py --rule new-file-no-sqlite --staged || {
+        echo "pre-commit: new service contains sqlite3.connect; refusing commit." >&2
+        exit 1
+    }
+fi
+
+if command -v python >/dev/null 2>&1; then
+    python scripts/guard.py --staged --skip-rule route-unique-owner || {
+        echo "pre-commit: architecture coupling rule violated; refusing commit." >&2
+        exit 1
+    }
+fi
+
+sqlite_changed=$(git diff --cached --name-only --diff-filter=ACMR -- services routes api_server.py)
+if [ -n "$sqlite_changed" ] && command -v python >/dev/null 2>&1; then
+    python scripts/audit_sqlite.py || {
+        echo "pre-commit: new sqlite3.connect outside allowlist; refusing commit." >&2
+        exit 1
+    }
+fi
+
+sql_changed=$(git diff --cached --name-only --diff-filter=ACMR -- '*.py' '*.sql')
+if [ -n "$sql_changed" ] && command -v python >/dev/null 2>&1; then
+    if [ "${SCIPAL_ALLOW_DESTRUCTIVE:-0}" = "1" ]; then
+        python scripts/sql_guard.py --staged --forbid-schema public --allow-destructive || {
+            echo "pre-commit: unsafe destructive SQL; refusing commit." >&2
+            exit 1
+        }
+    else
+        python scripts/sql_guard.py --staged --forbid-schema public || {
+            echo "pre-commit: unsafe destructive SQL; refusing commit." >&2
+            exit 1
+        }
+    fi
+fi
+
+staged_json=$(git diff --cached --name-only --diff-filter=ACMRD -- ARCHITECTURE.json)
+changed=$(git diff --cached --name-only --diff-filter=ACMR -- \
+    ARCHITECTURE.json api_server.py routes scripts/validate_arch.py)
+[ -z "$changed" ] && exit 0
+
+if [ -n "$staged_json" ]; then
+    echo "pre-commit: ARCHITECTURE.json is staged." >&2
+    echo "pre-commit: commit-msg will require [APPROVED_BY_HUMAN]." >&2
+fi
+
+if [ -n "$staged_json" ] && command -v python >/dev/null 2>&1; then
+    git show :ARCHITECTURE.json | python -c "import json,sys; json.load(sys.stdin)" || {
+        echo "pre-commit: staged ARCHITECTURE.json is not valid JSON; refusing commit." >&2
+        exit 1
+    }
+fi
+
+# Route/architecture drift guard: if the constitution or any route source is
+# staged, the JSON must still match the Flask app.
+if [ -n "$changed" ]; then
+    echo "pre-commit: route/architecture files staged; running validate_arch.py" >&2
+    if command -v python >/dev/null 2>&1; then
+        python scripts/validate_arch.py || {
+            echo "pre-commit: ARCHITECTURE.json is out of sync with Flask routes." >&2
+            echo "pre-commit: update ARCHITECTURE.json or fix the route mismatch." >&2
+            exit 1
+        }
+    else
+        echo "pre-commit: python not found; cannot validate architecture." >&2
+        exit 1
+    fi
+fi
+
+exit 0
+
+

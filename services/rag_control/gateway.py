@@ -1,0 +1,374 @@
+"""R5: minimal RAG gateway. Only code_search is routed for now."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+import urllib.error
+import urllib.parse
+import urllib.request
+import uuid
+from typing import Any
+
+from services.db.pg_pool import core_connection
+from services.rag_control.ledger import append_evidence
+from services.rag_control.models import list_bindings
+from services.rag_control.registry import get_provider
+
+
+class GatewayError(ValueError):
+    pass
+
+
+def _run(rag_id: str, library_id: str, snapshot: str, model_version: str, metadata: dict[str, Any]) -> str:
+    run_id = "qry_" + uuid.uuid4().hex[:12]
+    pg = core_connection()
+    try:
+        pg.execute(
+            """
+            INSERT INTO rag_runs
+              (run_id,job_id,rag_id,library_id,snapshot,model_version,exit_code,metrics,run_type,started_at,finished_at)
+            VALUES (%s,NULL,%s,%s,%s,%s,0,%s::jsonb,'query',now(),now())
+            """,
+            (run_id, rag_id, library_id, snapshot, model_version, json.dumps(metadata, ensure_ascii=False)),
+        )
+        pg.commit()
+        return run_id
+    except Exception:
+        pg.rollback()
+        raise
+    finally:
+        pg.close()
+
+
+def _query_literature(*, query_text: str, top_k: int, timeout: int) -> dict[str, Any]:
+    base = os.environ.get("SCIPAL_SELF_URL", "http://127.0.0.1:5001").rstrip("/")
+    token = os.environ.get("SCIPAL_INTERNAL_TOKEN", "").strip()
+    if not token:
+        raise GatewayError("SCIPAL_INTERNAL_TOKEN is not configured")
+    provider = get_provider("literature")
+    if not provider:
+        raise GatewayError("literature provider not registered")
+    body = json.dumps(
+        {"query": query_text, "top_k": max(1, min(int(top_k), 50))}, ensure_ascii=False
+    ).encode("utf-8")
+    req = urllib.request.Request(
+        base + "/api/evidence/search",
+        data=body,
+        method="POST",
+        headers={"Content-Type": "application/json", "X-SCIPAL-Internal-Token": token},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=max(30, timeout)) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        raise GatewayError(f"literature RAG rejected query: {detail}") from exc
+    except Exception as exc:  # noqa: BLE001
+        raise GatewayError(f"literature RAG unavailable: {exc}") from exc
+    entries = payload.get("evidence") or []
+    model_version = str((provider.get("model_bindings") or {}).get("embedding") or "")
+    run_id = _run(
+        "literature",
+        "",
+        "",
+        model_version,
+        {"capability": "evidence_search", "query": query_text, "hits": len(entries)},
+    )
+    results = []
+    for entry in entries:
+        paper_id = str(entry.get("paper_id") or "")
+        para_id = str(entry.get("para_id") or "")
+        matched = entry.get("matched_sentences") or []
+        text = " ".join(str(item.get("text") or "") for item in matched)
+        if not text:
+            details = entry.get("paragraph_details") or []
+            text = str(details[0].get("text") or "") if details else ""
+        score = None
+        highlights = entry.get("highlight") or []
+        if highlights:
+            score = highlights[0].get("score")
+        evidence = append_evidence(
+            run_id,
+            {
+                "rag_id": "literature",
+                "library_id": "",
+                "snapshot": "",
+                "source_path": f"literature/{paper_id}/{para_id}",
+                "content_hash": hashlib.sha256(text.encode("utf-8")).hexdigest(),
+                "model_version": model_version,
+                "score": score,
+                "metadata": {
+                    "paper_id": paper_id,
+                    "para_id": para_id,
+                    "sentence_ids": [item.get("sentence_id") for item in matched],
+                    "matched_sentences": matched,
+                },
+            },
+        )
+        results.append(
+            {
+                "paper_id": paper_id,
+                "para_id": para_id,
+                "matched_sentences": matched,
+                "paragraph": text,
+                "score": score,
+                "evidence_id": evidence["evidence_id"],
+            }
+        )
+    return {
+        "run_id": run_id,
+        "rag_id": "literature",
+        "library_id": "",
+        "query": query_text,
+        "results": results,
+    }
+
+
+def _query_docs(*, query_text: str, top_k: int, timeout: int) -> dict[str, Any]:
+    provider = get_provider("docs")
+    if not provider:
+        raise GatewayError("docs provider not registered")
+    endpoint = str(provider.get("endpoint") or "").rstrip("/")
+    if not endpoint.startswith("http"):
+        raise GatewayError("docs provider endpoint is not HTTP")
+    body = json.dumps(
+        {"query": query_text, "top_k": max(1, min(int(top_k), 50)), "mode": "hybrid"}, ensure_ascii=False
+    ).encode("utf-8")
+    req = urllib.request.Request(
+        endpoint + "/search",
+        data=body,
+        method="POST",
+        headers={"Content-Type": "application/json"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=max(30, timeout)) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        raise GatewayError(f"docs RAG rejected query: {detail}") from exc
+    except Exception as exc:  # noqa: BLE001
+        raise GatewayError(f"docs RAG unavailable: {exc}") from exc
+    hits = payload.get("hits") or []
+    model_version = str((provider.get("model_bindings") or {}).get("embedding") or "")
+    run_id = _run(
+        "docs",
+        "",
+        "",
+        model_version,
+        {"capability": "doc_search", "query": query_text, "hits": len(hits)},
+    )
+    results = []
+    for hit in hits:
+        text = str(hit.get("text") or "")
+        evidence = append_evidence(
+            run_id,
+            {
+                "rag_id": "docs",
+                "library_id": "",
+                "snapshot": "",
+                "source_path": str(hit.get("path") or ""),
+                "content_hash": hashlib.sha256(text.encode("utf-8")).hexdigest(),
+                "model_version": model_version,
+                "score": hit.get("score"),
+                "metadata": {
+                    "doc_id": hit.get("doc_id"),
+                    "title": hit.get("title"),
+                    "heading": hit.get("heading"),
+                    "category": hit.get("category"),
+                    "text": text,
+                },
+            },
+        )
+        item = dict(hit)
+        item["evidence_id"] = evidence["evidence_id"]
+        results.append(item)
+    return {
+        "run_id": run_id,
+        "rag_id": "docs",
+        "library_id": "",
+        "query": query_text,
+        "results": results,
+    }
+
+
+_RAG_CAPABILITY = {
+    "code": "code_search",
+    "literature": "evidence_search",
+    "docs": "doc_search",
+}
+
+
+def multi_query(
+    *,
+    rag_ids: list[str] | str,
+    library_id: str,
+    query_text: str,
+    top_k: int = 10,
+    timeout: int = 30,
+    created_by: str = "",
+    workspace_id: str = "ws_default",
+) -> dict[str, Any]:
+    if isinstance(rag_ids, str):
+        rag_ids = [item.strip() for item in rag_ids.split(",") if item.strip()]
+    requested = []
+    for rag_id in rag_ids or []:
+        if rag_id not in _RAG_CAPABILITY:
+            raise GatewayError(f"unsupported rag_id: {rag_id}")
+        if rag_id not in requested:
+            requested.append(rag_id)
+    if not requested:
+        raise GatewayError("rag_ids is required")
+    multi_run_id = "multi_" + uuid.uuid4().hex[:12]
+    pg = core_connection()
+    try:
+        pg.execute(
+            "INSERT INTO rag_multi_queries (multi_run_id,query,rag_ids,library_id,created_by,workspace_id) "
+            "VALUES (%s,%s,%s::jsonb,%s,%s,%s)",
+            (multi_run_id, query_text, json.dumps(requested), library_id, created_by or "", workspace_id or "ws_default"),
+        )
+        pg.commit()
+    finally:
+        pg.close()
+    groups = []
+    for rag_id in requested:
+        try:
+            result = query(
+                capability=_RAG_CAPABILITY[rag_id],
+                library_id=library_id if rag_id == "code" else "",
+                query_text=query_text,
+                top_k=top_k,
+                timeout=timeout,
+            )
+            group = {"rag_id": rag_id, "status": "ok", **result}
+            group["machine_signal"] = "has_evidence" if result.get("results") else "insufficient_evidence"
+            groups.append(group)
+        except GatewayError as exc:
+            groups.append(
+                {
+                    "rag_id": rag_id,
+                    "status": "error",
+                    "error": str(exc),
+                    "machine_signal": "error",
+                }
+            )
+    pg = core_connection()
+    try:
+        for group in groups:
+            pg.execute(
+                """
+                INSERT INTO rag_multi_groups
+                  (multi_run_id,rag_id,run_id,status,result_count,machine_signal)
+                VALUES (%s,%s,%s,%s,%s,%s)
+                ON CONFLICT (multi_run_id,rag_id) DO UPDATE SET
+                  run_id=EXCLUDED.run_id,
+                  status=EXCLUDED.status,
+                  result_count=EXCLUDED.result_count,
+                  machine_signal=EXCLUDED.machine_signal
+                """,
+                (
+                    multi_run_id,
+                    group["rag_id"],
+                    group.get("run_id"),
+                    group["status"],
+                    len(group.get("results") or []),
+                    group.get("machine_signal") or "unknown",
+                ),
+            )
+        pg.commit()
+    finally:
+        pg.close()
+    errors = any(group["status"] == "error" for group in groups)
+    has_evidence = any(group.get("results") for group in groups)
+    return {
+        "multi_run_id": multi_run_id,
+        "query": query_text,
+        "rag_ids": requested,
+        "groups": groups,
+        "partial": errors,
+        "machine_signal": "partial" if errors else ("has_evidence" if has_evidence else "insufficient_evidence"),
+    }
+
+
+def query(*, capability: str, library_id: str, query_text: str, top_k: int = 10, timeout: int = 30) -> dict[str, Any]:
+    capability = (capability or "").strip()
+    if not (query_text or "").strip():
+        raise GatewayError("query is required")
+    if capability == "evidence_search":
+        return _query_literature(query_text=query_text, top_k=top_k, timeout=timeout)
+    if capability == "doc_search":
+        return _query_docs(query_text=query_text, top_k=top_k, timeout=timeout)
+    if capability != "code_search":
+        raise GatewayError(f"unsupported capability: {capability}")
+    if not library_id:
+        raise GatewayError("library_id is required for code_search")
+    provider = get_provider("code")
+    if not provider:
+        raise GatewayError("code provider not registered")
+    endpoint = str(provider.get("endpoint") or "").rstrip("/")
+    if not endpoint.startswith("http"):
+        raise GatewayError("code provider endpoint is not HTTP")
+    body = json.dumps(
+        {"query": query_text, "top_k": max(1, min(int(top_k), 50))}, ensure_ascii=False
+    ).encode("utf-8")
+    req = urllib.request.Request(
+        endpoint + f"/libraries/{urllib.parse.quote(library_id)}/search",
+        data=body,
+        method="POST",
+        headers={"Content-Type": "application/json"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        raise GatewayError(f"code RAG rejected query: {detail}") from exc
+    except Exception as exc:  # noqa: BLE001
+        raise GatewayError(f"code RAG unavailable: {exc}") from exc
+    hits = payload.get("hits") or []
+    snapshot = str(hits[0].get("snapshot_id") or "") if hits else ""
+    model_version = ""
+    bindings = list_bindings(rag_id="code", library_id=library_id)
+    if bindings:
+        model_version = str(bindings[0].get("embedding_model") or "")
+    run_id = _run(
+        "code",
+        library_id,
+        snapshot,
+        model_version,
+        {"capability": capability, "query": query_text, "hits": len(hits)},
+    )
+    results = []
+    for hit in hits:
+        snippet = str(hit.get("snippet") or "")
+        evidence = append_evidence(
+            run_id,
+            {
+                "rag_id": "code",
+                "library_id": library_id,
+                "snapshot": str(hit.get("snapshot_id") or snapshot),
+                "source_path": str(hit.get("path") or ""),
+                "start_line": hit.get("start_line"),
+                "end_line": hit.get("end_line"),
+                "content_hash": hashlib.sha256(snippet.encode("utf-8")).hexdigest(),
+                "model_version": model_version,
+                "score": hit.get("score"),
+                "metadata": {
+                    "unit_id": hit.get("unit_id"),
+                    "symbol_name": hit.get("symbol_name"),
+                    "unit_type": hit.get("unit_type"),
+                    "snippet": snippet,
+                },
+            },
+        )
+        item = dict(hit)
+        item["evidence_id"] = evidence["evidence_id"]
+        results.append(item)
+    return {
+        "run_id": run_id,
+        "rag_id": "code",
+        "library_id": library_id,
+        "query": query_text,
+        "results": results,
+    }

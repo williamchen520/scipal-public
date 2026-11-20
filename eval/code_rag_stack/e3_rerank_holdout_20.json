@@ -1,0 +1,162 @@
+[
+  {
+    "id": "r01",
+    "library_id": "lib_12473817b941",
+    "query": "trim galore",
+    "expected_symbol": "TRIMGALORE",
+    "expected_path": "modules/nf-core/trimgalore/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r02",
+    "library_id": "lib_12473817b941",
+    "query": "star align reads",
+    "expected_symbol": "STAR_ALIGN",
+    "expected_path": "modules/nf-core/star/align/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r03",
+    "library_id": "lib_12473817b941",
+    "query": "salmon quantify transcripts",
+    "expected_symbol": "SALMON_QUANT",
+    "expected_path": "modules/nf-core/salmon/quant/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r04",
+    "library_id": "lib_12473817b941",
+    "query": "salmon build index",
+    "expected_symbol": "SALMON_INDEX",
+    "expected_path": "modules/nf-core/salmon/index/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r05",
+    "library_id": "lib_12473817b941",
+    "query": "rsem calculate expression",
+    "expected_symbol": "RSEM_CALCULATEEXPRESSION",
+    "expected_path": "modules/nf-core/rsem/calculateexpression/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r06",
+    "library_id": "lib_12473817b941",
+    "query": "rsem prepare reference",
+    "expected_symbol": "RSEM_PREPAREREFERENCE",
+    "expected_path": "modules/nf-core/rsem/preparereference/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r07",
+    "library_id": "lib_12473817b941",
+    "query": "samtools sort",
+    "expected_symbol": "SAMTOOLS_SORT",
+    "expected_path": "modules/nf-core/samtools/sort/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r08",
+    "library_id": "lib_12473817b941",
+    "query": "samtools index",
+    "expected_symbol": "SAMTOOLS_INDEX",
+    "expected_path": "modules/nf-core/samtools/index/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r09",
+    "library_id": "lib_12473817b941",
+    "query": "subread featurecounts",
+    "expected_symbol": "SUBREAD_FEATURECOUNTS",
+    "expected_path": "modules/nf-core/subread/featurecounts/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r10",
+    "library_id": "lib_12473817b941",
+    "query": "rseqc bamstat",
+    "expected_symbol": "RSEQC_BAMSTAT",
+    "expected_path": "modules/nf-core/rseqc/bamstat/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r11",
+    "library_id": "lib_12473817b941",
+    "query": "qualimap rnaseq",
+    "expected_symbol": "QUALIMAP_RNASEQ",
+    "expected_path": "modules/nf-core/qualimap/rnaseq/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r12",
+    "library_id": "lib_12473817b941",
+    "query": "preseq lcextrap",
+    "expected_symbol": "PRESEQ_LCEXTRAP",
+    "expected_path": "modules/nf-core/preseq/lcextrap/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r13",
+    "library_id": "lib_12473817b941",
+    "query": "sortmerna",
+    "expected_symbol": "SORTMERNA",
+    "expected_path": "modules/nf-core/sortmerna/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r14",
+    "library_id": "lib_12473817b941",
+    "query": "bbmap bbsplit",
+    "expected_symbol": "BBMAP_BBSPLIT",
+    "expected_path": "modules/nf-core/bbmap/bbsplit/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r15",
+    "library_id": "lib_12473817b941",
+    "query": "untar",
+    "expected_symbol": "UNTAR",
+    "expected_path": "modules/nf-core/untar/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r16",
+    "library_id": "lib_12473817b941",
+    "query": "ribodetector",
+    "expected_symbol": "RIBODETECTOR",
+    "expected_path": "modules/nf-core/ribodetector/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r17",
+    "library_id": "lib_12473817b941",
+    "query": "rseqc infer experiment",
+    "expected_symbol": "RSEQC_INFEREXPERIMENT",
+    "expected_path": "modules/nf-core/rseqc/inferexperiment/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r18",
+    "library_id": "lib_12473817b941",
+    "query": "rseqc inner distance",
+    "expected_symbol": "RSEQC_INNERDISTANCE",
+    "expected_path": "modules/nf-core/rseqc/innerdistance/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r19",
+    "library_id": "lib_12473817b941",
+    "query": "rseqc junction annotation",
+    "expected_symbol": "RSEQC_JUNCTIONANNOTATION",
+    "expected_path": "modules/nf-core/rseqc/junctionannotation/main.nf",
+    "category": "process"
+  },
+  {
+    "id": "r20",
+    "library_id": "lib_12473817b941",
+    "query": "custom tx2gene",
+    "expected_symbol": "CUSTOM_TX2GENE",
+    "expected_path": "modules/nf-core/custom/tx2gene/main.nf",
+    "category": "process"
+  }
+]

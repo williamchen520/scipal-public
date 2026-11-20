@@ -1,0 +1,311 @@
+{
+  "schema_version": "2026-11-18",
+  "generated_by": "scripts/migration_status.py",
+  "migrations": [
+    {
+      "version": "001_paragraph_embeddings",
+      "file": "deploy/sql/001_paragraph_embeddings.sql",
+      "sha256": "f9ca37bc8ff793f12cd686c7e34b898dc3a35c4dc12ca8795162d934ca07068e"
+    },
+    {
+      "version": "003_notes",
+      "file": "deploy/sql/003_notes.sql",
+      "sha256": "9036e0222956f52ec6a6de499761b95e3458e734279f7c885600ccb17c599b0f"
+    },
+    {
+      "version": "004_protocol_runs",
+      "file": "deploy/sql/004_protocol_runs.sql",
+      "sha256": "9a49b9465448991de80a12b12cafeb5ca1fef7856f289e00c26cbdac581779f8"
+    },
+    {
+      "version": "005_protocol_run_files",
+      "file": "deploy/sql/005_protocol_run_files.sql",
+      "sha256": "e658fedc148ee7f4d0b3ec26ca3a8d75ee2cda7b2737d4bee7532f69cc49a4ab"
+    },
+    {
+      "version": "006_paragraph_embeddings",
+      "file": "deploy/sql/006_paragraph_embeddings.sql",
+      "sha256": "524583cf9a9533177105f25df1cdb327ce806255038b9e375496c966c5e161e7"
+    },
+    {
+      "version": "007_abstracts",
+      "file": "deploy/sql/007_abstracts.sql",
+      "sha256": "7d1a4650cd0e967eaa8fd651f221ba4c880a4c39e090947629e807c0c9120d5c"
+    },
+    {
+      "version": "008_paper_id_indexes",
+      "file": "deploy/sql/008_paper_id_indexes.sql",
+      "sha256": "3dcc89b097b56e75bf53507df44115d2a5310660dc3aa2f11a8034eb0ecd2b2c"
+    },
+    {
+      "version": "009_data_layer_contract",
+      "file": "deploy/sql/009_data_layer_contract.sql",
+      "sha256": "5db0ec91148966f84d5c108af52be6151f96a31c77afcba8a319f1f45786892c"
+    },
+    {
+      "version": "010_p1_paper_documents",
+      "file": "deploy/sql/010_p1_paper_documents.sql",
+      "sha256": "fd94e0751222526ccfc85e0351db9c3823922b454c7be0faa5e2651e31b020d5"
+    },
+    {
+      "version": "011_p2_compat_views",
+      "file": "deploy/sql/011_p2_compat_views.sql",
+      "sha256": "6e7b54a3d71ec2cfbbc26f23c99d14dd21ba82668349c8dccd1f9a468f6f47ff"
+    },
+    {
+      "version": "012_p3b_bench_library",
+      "file": "deploy/sql/012_p3b_bench_library.sql",
+      "sha256": "cb03951713d88c97a298f90619ba78a42b35f81d42d835809e2d66670f752931"
+    },
+    {
+      "version": "013_p4_tenant_roles",
+      "file": "deploy/sql/013_p4_tenant_roles.sql",
+      "sha256": "abad7937454747e0db82f7207ca724385632a72c3f5309e6c66a6a7e944c0db2"
+    },
+    {
+      "version": "014_p4b2a_workspace_ownership",
+      "file": "deploy/sql/014_p4b2a_workspace_ownership.sql",
+      "sha256": "ac6e09a0694a4a51264663f08a0055987e1a6358c384283e733b9635788154e4"
+    },
+    {
+      "version": "015_p4b2b1_tenant_pilot",
+      "file": "deploy/sql/015_p4b2b1_tenant_pilot.sql",
+      "sha256": "190e712520a808b78c82d68be697b7d67f1602040002c8098cb2853fad0ec11f"
+    },
+    {
+      "version": "016_p4b2b2_tenant_tables",
+      "file": "deploy/sql/016_p4b2b2_tenant_tables.sql",
+      "sha256": "ca06213aade85221efc4aab7ccc4be34781c63683d5bc956c89f574644d5e6da"
+    },
+    {
+      "version": "017_p4b2b3_tenant_tasks_watch",
+      "file": "deploy/sql/017_p4b2b3_tenant_tasks_watch.sql",
+      "sha256": "64941ef540eb3623aa2a10cbb3664bd9fc46096a8377f6d2d625df67283347cc"
+    },
+    {
+      "version": "018_p4c_tenant_grants",
+      "file": "deploy/sql/018_p4c_tenant_grants.sql",
+      "sha256": "d7b0316e37292e7872a3846c27ea781ea2e5fbe5146c3fca85c74ea0e408693d"
+    },
+    {
+      "version": "019_p4c2_systematic_references_protocols",
+      "file": "deploy/sql/019_p4c2_systematic_references_protocols.sql",
+      "sha256": "8723a21a7672dc58cf2c9908d53ed767296bcca4d98c1464b4da2396ac261079"
+    },
+    {
+      "version": "020_p4d_ingest_admin_roles",
+      "file": "deploy/sql/020_p4d_ingest_admin_roles.sql",
+      "sha256": "e81d135c9fab97b12d312a42775cbdda60423e33d8748af3f43f5417f198cc18"
+    },
+    {
+      "version": "021_platform_libraries",
+      "file": "deploy/sql/021_platform_libraries.sql",
+      "sha256": "469c478104493985fa753dc037f411877886310d2c2ee096ddaef855969c4f0d"
+    },
+    {
+      "version": "022_rag_providers",
+      "file": "deploy/sql/022_rag_providers.sql",
+      "sha256": "57e195597efbd9e258e497f75365ad6e932fe4c95865d7064ff9c0a07acda28c"
+    },
+    {
+      "version": "023_rag_plans_jobs",
+      "file": "deploy/sql/023_rag_plans_jobs.sql",
+      "sha256": "0e9297dd8c5969b1167d2d2942ac2953d278b7d831e26cbc9359527501630e6a"
+    },
+    {
+      "version": "024_rag_models_bindings",
+      "file": "deploy/sql/024_rag_models_bindings.sql",
+      "sha256": "aa45278c9f144ae3e15880611e388a5b06ac8b320d74f0f4d5e150780cf111d9"
+    },
+    {
+      "version": "025_rag_step_params",
+      "file": "deploy/sql/025_rag_step_params.sql",
+      "sha256": "84f4fce9d0ae13a7c549e03373928b1423a42d5e8e951a200a833b14acdfa49f"
+    },
+    {
+      "version": "026_rag_evidence_artifacts",
+      "file": "deploy/sql/026_rag_evidence_artifacts.sql",
+      "sha256": "56ddb34644412d6d5e2d0bcd79aa44670050d8765f2e6131212232aaf8014abc"
+    },
+    {
+      "version": "027_rag_query_runs",
+      "file": "deploy/sql/027_rag_query_runs.sql",
+      "sha256": "c77d12ccb7d2396aa91df0f00ae9a2789eed045e461840cef49f7721edd090e4"
+    },
+    {
+      "version": "028_rag_step_approved",
+      "file": "deploy/sql/028_rag_step_approved.sql",
+      "sha256": "8ac8a63a01ad1886c38b6f190e13813e187be0f12aaebffadee1dedd419c1942"
+    },
+    {
+      "version": "029_rag_multi_adjudication",
+      "file": "deploy/sql/029_rag_multi_adjudication.sql",
+      "sha256": "b20edb76c57cd0c7e736619253d1646370d93c03e96699ff83684f6bb0d1e919"
+    },
+    {
+      "version": "030_rag_conflict_flags",
+      "file": "deploy/sql/030_rag_conflict_flags.sql",
+      "sha256": "2ab3559d62ce0a66f3443bbc45b5bf5c50e9c2e838693649c4008403b7cbf8e6"
+    },
+    {
+      "version": "031_rag_multi_workspace",
+      "file": "deploy/sql/031_rag_multi_workspace.sql",
+      "sha256": "b55cad431f157be90cf4aaf2ac838e6f892ccccb1baed489cebd80627af5fdb1"
+    },
+    {
+      "version": "032_rag_review_assignments",
+      "file": "deploy/sql/032_rag_review_assignments.sql",
+      "sha256": "336f7d085fd1243357428516ac1e1203e6d28efe1748b746e62d7cd37b7fe12c"
+    },
+    {
+      "version": "033_rag_finalization",
+      "file": "deploy/sql/033_rag_finalization.sql",
+      "sha256": "9fa1730b0c63c07b4eb6c5ebea3176a0bf297f0aed960ab3748f6b19b12c4fe6"
+    },
+    {
+      "version": "034_rag_seal_signature",
+      "file": "deploy/sql/034_rag_seal_signature.sql",
+      "sha256": "8c60f26b69070808641225234a0d461898468c84034685f6f4f9d02f2a435d63"
+    },
+    {
+      "version": "035_rag_signing_keys",
+      "file": "deploy/sql/035_rag_signing_keys.sql",
+      "sha256": "3bc51d672c2778ed61779084e1dd8286a3f630422ea38fc7cc1f5e5f54ba675a"
+    },
+    {
+      "version": "036_paper_code_links",
+      "file": "deploy/sql/036_paper_code_links.sql",
+      "sha256": "8e8923c2e7508456520365fe8d3d0eeae5c3e0ac5410aee7827c486056a9efd4"
+    },
+    {
+      "version": "037_paper_code_libraries",
+      "file": "deploy/sql/037_paper_code_libraries.sql",
+      "sha256": "536b717299424e8f61454ca0dc36803947c661e45af3be79653a97018dae4159"
+    },
+    {
+      "version": "038_paragraph_section_type",
+      "file": "deploy/sql/038_paragraph_section_type.sql",
+      "sha256": "07b1f4dbe95d0158f6b7fe79eeebe082025a34ed069ef753fa47fcb34673fb6e"
+    },
+    {
+      "version": "039_paragraph_section_roles",
+      "file": "deploy/sql/039_paragraph_section_roles.sql",
+      "sha256": "a8df54910dde02bafb39159de36d8665d40660a71b1083b08dc5150ddef9288e"
+    },
+    {
+      "version": "040_paper_sources",
+      "file": "deploy/sql/040_paper_sources.sql",
+      "sha256": "ba174aeea8554773a1edc7e84208e06d14d21fbab40568f56120f40ac217e0f7"
+    },
+    {
+      "version": "041_jats_native",
+      "file": "deploy/sql/041_jats_native.sql",
+      "sha256": "074d10e6ec91be04aa7c796ba3a760d33cc3759bad37a91787baa647e95fe3f5"
+    },
+    {
+      "version": "042_html_native",
+      "file": "deploy/sql/042_html_native.sql",
+      "sha256": "0a33bad4aae243b3ad83f0f41db900dea6f08500df806a230e5c5f38e207159e"
+    },
+    {
+      "version": "043_pdf_native",
+      "file": "deploy/sql/043_pdf_native.sql",
+      "sha256": "ed8df993ccd521ecfde0af9bd866bd152b913248a0ae2806e8b7f6fd8fb0b540"
+    },
+    {
+      "version": "044_federation_catalog",
+      "file": "deploy/sql/044_federation_catalog.sql",
+      "sha256": "385ef8e465ead697c88a241bb4a4a5e754b573c7e8cee1a27ba8d39b99f4b7ea"
+    },
+    {
+      "version": "045_tenant_stacks",
+      "file": "deploy/sql/045_tenant_stacks.sql",
+      "sha256": "e4d32e75b9af53cd8d06f68f3db62de26044117b151a698bcaa8498a634e6a13"
+    },
+    {
+      "version": "046_import_sessions",
+      "file": "deploy/sql/046_import_sessions.sql",
+      "sha256": "ed685e9e5f28a3bcea48a86763de51a457c7329e34c3919fedcd598b92cf4550"
+    },
+    {
+      "version": "047_import_staging",
+      "file": "deploy/sql/047_import_staging.sql",
+      "sha256": "39c364699229cf30abb4759818bfc5f120074355e234f4c63195b07cee8fa8a0"
+    },
+    {
+      "version": "048_import_fallback",
+      "file": "deploy/sql/048_import_fallback.sql",
+      "sha256": "d2f2318a0f559ccd77456dfe4eeaee4df8ca7df4ad58af65a75f906d2392c4c7"
+    },
+    {
+      "version": "049_paper_reviews",
+      "file": "deploy/sql/049_paper_reviews.sql",
+      "sha256": "2931ea4ed448deb380760e6d596dfd6c617da458808434cf1ca3117729120929"
+    },
+    {
+      "version": "050_paper_annotations",
+      "file": "deploy/sql/050_paper_annotations.sql",
+      "sha256": "097b6c754f60e6248431d29c788aba2849422a28fc517d55885a08c72d52abe2"
+    },
+    {
+      "version": "051_paper_citations",
+      "file": "deploy/sql/051_paper_citations.sql",
+      "sha256": "94b787c8f41e53c45652c4fcddd03a199f725cc63e80386a9ec5040f86d10766"
+    },
+    {
+      "version": "052_online_candidates",
+      "file": "deploy/sql/052_online_candidates.sql",
+      "sha256": "515c9562f38d84860af51c5e46c46aff05eeb35bac0572dcc1977426d9d55b7f"
+    },
+    {
+      "version": "053_import_paper_override",
+      "file": "deploy/sql/053_import_paper_override.sql",
+      "sha256": "70952ca46fd18c1b2485306c5fb9c5d9cb9196344a10a197fa470d65b853e293"
+    },
+    {
+      "version": "054_paper_embeddings",
+      "file": "deploy/sql/054_paper_embeddings.sql",
+      "sha256": "a9224175910ab2fc2622286d338c19d244379256ec05fc39ae23a3ab46a8358d"
+    },
+    {
+      "version": "scipal_auth_schema",
+      "file": "deploy/sql/scipal_auth_schema.sql",
+      "sha256": "214b3927bb834e004818dfa38578c050f54b945dafeb7016e730f2e46bc1e050"
+    },
+    {
+      "version": "scipal_core_schema",
+      "file": "deploy/sql/scipal_core_schema.sql",
+      "sha256": "97f5cad545113f46c19de548f4ef6bb1a011819901b8bc6e90de14be1f91c1c7"
+    },
+    {
+      "version": "scipal_corpus_schema",
+      "file": "deploy/sql/scipal_corpus_schema.sql",
+      "sha256": "b75f2fb94a248d739cd10447d3b0d4149fc95a57c21fcc37d54dc84b3fe4aef0"
+    },
+    {
+      "version": "schema",
+      "file": "code_rag/schema.sql",
+      "sha256": "916fb538283f8bd374b367ef16c59bb5f03f1cb7e2a24e9240d6102fe9cc8d5b"
+    },
+    {
+      "version": "postgres_schema_v2",
+      "file": "build_db/postgres_schema_v2.sql",
+      "sha256": "9b03619fd93b8947ae677e9deebdc99929917407beafd219b5f7145296c2ba42"
+    },
+    {
+      "version": "20261102_phase0_parity",
+      "file": "build_db/migrations/20261102_phase0_parity.sql",
+      "sha256": "85755e06b9228c72fdcd544259aa448a0c1e97523879cab02d94999b4e96328e"
+    },
+    {
+      "version": "055_audit_ledger",
+      "file": "deploy/sql/055_audit_ledger.sql",
+      "sha256": "abc76592ae9adda599606dcae037b39a83979763b5e3c8849f0ff9f05064fdb6"
+    },
+    {
+      "version": "056_audit_outbox_idempotency",
+      "file": "deploy/sql/056_audit_outbox_idempotency.sql",
+      "sha256": "789185df17807a345f382db9497302a0e3cfbdc03cda1b8c54a775b6676253a6"
+    }
+  ]
+}
